@@ -1,0 +1,91 @@
+.igcal_Control
+{
+	background-color:#77B9E5;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/header.gif);
+	border-color: LightGrey;
+}
+
+
+.igcal_Calendar
+{
+}
+
+
+.igcal_DOW
+{
+	background-color:White;
+	font-size:xx-small;
+	border-width:0px;
+	border-bottom:solid 1px #9AC6FF;
+	padding:5px 0px 0px 0px;
+}
+
+
+.igcal_Day
+{
+	background-color:White;
+	font-size:xx-small;
+	border-width:0px;
+}
+
+
+.igcal_NextPrev
+{
+	background-color:Transparent;
+}
+
+
+.igcal_Footer
+{
+	background-color:Gainsboro;
+	border-top:solid 0px Gainsboro;
+	padding-top:5px;
+	text-align:center;
+}
+
+
+.igcal_Header
+{
+	background-color:Transparent;
+	font-size:10px;
+	height: 16px;
+}
+
+
+.igcal_DropDown
+{
+}
+
+
+.igcal_WeekendDay
+{
+}
+
+
+.igcal_OtherMonthDay
+{
+	color:#B3B3B3;
+}
+
+
+.igcal_WeekendDayMajor
+{
+}
+
+
+.igcal_TodayDay
+{
+	border:solid 1px #A4D7F8;
+}
+
+
+.igcal_SelectedDay
+{
+	background-color:#699BC9;
+	background-image:none;
+	color:White;
+}
+
+

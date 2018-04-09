@@ -1,0 +1,246 @@
+.igdv_Control
+{
+	border: 1px solid #999999;
+}
+
+
+.igdv_CaptionHeader
+{
+	background-color:#77b9e5;
+	background-repeat:repeat-x;
+	background-image: url(images/header.gif);
+	font-weight:bold;
+	border-width:0;
+	border-bottom: 1px solid #679AC7;
+	line-height: 16pt;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+
+.igdv_DayHeader
+{
+	background-color: #DCE9F1;
+	background-repeat:repeat-x;
+	background-image: url(images/dayheader.jpg);
+	border-bottom: 1px solid #cccccc;
+	font-size:8pt;
+	padding: 5px;
+	text-align:center;
+	overflow: hidden;
+}
+
+
+.igdv_NonWorkingTimeSlot
+{
+	background-color:#F1F3F7;
+	border-right:solid 1px #D5E1F1;
+	border-bottom:solid 1px #D5E1F1;
+	height: 20px;
+}
+
+
+.igdv_WorkingTimeSlot
+{
+	background-color:#FFFFFF;
+	border-right:solid 1px #E6EDF7;
+	border-bottom:solid 1px #E6EDF7;
+	height: 20px;
+}
+
+
+.igdv_AllDayEventArea
+{
+	border-bottom: 1px solid #D3D3D3;
+}
+
+
+.igdv_AllDayEvent
+{
+	background-color:#FDFEFE;
+	background-repeat:repeat-x;
+	background-image: url(images/groupbyheader.gif);
+	font-size:8pt;
+	border: solid 1px #D3D3D3;
+	padding:5px;
+	white-space: nowrap;
+	text-align:center;
+	overflow: hidden;
+}
+
+
+.igdv_Appointment
+{
+	background-color:#477AA7;
+	background-repeat:repeat-x;
+	background-image: url(images/header_hover.gif);
+	font-size:8pt;
+	border:solid 1px #999999;
+	color:#FFFFFF;
+	overflow: hidden;
+}
+
+.igdv_FadedAppointment
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.igdv_ActivityEdge
+{
+	font-size: 1px;
+	height: 5px;
+	cursor:n-resize;
+}
+
+
+.igdv_ActivityEdgeLeft
+{
+	font-size:2px;
+	width: 6px;
+	cursor:move;
+}
+
+
+.igdv_TodayHeader
+{
+	background-color: #DCE9F1;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/dayheader.jpg);
+	font-size:8pt;
+	padding: 5px;
+	text-align:center;
+	font-weight: bold;
+}
+
+
+.igdv_TimeSlotLabel
+{
+	background-color:#FFFFFF;
+	font-size:medium;
+	border-right:solid 1px LightGrey;
+	border-bottom:solid 1px LightGrey;
+	width: 60px;
+	color: #333333;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+.igdv_TimeSlotLabelMinutes
+{
+	font-size:8pt;
+}
+
+
+.igdv_AllDayEventSelected
+{	
+	border-color: #FF9933;
+	background-color: #FF9933;
+	background-repeat: repeat-x;
+	background-image: url(images/igmc_dayselected.gif);
+}
+
+
+.igdv_AllDayEventAreaSelected
+{
+}
+
+
+.igdv_ActivityHover
+{
+	z-index: 10000;
+}
+
+
+.igdv_ActivityEdgeBusy
+{
+}
+
+
+.igdv_ActivityEdgeTentative
+{
+	background-color:#90C0FF;
+}
+
+
+.igdv_ActivityEdgeOutofOffice
+{
+	background-color:#900090;
+}
+
+
+.igdv_ActivityEdgeFree
+{
+	background-color:#F0F0F0;
+}
+
+
+.igdv_NavigationButton
+{
+	background-color:Transparent;
+	border-width:0px;
+	width: 30px;
+	vertical-align:middle;
+	cursor: pointer;
+	margin: 0px;
+}
+
+
+.igdv_SelectedAppointment
+{
+	background-color:#477AA7;
+	z-index: 9999;
+}
+
+.igdv_ResourceButton
+{
+	border-width: 0;
+	border-right: solid 1px #999999;
+	border-bottom: solid 1px #999999;
+	padding: 4px;
+	font-size: 8pt;
+	color: #333;
+	background-color: #DCE9F1;
+	background-repeat:repeat-x;
+	background-image: url(images/dayheader.jpg);
+}
+
+.igdv_ResourceButton:focus, .igdv_ResourceButtonActive
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.igdv_ResourceButton:hover
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.igdv_MultiDayEventArrowLeft
+{
+      background-image: url(images/igws_arrowLeft.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+}
+
+.igdv_MultiDayEventArrowRight
+{
+      background-image: url(images/igws_arrowRight.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+}

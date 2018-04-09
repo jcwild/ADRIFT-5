@@ -1,0 +1,155 @@
+.igdt_Control {
+	background-color:transparent;
+	border:1px solid transparent;
+	color:#000000;
+	font-size: xx-small;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.igdt_ControlActive {
+
+}
+
+.igdt_Node
+{
+	cursor:hand;
+	color:#333333;
+	text-decoration:none;	
+	padding:1px 3px 1px 3px;
+	line-height: 15px;
+}
+
+.igdt_NodeRoot {
+	font-weight:bold;
+	color:#74B8E4;
+	vertical-align:middle;
+
+}
+
+.igdt_NodeImage {	
+	vertical-align: middle;
+}
+
+.igdt_NodeSelected {
+	background-color:#9EDEFF;
+	color: White;
+}
+
+.igdt_NodeActive 
+{
+	border:1px solid #74B8E4;
+	padding: 0px 3px 0px 2px;
+}
+
+.igdt_NodeHover {
+	
+	background-color:#BEE2F8;
+}
+
+.igdt_NodeDisabled
+{
+	color:Gray;
+}
+
+.igdt_InternalNodeEditor
+{
+	border:1px solid #74B8E4;
+	padding-left: 2px;
+}
+
+
+/* //////////////////// GROUP STYLES //////////////////// */
+.igdt_NodeGroup {
+	list-style :none;	
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.igdt_NodeHolder {
+	white-space:nowrap;
+	/*margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;*/
+}
+
+
+.igdt_NodeHolder img {
+	vertical-align: middle;
+}
+
+/* //////////////////// GROUP STYLES //////////////////// */
+
+/****************************************************/
+/* Added for WebDataTree Drag And Drop funtionality */
+/****************************************************/
+
+
+/*CSS class that will define the style applied before or after some node. 
+If the space between the nodes is accepted as potential drop target this class will define 
+some separator/dashed line that will show where the new node will be placed*/
+/*The DropIndicator purpose is to guide the user where the node will be inserted 
+when they drop it*/
+.igdt_DropIndicator
+{
+    border      : 1px solid #BBBBBB;
+    padding     : 1px 8px 3px 4px;
+    background   : #CFEAFA url(./images/igdt_DropIndicatorBg.jpg) repeat-x scroll 0 0 ;
+    
+    color       : #333333;
+    cursor      : default;
+    font-family : Segoe UI,Arial,Verdana,Helvetica,sans-serif;
+    font-size   : 12px;
+
+    height:20px;
+}
+
+.igdt_DropIndicator img
+{
+    position:relative;
+    top:3px;
+    margin-right:5px;
+    width:16px;
+    height:16px;
+}
+.igdt_DropIndicator span
+{
+    position:relative;
+    top:-1px;
+}
+
+/*CSS class that will be applied just before the Dropping event is fired on a node if it is a possible drop target. 
+For example when you drag over concrete node its color will change to alert the user he will drop inside the highlighted node.*/
+.igdt_DropTarget
+{
+    background  : #e4e5f0;
+}
+
+/*Applied on the cloned node that is being dragged*/
+.igdt_DragMarkup
+{
+    cursor: move;
+    padding:1px 3px;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:xx-small;
+}
+
+/* Applied to the line shown, when inserting between two nodes.*/
+.igdt_DropInsertLine
+{
+  border: 2px dotted #BBBBBB;
+}
+
+.igdt_NodeGroupDragDrop {
+	list-style :none;	
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.igdt_NodeHolderDragDrop {
+	white-space:nowrap;
+}
+.igdt_NodeHolderDragDrop img {vertical-align:middle}

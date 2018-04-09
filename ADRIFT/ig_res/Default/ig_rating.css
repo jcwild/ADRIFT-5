@@ -1,0 +1,81 @@
+﻿.igr_Control
+{
+    outline: none;
+	border : 0px none;
+	background:transparent;
+}
+
+.igr_EmptyContainer
+{
+    overflow : hidden;
+}
+
+.igr_SelectedContainer
+{
+    position : relative;
+    overflow : hidden;
+    white-space : nowrap;
+}
+
+.igr_HoveredContainer
+{
+    position : relative;
+    overflow : hidden;
+    white-space : nowrap;
+}
+
+.igr_ImageSpan
+{
+    display : inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.igr_ImageSpanVert
+{
+    display : block;
+    width: 20px;
+    height: 20px;
+}
+
+.igr_EmptyImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: 0px 0px;
+}
+
+.igr_SelectedImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -50px 0px;
+}
+
+.igr_HoveredImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -25px 0px;
+}
+/*
+    These were added for our clients to control the disabled appearence
+*/
+
+.igr_DisabledEmptyImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -75px 0px;
+}
+
+.igr_DisabledSelectedImg
+{
+    background:transparent url(images/igr_RatingSprite.png) no-repeat;
+    background-position: -100px 0px;
+}
+
+.igr_ControlFocus
+{
+    border : 0px none;
+}
+
+.igr_ControlDisabled
+{
+}

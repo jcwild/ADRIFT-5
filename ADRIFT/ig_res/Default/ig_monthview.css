@@ -1,0 +1,298 @@
+.igmv_Control
+{
+	border:solid 1px #999999;
+	overflow: auto;
+	position: relative;
+}
+
+
+.igmv_CaptionHeader
+{
+	background-color:#77b9e5;
+	background-repeat:repeat-x;
+	background-position: top;
+	background-image: url(images/header.gif);
+	font-weight:bold;
+	border-width:0;
+	border-bottom: 1px solid #679AC7;
+	line-height: 16pt;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+
+.igmv_DayHeader
+{
+	background-color: #DCE9F1;
+	background-repeat:repeat-x;
+	background-position:top ;
+	background-image: url(images/dayheader.jpg);
+	font-size:8pt;
+	font-weight: bold;
+	border:solid 1px #999999;
+	border-right-width:0px;
+	padding: 3px;
+	cursor:default;
+	color:#333333;
+	text-align:left;
+	height: 1%;
+}
+
+
+.igmv_Day
+{
+	border:solid 1px #999999;
+	border-bottom-width:0px;
+	border-right-width:0px;
+	overflow: hidden;
+	cursor:hand;
+	color:Black;
+	vertical-align: top;
+}
+
+
+.igmv_Appointment
+{
+	background-color:#EFF5F8;
+	background-image: none;
+	border:solid 1px #999999;
+	font-size: 8pt;
+	padding: 3px;
+	margin: 1px;
+	cursor: hand;
+	text-align:left;
+	overflow: hidden;
+}
+
+.igmv_FadedAppointment
+{
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.igmv_AllDayEvent
+{
+	background-color:#EFF5F8;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/groupbyheader.gif);
+	border:solid 1px #999999;
+	padding: 3px;
+	margin: 1px;
+	font-size: 8pt;
+	cursor: hand;
+	text-align:left;
+	overflow: hidden;
+}
+
+
+.igmv_NavigationButton
+{
+	background-color:Transparent;
+	border-width:0px;
+	margin:0px;
+	padding:0px;
+	width: 20px;
+	cursor:hand;
+}
+
+
+.igmv_WeekNumber
+{
+	background-color:#EFF5F8;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/groupbyheader.gif);
+	font-size:8pt;
+	font-weight: bold;
+	border: 1px solid #999999;
+	border-right-width:0px;
+	border-left-width:0px;
+	width: 30px;
+	text-align:center;
+}
+
+
+.igmv_CompressedDay
+{
+	border-left:solid 1px Silver;
+	vertical-align:top;
+}
+
+
+tr.igmv_CaptionHeader td.igmv_WeekNumber
+{
+	background-color:#77b9e5;
+	background-repeat:repeat-x;
+	background-position: top;
+	background-image: url(images/header.gif);
+	border-width:0px;
+	text-align: left;
+}
+
+.igmv_MonthDayOfWeekHeader.igmv_WeekNumber
+{
+	border-left-width:0px;
+}
+
+
+.igmv_MonthDayOfWeekHeader
+{
+	background-color:#EFF5F8;
+	background-repeat:repeat-x;
+	background-position:bottom ;
+	background-image: url(images/groupbyheader.gif);
+	font-size:8pt;
+	border:1px solid #999999;
+	border-right-width: 0px;
+	padding:3px;
+	color:#333333;
+	text-align:center;
+	height: 1%;
+}
+
+
+.igmv_OtherMonthDayHeader
+{
+	background-color: #F3F3F3;
+	background-image: none;
+	font-size:8pt;
+	border:solid 1px #999999;
+	border-right-width:0px;
+	padding: 3px;
+	color: #666666;
+	text-align: left;
+	height: 1%;
+}
+
+
+.igmv_OtherMonthDay
+{
+	background-color: #FAFAFA;
+	border:solid 1px #999999;
+	border-bottom-width:0px;
+	border-right-width:0px;
+	cursor:hand;
+	color:Black;
+	vertical-align: top;
+}
+
+
+.igmv_OtherCompressedDay
+{
+	border-left:solid 1px #999999;
+	vertical-align:top;
+}
+
+
+.igmv_TodayHeader
+{
+	background-color:#FF9D33;
+	background-repeat:repeat-x;
+	background-image: url(images/igdd_ListItemHover.png);
+	font-size:8pt;
+	color:White;
+}
+
+
+.igmv_Today
+{
+}
+
+
+.igmv_SelectedAppointment
+{
+	background-color: #FF9933;
+	background-repeat: repeat-x;
+	background-image: url(images/igmc_dayselected.gif);
+	font-size:8pt;
+	border:solid 1px #FF9933;
+	padding: 3px;
+	margin: 1px;
+	white-space: nowrap;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+
+.igmv_ActiveDayHeader
+{
+	background-color:#9BD1F5;
+	background-repeat:repeat-x;
+	background-image: url(images/header_hover.gif);
+	color:White;
+}
+
+
+.igmv_ActiveDay
+{
+}
+
+
+.igmv_NavigationButtonPrev
+{
+	margin-left: 3px;
+}
+
+
+.igmv_Control table
+{
+	border-collapse:Collapse;
+}
+
+
+.igmv_NavigationButtonNext
+{
+	margin-right: 3px;
+}
+
+.igmv_ResourceButton
+{
+	border-width: 0;
+	border-right: solid 1px #999999;
+	border-bottom: solid 1px #999999;
+	padding: 4px;
+	font-size: 8pt;
+	color: #333;
+	background-color: #DCE9F1;
+	background-repeat:repeat-x;
+	background-image: url(images/dayheader.jpg);
+}
+
+.igmv_ResourceButton:focus, .igmv_ResourceButtonActive
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.igmv_ResourceButton:hover
+{
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	-khtml-opacity: 1.0;
+	opacity: 1.0;
+}
+
+.igmv_MultiDayEventArrowLeft
+{
+      background-image: url(images/igws_arrowLeft.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+}
+
+.igmv_MultiDayEventArrowRight
+{
+      background-image: url(images/igws_arrowRight.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+}

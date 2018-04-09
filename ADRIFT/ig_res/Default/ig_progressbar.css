@@ -1,0 +1,54 @@
+﻿body
+{
+}
+.igpb_BaseLabel
+{
+	text-align:left;
+	white-space:nowrap;
+	position:absolute;
+	padding:2px;
+}
+.igpb_BackgroundLabel
+{
+	color:Black;
+}
+.igpb_ForegroundLabel
+{
+	color:white;
+}
+.igpb_InnerDiv
+{
+	height:100%;
+	width:100%;
+	position:absolute;
+	overflow:hidden;
+	
+}
+.igpb_Fill_Horiz
+{
+	background-image: url(./images/igpb_horizontalFill.gif);
+	background-repeat: repeat-x;
+	background-color:#75BAE5;
+}
+.igpb_Fill_Vert
+{
+	background-image: url(./images/igpb_VerticalFill.gif);
+	background-repeat: repeat-y;
+	background-color:#75BAE5;
+}
+.igpb_Background_Horiz
+{
+
+}
+.igpb_Background_Vert
+{
+
+}
+.igpb_Container
+{
+	height:100%;
+	width:100%;
+	position:relative;
+	border:solid 1px #ABC1DE;
+	overflow: hidden;
+}

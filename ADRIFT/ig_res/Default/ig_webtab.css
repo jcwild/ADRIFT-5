@@ -1,0 +1,2151 @@
+.igtab_THControl
+{
+	overflow:hidden;
+}
+.igtab_THContentHolder
+{
+	border:1px solid #4679A6;
+	border-top-width:0px;
+	height:80%;
+	overflow:hidden;
+	position:relative;
+	background:#FFFFFF;
+}
+.igtab_THContent
+{
+	height:100%;
+	position:relative;
+	background-color:#FFFFFF;
+}
+.igtab_THHolderNoScroll
+{
+	display:block;
+	position:relative;
+	width:100%;
+}
+.igtab_THHolder
+{
+	background:url(./images/igtab_HolderBorder.gif) repeat-x bottom left;
+	position:relative;
+	display:block;
+	height:23px;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.igtab_THRoundedForHolder
+{
+	background:none;
+	margin-left:5px;
+	height:22px;
+}
+.igtab_THHolderScroll
+{
+	position:relative;
+	width:100%;
+	margin-left:-50px;
+	display:block;
+	overflow:hidden;
+}
+.igtab_THHolderScrollInner
+{
+	position:relative;
+	display:block;
+	width:9999px;
+	left:50px;
+}
+.igtab_THScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	left:100%;
+	display:block;
+	margin-left:-50px;
+	width:50px;
+	z-index:20000;
+	text-align:right;
+	padding-top:2px;
+}
+.igtab_THRoundedForScroll
+{
+	margin-left:-56px;
+}
+.igtab_THImage
+{
+	vertical-align:middle;
+}
+.igtab_THClose
+{
+	position:absolute;
+	left:100%;
+	margin-left:-20px;
+	margin-top:6px;
+	top:0px;
+	cursor: pointer;
+}
+.igtab_THScrollButton
+{
+	padding:1px;
+}
+.igtab_THText
+{
+	vertical-align:middle;
+	padding:0px 1px 0px 1px;
+	font-family:Verdana;
+	font-size:11px;
+	white-space:nowrap;
+	border:0px;
+	line-height:22px;
+	cursor:default;
+}
+.igtab_THCenter
+{
+	padding:0px 1px 0px 1px;
+	display:block;
+	position:relative;    
+    background:url(./images/igtab_THCenter.jpg) repeat-x;	
+    background-color:#f0f0f0;
+	white-space:nowrap;
+	text-align:center;
+	font:22px sans-serif;
+	line-height:22px;
+	overflow:hidden;
+}
+.igtab_THCloseSize
+{
+	padding-right:20px;
+}
+.igtab_THTail
+{
+	background: transparent url(./images/igtab_THRight.gif) no-repeat;
+	background-position: top right;
+	padding-left:0px;
+	padding-right:7px;
+	display:block;
+	margin: 0px;
+}
+.igtab_THTab
+{
+	display:inline;
+	position:relative;
+	padding-left:7px;
+	float:left;
+	background: transparent url(./images/igtab_THLeft.gif) top left no-repeat;
+	margin:0px;
+	overflow:hidden;
+	white-space:nowrap;
+	border-bottom:1px solid #4679A6;
+	height:22px;
+}
+.igtab_THOverlap
+{
+	margin-left:-5px;
+}
+.igtab_THTextHov
+{
+	color: #FFFFFF;
+}
+.igtab_THCenterHov
+{
+	background-position: 0px -50px;
+	background-color: #ff9e33;
+}
+.igtab_THTailHov
+{
+	background: transparent url(./images/igtab_THRightHov.gif);
+	background-position: top right;
+}
+.igtab_THTabHov
+{
+	background-position: 0px -50px;
+	background-color: #ff9e33;
+}
+.igtab_THTextSel
+{
+}
+.igtab_THCenterSel
+{
+	background-position: 0px -100px;
+	background-color:#8fc6ea;
+}
+.igtab_THTailSel
+{
+	background: transparent url(./images/igtab_THRightSel.gif) no-repeat;
+	background-position: top right;
+}
+.igtab_THTabSel
+{
+	background-position: 0px -100px;
+}
+.igtab_THTextAct
+{
+	border:1px dotted #000;
+	padding:0px;
+}
+.igtab_THCenterAct
+{
+}
+.igtab_THTailAct
+{
+}
+.igtab_THTabAct
+{
+}
+.igtab_THTextDis
+{
+	color:#AAAAAA;
+}
+.igtab_THCenterDis
+{
+	background-position: 0px -150px;
+	background-color:#CCCCCC;
+}
+.igtab_THTailDis
+{
+	background-image:url(./images/igtab_THRightDis.gif);
+}
+.igtab_THTabDis
+{
+	background-position: 0px -150px;
+}
+.igtab_THTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_THTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+
+.igtab_THRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_THRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_THRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_THRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundFill.gif);
+}
+
+
+
+
+
+
+
+
+
+.igtab_TVControl
+{
+	overflow:hidden;
+}
+.igtab_TVContentHolder
+{
+	border:1px solid #4679A6;
+	border-top-width:0px;
+	height:50%;
+	overflow:hidden;
+	position:relative;
+	background:#FFFFFF;
+}
+.igtab_TVContent
+{
+	height:100%;
+	position:relative;
+	background: #EFEFEF url(./images/igtab_THContentBackground.jpg) repeat-x;
+}
+.igtab_TVHolderNoScroll
+{
+	display:block;
+	position:relative;
+	width:100%;
+}
+.igtab_TVHolder
+{
+	background:url(./images/igtab_HolderBorder.gif) repeat-x bottom left;
+	position:relative;
+	display:block;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.igtab_TVRoundedForHolder
+{
+	background:none;
+	margin-left:5px;
+}
+.igtab_TVHolderScroll
+{
+	position:relative;
+	width:100%;
+	margin-left:-50px;
+	display:block;
+	overflow:hidden;
+}
+.igtab_TVHolderScrollInner
+{
+	position:relative;
+	display:block;
+	width:9999px;
+	left:50px;
+}
+.igtab_TVScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	left:100%;
+	top:100%;
+	display:block;
+	margin-left:-50px;
+	margin-top:-23px;
+	width:50px;
+	z-index:20000;
+	text-align:right;
+	padding-top:2px;
+}
+.igtab_TVRoundedForScroll
+{
+	margin-left:-56px;
+}
+.igtab_TVImage
+{
+	margin-left:10%;
+	display:block;
+}
+.igtab_TVClose
+{
+	position:absolute;
+	left:12px;
+	top:100%;
+	margin-top:-13px;
+	cursor: pointer;
+}
+.igtab_TVScrollButton
+{
+	padding:1px;
+}
+.igtab_TVText
+{
+	margin-top:5px;
+	margin-bottom:6px;
+	font-family:Verdana;
+	font-size:11px;
+	white-space:nowrap;
+	border:0px;
+	line-height:11px;
+	display:block;
+	text-align:center;
+	overflow:hidden;
+	margin-left:5px;
+	width:20px;
+	cursor:default;
+}
+.igtab_TVCenter
+{
+	padding-top:5px;
+	display:block;
+	position:relative;
+	overflow:hidden;
+}
+.igtab_TVCloseSize
+{
+	padding-bottom:12px;
+}
+.igtab_TVMirrorCenter
+{
+	background:url(./images/igtab_TVRight.gif) top right repeat-y;
+	display:block;
+	margin-top:12px;
+	width:100%;
+	height:100%;
+}
+.igtab_TVMirror
+{
+	background:url(./images/igtab_TVRightTop.gif) top right no-repeat;
+	display:block;
+	position:absolute;
+	margin-left:8px;
+	width:22px;
+	height:100%;
+}
+.igtab_TVTail
+{
+	background:url(./images/igtab_TVLeft.jpg) repeat-y;
+	padding:0px;
+	display:block;
+	position:absolute;
+	width:12px;
+	margin-top:12px;
+	height:100%;
+}
+.igtab_TVTab
+{
+	display:inline;
+	position:relative;
+	padding:0px;
+	float:left;
+	background:url(./images/igtab_TVLeftTop.gif) no-repeat;
+	margin:0px;
+	overflow:hidden;
+	width:30px;
+	border-bottom:1px solid #4679A6;
+}
+.igtab_TVOverlap
+{
+	margin-left:-5px;
+}
+.igtab_TVTextHov
+{
+	color: #FFFFFF;
+}
+.igtab_TVCenterHov
+{
+}
+.igtab_TVMirrorCenterHov
+{
+	background-image:url(./images/igtab_TVRightHov.gif);
+}
+.igtab_TVMirrorHov
+{
+	background-image:url(./images/igtab_TVRightTopHov.gif);
+}
+.igtab_TVTailHov
+{
+	background-position: -50px 0px;
+}
+.igtab_TVTabHov
+{
+	background-position: 0px -19px;
+}
+.igtab_TVTextSel
+{
+}
+.igtab_TVCenterSel
+{
+}
+.igtab_TVMirrorCenterSel
+{
+	background-image:url(./images/igtab_TVRightSel.gif);
+	background-color:#FFFFFF;
+}
+.igtab_TVMirrorSel
+{
+	background-image:url(./images/igtab_TVRightTopSel.gif);
+}
+.igtab_TVTailSel
+{
+	background-position: -100px 0px;
+}
+.igtab_TVTabSel
+{
+	background-position: 0px -38px;
+}
+.igtab_TVTextAct
+{
+	margin-left:4px;
+	border:1px dotted #000;
+}
+.igtab_TVCenterAct
+{
+}
+.igtab_TVMirrorCenterAct
+{
+}
+.igtab_TVMirrorAct
+{
+}
+.igtab_TVTailAct
+{
+}
+.igtab_TVTabAct
+{
+}
+.igtab_TVTextDis
+{
+	color:#AAAAAA;
+}
+.igtab_TVCenterDis
+{
+}
+.igtab_TVMirrorCenterDis
+{
+	background-image:url(./images/igtab_TVRightDis.gif);
+}
+.igtab_TVMirrorDis
+{
+	background-image:url(./images/igtab_TVRightTopDis.gif);
+}
+.igtab_TVTailDis
+{
+	background-position: -150px 0px;
+}
+.igtab_TVTabDis
+{
+	background-position: 0px -57px;
+}
+.igtab_TVTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_TVTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+.igtab_TVRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_TVRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_TVRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_TVRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundFill.gif);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.igtab_BHControl
+{
+	overflow:hidden;
+}
+.igtab_BHContentHolder
+{
+	border:1px solid #4679A6;
+	border-bottom-width: 0px;
+	height:60%;
+	overflow:hidden;
+	position:relative;
+	background:#FFFFFF;
+}
+.igtab_BHContent
+{
+	height:100%;
+	background: #EFEFEF url(./images/igtab_THContentBackground.jpg) repeat-x;
+	position:relative;
+}
+.igtab_BHHolderNoScroll
+{
+	display:block;
+	position:relative;
+	width:100%;
+}
+.igtab_BHHolder
+{
+	background:url(./images/igtab_HolderBorder.gif) repeat-x;
+	position:relative;
+	display:block;
+	height:23px;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.igtab_BHRoundedForHolder
+{
+	background:none;
+	margin-left:5px;
+	height:22px;
+}
+.igtab_BHHolderScroll
+{
+	position:relative;
+	width:100%;
+	margin-left:-50px;
+	display:block;
+	overflow:hidden;
+}
+.igtab_BHHolderScrollInner
+{
+	position:relative;
+	display:block;
+	width:9999px;
+	left:50px;
+}
+.igtab_BHScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	left:100%;
+	display:block;
+	margin-left:-50px;
+	width:50px;
+	z-index:20000;
+	text-align:right;
+	padding-top:2px;
+}
+.igtab_BHRoundedForScroll
+{
+	margin-left:-56px;
+}
+.igtab_BHImage
+{
+	vertical-align:middle;
+}
+.igtab_BHClose
+{
+	position:absolute;
+	left:100%;
+	margin-left:-20px;
+	margin-top:5px;
+	top:0px;
+	cursor: pointer;
+}
+.igtab_BHScrollButton
+{
+	padding:1px;
+}
+.igtab_BHText
+{
+	vertical-align:middle;
+	padding:0px 1px 0px 1px;
+	font-family:Verdana;
+	font-size:11px;
+	white-space:nowrap;
+	border:0px;
+	line-height:22px;
+	cursor:default;
+}
+.igtab_BHCenter
+{
+	display:block;
+	position:relative;
+	background:url(./images/igtab_BHCenter.gif) top left repeat-x;
+	background-color:#f0f0f0;
+	white-space:nowrap;
+	text-align:center;
+	font:22px sans-serif;
+	line-height:22px;
+	overflow:hidden;
+}
+.igtab_BHCloseSize
+{
+	padding-right:20px;
+}
+.igtab_BHTail
+{
+	background:url(./images/igtab_BHRight.gif) top right no-repeat;
+	padding-left:0px;
+	padding-right:7px;
+	display:block;
+}
+.igtab_BHTab
+{
+	display:inline;
+	position:relative;
+	padding-left:7px;
+	float:left;
+	background:transparent url(./images/igtab_BHLeft.gif) top left no-repeat;
+	margin:0px;
+	overflow:hidden;
+	white-space:nowrap;
+	border-top:1px solid #4679A6;
+	height:22px;
+}
+.igtab_BHOverlap
+{
+	margin-left:-5px;
+}
+.igtab_BHTextHov
+{
+	color: #FFFFFF;
+}
+.igtab_BHCenterHov
+{
+	background-position: 0px -27px;
+	background-color:#ff9e33;
+}
+.igtab_BHTailHov
+{
+	background-image:url(./images/igtab_BHRightHov.gif);
+}
+.igtab_BHTabHov
+{
+	background-position: 0px -27px;
+}
+.igtab_BHTextSel
+{
+}
+.igtab_BHCenterSel
+{
+	background-position: 0px -54px;
+	background-color:#8fc6ea;
+}
+.igtab_BHTailSel
+{
+	background-image:url(./images/igtab_BHRightSel.gif);
+}
+.igtab_BHTabSel
+{
+	background-position: 0px -54px;
+}
+.igtab_BHTextAct
+{
+	border:1px dotted #000;
+	padding:0px;
+}
+.igtab_BHCenterAct
+{
+}
+.igtab_BHTailAct
+{
+}
+.igtab_BHTabAct
+{
+}
+.igtab_BHTextDis
+{
+	color:#AAAAAA;
+}
+.igtab_BHCenterDis
+{
+	background-position: 0px -81px;
+	background-color:#cccccc;
+}
+.igtab_BHTailDis
+{
+	background-image:url(./images/igtab_BHRightDis.gif);
+}
+.igtab_BHTabDis
+{
+	background-position: 0px -81px;
+}
+.igtab_BHTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_BHTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+.igtab_BHRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_BHRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_BHRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_BHRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundFill.gif);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.igtab_BVControl
+{
+	overflow:hidden;
+}
+.igtab_BVContentHolder
+{
+	border:1px solid #4679A6;
+	border-bottom-width: 0px;
+	height:50%;
+	overflow:hidden;
+	position:relative;
+	background:#FFFFFF;
+}
+.igtab_BVContent
+{
+	height:100%;
+	position:relative;
+	background: #EFEFEF url(./images/igtab_THContentBackground.jpg) repeat-x;
+}
+.igtab_BVHolderNoScroll
+{
+	display:block;
+	position:relative;
+	width:100%;
+}
+.igtab_BVHolder
+{
+	background:url(./images/igtab_HolderBorder.gif) repeat-x top left;
+	position:relative;
+	display:block;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.igtab_BVRoundedForHolder
+{
+	background:none;
+	margin-left:5px;
+}
+.igtab_BVHolderScroll
+{
+	position:relative;
+	width:100%;
+	margin-left:-50px;
+	display:block;
+	overflow:hidden;
+}
+.igtab_BVHolderScrollInner
+{
+	position:relative;
+	display:block;
+	width:9999px;
+	left:50px;
+}
+.igtab_BVScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	left:100%;
+	display:block;
+	margin-left:-50px;
+	width:50px;
+	z-index:20000;
+	text-align:right;
+	padding-top:1px;
+}
+.igtab_BVRoundedForScroll
+{
+	margin-left:-56px;
+}
+.igtab_BVImage
+{
+	margin-left:3px;
+	margin-top:2px;
+	display:block;
+}
+.igtab_BVClose
+{
+	position:absolute;
+	left:100%;
+	top:100%;
+	margin-left:-18px;
+	margin-top:-16px;
+	cursor:pointer;
+}
+.igtab_BVScrollButton
+{
+	padding:1px;
+}
+.igtab_BVText
+{
+	margin-top:3px;
+	margin-bottom:5px;
+	font-family:Verdana;
+	font-size:11px;
+	white-space:nowrap;
+	border:0px;
+	line-height:11px;
+	display:block;
+	text-align:center;
+	overflow:hidden;
+	margin-left:4px;
+	width:20px;
+	cursor:default;
+}
+.igtab_BVCenter
+{
+	padding-bottom:5px;
+	display:block;
+	position:relative;
+	overflow:hidden;
+}
+.igtab_BVCloseSize
+{
+	padding-bottom:14px;
+}
+.igtab_BVMirrorCenter
+{
+	background:url(./images/igtab_BVRight.gif) top right repeat-y;
+	display:block;
+	margin-top:-12px;
+	width:100%;
+	height:100%;
+}
+.igtab_BVMirror
+{
+	background:url(./images/igtab_BVRightBot.gif) bottom right no-repeat;
+	display:block;
+	position:absolute;
+	margin-left:8px;
+	width:22px;
+	height:100%;
+}
+.igtab_BVTail
+{
+	background:url(./images/igtab_BVLeft.jpg) repeat-y;
+	padding:0px;
+	display:block;
+	position:absolute;
+	width:12px;
+	margin-top:-12px;
+	height:100%;
+}
+.igtab_BVTab
+{
+	display:inline;
+	position:relative;
+	padding:0px;
+	float:left;
+	background:url(./images/igtab_BVLeftBot.gif) bottom left no-repeat;
+	margin:0px;
+	overflow:hidden;
+	width:30px;
+	border-top:1px solid #4679A6;
+}
+.igtab_BVOverlap
+{
+	margin-left:-5px;
+}
+.igtab_BVTextHov
+{
+	color: #FFFFFF;
+}
+.igtab_BVCenterHov
+{
+}
+.igtab_BVMirrorCenterHov
+{
+	background-image:url(./images/igtab_BVRightHov.gif);
+}
+.igtab_BVMirrorHov
+{
+	background-image:url(./images/igtab_BVRightBotHov.gif);
+}
+.igtab_BVTailHov
+{
+	background-position: -50px 0px;
+}
+.igtab_BVTabHov
+{
+	background-image:url(./images/igtab_BVLeftBotHov.gif);
+}
+.igtab_BVTextSel
+{
+}
+.igtab_BVCenterSel
+{
+}
+.igtab_BVMirrorCenterSel
+{
+	background-image:url(./images/igtab_BVRightSel.gif);
+}
+.igtab_BVMirrorSel
+{
+	background-image:url(./images/igtab_BVRightBotSel.gif);
+}
+.igtab_BVTailSel
+{
+	background-position: -100px 0px;
+}
+.igtab_BVTabSel
+{
+	background-image:url(./images/igtab_BVLeftBotSel.gif);
+}
+.igtab_BVTextAct
+{
+	margin: 2px 0px 0px 4px;
+	border:1px dotted #000;
+}
+.igtab_BVCenterAct
+{
+}
+.igtab_BVMirrorCenterAct
+{
+}
+.igtab_BVMirrorAct
+{
+}
+.igtab_BVTailAct
+{
+}
+.igtab_BVTabAct
+{
+}
+.igtab_BVTextDis
+{
+	color:#AAAAAA;
+}
+.igtab_BVCenterDis
+{
+}
+.igtab_BVMirrorCenterDis
+{
+	background-image:url(./images/igtab_BVRightDis.gif);
+}
+.igtab_BVMirrorDis
+{
+	background-image:url(./images/igtab_BVRightBotDis.gif);
+}
+.igtab_BVTailDis
+{
+	background-position: -150px 0px;
+}
+.igtab_BVTabDis
+{
+	background-image:url(./images/igtab_BVLeftBotDis.gif);
+}
+.igtab_BVTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_BVTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+.igtab_BVRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_BVRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_BVRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_BVRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_BRoundFill.gif);
+}
+
+
+
+
+
+
+
+
+.igtab_LVControl
+{
+	overflow:hidden;
+	position:relative;
+}
+.igtab_LVContentHolder
+{
+	background:#FFFFFF;
+	border:1px solid #4679A6;
+	height:99%;
+	margin-left:24px;
+	position:relative;
+	overflow:hidden;
+	z-index:9;
+}
+.igtab_LVContent
+{
+	height:100%;
+	position:relative;
+	background-color:#FFFFFF;
+}
+.igtab_LVHolder
+{
+	overflow:hidden;
+	position:absolute;
+	z-index:999;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:25px;
+}
+.igtab_LVHolderScroll
+{	
+	top:-47px;
+}
+.igtab_LVHolderScrollInner
+{
+	top:47px;
+}
+.igtab_LVRoundedForHolder
+{
+	top:-6px;
+}
+.igtab_LVRoundedForHolderInner
+{
+	top:12px;
+}
+.igtab_LVRoundedForHolderScroll
+{
+	top:-53px;
+}
+.igtab_LVRoundedForHolderScrollInner
+{
+	top:59px;
+}
+.igtab_LVScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	top:100%;
+	margin-top:-47px;
+	margin-left:5px;	
+	z-index:20000; 
+	left:0px;
+}
+.igtab_LVRoundedForScroll
+{
+	margin-top:-53px;
+}
+.igtab_LVScrollButton
+{
+	display:block;
+	margin-top:2px;
+}
+.igtab_LVClose
+{
+	position:absolute;
+	cursor:pointer;
+	margin-top:-15px;
+	margin-left:6px;
+}
+.igtab_LVCloseSize 
+{
+	padding-bottom:14px;
+}
+.igtab_LVImage
+{
+	vertical-align:middle;
+	position:relative;
+	display:block;
+}
+.igtab_LVText
+{
+	vertical-align:middle;
+	line-height:14px;
+	font-family:Verdana;
+	font-size:11px;
+	display:block;
+	padding-left:6px;
+	position:relative;
+	
+	cursor:default;
+}
+.igtab_LVCenter
+{
+	display:block;
+	position:relative;
+	overflow:hidden;	
+	background:url(./images/igtab_LVCenter.gif) repeat-y;
+	background-color:#f0f0f0;
+	padding-left:3px;
+}
+.igtab_LVTail
+{
+	display:block;
+	background:url(./images/igtab_LVBot.gif) bottom left;
+	padding-top:3px;
+}
+.igtab_LVTab
+{
+	background:url(./images/igtab_LVTop.gif) no-repeat top left;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	padding-top:3px;
+	border-right:1px solid #4679A6;
+}
+.igtab_LVOverlap
+{
+	margin-top:-5px;
+}
+.igtab_LVTextHov
+{
+}
+.igtab_LVCenterHov
+{
+	background-image:url(./images/igtab_LVCenterHov.gif);
+	background-color:#ff9e33;
+}
+.igtab_LVTailHov
+{
+	background-image:url(./images/igtab_LVBotHov.gif);
+}
+.igtab_LVTabHov
+{
+	background-image:url(./images/igtab_LVTopHov.gif);
+	color:#ffffff;
+}
+.igtab_LVTextSel
+{
+}
+.igtab_LVCenterSel
+{
+	background-image:url(./images/igtab_LVCenterSel.gif);
+	background-color:#8fc6ea;
+}
+.igtab_LVTailSel
+{
+	background-image:url(./images/igtab_LVBotSel.gif);
+	border-right-color:#00D0D0;
+}
+.igtab_LVTabSel
+{
+	background-image:url(./images/igtab_LVTopSel.gif);
+	border-right-color:#94c8eb;
+}
+.igtab_LVTextAct
+{	
+	border:1px dotted #000;
+}
+.igtab_LVCenterAct
+{
+}
+.igtab_LVTailAct
+{
+}
+.igtab_LVTabAct
+{
+}
+.igtab_LVTextDis
+{
+}
+.igtab_LVCenterDis
+{
+	background-image:url(./images/igtab_LVCenterDis.gif);
+	background-color:#cccccc;
+}
+.igtab_LVTailDis
+{
+	background-image:url(./images/igtab_LVBotDis.gif);
+}
+.igtab_LVTabDis
+{
+	background-image:url(./images/igtab_LVTopDis.gif);
+}
+.igtab_LVTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_LVTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+.igtab_LVRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_LVRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_LVRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_LVRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundFill.gif);
+}
+
+
+
+.igtab_RVControl
+{
+	overflow:hidden;
+	position:relative;
+}
+.igtab_RVContentHolder
+{
+	background:#FFFFFF;
+	border-right:1px solid #4679A6;
+	border-bottom:1px solid #4679A6;
+	border-top:1px solid #4679A6;
+	height:99%;
+	margin-left:-24px;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	z-index:9;
+}
+.igtab_RVContentHolderInner
+{
+	border-left:1px solid #4679A6;
+	height:100%;
+	margin-left:24px;
+	position:relative;
+	overflow:hidden;
+	z-index:9;
+}
+.igtab_RVContent
+{
+	height:100%;
+	position:relative;
+	background-color:#FFFFFF;
+}
+.igtab_RVHolder
+{
+	overflow:hidden;
+	position:absolute;
+	z-index:999;
+	left:100%;
+	top:0px;
+	height:100%;
+	width:24px;
+	margin-left:-24px;
+}
+.igtab_RVHolderScroll
+{
+	top:-47px;
+}
+.igtab_RVHolderScrollInner
+{
+	top:47px;
+}
+.igtab_RVRoundedForHolder
+{
+	top:-6px;
+}
+.igtab_RVRoundedForHolderInner
+{
+	top:12px;
+}
+.igtab_RVRoundedForHolderScroll
+{
+	top:-53px;
+}
+.igtab_RVRoundedForHolderScrollInner
+{
+	top:59px;
+}
+.igtab_RVScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	top:100%;	
+	z-index:20000;
+	left:100%;
+	margin-top:-47px;
+	margin-left:-22px;
+}
+.igtab_RVRoundedForScroll
+{
+	margin-top:-53px;
+}
+.igtab_RVScrollButton
+{
+	display:block;
+	margin-top:2px;
+}
+.igtab_RVClose
+{
+	position:absolute;
+	margin-top:-15px;
+	margin-left:4px;
+	cursor:pointer;
+}
+.igtab_RVCloseSize
+{
+	padding-bottom:14px;
+}
+.igtab_RVImage
+{
+	vertical-align:middle;
+	position:relative;
+	display:block;
+}
+.igtab_RVText
+{
+	vertical-align:middle;
+	line-height:14px;
+	font-family:Verdana;
+	font-size:11px;
+	display:block;
+	padding-left:5px;
+	width:13px;
+	position:relative;
+	
+	cursor:default;
+}
+.igtab_RVCenter
+{
+	display:block;
+	position:relative;
+	overflow:hidden;
+	background:url(./images/igtab_RVCenter.gif) repeat-y top right;
+	background-color:#f0f0f0;
+	padding-left:1px;
+}
+.igtab_RVTail
+{
+	display:block;
+	background:url(./images/igtab_RVBot.gif) bottom right;
+	padding-top:3px;
+}
+.igtab_RVTab
+{
+	background:url(./images/igtab_RVTop.gif) no-repeat top right;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	padding-top:3px;
+	border-left:1px solid #4679A6;
+}
+.igtab_RVOverlap
+{
+	margin-top:-5px;
+}
+.igtab_RVTextHov
+{
+}
+.igtab_RVCenterHov
+{
+	background-image:url(./images/igtab_RVCenterHov.gif);
+	background-color:#ff9e33;
+}
+.igtab_RVTailHov
+{
+	background-image:url(./images/igtab_RVBotHov.gif);
+}
+.igtab_RVTabHov
+{
+	background-image:url(./images/igtab_RVTopHov.gif);
+	color:#ffffff;
+}
+.igtab_RVTextSel
+{
+}
+.igtab_RVCenterSel
+{
+	background-image:url(./images/igtab_RVCenterSel.gif);
+	background-color:#8fc6ea;
+}
+.igtab_RVTailSel
+{
+	background-image:url(./images/igtab_RVBotSel.gif);
+	border-left-color:#00D0D0;
+}
+.igtab_RVTabSel
+{
+	background-image:url(./images/igtab_RVTopSel.gif);
+	border-left-color:#94c8eb;
+}
+.igtab_RVTextAct
+{
+	border:1px dotted #000;
+}
+.igtab_RVCenterAct
+{
+}
+.igtab_RVTailAct
+{
+}
+.igtab_RVTabAct
+{
+}
+.igtab_RVTextDis
+{
+}
+.igtab_RVCenterDis
+{
+	background-image:url(./images/igtab_RVCenterDis.gif);
+	background-color:#cccccc;
+}
+.igtab_RVTailDis
+{
+	background-image:url(./images/igtab_RVBotDis.gif);
+}
+.igtab_RVTabDis
+{
+	background-image:url(./images/igtab_RVTopDis.gif);
+}
+.igtab_RVTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_RVTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+.igtab_RVRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_RVRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_RVRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_RVRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundFill.gif);
+}
+
+
+
+
+
+
+
+.igtab_LHControl
+{
+	overflow:hidden;
+	position:relative;
+}
+.igtab_LHContentHolder
+{
+	background:#FFFFFF;
+	border:1px solid #4679A6;
+	height:99%;
+	left:-1px;
+	position:relative;
+	overflow:hidden;
+	z-index:9;
+}
+.igtab_LHContent
+{
+	height:100%;
+	position:relative;
+	background-color:#FFFFFF;
+}
+.igtab_LHHolder
+{
+	overflow:hidden;
+	position:absolute;
+	z-index:999;
+	left:0px;
+	top:0px;
+	height:100%;
+}
+.igtab_LHHolderScroll
+{
+	top:-47px;
+}
+.igtab_LHHolderScrollInner
+{
+	top:47px;
+}
+.igtab_LHRoundedForHolder
+{
+	top:-6px;
+}
+.igtab_LHRoundedForHolderInner
+{
+	top:12px;
+}
+.igtab_LHRoundedForHolderScroll
+{
+	top:-53px;
+}
+.igtab_LHRoundedForHolderScrollInner
+{
+	top:59px;
+}
+.igtab_LHScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	top:100%;
+	margin-top:-47px;
+	margin-left:-21px;
+	z-index:20000;
+}
+.igtab_LHRoundedForScroll
+{
+	margin-top:-53px;
+}
+.igtab_LHScrollButton
+{
+	display:block;
+	margin-top:2px;
+}
+.igtab_LHClose
+{
+	position:absolute;
+	left:100%;
+	top:12px;
+	margin-left:-17px;
+	cursor:pointer;
+}
+.igtab_LHCloseSize
+{
+	padding-right:10px;
+}
+.igtab_LHImage
+{
+	vertical-align:middle;
+	position:relative;
+	margin-top:2px;
+}
+.igtab_LHText
+{
+	vertical-align:middle;	
+	line-height:24px;
+	font-family:Verdana;
+	font-size:11px;
+	white-space:nowrap;
+	position:relative;
+	cursor:default;
+}
+.igtab_LHCenter
+{
+	display:block;
+	background:url(./images/igtab_LHTop.gif) repeat-x;
+	background-color:#f0f0f0;
+	font:1px verdana;
+	line-height:1px;
+	height:100%;
+}
+.igtab_LHTail
+{
+	display:block;
+	background:url(./images/igtab_LHTopLeft.gif) no-repeat;
+	padding-left:10px;
+	white-space:nowrap;
+	border-right:1px solid #4679A6;
+	height:24px;
+}
+.igtab_LHMirror
+{
+	display:block;
+	padding-left:10px;
+	background:url(./images/igtab_LHBotLeft.gif) bottom left no-repeat;
+	border-right:1px solid #4679A6;
+	height:3px;
+}
+.igtab_LHMirrorCenter
+{
+	display:block;
+	background:url(./images/igtab_LHBot.gif) bottom left repeat-x;
+	font:1px verdana;
+	line-height:1px;
+	height:100%;
+}
+.igtab_LHTab
+{
+	display:block;
+	overflow:hidden;
+	position:relative;
+}
+.igtab_LHOverlap
+{
+	margin-top:-5px;
+}
+.igtab_LHTextHov
+{
+}
+.igtab_LHCenterHov
+{
+	background-image:url(./images/igtab_LHTopHov.gif);
+	background-color:#ff9e33;
+}
+.igtab_LHTailHov
+{
+	background-image:url(./images/igtab_LHTopLeftHov.gif);
+}
+.igtab_LHMirrorHov
+{
+	background-image:url(./images/igtab_LHBotLeftHov.gif);
+}
+.igtab_LHMirrorCenterHov
+{
+	background-image:url(./images/igtab_LHBotHov.gif);
+}
+.igtab_LHTabHov
+{
+}
+.igtab_LHTextSel
+{
+}
+.igtab_LHCenterSel
+{
+	background-image:url(./images/igtab_LHTopSel.gif);
+	background-color:#8fc6ea;
+}
+.igtab_LHTailSel
+{
+	background-image:url(./images/igtab_LHTopLeftSel.gif);
+	border-right-color:#00D0D0;
+}
+.igtab_LHMirrorSel
+{
+	background-image:url(./images/igtab_LHBotLeftSel.gif);
+	border-right-color:#00D0D0;
+}
+.igtab_LHMirrorCenterSel
+{
+	background-image:url(./images/igtab_LHBotSel.gif);
+}
+.igtab_LHTabSel
+{
+}
+.igtab_LHTextAct
+{
+	border:1px dotted blue;
+}
+.igtab_LHCenterAct
+{
+}
+.igtab_LHTailAct
+{
+}
+.igtab_LHMirrorAct
+{
+}
+.igtab_LHMirrorCenterAct
+{
+}
+.igtab_LHTabAct
+{
+}
+.igtab_LHTextDis
+{
+}
+.igtab_LHCenterDis
+{
+	background-image:url(./images/igtab_LHTopDis.gif);
+	background-color:#cccccc;
+}
+.igtab_LHTailDis
+{
+	background-image:url(./images/igtab_LHTopLeftDis.gif);
+}
+.igtab_LHMirrorDis
+{
+	background-image:url(./images/igtab_LHBotLeftDis.gif);
+}
+.igtab_LHMirrorCenterDis
+{
+	background-image:url(./images/igtab_LHBotDis.gif);
+}
+.igtab_LHTabDis
+{
+}
+.igtab_LHTabMoving
+{
+	filter:alpha(opacity:30);
+	opacity:0.3;
+}
+.igtab_LHTabMovingMarkUp
+{
+	filter:alpha(opacity:70);
+	opacity:0.7;
+}
+.igtab_LHRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_LHRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_LHRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_LHRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundFill.gif);
+}
+
+
+
+
+
+
+
+.igtab_RHControl
+{
+	overflow:hidden;
+	position:relative;
+}
+.igtab_RHContentHolder
+{
+	background:#FFFFFF;
+	border-right:1px solid #4679A6;
+	border-bottom:1px solid #4679A6;
+	border-top:1px solid #4679A6;
+	height:99%;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	z-index:9;
+}
+.igtab_RHContentHolderInner
+{
+	border-left:1px solid #4679A6;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	z-index:9;
+}
+.igtab_RHContent
+{
+	height:100%;
+	position:relative;
+	background-color:#FFFFFF;
+}
+.igtab_RHHolder
+{
+	overflow:hidden;
+	position:absolute;
+	z-index:999;
+	left:100%;
+	top:0px;
+	height:100%;
+}
+.igtab_RHHolderScroll
+{
+	top:-47px;
+}
+.igtab_RHHolderScrollInner
+{
+	top:47px;
+}
+.igtab_RHRoundedForHolder
+{
+	top:-6px;
+}
+.igtab_RHRoundedForHolderInner
+{
+	top:12px;
+}
+.igtab_RHRoundedForHolderScroll
+{
+	top:-53px;
+}
+.igtab_RHRoundedForHolderScrollInner
+{
+	top:59px;
+}
+.igtab_RHScrollButtons
+{
+	font-size:1px;
+	position:absolute;
+	top:100%;
+	margin-top:-47px;
+	z-index:20000;
+	left:100%;
+}
+.igtab_RHRoundedForScroll
+{
+	margin-top:-53px;
+}
+.igtab_RHScrollButton
+{
+	display:block;
+	margin-top:2px;
+	margin-left:3px;
+}
+.igtab_RHClose
+{
+	position:absolute;
+	top:12px;
+	margin-left:3px;
+	cursor:pointer;
+}
+.igtab_RHCloseSize
+{
+	padding-left:10px;
+}
+.igtab_RHImage
+{
+	vertical-align:middle;
+	position:relative;
+	margin-top:2px;
+}
+.igtab_RHText
+{
+	vertical-align:middle;
+	line-height:24px;
+	font-family:Verdana;
+	font-size:11px;
+	white-space:nowrap;
+	position:relative;
+	cursor:default;
+}
+.igtab_RHCenter
+{
+	display:block;
+	background:url(./images/igtab_RHTop.gif) repeat-x;
+	background-color:#f0f0f0;
+	line-height:20px;
+	font:22px sans-serif;
+	text-align:right;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.igtab_RHTail
+{
+	display:block;
+	padding-right:10px;
+	background:url(./images/igtab_RHTopRight.gif) top right no-repeat;
+	white-space:nowrap;
+	border-left:1px solid #4679A6;
+	height:24px;
+}
+.igtab_RHMirror
+{
+	display:block;
+	padding-right:10px;
+	background:url(./images/igtab_RHBotRight.gif) bottom right no-repeat;
+	border-left:1px solid #4679A6;
+	height:3px;
+}
+.igtab_RHMirrorCenter
+{
+	display:block;
+	background:url(./images/igtab_RHBot.gif) bottom left repeat-x;
+	font:1px verdana;
+	line-height:1px;
+	height:100%;
+}
+.igtab_RHTab
+{
+	display:block;
+	overflow:hidden;
+	position:relative;
+}
+.igtab_RHOverlap
+{
+	margin-top:-5px;
+}
+.igtab_RHTextHov
+{
+}
+.igtab_RHCenterHov
+{
+	background-image:url(./images/igtab_RHTopHov.gif);
+	background-color:#ff9e33;
+}
+.igtab_RHTailHov
+{
+	background-image:url(./images/igtab_RHTopRightHov.gif);
+}
+.igtab_RHMirrorHov
+{
+	background-image:url(./images/igtab_RHBotRightHov.gif);
+}
+.igtab_RHMirrorCenterHov
+{
+	background-image:url(./images/igtab_RHBotHov.gif);
+}
+.igtab_RHTabHov
+{
+}
+.igtab_RHTextSel
+{
+}
+.igtab_RHCenterSel
+{
+	background-image:url(./images/igtab_RHTopSel.gif);
+	background-color:#8fc6ea;
+}
+.igtab_RHTailSel
+{
+	background-image:url(./images/igtab_RHTopRightSel.gif);
+	border-left-color:#00D0D0;
+}
+.igtab_RHMirrorSel
+{
+	background-image:url(./images/igtab_RHBotRightSel.gif);
+	border-left-color:#00D0D0;
+}
+.igtab_RHMirrorCenterSel
+{
+	background-image:url(./images/igtab_RHBotSel.gif);
+}
+.igtab_RHTabSel
+{
+}
+.igtab_RHTextAct
+{
+	border:1px dotted blue;
+}
+.igtab_RHCenterAct
+{
+}
+.igtab_RHTailAct
+{
+}
+.igtab_RHMirrorAct
+{
+}
+.igtab_RHMirrorCenterAct
+{
+}
+.igtab_RHTabAct
+{
+}
+.igtab_RHTextDis
+{
+}
+.igtab_RHCenterDis
+{
+	background-image:url(./images/igtab_RHTopDis.gif);
+	background-color:#cccccc;
+}
+.igtab_RHTailDis
+{
+	background-image:url(./images/igtab_RHTopRightDis.gif);
+}
+.igtab_RHMirrorDis
+{
+	background-image:url(./images/igtab_RHBotRightDis.gif);
+}
+.igtab_RHMirrorCenterDis
+{
+	background-image:url(./images/igtab_RHBotDis.gif);
+}
+.igtab_RHTabDis
+{
+}
+.igtab_RHRoundedCorners
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundCorners.gif);
+	background-repeat:no-repeat;
+}
+.igtab_RHRoundedTopBottom
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundTopBot.gif);
+	background-repeat:repeat-x;
+}
+.igtab_RHRoundedLeftRight
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundLeftRight.gif);
+	background-repeat:repeat-y;
+}
+.igtab_RHRoundedFill
+{
+	position:absolute;
+	display:block;
+	background-image:url(./images/igtab_TRoundFill.gif);
+}

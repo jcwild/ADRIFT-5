@@ -1,0 +1,41 @@
+﻿.igfeb_Control
+{
+	background-color: Transparent;
+}
+
+.igfeb_ControlHover
+{
+				
+				
+}
+
+.igfeb_FishEyeItemLabel
+{
+}
+
+.igfeb_FishEyeItem
+{
+}
+
+.igfeb_FishEyeItemHover
+{			
+}
+
+.igfeb_FishEyeItemDisabled
+{
+				
+				
+}
+
+.igfeb_ControlFocus
+{
+				
+				
+}
+
+.igfeb_FishEyeItemSelected
+{
+	background-position: bottom;
+	background-image: url(images/igfeb_itemselected.png);	
+	background-repeat:  no-repeat;
+}

@@ -1,0 +1,174 @@
+.iglb_Control
+{
+	border:solid 1px #DCDCDC;
+	margin-bottom:0px;
+}
+
+
+.iglb_Control_Exp
+{
+	border:solid 1px #DCDCDC;
+}
+
+
+.iglb_Button
+{
+	background-image: url(images/header.gif);
+	font-size:x-small;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:3px;
+	cursor:hand;
+	color:White;
+}
+
+
+.iglb_ButtonHover
+{
+	background-position:bottom ;
+	background-image: url(images/header_hover.gif);
+	font-size:x-small;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:3px;
+	cursor:hand;
+	color:White;
+}
+
+
+.iglb_ButtonSelected
+{
+	background-image: url(images/header.gif);
+	font-size:x-small;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:3px;
+	cursor:hand;
+	color:White;
+}
+
+
+.iglb_HeaderCollapsed
+{
+	background-image: url(images/header.gif);
+	font-size:x-small;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:3px;
+	cursor:hand;
+	color:White;
+}
+
+
+.iglb_HeaderExpanded
+{
+	background-image: url(images/header.gif);
+	font-size:x-small;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:3px;
+	cursor:hand;
+	color:White;
+}
+
+
+.iglb_HeaderHover
+{
+	background-position:bottom ;
+	background-image: url(images/header_hover.gif);
+	font-size:x-small;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:3px;
+	cursor:hand;
+	color:White;
+}
+
+
+.iglb_Group
+{
+}
+
+
+.iglb_Group_Exp
+{
+	margin-bottom:0px;
+}
+
+
+.iglb_Item
+{
+	font-size:xx-small;
+	margin-top:8px;
+	margin-bottom:3px;
+	padding-left:4px;
+	text-align:left;
+}
+
+
+.iglb_Item_Exp
+{
+	font-size:xx-small;
+	margin-top:4px;
+	margin-bottom:0px;
+	padding-bottom:3px;
+	padding-left:4px;
+	cursor:hand;
+	text-align:left;
+}
+
+
+.iglb_ItemHover
+{
+	font-size:xx-small;
+	margin-top:8px;
+	margin-bottom:3px;
+	padding-left:4px;
+	cursor:hand;
+	color:#74B8E4;
+	text-align:left;
+	text-decoration:underline;
+}
+
+
+.iglb_ItemHover_Exp
+{
+	font-size:xx-small;
+	margin-top:4px;
+	margin-bottom:0px;
+	padding-bottom:3px;
+	padding-left:4px;
+	cursor:hand;
+	color:#74B8E4;
+	text-align:left;
+	text-decoration:underline;
+}
+
+
+.iglb_ItemSelected
+{
+	font-weight:bold;
+	font-size:xx-small;
+	margin-top:8px;
+	margin-bottom:3px;
+	padding-left:4px;
+	cursor:hand;
+	color:#74B8E4;
+	text-align:left;
+}
+
+
+.iglb_ItemSelected_Exp
+{
+	font-weight:bold;
+	font-size:xx-small;
+	margin-top:4px;
+	margin-bottom:0px;
+	padding-bottom:3px;
+	padding-left:4px;
+	cursor:hand;
+	color:#74B8E4;
+	text-align:left;
+}
+
+

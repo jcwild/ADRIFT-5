@@ -1,0 +1,136 @@
+.igspell_Wrapper
+{
+	background-repeat:no-repeat;
+	background-image: url(images/officeblue.jpg);
+	font-size:x-small;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin:0px;
+	padding:5px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+
+.igspell_DocumentTextPanel
+{
+	background-color:White;
+	border:solid 1px #BFDBFF;
+	position: absolute;
+	height: 85px;
+	width: 230px;
+	left: 10px;
+	top: 76px;
+	overflow: auto;
+}
+
+
+.igspell_Button
+{
+	background-color:Transparent;
+	background-repeat:no-repeat;
+	background-image: url(images/button_officeblue.png);
+	font-size:10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-width:0px;
+	width: 95px;
+	height: 21px;
+	position: absolute;
+	left: 250px;
+	cursor:hand;
+}
+
+
+.igspell_ChangeToBox
+{
+	border:solid 1px #BFDBFF;
+	position: absolute;
+	left: 10px;
+	top: 197px;
+	width: 230px;
+	height: 25px;
+}
+
+
+.igspell_Suggestions
+{
+	border:solid 1px #BFDBFF;
+	position: absolute;
+	left: 10px;
+	top: 262px;
+	width: 340px;
+	height: 109px;
+}
+
+
+.igspell_Label
+{
+	font-weight:bold;
+	font-size:xx-small;
+	margin-bottom:2px;
+	position: absolute;
+	left: 10px;
+	color:#151C55;
+}
+
+
+.igspell_BadWord
+{
+	border-bottom:solid 1px Red;
+}
+
+
+.igspell_IgnoreButton
+{
+	top: 76px;
+}
+
+
+.igspell_IgnoreAllButton
+{
+	top: 102px;
+}
+
+
+.igspell_ChangeButton
+{
+	top: 197px;
+}
+
+
+.igspell_ChangeAllButton
+{
+	top: 223px;
+}
+
+
+.igspell_FinishButton
+{
+	top: 374px;
+}
+
+
+.igspell_AddButton
+{
+	top: 128px;
+}
+
+
+.igspell_ChangeToLabel
+{
+	top: 180px;
+}
+
+
+.igspell_SuggestionsLabel
+{
+	top: 246px;
+}
+
+
+.igspell_NotFoundLabel
+{
+	top: 10px;
+}
+
+

@@ -1,0 +1,181 @@
+.igdw_Control
+{
+	background-color:Transparent;
+	border-width:0px;
+}
+
+
+.igdw_HeaderArea
+{
+	background-color:Transparent;
+	font-weight:bold;
+	border-width:0px;
+	height: 24px;
+	cursor:default;
+	color:White;
+}
+
+
+.igdw_BodyContent
+{
+	border:solid 0px #999999;
+}
+
+
+.igdw_HeaderButton
+{
+	margin:4px 3px 3px 3px;
+	cursor:pointer;
+}
+
+
+.igdw_HeaderCaption
+{
+	margin-top:16px;
+	margin-left:6px;
+	padding-top:10px;
+	color:White;
+}
+
+
+.igdw_HeaderButtonArea
+{
+	width: 120px;
+	vertical-align:middle;
+}
+
+
+.igdw_HeaderImage
+{
+	cursor:default;
+}
+
+
+.igdw_ModalBackground
+{
+	background-color:White;
+	filter: alpha(opacity : 50);
+	opacity: 0.5;
+	z-index: 99999;
+}
+
+
+.igdw_ResizingHandle
+{
+	cursor:se-resize;
+}
+
+
+/* used only when header visible */
+.igdw_HeaderCornerLeft
+{
+	background-color:Transparent;
+	background-position:top left ;
+	background-image: url(images/igdw_HeaderCornerLeft.gif);
+	width: 9px;
+}
+
+
+/* used only when header visible */
+.igdw_HeaderContent
+{
+	background-image: url(images/igdw_HeaderContent.gif);
+}
+
+
+/* used only when header visible */
+.igdw_HeaderCornerRight
+{
+	background-position:top right ;
+	background-image: url(images/igdw_HeaderCornerRight.gif);
+	width: 9px;
+}
+
+
+/* used only when header hidden */
+.igdw_BodyCornerTopLeft
+{
+	background-repeat:no-repeat;
+	background-image: url(images/igdw_BodyCornerTopLeft.gif);
+	width: 6px;
+}
+
+
+/* used only when header hidden */
+.igdw_BodyEdgeTop
+{
+	background-repeat:repeat-x;
+	background-image: url(images/igdw_BodyEdgeTop.gif);
+}
+
+
+/* used only when header hidden */
+.igdw_BodyCornerTopRight
+{
+	background-repeat:no-repeat;
+	background-position:right ;
+	background-image: url(images/igdw_BodyCornerTopRight.gif);
+	width: 6px;
+}
+
+
+.igdw_BodyEdgeLeft
+{
+	background-color:WhiteSmoke;
+	background-repeat:repeat-y;
+	border-right:solid 1px #BBBBBB;
+	border-left:solid 1px #666666;
+	width: 6px;
+}
+
+
+.igdw_BodyEdgeRight
+{
+	background-color:WhiteSmoke;
+	border-right:solid 1px #666666;
+	border-left:solid 1px #BBBBBB;
+	width: 6px;
+}
+
+
+.igdw_BodyCornerBottomLeft
+{
+	background-color:WhiteSmoke;
+	background-repeat:no-repeat;
+	background-image: url(images/igdw_BodyCornerBottomLeft.gif);
+	font-size:1px;
+	height: 14px;
+	width: 9px;
+}
+
+
+.igdw_BodyContentArea
+{
+	background-color:White;
+	vertical-align:top;
+}
+
+
+.igdw_BodyCornerBottomRight
+{
+	background-color:Gainsboro;
+	background-repeat:no-repeat;
+	background-image: url(images/igdw_BodyCornerBottomRight.gif);
+	background-position:right top;	
+	font-size:1px;
+	height: 14px;
+	width: 9px;
+}
+
+
+.igdw_BodyEdgeBottom
+{
+	background-color:WhiteSmoke;
+	background-repeat:repeat-x;
+	background-image: url(images/igdw_BodyEdgeBottom.gif);
+	font-size:1px;
+	border-top:solid 1px #BBBBBB;
+	height: 15px;
+}
+
+

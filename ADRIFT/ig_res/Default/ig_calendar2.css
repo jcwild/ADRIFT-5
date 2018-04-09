@@ -1,0 +1,193 @@
+.igmc_Control
+{
+	background-color: #eee;
+	border:1px solid #BBBBBB;
+	height: 20px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.igmc_DOW
+{
+	background-color: #eeeeee;
+	background-repeat:repeat-x;
+	background-position:top;
+	background-image: url(images/igmc_dowbg.gif);
+	font-size:xx-small;
+	border-width:0px;
+	border-bottom:solid 1px #CCCCCC;
+	padding: 3px 5px;
+	height: 14px;
+	text-align:center;
+	font-weight: bold;
+}
+
+.igmc_NextPrev
+{
+	margin: 0px;
+	padding: 0px;
+	font-size:xx-small;
+	color: #FFFFFF;
+	padding: 0px 5px;
+}
+
+.igmc_HoverNextPrev
+{
+	cursor: pointer;
+	color: #FF9933;
+}
+
+.igmc_PressedNextPrev
+{
+}
+
+.igmc_Footer
+{
+	background-color: #FFFFFF;
+	background-image: url(images/igmc_footerbg.gif);
+	background-repeat:repeat-x;
+	border-top: 1px solid #dddddd;
+	padding:2px;
+	font-size:xx-small;
+	text-align:center;
+	height:20px;
+}
+
+.igmc_HoverFooter
+{
+	background-color: #F1F1F1;
+	background-image: url(images/igmc_footerbghover.gif);
+	background-repeat:repeat-x;
+	cursor: pointer;
+}
+
+.igmc_PressedFooter
+{
+	background-color: #FFFFFF;
+	background-image: url(images/igmc_footerbgpressed.gif);
+	background-repeat:repeat-x;
+}
+
+.igmc_Header
+{
+	background-color: #6eb6e5;
+	background-repeat:repeat-x;
+	background-position:top;
+	background-image: url(images/igmc_headerbg.png);
+	font-size:10px;
+	height: 20px;
+	border-bottom: 1px solid #6691B8;
+}
+
+.igmc_MonthYear
+{
+	font-size:10px;
+	font-weight:bold;
+	padding:2px;
+	color: #FFFFFF;
+}
+
+.igmc_PressedMonthYear
+{
+	color: #ff9933;
+}
+
+.igmc_HoverMonthYear
+{
+	cursor: pointer;
+	color: #ff9933;
+	
+}
+
+.igmc_Day
+{
+	background-color:#FFFFFF;
+	font-size:xx-small;
+	text-align:center;
+	padding: 5px;
+}
+
+.igmc_WeekNumber
+{
+	border-right: 1px solid #DDDDDD;
+	background-color: #F5F5F5;
+	background-repeat:repeat-x;
+	background-position:top;
+	background-image: url(images/igmc_weekbg.gif);
+	font-weight: bold;
+}
+
+.igmc_WeekendDay
+{
+	background-color:#FAFAFA;
+}
+
+.igmc_OtherMonthDay
+{
+	color:#AAAAAA;
+	background-image: none;
+}
+
+.igmc_TodayDay
+{
+	background-color: #F1F9FE;
+}
+
+.igmc_SelectedDay
+{
+	background-color: #DDDDDD;
+	font-weight:bold;
+}
+
+.igmc_FocusDay
+{
+	background-color: #ff9933;
+	color:#FFFFFF;
+}
+
+.igmc_HoverDay
+{
+	background-color: #ff9933;
+	background-image: url(images/igmc_dayselected.gif);
+	background-repeat: repeat-x;
+	color:#FFFFFF;
+	font-weight: bold;
+}
+
+
+
+.igmc_DisabledDay
+{
+	color:#FFFFFF;
+}
+
+/* CSS classes for Month and Year selection Popup in header */
+.igmc_List
+{
+	background:#FFFFFF;
+	border:1px solid #666666;
+}
+
+.igmc_Item
+{
+	font-size:8pt;
+	background:#F7F7F7;
+	padding: 2px;
+	text-align: center;
+}
+
+.igmc_SelectedItem
+{
+	background-color: #ff9933;
+	background-image: url(images/igmc_dayselected.gif);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.igmc_HoverItem
+{
+	background-color: #ff9933;
+	color: #FFFFFF;
+	cursor: pointer;
+}

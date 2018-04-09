@@ -1,0 +1,62 @@
+.igtr_Control
+{
+	border-width:0px;
+	color:Black;
+}
+
+
+.igtr_Island
+{
+}
+
+
+.igtr_Node
+{
+	cursor:hand;
+	color:Black;
+}
+
+
+.igtr_Parent
+{
+	cursor:hand;
+}
+
+
+.igtr_Leaf
+{
+	cursor:hand;
+}
+
+
+.igtr_Edit
+{
+}
+
+
+.igtr_Root
+{
+	font-weight:bold;
+	color:#74B8E4;
+}
+
+
+.igtr_Hover
+{
+	color:#74B8E4;
+	text-decoration:underline;
+}
+
+
+.igtr_Selected
+{
+	background-color:WhiteSmoke;
+	font-weight:bold;
+	color:#74B8E4;
+}
+
+
+.igtr_Disabled
+{
+	color:#DADEE8;
+}

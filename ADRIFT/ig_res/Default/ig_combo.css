@@ -1,0 +1,114 @@
+.igcmb_Control
+{
+	background-color:Black;
+	border:solid 1px #ABC1DE;
+}
+
+
+.igcmb_EditWithButtons
+{
+	border:solid 1px #ABC1DE;
+	cursor:hand;
+}
+
+
+.igcmb_PagerArea
+{
+}
+
+
+.igcmb_PageCurrent
+{
+}
+
+
+.igcmb_PageLink
+{
+}
+
+
+.igcmb_Item
+{
+	border:solid 1px Transparent;
+	border-right-color:#D0D7E5;
+	border-bottom-color:#D0D7E5;
+}
+
+
+.igcmb_Alt
+{
+}
+
+
+.igcmb_Header
+{
+	background-color:Transparent;
+	background-position:bottom ;
+	background-image: url(images/office_grid_header.jpg);
+	border-width:0px;
+	border-color:Transparent;
+	border-right-width:1px;
+	border-right-color:#F29536;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+
+.igcmb_Footer
+{
+}
+
+
+.igcmb_Label
+{
+	background-color:#E4ECF7;
+	background-image:none;
+	border-right-width:1px;
+	border-right-color:#D0D7E5;
+	border-bottom-width:1px;
+	border-bottom-color:#D0D7E5;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+
+.igcmb_Selected
+{
+	background-color:#EAECF5;
+	border:solid 1px #EAECF5;
+}
+
+
+.igcmb_EditSelected
+{
+	background-color:White;
+	font-size:x-small;
+	font-family: Verdana;
+	border:solid 1px Transparent;
+	padding-top:7px;
+	text-align:left;
+	vertical-align:middle;
+}
+
+
+.igcmb_ActiveBorderTopBottom
+{
+	border-top-width:1px;
+	border-top-color:#1E1E1E;
+	border-bottom-width:1px;
+	border-bottom-color:#1E1E1E;
+}
+
+
+.igcmb_ActiveBorderLeft
+{
+	border-left:solid 1px #1E1E1E;
+}
+
+
+.igcmb_ActiveBorderRight
+{
+	border-right:solid 1px #1E1E1E;
+}
+
+

@@ -1,0 +1,80 @@
+.igtxt_EditWithButtons
+{
+	background-color:White;
+	font-family: Verdana;
+	font-size:10px;
+	line-height:1px;
+	height:20px;
+	width:130px;
+	border:solid 1px Gainsboro;
+}
+
+
+.igtxt_Edit
+{
+	background-color:White;
+	border:solid 1px Gainsboro;
+	outline:0;
+}
+
+.igtxt_TextArea
+{
+	background-color:White;
+	border:solid 1px Gainsboro;
+	font-family:arial;
+	font-size:12px;
+	outline:0;
+}
+
+.igtxt_EditInContainer
+{
+	background-color:White;
+	border-width:0px;
+	margin:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	outline:0;
+}
+
+.igtxt_Focus
+{
+	border-color:#C0C080;
+}
+
+.igtxt_ButtonSize
+{
+	width:15px;
+	height:100%;
+}
+
+.igtxt_Button
+{
+	background-color:White;
+	line-height:normal;
+	border:solid 1px White;
+}
+
+.igtxt_ButtonFocus
+{
+	background-color:#F0F0B0;
+}
+
+.igtxt_ButtonHover
+{
+	background-color:#ABC1DE;
+	border:solid 1px #ABC1DE;
+}
+
+
+.igtxt_ButtonPressed
+{
+	background-color:#FFA738;
+	border:solid 1px #ABC1DE;
+}
+
+
+.igtxt_ButtonDisabled
+{
+	background-color:#EAF2FB;
+	border:solid 1px White;
+}

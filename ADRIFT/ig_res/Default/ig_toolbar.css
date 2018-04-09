@@ -1,0 +1,64 @@
+.igtb_Control
+{
+	background-color:#E3EFFF;
+	background-image: url(images/groupbyheader.gif);
+	border-color:WhiteSmoke;
+}
+
+
+.igtb_Item
+{
+}
+
+
+.igtb_Button
+{
+	background-color:Transparent;
+	border:solid 1px Transparent;
+	padding-right:38px;
+	padding-left:4px;
+}
+
+
+.igtb_ButtonHover
+{
+	background-position:center ;
+	background-image: url(images/header.gif);
+	border:solid 1px #699BC9;
+	color:White;
+	padding-right:38px;
+	padding-left:4px;
+}
+
+
+.igtb_ButtonPressed
+{
+	background-position:center ;
+	background-image: url(images/header.gif);
+	border:solid 1px #699BC9;
+	color:White;
+}
+
+
+.igtb_Label
+{
+	background-color:Transparent;
+}
+
+
+.igtb_TextBox
+{
+}
+
+
+.igtb_Separator
+{
+	background-color:Transparent;
+}
+
+
+.igtb_Office2007BlueButtonDisabled
+{
+}
+
+

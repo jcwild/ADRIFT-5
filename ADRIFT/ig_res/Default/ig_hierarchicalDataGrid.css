@@ -1,0 +1,131 @@
+﻿.ighg_ExpandButton
+{
+	cursor: pointer;
+	cursor: hand;
+	padding-left: 5px;
+}
+
+TBODY>TR>TD.ighg_ExpandableArea
+{
+	padding: 0px 0px 0px 25px;
+}
+
+.ighg_ExpansionColumn
+{
+	width: 25px;
+	padding: 0 !important;
+}
+
+.ighg_ExpansionColumnHeader
+{
+	width: 25px;
+}
+
+.ighg_ExpansionColumnFooter
+{
+	width: 25px;
+}
+
+/* START -- GroupBy CSS Classes */
+.ighg_GroupIndentHeaderCell
+{
+}
+
+TBODY>TR.ighg_GroupedRow>TD
+{
+	background: #EEEEEE url(images/ighg_GroupedRowBg.png) repeat-x;
+}
+
+
+TBODY>TR>TD.ighg_GroupIndentCell
+{
+	border-right: 1px solid #D8D8D8;
+}
+
+.ighg_GroupArea
+{
+	background: #EEEEEE url(images/ighg_GroupAreaBg.png) repeat-x;
+	border-bottom: 1px solid #999999;
+	padding: 10px;
+	color: #333333;
+}
+
+.ighg_GroupedColumn
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnBg.png) repeat-x;
+	height: 16px;
+	padding: 3px 5px 0px 10px;
+}
+.ighg_GroupedColumnRightEdgeEnd
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnRightEdgeEndBg.gif) no-repeat;		
+	width: 10px;
+	height: 16px;
+	padding-top: 3px;
+}
+.ighg_GroupedColumnRightEdge
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnRightEdgeBg.png) no-repeat;
+	width: 10px;
+	height: 16px;
+	padding-top: 3px;
+}
+
+.ighg_GroupedColumnLeftEdge
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedColumnLeftEdgeBg.gif) no-repeat;
+	width: 9px;
+	height: 16px;
+	padding-top: 3px;
+}
+
+.ighg_GroupedBand
+{
+	display: inline-block;
+	background: url(images/ighg_GroupedBandBg.png) repeat-x;
+	border-left: 1px solid #FF9900;
+	height: 16px;
+	padding: 3px 0px 0px 10px;
+}
+.ighg_GroupedBandRightEdge
+{		
+	display: inline-block;
+	background: url(images/ighg_GroupedBandBg.png) repeat-x;
+	border-right: 1px solid #FF9900;
+	width: 10px;
+	height: 16px;
+	padding: 3px 0px 0px 0px;
+}
+
+.ighg_ColumnGroupingTopDragIndicator
+{
+	background-image:url(images/ighg_TopDragIndicator.gif);
+	background-repeat: no-repeat;
+	width:5px; 
+	height:3px;
+	z-index: 100;
+}
+
+.ighg_ColumnGroupingMiddleDragIndicator
+{
+      background-image:url(images/ighg_MiddleDragIndicator.gif);
+      background-repeat: repeat-y;
+      background-position: center;
+      width:3px; 
+}
+
+.ighg_ColumnGroupingBottomDragIndicator
+{
+      background-image:url(images/ighg_BottomDragIndicator.gif);
+      background-repeat: no-repeat;
+      width:5px; 
+      height:3px;
+      position: absolute;
+      z-index: 100;   
+}
+/* END -- GroupBy CSS Classes */
+@media print{.ighg_Control, .ighg_Control div{width:auto !important; height:auto !important; overflow: visible !important;}}
