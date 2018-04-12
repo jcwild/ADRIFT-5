@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Adventure>
+    <Version>5.0000321</Version>
+    <LastUpdated>2014-11-17 17:21:08</LastUpdated>
+    <Title>Time System library</Title>
+    <Author>Campbell Wild</Author>
+    <Description>Basic Time System library.  This library keeps track of hours and minutes, and has periods of the day.  Outdoor locations will become dark at night unless you have a light source.</Description>
+    <Folder>
+        <Key>ts_fldTimeSystem</Key>
+        <Name>Time System</Name>
+        <Member>ts_fldSystemTasks</Member>
+        <Member>ts_fldVariables</Member>
+        <Member>ts_fldEvents</Member>
+        <Member>ts_fldFunctions</Member>
+        <Member>ts_tasSleep</Member>
+        <Member>ts_tasCheckTime</Member>
+        <Member>ts_grpOutside</Member>
+        <Expanded>0</Expanded>
+        <Height>219</Height>
+        <Width>317</Width>
+        <Visible>1</Visible>
+        <X>139</X>
+        <Y>122</Y>
+        <SortColumn>0</SortColumn>
+        <LastUpdated>2014-11-17 17:20:49</LastUpdated>
+        <Created>2014-11-17 17:20:49</Created>
+    </Folder>
+    <Folder>
+        <Key>ts_fldSystemTasks</Key>
+        <Name>System Tasks</Name>
+        <Member>ts_tasSetDayPeriod</Member>
+        <Member>ts_tasInitialise</Member>
+        <Member>ts_tasIncrement</Member>
+        <Member>ts_tasSunset</Member>
+        <Member>ts_tasSunrise</Member>
+        <Height>198</Height>
+        <Width>206</Width>
+        <X>461</X>
+        <Y>138</Y>
+        <LastUpdated>2014-11-17 17:20:49</LastUpdated>
+        <Created>2014-11-17 17:20:49</Created>
+    </Folder>
+    <Folder>
+        <Key>ts_fldVariables</Key>
+        <Name>Variables</Name>
+        <Member>ts_varDayPeriodText</Member>
+        <Member>ts_varHour</Member>
+        <Member>ts_varMinute</Member>
+        <Member>ts_varDay</Member>
+        <Member>ts_varMinutesPerTurn</Member>
+        <Member>ts_varDayPeriodNumber</Member>
+        <Member>ts_varSunsetHour</Member>
+        <Member>ts_varSunriseHour</Member>
+        <Height>259</Height>
+        <Width>185</Width>
+        <X>461</X>
+        <Y>122</Y>
+        <LastUpdated>2014-11-17 17:20:49</LastUpdated>
+        <Created>2014-11-17 17:20:49</Created>
+    </Folder>
+    <Folder>
+        <Key>ts_fldEvents</Key>
+        <Name>Events</Name>
+        <Member>ts_evtCallIncrementTime</Member>
+        <Height>126</Height>
+        <Width>239</Width>
+        <X>473</X>
+        <Y>158</Y>
+        <LastUpdated>2014-11-17 17:20:49</LastUpdated>
+        <Created>2014-11-17 17:20:49</Created>
+    </Folder>
+    <Folder>
+        <Key>ts_fldFunctions</Key>
+        <Name>Functions</Name>
+        <Member>ts_funDayPeriod</Member>
+        <Member>ts_funDisplayTime</Member>
+        <Height>149</Height>
+        <Width>181</Width>
+        <X>463</X>
+        <Y>144</Y>
+        <LastUpdated>2014-11-17 17:20:49</LastUpdated>
+        <Created>2014-11-17 17:20:49</Created>
+    </Folder>        
+    <Task>
+        <Key>ts_tasInitialise</Key>
+        <Priority>50000</Priority>
+        <Type>System</Type>
+        <RunImmediately>1</RunImmediately>
+        <Description>Initialise Time</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;!--
+
+Use this task to set your preferred Start Time in the game
+
+--&gt;</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Actions>
+            <SetTasks>Execute ts_tasSetDayPeriod</SetTasks>
+        </Actions>
+        <LastUpdated>2014-11-17 17:17:24</LastUpdated>
+        <Created>2014-11-17 17:17:24</Created>
+    </Task>
+    <Task>
+        <Key>ts_tasIncrement</Key>
+        <Priority>2</Priority>
+        <Type>System</Type>
+        <Description>Increment Time</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;!--
+
+This task increments time by the specified number of minutes per turn
+
+--&gt;</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Actions>
+            <IncVariable>ts_varMinute = %MinutesPerTurn%</IncVariable>
+            <IncVariable>ts_varHour = (%Minute%-30)/60</IncVariable>
+            <IncVariable>ts_varDay = (%Hour%-12)/24</IncVariable>
+            <SetVariable>ts_varMinute = %Minute% MOD 60</SetVariable>
+            <SetVariable>ts_varHour = %Hour% MOD 24</SetVariable>
+            <SetVariable>ts_varDay = %Day% MOD 30</SetVariable>
+            <SetTasks>Execute ts_tasSetDayPeriod</SetTasks>
+        </Actions>
+        <LastUpdated>2014-11-12 13:30:05</LastUpdated>
+        <Created>2014-11-12 13:30:05</Created>
+    </Task>
+    <Task>
+        <Key>ts_tasCheckTime</Key>
+        <Priority>3</Priority>
+        <Type>General</Type>
+        <Command>{check{ the} }time</Command>
+        <Description>Check Time</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>Time: %DisplayTime%
+Day Period: %DayPeriod%</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <LastUpdated>2014-11-17 17:20:00</LastUpdated>
+        <Created>2014-11-17 17:20:00</Created>
+    </Task>
+    <Task>
+        <Key>ts_tasSetDayPeriod</Key>
+        <Priority>4</Priority>
+        <Type>System</Type>
+        <Description>Set DayPeriod</Description>
+        <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Actions>
+            <SetVariable>ts_varDayPeriodNumber = IF(%Hour% &gt;= 6, IF(%Hour% &gt;= 12, IF(%Hour% &gt;= 17, 3, 2), 1), 4)</SetVariable>
+            <SetTasks>Execute ts_tasSunset</SetTasks>
+            <SetTasks>Execute ts_tasSunrise</SetTasks>
+        </Actions>
+        <LastUpdated>2014-11-17 16:23:05</LastUpdated>
+        <Created>2014-11-17 16:23:05</Created>
+    </Task>
+    <Task>
+        <Key>ts_tasSleep</Key>
+        <Priority>5</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>Sleep</GeneralTask>
+        <Description>Override default Sleep - wake up in morning</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>You lie down on the spot and fall asleep.  Next thing you know, it's the morning.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>Override</SpecificOverrideType>
+        <Restrictions>
+            <Restriction>
+                <Variable>ts_varDayPeriodNumber Must BeGreaterThan 2</Variable>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>It's too early to go to sleep!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetVariable>ts_varHour = 7</SetVariable>
+            <SetVariable>ts_varMinute = 0</SetVariable>
+            <SetTasks>Execute ts_tasSetDayPeriod</SetTasks>
+        </Actions>
+        <LastUpdated>2014-11-17 17:18:32</LastUpdated>
+        <Created>2014-11-17 17:18:32</Created>
+    </Task>
+    <Task>
+        <Key>ts_tasSunset</Key>
+        <Priority>6</Priority>
+        <Type>System</Type>
+        <Description>Sunset</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text />
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% Must BeWithinLocationGroup ts_grpOutside</Character>
+                    </Restriction>
+                    <Restriction>
+                        <Variable>ts_varHour Must BeEqualTo ts_varSunsetHour</Variable>
+                    </Restriction>
+                    <BracketSequence>#A#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>The sun sets.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>0</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Restrictions>
+            <Restriction>
+                <Variable>ts_varHour Must BeGreaterThanOrEqualTo ts_varSunsetHour</Variable>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Unset ts_tasSunrise</SetTasks>
+            <AddLocationToGroup>EverywhereInGroup ts_grpOutside ToGroup DarkLocations</AddLocationToGroup>
+        </Actions>
+        <LastUpdated>2014-11-17 16:55:42</LastUpdated>
+        <Created>2014-11-17 16:55:42</Created>
+    </Task>
+    <Task>
+        <Key>ts_tasSunrise</Key>
+        <Priority>7</Priority>
+        <Type>System</Type>
+        <Description>Sunrise</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text />
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% Must BeWithinLocationGroup ts_grpOutside</Character>
+                    </Restriction>
+                    <Restriction>
+                        <Variable>ts_varHour Must BeEqualTo ts_varSunriseHour</Variable>
+                    </Restriction>
+                    <BracketSequence>#A#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>The sun rises.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>0</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Restrictions>
+            <Restriction>
+                <Variable>ts_varHour Must BeGreaterThanOrEqualTo ts_varSunriseHour</Variable>
+            </Restriction>
+            <Restriction>
+                <Variable>ts_varHour Must BeLessThan ts_varSunsetHour</Variable>
+            </Restriction>
+            <Restriction>
+                <Task>ts_tasSunset Must BeComplete</Task>
+            </Restriction>
+            <BracketSequence>#A#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Unset ts_tasSunset</SetTasks>
+            <RemoveLocationFromGroup>EverywhereInGroup ts_grpOutside FromGroup DarkLocations</RemoveLocationFromGroup>
+        </Actions>
+        <LastUpdated>2014-11-17 16:45:24</LastUpdated>
+        <Created>2014-11-17 16:45:24</Created>
+    </Task>
+    <Event>
+        <Key>ts_evtCallIncrementTime</Key>
+        <Description>Call Increment Time</Description>
+        <WhenStart>Immediately</WhenStart>
+        <Length>1</Length>
+        <Repeating>1</Repeating>
+        <SubEvent>
+            <When>1 FromStartOfEvent</When>
+            <What>ExecuteTask</What>
+            <Measure>Turns</Measure>
+            <Action>ExecuteTask ts_tasIncrement</Action>
+        </SubEvent>
+        <LastUpdated>2014-11-12 13:05:01</LastUpdated>
+        <Created>2014-11-12 13:05:01</Created>
+    </Event>    
+    <Variable>
+        <Key>ts_varDayPeriodText</Key>
+        <Name>DayPeriodText</Name>
+        <Type>Text</Type>
+        <InitialValue>Morning
+Afternoon
+Evening
+Night</InitialValue>
+        <ArrayLength>4</ArrayLength>
+        <LastUpdated>2014-11-12 13:19:04</LastUpdated>
+        <Created>2014-11-12 13:19:04</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varHour</Key>
+        <Name>Hour</Name>
+        <Type>Numeric</Type>
+        <InitialValue>12</InitialValue>
+        <LastUpdated>2014-11-17 17:17:03</LastUpdated>
+        <Created>2014-11-17 17:17:03</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varMinute</Key>
+        <Name>Minute</Name>
+        <Type>Numeric</Type>
+        <InitialValue>0</InitialValue>
+        <LastUpdated>2014-11-17 17:17:07</LastUpdated>
+        <Created>2014-11-17 17:17:07</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varDay</Key>
+        <Name>Day</Name>
+        <Type>Numeric</Type>
+        <InitialValue>1</InitialValue>
+        <LastUpdated>2014-11-17 17:17:12</LastUpdated>
+        <Created>2014-11-17 17:17:12</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varMinutesPerTurn</Key>
+        <Name>MinutesPerTurn</Name>
+        <Type>Numeric</Type>
+        <InitialValue>3</InitialValue>
+        <LastUpdated>2014-11-17 17:17:18</LastUpdated>
+        <Created>2014-11-17 17:17:18</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varDayPeriodNumber</Key>
+        <Name>DayPeriodNumber</Name>
+        <Type>Numeric</Type>
+        <InitialValue>1</InitialValue>
+        <LastUpdated>2014-11-12 13:29:02</LastUpdated>
+        <Created>2014-11-12 13:29:02</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varSunsetHour</Key>
+        <Name>SunsetHour</Name>
+        <Type>Numeric</Type>
+        <InitialValue>19</InitialValue>
+        <LastUpdated>2014-11-17 16:05:29</LastUpdated>
+        <Created>2014-11-17 16:05:29</Created>
+    </Variable>
+    <Variable>
+        <Key>ts_varSunriseHour</Key>
+        <Name>SunriseHour</Name>
+        <Type>Numeric</Type>
+        <InitialValue>6</InitialValue>
+        <LastUpdated>2014-11-17 16:05:40</LastUpdated>
+        <Created>2014-11-17 16:05:40</Created>
+    </Variable>    
+    <Group>
+        <Key>ts_grpOutside</Key>
+        <Type>Locations</Type>
+        <Name>Outside Locations</Name>        
+        <LastUpdated>2014-11-17 16:25:48</LastUpdated>
+        <Created>2014-11-17 16:25:48</Created>
+    </Group>
+    <Function>
+        <Key>ts_funDisplayTime</Key>
+        <Name>DisplayTime</Name>
+        <Output>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;# IF(%Hour%&lt;10, "0", "") #&gt;%Hour%:&lt;# IF(%Minute%&lt;10, "0", "") #&gt;%Minute%</Text>
+            </Description>
+        </Output>
+        <LastUpdated>2014-11-12 13:01:03</LastUpdated>
+        <Created>2014-11-12 13:01:03</Created>
+    </Function>
+    <Function>
+        <Key>ts_funDayPeriod</Key>
+        <Name>DayPeriod</Name>
+        <Output>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%DayPeriodText[%DayPeriodNumber%]%</Text>
+            </Description>
+        </Output>
+        <LastUpdated>2014-11-12 13:26:33</LastUpdated>
+        <Created>2014-11-12 13:26:33</Created>
+    </Function>    
+</Adventure>

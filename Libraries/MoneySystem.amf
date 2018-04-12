@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Adventure>
+    <Version>5.00</Version>
+    <LastUpdated>2010-05-09 21:08:22</LastUpdated>
+    <Title>Money system</Title>
+    <Author>Campbell Wild</Author>
+    <V4Compatibility>True</V4Compatibility>
+    <Property>
+        <Key>BuyableItem</Key>
+        <Description>Buyable item</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <DependentKey>StaticOrDynamic</DependentKey>
+        <DependentValue>Dynamic</DependentValue>
+    </Property>
+    <Property>
+        <Key>Purchased</Key>
+        <Description>Purchased</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <DependentKey>BuyableItem</DependentKey>
+    </Property>
+    <Property>
+        <Key>ItemCost</Key>
+        <Description>Item cost</Description>
+        <Mandatory>True</Mandatory>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Integer</Type>
+        <DependentKey>BuyableItem</DependentKey>
+    </Property>
+    <Object>
+        <Key>Wallet</Key>
+        <Article>your</Article>
+        <Prefix />
+        <Name>wallet</Name>
+        <Description>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>An ordinary black wallet.</Text>
+            </Description>
+        </Description>
+        <Property>
+            <Key>Openable</Key>
+        </Property>
+        <Property>
+            <Key>HeldByWho</Key>
+            <Value>%Player%</Value>
+        </Property>
+        <Property>
+            <Key>Container</Key>
+        </Property>
+        <Property>
+            <Key>StaticOrDynamic</Key>
+            <Value>Dynamic</Value>
+        </Property>
+        <Property>
+            <Key>OpenStatus</Key>
+            <Value>Closed</Value>
+        </Property>
+        <Property>
+            <Key>DynamicLocation</Key>
+            <Value>Held By Character</Value>
+        </Property>
+    </Object>
+    <Object>
+        <Key>YourMoney</Key>
+        <Article>%money%</Article>
+        <Prefix />
+        <Name>coins</Name>
+        <Name>money</Name>
+        <Description>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>You have %money% coins.</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Variable>MoneyAmount Must BeEqualTo 0</Variable>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>What money?</Text>
+            </Description>
+        </Description>
+        <Property>
+            <Key>StaticOrDynamic</Key>
+            <Value>Dynamic</Value>
+        </Property>
+        <Property>
+            <Key>DynamicLocation</Key>
+            <Value>Inside Object</Value>
+        </Property>
+        <Property>
+            <Key>InsideWhat</Key>
+            <Value>Wallet</Value>
+        </Property>
+    </Object>
+    <Task>
+        <Key>TakeObjects</Key>
+        <Priority>400009</Priority>
+        <AutoFillPriority>1</AutoFillPriority>
+        <Type>General</Type>
+        <FailOverride>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>There is nothing worth taking here.</Text>
+            </Description>
+        </FailOverride>
+        <Command>[get/take/pick up] %objects%</Command>
+        <Command>pick %objects% up</Command>
+        <Description>Take objects parent task (buy)</Description>
+        <Repeatable>True</Repeatable>
+        <Continue>ContinueOnFail</Continue>
+        <ReplaceTask>True</ReplaceTask>
+        <LowPriority>True</LowPriority>
+        <PreventOverriding>True</PreventOverriding>
+        <FailOverride>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>There is nothing worth taking here.</Text>
+            </Description>
+        </FailOverride>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObjects Must Exist </Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you're referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must HaveBeenSeenByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you're referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeVisibleToCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You can't see %TheObjects[%objects%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Property>StaticOrDynamic ReferencedObjects Must Dynamic</Property>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You can't take %TheObjects[%objects%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeExactText All</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeInsideObject AnyObject</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeOnObject AnyObject</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeHeldByCharacter %Player%</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeWornByCharacter %Player%</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeExactText All</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeHeldByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You are already carrying %TheObjects[%objects%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeWornByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You are wearing %TheObjects[%objects%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects MustNot HaveProperty BuyableItem</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must HaveProperty Purchased</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%PCase[%TheObjects[%objects%]%]% costs %PropertyValue[%objects%,ItemCost]%.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A[#A#A#A#A#)O(#A#A#]A(#O#)</BracketSequence>
+        </Restrictions>
+    </Task>
+    <Task>
+        <Key>Purchase</Key>
+        <Priority>400022</Priority>
+        <Type>General</Type>
+        <Command>[purchase/buy] %object%</Command>
+        <Description>Purchase object</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>You purchase %TheObject[%object%]%.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>True</Repeatable>
+        <Continue>ContinueOnFail</Continue>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObject Must Exist </Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you're referring to. (objects must exist)</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject Must HaveBeenSeenByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you're referring to. (objects must be seen)</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject Must BeVisibleToCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You can't see %TheObject[%object%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject Must HaveProperty BuyableItem</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You can't buy %TheObject[%object%]%.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject MustNot BeHeldByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You already have %TheObject[%object%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Variable>MoneyAmount Must BeGreaterThanOrEqualTo '%PropertyValue[%object%, ItemCost]%'</Variable>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>You can't afford %TheObject[%object%]%.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetVariable>MoneyAmount = %money% - %PropertyValue[%object%, ItemCost]%</SetVariable>
+            <MoveObject>ReferencedObject ToCarriedBy %Player%</MoveObject>
+            <SetProperty>ReferencedObject Purchased Selected</SetProperty>
+        </Actions>
+    </Task>
+    <Variable>
+        <Key>MoneyAmount</Key>
+        <Name>money</Name>
+        <Type>Numeric</Type>
+        <InitialValue>10</InitialValue>
+    </Variable>
+    <Group>
+        <Key>BuyableItems</Key>
+        <Type>Objects</Type>
+        <Name>Buyable items</Name>
+        <Property>
+            <Key>BuyableItem</Key>
+        </Property>
+        <Property>
+            <Key>StaticOrDynamic</Key>
+            <Value>Dynamic</Value>
+        </Property>
+    </Group>
+    <TextOverride>
+        <Key>GetCoinsOverride</Key>
+        <OldText>You are already carrying the coins!</OldText>
+        <NewText>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>If only it were that easy!</Text>
+            </Description>
+        </NewText>
+    </TextOverride>
+    <TextOverride>
+        <Key>WalletOverride</Key>
+        <OldText>Inside the wallet is</OldText>
+        <NewText>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>Inside the wallet are</Text>
+            </Description>
+        </NewText>
+    </TextOverride>
+    <TextOverride>
+        <Key>ZeroCoinsOverride</Key>
+        <OldText>Inside the wallet is 0 coins.</OldText>
+        <NewText>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>You have no money.</Text>
+            </Description>
+        </NewText>
+    </TextOverride>
+</Adventure>
