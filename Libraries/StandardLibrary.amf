@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
-    <Version>5.0000331</Version>
-    <LastUpdated>2015-11-14 14:56:37</LastUpdated>
+    <Version>5.000035</Version>
+    <LastUpdated>2015-11-18 21:45:36</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -25,7 +25,6 @@
         <Width>300</Width>
         <X>176</X>
         <Y>152</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -37,7 +36,6 @@
         <Visible>1</Visible>
         <X>0</X>
         <Y>3</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -49,7 +47,6 @@
         <Visible>1</Visible>
         <X>183</X>
         <Y>3</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -61,7 +58,6 @@
         <Visible>1</Visible>
         <X>366</X>
         <Y>3</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -73,7 +69,6 @@
         <Visible>1</Visible>
         <X>732</X>
         <Y>3</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -87,7 +82,6 @@
         <Visible>1</Visible>
         <X>549</X>
         <Y>3</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -101,7 +95,6 @@
         <Width>189</Width>
         <X>89</X>
         <Y>124</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -114,7 +107,6 @@
         <Width>181</Width>
         <X>633</X>
         <Y>54</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -126,7 +118,6 @@
         <Width>184</Width>
         <X>210</X>
         <Y>102</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -137,7 +128,6 @@
         <Width>182</Width>
         <X>394</X>
         <Y>101</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -149,7 +139,6 @@
         <Width>389</Width>
         <X>544</X>
         <Y>222</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:23:49</LastUpdated>
         <Created>2010-08-13 22:23:49</Created>
     </Folder>
@@ -161,7 +150,6 @@
         <Width>184</Width>
         <X>210</X>
         <Y>102</Y>
-        <Library>1</Library>
         <LastUpdated>2013-08-26 11:58:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Folder>
@@ -173,7 +161,6 @@
         <Width>184</Width>
         <X>210</X>
         <Y>102</Y>
-        <Library>1</Library>
         <LastUpdated>2013-08-26 11:58:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Folder>
@@ -197,7 +184,6 @@
         <Width>267</Width>
         <X>100</X>
         <Y>100</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:24:02</LastUpdated>
         <Created>2010-08-13 22:24:02</Created>
     </Folder>
@@ -239,7 +225,6 @@
         <X>0</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:24:02</LastUpdated>
         <Created>2010-08-13 22:24:02</Created>
     </Folder>
@@ -265,7 +250,6 @@
         <Width>325</Width>
         <X>228</X>
         <Y>96</Y>
-        <Library>1</Library>
         <LastUpdated>2010-08-13 22:24:02</LastUpdated>
         <Created>2010-08-13 22:24:02</Created>
     </Folder>
@@ -295,7 +279,6 @@
         <X>512</X>
         <Y>71</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -322,7 +305,6 @@
         <X>244</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -337,7 +319,6 @@
         <X>732</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -356,7 +337,6 @@
         <X>0</X>
         <Y>321</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -383,7 +363,6 @@
         <X>244</X>
         <Y>271</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -406,7 +385,6 @@
         <X>587</X>
         <Y>39</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -423,7 +401,6 @@
         <X>732</X>
         <Y>326</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -439,7 +416,6 @@
         <Width>220</Width>
         <X>660</X>
         <Y>192</Y>
-        <Library>1</Library>
         <LastUpdated>2010-10-07 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
@@ -468,7 +444,6 @@
         <X>338</X>
         <Y>84</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2010-10-09 12:03:37</LastUpdated>
         <Created>2010-10-09 12:03:37</Created>
     </Folder>
@@ -482,7 +457,6 @@
         <X>244</X>
         <Y>642</Y>
         <ShowPriority>1</ShowPriority>
-        <Library>1</Library>
         <LastUpdated>2011-05-05 13:48:46</LastUpdated>
         <Created>2011-05-05 13:48:46</Created>
     </Folder>
@@ -492,7 +466,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>Text</Type>
         <DependentKey>ExplicitlyList</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -506,7 +479,6 @@
         <DependentKey>DynamicLocation</DependentKey>
         <DependentValue>Inside Object</DependentValue>
         <RestrictProperty>Container</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -516,7 +488,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
         <Tooltip>Supporters are objects that you can put things on top of.</Tooltip>
-        <Library>1</Library>
         <LastUpdated>2011-12-10 15:38:45</LastUpdated>
         <Created>2011-12-10 15:38:45</Created>
     </Property>
@@ -526,7 +497,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
         <Tooltip>The object can be opened and closed.  Useful for doors, cupboards, bags etc.</Tooltip>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -538,7 +508,6 @@
         <Type>LocationKey</Type>
         <DependentKey>CharacterLocation</DependentKey>
         <DependentValue>At Location</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 18:34:11</LastUpdated>
         <Created>2010-06-06 18:34:11</Created>
     </Property>
@@ -550,7 +519,6 @@
         <Tooltip>Select this property if you want to restrict the capacity of the object.</Tooltip>
         <DependentKey>Container</DependentKey>
         <RestrictProperty>Size</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2011-12-16 09:12:00</LastUpdated>
         <Created>2011-12-16 09:12:00</Created>
     </Property>
@@ -563,7 +531,6 @@
         <DependentKey>DynamicLocation</DependentKey>
         <DependentValue>On Object</DependentValue>
         <RestrictProperty>Surface</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -574,7 +541,6 @@
         <Type>SelectionOnly</Type>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -586,7 +552,6 @@
         <Type>CharacterKey</Type>
         <DependentKey>CharacterLocation</DependentKey>
         <DependentValue>On Character</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-08-12 23:35:56</LastUpdated>
         <Created>2011-08-12 23:35:56</Created>
     </Property>
@@ -599,7 +564,6 @@
         <DependentKey>CharacterLocation</DependentKey>
         <DependentValue>On Object</DependentValue>
         <RestrictProperty>Surface</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 18:34:55</LastUpdated>
         <Created>2010-06-06 18:34:55</Created>
     </Property>
@@ -610,7 +574,6 @@
         <Type>Text</Type>
         <DependentKey>ExplicitlyExclude</DependentKey>
         <DependentValue>False</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-03-19 16:18:35</LastUpdated>
         <Created>2011-03-19 16:18:35</Created>
     </Property>
@@ -628,7 +591,6 @@
         <State>Part of Object</State>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Static</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -638,7 +600,6 @@
         <PropertyOf>Characters</PropertyOf>
         <Type>SelectionOnly</Type>
         <Tooltip>If the character is known to the Player, you can refer to them using their Proper name.</Tooltip>
-        <Library>1</Library>
         <LastUpdated>2010-06-10 21:51:41</LastUpdated>
         <Created>2010-06-10 21:51:41</Created>
     </Property>
@@ -650,7 +611,6 @@
         <Type>StateList</Type>
         <State>Static</State>
         <State>Dynamic</State>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -663,7 +623,6 @@
         <DependentKey>Lockable</DependentKey>
         <RestrictProperty>StaticOrDynamic</RestrictProperty>
         <RestrictValue>Dynamic</RestrictValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -673,7 +632,6 @@
         <PropertyOf>Characters</PropertyOf>
         <Type>Text</Type>
         <Tooltip>This description will be appended to the main location description.</Tooltip>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -685,7 +643,6 @@
         <Tooltip>This will prevent the object from being listed in the location, but it will still be there.</Tooltip>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-03-19 16:15:35</LastUpdated>
         <Created>2011-03-19 16:15:35</Created>
     </Property>
@@ -697,7 +654,6 @@
         <Type>ObjectKey</Type>
         <DependentKey>StaticLocation</DependentKey>
         <DependentValue>Part of Object</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -706,7 +662,6 @@
         <Description>Object is readable</Description>
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -717,7 +672,6 @@
         <Type>SelectionOnly</Type>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-10-09 12:09:22</LastUpdated>
         <Created>2010-10-09 12:09:22</Created>
     </Property>
@@ -728,7 +682,6 @@
         <Type>SelectionOnly</Type>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -740,7 +693,6 @@
         <Type>LocationKey</Type>
         <DependentKey>DynamicLocation</DependentKey>
         <DependentValue>In Location</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -752,7 +704,6 @@
         <Tooltip>This will list the object in the location, in the same way as dynamic objects are listed.</Tooltip>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Static</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -767,7 +718,6 @@
         <State>On Object</State>
         <State>In Object</State>
         <State>On Character</State>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -777,7 +727,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
         <DependentKey>Openable</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -789,7 +738,6 @@
         <Type>CharacterKey</Type>
         <DependentKey>StaticLocation</DependentKey>
         <DependentValue>Part of Character</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -802,7 +750,6 @@
         <DependentKey>CharacterLocation</DependentKey>
         <DependentValue>In Object</DependentValue>
         <RestrictProperty>Container</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 18:34:35</LastUpdated>
         <Created>2010-06-06 18:34:35</Created>
     </Property>
@@ -812,7 +759,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
         <DependentKey>Container</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-10-23 17:07:39</LastUpdated>
         <Created>2010-10-23 17:07:39</Created>
     </Property>
@@ -824,7 +770,6 @@
         <Type>CharacterKey</Type>
         <DependentKey>DynamicLocation</DependentKey>
         <DependentValue>Held By Character</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -835,7 +780,6 @@
         <Type>Text</Type>
         <Tooltip>This should be defined as though completing the following: Character [ ... ] to the north.</Tooltip>
         <DependentKey>ShowEnterExit</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -845,7 +789,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
         <DependentKey>Surface</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -858,7 +801,6 @@
         <State>Male</State>
         <State>Female</State>
         <State>Unknown</State>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -871,7 +813,6 @@
         <State>Open</State>
         <State>Closed</State>
         <DependentKey>Openable</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -883,7 +824,6 @@
         <Type>LocationGroupKey</Type>
         <DependentKey>StaticLocation</DependentKey>
         <DependentValue>Location Group</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -893,7 +833,6 @@
         <PropertyOf>Objects</PropertyOf>
         <Type>Integer</Type>
         <DependentKey>Surface</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -904,7 +843,6 @@
         <Type>Text</Type>
         <Tooltip>This should be defined as though completing the following: Character [ ... ] from the north.</Tooltip>
         <DependentKey>ShowEnterExit</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -916,7 +854,6 @@
         <Type>CharacterKey</Type>
         <DependentKey>DynamicLocation</DependentKey>
         <DependentValue>Worn By Character</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -928,7 +865,6 @@
         <Type>LocationKey</Type>
         <DependentKey>StaticLocation</DependentKey>
         <DependentValue>Single Location</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -941,7 +877,6 @@
         <State>Standing</State>
         <State>Sitting</State>
         <State>Lying</State>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 18:35:24</LastUpdated>
         <Created>2010-06-06 18:35:24</Created>
     </Property>
@@ -952,7 +887,6 @@
         <Type>SelectionOnly</Type>
         <DependentKey>Surface</DependentKey>
         <DependentValue>True</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-12-10 15:37:20</LastUpdated>
         <Created>2011-12-10 15:37:20</Created>
     </Property>
@@ -961,7 +895,6 @@
         <Description>Object is a container</Description>
         <PropertyOf>Objects</PropertyOf>
         <Type>SelectionOnly</Type>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -972,7 +905,6 @@
         <Type>SelectionOnly</Type>
         <DependentKey>Surface</DependentKey>
         <DependentValue>True</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-12-10 15:37:29</LastUpdated>
         <Created>2011-12-10 15:37:29</Created>
     </Property>
@@ -983,7 +915,6 @@
         <Type>Text</Type>
         <Tooltip>Anything you enter here will be displayed when the player types "Read &lt;object&gt;".  If you leave this blank, the description of the object will be returned instead.</Tooltip>
         <DependentKey>Readable</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -996,7 +927,6 @@
         <State>Locked</State>
         <AppendTo>OpenStatus</AppendTo>
         <DependentKey>Lockable</DependentKey>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -1014,7 +944,6 @@
         <State>On Object</State>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -1023,7 +952,6 @@
         <Description>Show character entering/exiting the location</Description>
         <PropertyOf>Characters</PropertyOf>
         <Type>SelectionOnly</Type>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
@@ -1054,7 +982,6 @@
         </ValueList>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-12-10 14:45:44</LastUpdated>
         <Created>2011-12-10 14:45:44</Created>
     </Property>
@@ -1085,7 +1012,6 @@
         </ValueList>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <Library>1</Library>
         <LastUpdated>2011-12-16 09:17:40</LastUpdated>
         <Created>2011-12-16 09:17:40</Created>
     </Property>
@@ -1095,7 +1021,6 @@
         <PropertyOf>Characters</PropertyOf>
         <Type>Integer</Type>
         <RestrictProperty>Size</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2011-12-16 10:29:22</LastUpdated>
         <Created>2011-12-16 10:29:22</Created>
     </Property>
@@ -1105,7 +1030,6 @@
         <PropertyOf>Characters</PropertyOf>
         <Type>Integer</Type>
         <RestrictProperty>Weight</RestrictProperty>
-        <Library>1</Library>
         <LastUpdated>2011-12-16 10:29:22</LastUpdated>
         <Created>2011-12-16 10:29:22</Created>
     </Property>
@@ -1114,7 +1038,6 @@
         <Description>Short Location Description</Description>
         <PropertyOf>Locations</PropertyOf>
         <Type>Text</Type>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 15:23:38</LastUpdated>
         <Created>2012-11-17 15:23:38</Created>
     </Property>
@@ -1123,7 +1046,6 @@
         <Description>Long Location Description</Description>
         <PropertyOf>Locations</PropertyOf>
         <Type>Text</Type>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 15:23:38</LastUpdated>
         <Created>2012-11-17 15:23:38</Created>
     </Property>
@@ -1132,7 +1054,6 @@
         <Description>Character Proper Name</Description>
         <PropertyOf>Characters</PropertyOf>
         <Type>Text</Type>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 15:23:38</LastUpdated>
         <Created>2012-11-17 15:23:38</Created>
     </Property>
@@ -1143,7 +1064,6 @@
         <Type>StateList</Type>
         <State>on</State>
         <State>off</State>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Property>
@@ -1252,7 +1172,6 @@
         <Actions>
             <SetProperty>%Player% CharacterPosition Lying</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:14:21</LastUpdated>
         <Created>2011-08-07 18:14:21</Created>
     </Task>
@@ -1336,7 +1255,6 @@
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2013-08-26 11:58:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
@@ -1393,7 +1311,6 @@
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:18:54</LastUpdated>
         <Created>2011-08-07 18:18:54</Created>
     </Task>
@@ -1421,7 +1338,6 @@
         <Actions>
             <SetTasks>Execute SayToCharacter (%text%|%convcharacter%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-08 12:06:35</LastUpdated>
         <Created>2011-08-08 12:06:35</Created>
     </Task>
@@ -1463,7 +1379,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <SetTasks>Execute StandOnObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 17:01:46</LastUpdated>
         <Created>2011-06-04 17:01:46</Created>
     </Task>
@@ -1510,7 +1425,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <MoveCharacter>Character %Player% ToParentLocation </MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-08-06 19:58:15</LastUpdated>
         <Created>2012-08-06 19:58:15</Created>
     </Task>
@@ -1580,7 +1494,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             </Restriction>
             <BracketSequence>#A#A#A#A(#O#)</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-09-16 14:31:49</LastUpdated>
         <Created>2012-09-16 14:31:49</Created>
     </Task>
@@ -1589,12 +1502,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Priority>50011</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
-        <FailOverride>
-            <Description>
-                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>There is nothing worth taking here.</Text>
-            </Description>
-        </FailOverride>
         <Command>[get/take/pick up/remove] %objects% from %object2%</Command>
         <Command>pick %objects% up from %object2%</Command>
         <Description>Take Objects From Object</Description>
@@ -1750,7 +1657,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2013-08-26 11:58:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
@@ -1842,7 +1748,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:15:59</LastUpdated>
         <Created>2011-08-07 18:15:59</Created>
     </Task>
@@ -1955,7 +1860,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2013-01-29 19:44:07</LastUpdated>
         <Created>2013-01-29 19:44:07</Created>
     </Task>
@@ -2034,7 +1938,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <MoveCharacter>Character %Player% ToStandingOn ReferencedObject</MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:14:09</LastUpdated>
         <Created>2011-08-07 18:14:09</Created>
     </Task>
@@ -2077,7 +1980,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute LieOnObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 17:01:57</LastUpdated>
         <Created>2011-06-04 17:01:57</Created>
     </Task>
@@ -2125,7 +2027,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-10-08 23:50:18</LastUpdated>
         <Created>2011-10-08 23:50:18</Created>
     </Task>
@@ -2203,7 +2104,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy Player</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-16 14:32:06</LastUpdated>
         <Created>2012-09-16 14:32:06</Created>
     </Task>
@@ -2231,7 +2131,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute AskCharacter (%convcharacter%|%text%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 17:05:47</LastUpdated>
         <Created>2011-06-04 17:05:47</Created>
     </Task>
@@ -2332,7 +2231,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-08-06 14:28:34</LastUpdated>
         <Created>2011-08-06 14:28:34</Created>
     </Task>
@@ -2368,7 +2266,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             <MoveCharacter>Character %Player% ToParentLocation </MoveCharacter>
             <SetProperty>%Player% CharacterPosition Standing</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-06 13:34:58</LastUpdated>
         <Created>2012-09-06 13:34:58</Created>
     </Task>
@@ -2416,7 +2313,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute UnlockObject (%object1%|%PropertyValue[%object1%,LockKey]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 16:47:46</LastUpdated>
         <Created>2011-06-04 16:47:46</Created>
     </Task>
@@ -2495,7 +2391,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <MoveCharacter>Character %Player% ToSittingOn ReferencedObject</MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:13:42</LastUpdated>
         <Created>2011-08-07 18:13:42</Created>
     </Task>
@@ -2586,7 +2481,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <MoveCharacter>Character %Player% InsideObject ReferencedObject</MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-10-11 20:18:27</LastUpdated>
         <Created>2011-10-11 20:18:27</Created>
     </Task>
@@ -2640,7 +2534,6 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
         <Actions>
             <SetTasks>Execute MoveOffObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-06 13:35:10</LastUpdated>
         <Created>2012-09-06 13:35:10</Created>
     </Task>
@@ -2687,7 +2580,6 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
         <Actions>
             <SetProperty>%Player% CharacterPosition Sitting</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:13:33</LastUpdated>
         <Created>2011-08-07 18:13:33</Created>
     </Task>
@@ -2744,7 +2636,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <SetTasks>Execute TakeObjectsFromOthers (%objects%|%ParentOf[%objects%]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-12-21 09:06:20</LastUpdated>
         <Created>2011-12-21 09:06:20</Created>
     </Task>
@@ -2780,7 +2671,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <Conversation>Ask ReferencedCharacter About '%text%'</Conversation>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 17:05:42</LastUpdated>
         <Created>2011-06-04 17:05:42</Created>
     </Task>
@@ -2789,12 +2679,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Priority>50028</Priority>
         <AutoFillPriority>2</AutoFillPriority>
         <Type>General</Type>
-        <FailOverride>
-            <Description>
-                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>You have nothing to drop.</Text>
-            </Description>
-        </FailOverride>
         <Command>[drop/put down] %objects%</Command>
         <Command>put %objects% down</Command>
         <Description>Drop objects</Description>
@@ -2850,7 +2734,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <MoveObject>Object ReferencedObjects ToSameLocationAs %Player%</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-16 14:32:21</LastUpdated>
         <Created>2012-09-16 14:32:21</Created>
     </Task>
@@ -2886,7 +2769,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <Conversation>Say '%text%' To ReferencedCharacter</Conversation>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-08 12:06:37</LastUpdated>
         <Created>2011-08-08 12:06:37</Created>
     </Task>
@@ -2970,7 +2852,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <SetTasks>Execute UnlockObWithKey (%object1%|%PropertyValue[%object1%,LockKey]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-11 15:42:57</LastUpdated>
         <Created>2012-09-11 15:42:57</Created>
     </Task>
@@ -3007,7 +2888,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <SetProperty>%Player% CharacterPosition Standing</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:14:00</LastUpdated>
         <Created>2011-08-07 18:14:00</Created>
     </Task>
@@ -3064,7 +2944,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:18:41</LastUpdated>
         <Created>2011-08-07 18:18:41</Created>
     </Task>
@@ -3093,7 +2972,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-10-12 17:53:02</LastUpdated>
         <Created>2012-10-12 17:53:02</Created>
     </Task>
@@ -3231,7 +3109,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <MoveObject>Object ReferencedObjects InsideObject ReferencedObject2</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2013-08-26 11:58:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
@@ -3264,7 +3141,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-12-30 14:11:03</LastUpdated>
         <Created>2012-12-30 14:11:03</Created>
     </Task>
@@ -3318,7 +3194,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy Player</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-16 14:33:09</LastUpdated>
         <Created>2012-09-16 14:33:09</Created>
     </Task>
@@ -3391,7 +3266,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2010-10-14 13:56:22</LastUpdated>
         <Created>2010-10-14 13:56:22</Created>
     </Task>
@@ -3400,12 +3274,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Priority>50010</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
-        <FailOverride>
-            <Description>
-                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%CharacterName% [am/are/is] holding nothing worth wearing.</Text>
-            </Description>
-        </FailOverride>
         <Command>[wear/put on/don] %objects%</Command>
         <Command>put %objects% on</Command>
         <Description>Wear objects</Description>
@@ -3533,7 +3401,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute SitOnObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 17:01:31</LastUpdated>
         <Created>2011-06-04 17:01:31</Created>
     </Task>
@@ -3542,12 +3409,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Priority>50013</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
-        <FailOverride>
-            <Description>
-                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>There is nothing worth taking here.</Text>
-            </Description>
-        </FailOverride>
         <Command>[get/take/pick up] %objects%</Command>
         <Command>pick %objects% up</Command>
         <Description>Take Objects (Parent Task)</Description>
@@ -3635,7 +3496,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#A#A#A[#A#A#A#A#)O#)A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-01-18 13:50:43</LastUpdated>
         <Created>2012-01-18 13:50:43</Created>
     </Task>
@@ -3714,7 +3574,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <MoveCharacter>Character %Player% ToLyingOn ReferencedObject</MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:14:33</LastUpdated>
         <Created>2011-08-07 18:14:33</Created>
     </Task>
@@ -3783,7 +3642,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Closed</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:15:27</LastUpdated>
         <Created>2011-08-07 18:15:27</Created>
     </Task>
@@ -3819,7 +3677,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <Conversation>Tell ReferencedCharacter About '%text%'</Conversation>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-06-04 17:05:55</LastUpdated>
         <Created>2011-06-04 17:05:55</Created>
     </Task>
@@ -3862,7 +3719,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:17:51</LastUpdated>
         <Created>2011-08-07 18:17:51</Created>
     </Task>
@@ -3963,7 +3819,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Closed</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:15:46</LastUpdated>
         <Created>2011-08-07 18:15:46</Created>
     </Task>
@@ -4011,7 +3866,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:15:06</LastUpdated>
         <Created>2011-08-07 18:15:06</Created>
     </Task>
@@ -4069,7 +3923,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-09-03 11:13:55</LastUpdated>
         <Created>2012-09-03 11:13:55</Created>
     </Task>
@@ -4163,7 +4016,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#A#A#A#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-08-07 18:16:07</LastUpdated>
         <Created>2011-08-07 18:16:07</Created>
     </Task>
@@ -4199,7 +4051,6 @@ This task runs the Say Something to Character task, passing %AloneWithChar% key 
         <Actions>
             <SetTasks>Execute SayToCharacter (%text%|%AloneWithChar%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-10 11:16:57</LastUpdated>
         <Created>2011-08-10 11:16:57</Created>
     </Task>
@@ -4238,7 +4089,6 @@ This task runs the Say Something to Character task, passing %AloneWithChar% key 
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-05-05 14:12:46</LastUpdated>
         <Created>2011-05-05 14:12:46</Created>
     </Task>
@@ -4304,7 +4154,6 @@ This task runs the Say Something to Character task, passing %AloneWithChar% key 
             </Restriction>
             <BracketSequence>#A#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2011-05-05 14:12:46</LastUpdated>
         <Created>2011-05-05 14:12:46</Created>
     </Task>
@@ -4338,7 +4187,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute AskCharacter (%AloneWithChar%|%text%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-08-10 11:25:35</LastUpdated>
         <Created>2011-08-10 11:25:35</Created>
     </Task>
@@ -4373,7 +4221,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute LockObject (%object1%|%object2%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2013-03-11 15:54:37</LastUpdated>
         <Created>2013-03-11 15:54:37</Created>
     </Task>
@@ -4470,7 +4317,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Locked</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2011-12-21 15:38:51</LastUpdated>
         <Created>2011-12-21 15:38:51</Created>
     </Task>
@@ -4544,7 +4390,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute LockObWithKey (%object1%|%object1%.LockKey)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2013-03-11 15:55:57</LastUpdated>
         <Created>2013-03-11 15:55:57</Created>
     </Task>
@@ -4576,7 +4421,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-11 15:43:27</LastUpdated>
         <Created>2012-09-11 15:43:27</Created>
     </Task>
@@ -4611,7 +4455,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-09-11 15:43:27</LastUpdated>
         <Created>2012-09-11 15:43:27</Created>
     </Task>
@@ -4658,7 +4501,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4705,7 +4547,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4752,7 +4593,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4799,7 +4639,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4816,7 +4655,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4854,7 +4692,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-12-07 18:16:00</LastUpdated>
         <Created>2012-12-07 18:16:00</Created>
     </Task>
@@ -4871,7 +4708,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4888,7 +4724,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4935,7 +4770,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4952,7 +4786,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -4999,7 +4832,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5046,7 +4878,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5120,7 +4951,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5137,7 +4967,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5154,7 +4983,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5171,7 +4999,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5218,7 +5045,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5265,7 +5091,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5334,7 +5159,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn on</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5403,7 +5227,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn off</SetProperty>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5459,7 +5282,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute SwitchObjectOn (%object%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5515,7 +5337,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute SwitchObjectOff (%object%)</SetTasks>
         </Actions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5532,7 +5353,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5579,7 +5399,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5635,7 +5454,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5652,7 +5470,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5669,7 +5486,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5725,7 +5541,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
@@ -5757,7 +5572,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <Key>CharacterLocation</Key>
             <Value>Hidden</Value>
         </Property>
-        <Library>1</Library>
         <LastUpdated>2012-11-17 17:22:56</LastUpdated>
         <Created>2012-11-17 17:22:56</Created>
     </Character>
@@ -5766,7 +5580,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Name>Score</Name>
         <Type>Numeric</Type>
         <InitialValue>0</InitialValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Variable>
@@ -5775,7 +5588,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Name>MaxScore</Name>
         <Type>Numeric</Type>
         <InitialValue>0</InitialValue>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Variable>
@@ -5783,7 +5595,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Key>AllLocations</Key>
         <Type>Locations</Type>
         <Name>[Everywhere]</Name>
-        <Library>1</Library>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Group>
@@ -5806,7 +5617,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 </Description>
             </Value>
         </Property>
-        <Library>1</Library>
         <LastUpdated>2011-05-02 18:28:10</LastUpdated>
         <Created>2011-05-02 18:28:10</Created>
     </Group>
@@ -5814,8 +5624,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Key>LightSources</Key>
         <Type>Objects</Type>
         <Name>Light Sources</Name>
-        <Library>1</Library>
         <LastUpdated>2011-05-02 16:29:40</LastUpdated>
         <Created>2011-05-02 16:29:40</Created>
-    </Group>   
+    </Group>
 </Adventure>

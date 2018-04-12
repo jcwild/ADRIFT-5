@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
-    <Version>5.0000321</Version>
-    <LastUpdated>2014-11-17 17:21:08</LastUpdated>
+    <Version>5.000035</Version>
+    <LastUpdated>2015-11-18 23:26:42</LastUpdated>
     <Title>Time System library</Title>
     <Author>Campbell Wild</Author>
     <Description>Basic Time System library.  This library keeps track of hours and minutes, and has periods of the day.  Outdoor locations will become dark at night unless you have a light source.</Description>
@@ -80,7 +80,7 @@
         <Y>144</Y>
         <LastUpdated>2014-11-17 17:20:49</LastUpdated>
         <Created>2014-11-17 17:20:49</Created>
-    </Folder>        
+    </Folder>
     <Task>
         <Key>ts_tasInitialise</Key>
         <Priority>50000</Priority>
@@ -123,12 +123,12 @@ This task increments time by the specified number of minutes per turn
         <Repeatable>1</Repeatable>
         <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
         <Actions>
-            <IncVariable>ts_varMinute = %MinutesPerTurn%</IncVariable>
-            <IncVariable>ts_varHour = (%Minute%-30)/60</IncVariable>
-            <IncVariable>ts_varDay = (%Hour%-12)/24</IncVariable>
-            <SetVariable>ts_varMinute = %Minute% MOD 60</SetVariable>
-            <SetVariable>ts_varHour = %Hour% MOD 24</SetVariable>
-            <SetVariable>ts_varDay = %Day% MOD 30</SetVariable>
+            <IncVariable>ts_varMinute = "%MinutesPerTurn%"</IncVariable>
+            <IncVariable>ts_varHour = "(%Minute%-30)/60"</IncVariable>
+            <IncVariable>ts_varDay = "(%Hour%-12)/24"</IncVariable>
+            <SetVariable>ts_varMinute = "%Minute% MOD 60"</SetVariable>
+            <SetVariable>ts_varHour = "%Hour% MOD 24"</SetVariable>
+            <SetVariable>ts_varDay = "%Day% MOD 30"</SetVariable>
             <SetTasks>Execute ts_tasSetDayPeriod</SetTasks>
         </Actions>
         <LastUpdated>2014-11-12 13:30:05</LastUpdated>
@@ -160,7 +160,7 @@ Day Period: %DayPeriod%</Text>
         <Repeatable>1</Repeatable>
         <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
         <Actions>
-            <SetVariable>ts_varDayPeriodNumber = IF(%Hour% &gt;= 6, IF(%Hour% &gt;= 12, IF(%Hour% &gt;= 17, 3, 2), 1), 4)</SetVariable>
+            <SetVariable>ts_varDayPeriodNumber = "IF(%Hour% &gt;= 6, IF(%Hour% &gt;= 12, IF(%Hour% &gt;= 17, 3, 2), 1), 4)"</SetVariable>
             <SetTasks>Execute ts_tasSunset</SetTasks>
             <SetTasks>Execute ts_tasSunrise</SetTasks>
         </Actions>
@@ -194,8 +194,8 @@ Day Period: %DayPeriod%</Text>
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
-            <SetVariable>ts_varHour = 7</SetVariable>
-            <SetVariable>ts_varMinute = 0</SetVariable>
+            <SetVariable>ts_varHour = "7"</SetVariable>
+            <SetVariable>ts_varMinute = "0"</SetVariable>
             <SetTasks>Execute ts_tasSetDayPeriod</SetTasks>
         </Actions>
         <LastUpdated>2014-11-17 17:18:32</LastUpdated>
@@ -299,7 +299,7 @@ Day Period: %DayPeriod%</Text>
         </SubEvent>
         <LastUpdated>2014-11-12 13:05:01</LastUpdated>
         <Created>2014-11-12 13:05:01</Created>
-    </Event>    
+    </Event>
     <Variable>
         <Key>ts_varDayPeriodText</Key>
         <Name>DayPeriodText</Name>
@@ -367,11 +367,11 @@ Night</InitialValue>
         <InitialValue>6</InitialValue>
         <LastUpdated>2014-11-17 16:05:40</LastUpdated>
         <Created>2014-11-17 16:05:40</Created>
-    </Variable>    
+    </Variable>
     <Group>
         <Key>ts_grpOutside</Key>
         <Type>Locations</Type>
-        <Name>Outside Locations</Name>        
+        <Name>Outside Locations</Name>
         <LastUpdated>2014-11-17 16:25:48</LastUpdated>
         <Created>2014-11-17 16:25:48</Created>
     </Group>
@@ -398,5 +398,5 @@ Night</InitialValue>
         </Output>
         <LastUpdated>2014-11-12 13:26:33</LastUpdated>
         <Created>2014-11-12 13:26:33</Created>
-    </Function>    
+    </Function>
 </Adventure>
