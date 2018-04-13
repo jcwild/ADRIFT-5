@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
-    <Version>5.000035</Version>
-    <LastUpdated>2015-11-18 21:45:36</LastUpdated>
+    <Version>5.000036</Version>
+    <LastUpdated>2018-04-13 17:42:00</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -3087,20 +3087,20 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                 <Object>ReferencedObject2 MustNot HaveProperty Capacity</Object>
             </Restriction>
             <Restriction>
-                <Property>Capacity ReferencedObject2 Must GreaterThanOrEqualTo %object%.Size</Property>
+                <Property>Capacity ReferencedObject2 Must GreaterThanOrEqualTo %objects%.Size.Sum</Property>
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%object%.Name is too big to fit inside %object2%.Name.</Text>
+                        <Text>%objects%.Name is too big to fit inside %object2%.Name.</Text>
                     </Description>
                 </Message>
             </Restriction>
             <Restriction>
-                <Property>Capacity ReferencedObject2 Must GreaterThanOrEqualTo %object2%.Contents.Size.Sum+%object%.Size</Property>
+                <Property>Capacity ReferencedObject2 Must GreaterThanOrEqualTo %object2%.Contents.Size.Sum+%objects%.Size.Sum</Property>
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%object%.Name can't fit inside %object2%.Name at the moment.</Text>
+                        <Text>%objects%.Name can't fit inside %object2%.Name at the moment.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -3109,7 +3109,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <MoveObject>Object ReferencedObjects InsideObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2013-08-26 11:58:00</LastUpdated>
+        <LastUpdated>2018-04-13 17:42:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
     <Task>
