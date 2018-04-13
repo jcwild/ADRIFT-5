@@ -551,6 +551,17 @@ Public Class frmDebugger
                                     .SeenBy(Adventure.Player.Key) = SafeBool(row.Cells(1).Value)
                                 Case Else
                                     .htblProperties(sPropKey).Value = row.Cells(1).Value.ToString
+                                    Select Case sPropKey
+                                        Case "CharacterAtLocation"
+                                            Dim dest As New clsCharacterLocation(Adventure.htblCharacters(sKey))
+
+                                            ' Default new destination to current location
+                                            dest.ExistWhere = .Location.ExistWhere                                            
+                                            dest.Position = .Location.Position                                            
+                                            dest.Key = row.Cells(1).Value.ToString
+
+                                            .Move(dest)
+                                    End Select
                             End Select
                         End With
 

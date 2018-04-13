@@ -5051,7 +5051,8 @@ NextWord:
 
         If Adventure.eGameState <> clsAction.EndGameEnum.Running OrElse fRunner.Locked Then Exit Sub
 
-        bEventsRunning = True
+        bEventsRunning = True        
+
         For Each e As clsEvent In Adventure.htblEvents.Values
             If Adventure.eGameState <> clsAction.EndGameEnum.Running Then Exit For
             If e.EventType = clsEvent.EventTypeEnum.TimeBased Then e.IncrementTimer()
@@ -5062,7 +5063,7 @@ NextWord:
         Next
         bEventsRunning = False
 #If Not www Then
-        If Debugger IsNot Nothing AndAlso Debugger.HasText Then DebugPrint(ItemEnum.General, "", DebugDetailLevelEnum.Low, "ENDOFTURN")
+        If Debugger IsNot Nothing AndAlso Debugger.HasText AndAlso sOutputText <> "" Then DebugPrint(ItemEnum.General, "", DebugDetailLevelEnum.Low, "ENDOFTURN")
 #End If        
         If sOutputText <> "" Then Display("", True)
 
