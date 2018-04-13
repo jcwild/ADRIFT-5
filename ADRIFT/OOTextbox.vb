@@ -843,30 +843,33 @@ SkipArgs:
                         AddTool("Location", "Location", My.Resources.imgLocation16, "This returns the location of the " & sObject & ", regardless whether the object is in/on something else")
                         AddTool("Parent", "Parent", My.Resources.imgObjectDynamic16, "This returns the parent object/character/location of the " & sObject)
                         For Each p As clsProperty In Adventure.htblObjectProperties.Values
-                            Dim img As Image = My.Resources.imgProperty16
-                            Select Case p.Type
-                                Case clsProperty.PropertyTypeEnum.CharacterKey
-                                    img = My.Resources.imgCharacter16
-                                Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList
-                                    img = My.Resources.imgVariable16
-                                Case clsProperty.PropertyTypeEnum.LocationGroupKey
-                                    img = My.Resources.imgGroup16
-                                Case clsProperty.PropertyTypeEnum.LocationKey
-                                    img = My.Resources.imgLocation16
-                                Case clsProperty.PropertyTypeEnum.ObjectKey
-                                    img = My.Resources.imgObjectDynamic16
-                                Case clsProperty.PropertyTypeEnum.Text, clsProperty.PropertyTypeEnum.StateList
-                                    img = My.Resources.imgALR16
-                                Case clsProperty.PropertyTypeEnum.SelectionOnly
-                                    If bObjectList Then
-                                        img = My.Resources.imgFilter
-                                    Else
-                                        img = My.Resources.imgVariable16
-                                    End If
-                            End Select
-                            'If p.Type <> clsProperty.PropertyTypeEnum.SelectionOnly Then
-                            If oObject Is Nothing OrElse oObject.HasProperty(p.Key) Then AddTool(p.CommonName, p.Key, img, GetPropertyHelp(p))
-                            'End If
+                            Select Case p.Key
+                                Case OBJECTARTICLE, OBJECTPREFIX, OBJECTNOUN
+                                    ' Suppress
+                                Case Else
+                                    Dim img As Image = My.Resources.imgProperty16
+                                    Select Case p.Type
+                                        Case clsProperty.PropertyTypeEnum.CharacterKey
+                                            img = My.Resources.imgCharacter16
+                                        Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList
+                                            img = My.Resources.imgVariable16
+                                        Case clsProperty.PropertyTypeEnum.LocationGroupKey
+                                            img = My.Resources.imgGroup16
+                                        Case clsProperty.PropertyTypeEnum.LocationKey
+                                            img = My.Resources.imgLocation16
+                                        Case clsProperty.PropertyTypeEnum.ObjectKey
+                                            img = My.Resources.imgObjectDynamic16
+                                        Case clsProperty.PropertyTypeEnum.Text, clsProperty.PropertyTypeEnum.StateList
+                                            img = My.Resources.imgALR16
+                                        Case clsProperty.PropertyTypeEnum.SelectionOnly
+                                            If bObjectList Then
+                                                img = My.Resources.imgFilter
+                                            Else
+                                                img = My.Resources.imgVariable16
+                                            End If
+                                    End Select                                    
+                                    If oObject Is Nothing OrElse oObject.HasProperty(p.Key) Then AddTool(p.CommonName, p.Key, img, GetPropertyHelp(p))                                    
+                            End Select                            
                         Next
                     End If
 
