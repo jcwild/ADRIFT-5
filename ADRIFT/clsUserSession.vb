@@ -3194,16 +3194,25 @@ NextMessage:
                         For Each re As System.Text.RegularExpressions.Regex In GetRegularExpression(topic.Keywords.Trim.Replace("?", "\?"), sCommandOrSubject, False)
                             If re IsNot Nothing AndAlso re.IsMatch(sCommandOrSubject) Then
                                 If PassRestrictions(topic.arlRestrictions) Then
-                                    For i As Integer = 0 To 5
-                                        Dim iRef As Integer = i
-                                        If iRef > 0 Then iRef -= 1
+                                    For i As Integer = 0 To 4
+                                        Dim iRef As Integer = i + 1
+                                        Dim sNumber As String = "%number" & iRef.ToString & "%"
+                                        Dim sRefText As String = "%text" & iRef.ToString & "%"
 
-                                        Dim sNumber As String = "%number" & If(i > 0, i.ToString, "").ToString & "%"
-
-
-                                        Dim sRefText As String = "%text" & If(i > 0, i.ToString, "").ToString & "%"
                                         If topic.Keywords.Contains(sRefText) Then ' Needs full parsing really...
-                                            Adventure.sReferencedText(i) = re.Match(sCommandOrSubject).Groups("text").Value.Trim
+                                            Adventure.sReferencedText(i) = re.Match(sCommandOrSubject).Groups("text" & iRef.ToString).Value.Trim
+                                            ' Update Refs
+                                            For Each ref As clsNewReference In NewReferences
+                                                If ref.ReferenceType = ReferencesType.Text AndAlso ref.ReferenceMatch = sRefText.Replace("%", "") Then
+                                                    ref.Items.Clear()
+                                                    Dim refItem As New clsSingleItem
+                                                    refItem.bExplicitlyMentioned = True
+                                                    refItem.MatchingPossibilities.Add(Adventure.sReferencedText(i))
+                                                    refItem.sCommandReference = sCommandOrSubject
+                                                    ref.Items.Add(refItem)
+                                                    ref.sParentTask = "Topic"
+                                                End If
+                                            Next
                                         End If
                                     Next
 
@@ -8529,7 +8538,7 @@ FoundTask:
             ' TODO - replace above with custom names if changed
 
             sC = sC.Replace("%objects%", "(?<objects>.+?)")
-            sC = sC.Replace("%characters%", "(?<characters>.+?)")
+            sC = sC.Replace("%characters%", "(?<characters>.+?)")         
             'sC = sC.Replace("%text%", "(?<text>.+?)") ' ? after + makes this a non-greedy match
             'sC = sC.Replace("%number%", "(?<number>-?[0-9]+)")
             'sC = sC.Replace("%location%", "(?<location>.+?)")

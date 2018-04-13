@@ -637,6 +637,12 @@ Module FileIO
                             act.StringValue &= sElements(iElement)
                         Next
                         If act.StringValue IsNot Nothing Then
+#If Generator Then
+                            act.StringValue = act.StringValue
+#Else
+                            ' Simplify Runner so it only has to deal with multiple, or specific refs
+                            act.StringValue = FixInitialRefs(act.StringValue)
+#End If                            
                             If act.StringValue.StartsWith("(") Then act.StringValue = sRight(act.StringValue, act.StringValue.Length - 1)
                             If act.StringValue.EndsWith(")") Then act.StringValue = sLeft(act.StringValue, act.StringValue.Length - 1)
                         End If
@@ -3651,7 +3657,13 @@ NextEvent:
                                 topic.Key = nodTopic.Item("Key").InnerText
                                 If nodTopic.Item("ParentKey") IsNot Nothing Then topic.ParentKey = nodTopic.Item("ParentKey").InnerText
                                 topic.Summary = nodTopic.Item("Summary").InnerText
+#If Generator Then                                        
                                 topic.Keywords = nodTopic.Item("Keywords").InnerText
+#Else
+                                ' Simplify Runner so it only has to deal with multiple, or specific refs                                
+                                topic.Keywords = FixInitialRefs(nodTopic.Item("Keywords").InnerText)
+#End If
+
                                 topic.oConversation = LoadDescription(nodTopic, "Description")
                                 If nodTopic.Item("IsAsk") IsNot Nothing Then topic.bAsk = GetBool(nodTopic.Item("IsAsk").InnerText)
                                 If nodTopic.Item("IsCommand") IsNot Nothing Then topic.bCommand = GetBool(nodTopic.Item("IsCommand").InnerText)
