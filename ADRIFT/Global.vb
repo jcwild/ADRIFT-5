@@ -3637,12 +3637,19 @@ Module SharedModule
         Dim re As New System.Text.RegularExpressions.Regex("%" & udf.Name & "(\[.*?\])?%")
 
         If re.IsMatch(sText) Then
-            If udf.Output.ToString.Contains("%" & udf.Name & "%") Then
-                ErrMsg("Recursive User Defined Function - " & udf.Name)
-            Else
-                ' Replace each parameter with it's resolved value
-                Dim sMatch As String = re.Match(sText).Value
-                Dim dOut As Description = udf.Output.Copy
+            ' We can't test udf.Output.ToString until we've replaced the parameters below
+
+            ' Test for recursion
+            For Each d As SingleDescription In udf.Output
+                If d.Description.Contains("%" & udf.Name & If(udf.Arguments.Count = 0, "%", "[")) Then
+                    ErrMsg("Recursive User Defined Function - " & udf.Name)
+                    Exit Sub
+                End If
+            Next
+
+            ' Replace each parameter with it's resolved value
+            Dim sMatch As String = re.Match(sText).Value
+            Dim dOut As Description = udf.Output.Copy
 
 #If Runner Then
                 ' Backup existing Refs
@@ -3651,14 +3658,14 @@ Module SharedModule
                 Dim iRefNo As Integer = 0
 #End If
 
-                If sMatch.Contains("[") AndAlso sMatch.Contains("]") Then
-                    Dim sArgs As String = sMatch.Substring(sMatch.IndexOf("["c) + 1, sMatch.LastIndexOf("]"c) - sMatch.IndexOf("["c) - 1)
+            If sMatch.Contains("[") AndAlso sMatch.Contains("]") Then
+                Dim sArgs As String = sMatch.Substring(sMatch.IndexOf("["c) + 1, sMatch.LastIndexOf("]"c) - sMatch.IndexOf("["c) - 1)
 
-                    'Dim sArg() As String = sArgs.Split(","c)
-                    Dim sArg As List(Of String) = SplitArgs(sArgs)
-                    Dim i As Integer = 0
-                    For Each arg As clsUserFunction.Argument In udf.Arguments
-                        Dim sEvaluatedArg As String = ReplaceFunctions(sArg(i))
+                'Dim sArg() As String = sArgs.Split(","c)
+                Dim sArg As List(Of String) = SplitArgs(sArgs)
+                Dim i As Integer = 0
+                For Each arg As clsUserFunction.Argument In udf.Arguments
+                    Dim sEvaluatedArg As String = ReplaceFunctions(sArg(i))
 
 #If Runner Then
                         If sEvaluatedArg.Contains("|") Then ' Means it evaluated to multiple items                            
@@ -3682,34 +3689,32 @@ Module SharedModule
                         End If
 #End If
 
-                        ' Our function argument could be an expression
-                        If New System.Text.RegularExpressions.Regex("\d( )*[+-/*^]( )*\d").IsMatch(sEvaluatedArg) Then
-                            Dim sExpr As String = EvaluateExpression(sEvaluatedArg)
-                            If sExpr IsNot Nothing Then sEvaluatedArg = sExpr
-                        End If
+                    ' Our function argument could be an expression
+                    If New System.Text.RegularExpressions.Regex("\d( )*[+-/*^]( )*\d").IsMatch(sEvaluatedArg) Then
+                        Dim sExpr As String = EvaluateExpression(sEvaluatedArg)
+                        If sExpr IsNot Nothing Then sEvaluatedArg = sExpr
+                    End If
 
-                        For Each d As SingleDescription In dOut
-                            d.Description = d.Description.Replace("%" & arg.Name & "%", sEvaluatedArg)
-                            For Each r As clsRestriction In d.Restrictions
-                                If r.sKey1 = "Parameter-" & arg.Name Then r.sKey1 = If(sEvaluatedArg.Contains("|"), "ReferencedObjects", sEvaluatedArg).ToString
-                                If r.sKey2 = "Parameter-" & arg.Name Then r.sKey2 = If(sEvaluatedArg.Contains("|"), "ReferencedObjects", sEvaluatedArg).ToString
-                            Next
+                    For Each d As SingleDescription In dOut
+                        d.Description = d.Description.Replace("%" & arg.Name & "%", sEvaluatedArg)
+                        For Each r As clsRestriction In d.Restrictions
+                            If r.sKey1 = "Parameter-" & arg.Name Then r.sKey1 = If(sEvaluatedArg.Contains("|"), "ReferencedObjects", sEvaluatedArg).ToString
+                            If r.sKey2 = "Parameter-" & arg.Name Then r.sKey2 = If(sEvaluatedArg.Contains("|"), "ReferencedObjects", sEvaluatedArg).ToString
                         Next
-                        i += 1
                     Next
-                End If
+                    i += 1
+                Next
+            End If
 
 #If Runner Then
-                UserSession.NewReferences = refsUDF
+            UserSession.NewReferences = refsUDF
 #End If
-                Dim sFunctionResult As String = dOut.ToString ' re.Replace(sMatch, dOut.ToString)
-                'sText = ReplaceFunctions(re.Replace(sText, dOut.ToString))
+            Dim sFunctionResult As String = dOut.ToString
 #If Runner Then
-                ' Restore Refs
-                UserSession.NewReferences = refsCopy
+            ' Restore Refs
+            UserSession.NewReferences = refsCopy
 #End If
-                sText = ReplaceFunctions(re.Replace(sText, sFunctionResult, 1))
-            End If
+            sText = ReplaceFunctions(re.Replace(sText, sFunctionResult, 1))            
         End If
 
     End Sub
