@@ -892,11 +892,14 @@ Public Class frmProperty
             ' Now go thru all items and update their properties if they contain this one
             If .PropertyOf = clsProperty.PropertyOfEnum.Locations OrElse .PropertyOf = clsProperty.PropertyOfEnum.AnyItem Then
                 For Each l As clsLocation In Adventure.htblLocations.Values
+                    If .Mandatory AndAlso Not l.htblActualProperties.ContainsKey(.Key) Then
+                        l.htblActualProperties.Add(.Copy)
+                    End If
                     If l.htblActualProperties.ContainsKey(.Key) Then
                         Dim p As clsProperty = l.htblActualProperties(.Key)
                         Dim StringData As Description = p.StringData
                         Dim IntData As Integer = p.IntData
-                        p = cProperty.Copy
+                        p = .Copy
                         p.Selected = True
                         p.StringData = StringData
                         p.IntData = IntData
@@ -906,11 +909,14 @@ Public Class frmProperty
             End If
             If .PropertyOf = clsProperty.PropertyOfEnum.Objects OrElse .PropertyOf = clsProperty.PropertyOfEnum.AnyItem Then
                 For Each o As clsObject In Adventure.htblObjects.Values
+                    If .Mandatory AndAlso Not o.htblActualProperties.ContainsKey(.Key) Then
+                        o.htblActualProperties.Add(.Copy)
+                    End If
                     If o.htblActualProperties.ContainsKey(.Key) Then
                         Dim p As clsProperty = o.htblActualProperties(.Key)
                         Dim StringData As Description = p.StringData
                         Dim IntData As Integer = p.IntData
-                        p = cProperty.Copy
+                        p = .Copy
                         p.Selected = True
                         p.StringData = StringData
                         p.IntData = IntData
@@ -920,11 +926,14 @@ Public Class frmProperty
             End If
             If .PropertyOf = clsProperty.PropertyOfEnum.Characters OrElse .PropertyOf = clsProperty.PropertyOfEnum.AnyItem Then
                 For Each c As clsCharacter In Adventure.htblCharacters.Values
+                    If .Mandatory AndAlso Not c.htblActualProperties.ContainsKey(.Key) Then
+                        c.htblActualProperties.Add(.Copy)
+                    End If
                     If c.htblActualProperties.ContainsKey(.Key) Then
                         Dim p As clsProperty = c.htblActualProperties(.Key)
                         Dim StringData As Description = p.StringData
                         Dim IntData As Integer = p.IntData
-                        p = cProperty.Copy
+                        p = .Copy
                         p.Selected = True
                         p.StringData = StringData
                         p.IntData = IntData

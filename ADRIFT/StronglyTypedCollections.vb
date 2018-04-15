@@ -1009,6 +1009,7 @@ Module StronglyTypedCollections
 
             Dim iCount As Integer = 0
 
+            If MyBase.ContainsKey(sKey) Then iCount += 1
             For Each p As clsProperty In MyBase.Values
                 If p.AppendToProperty = sKey Then iCount += 1
                 If p.DependentKey = sKey Then iCount += 1
@@ -1098,6 +1099,7 @@ restart:
                     End If
                 End If
             Next
+            If ContainsKey(sKey) Then Remove(sKey)
 
             Return True
 
