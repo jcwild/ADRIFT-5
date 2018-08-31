@@ -2127,7 +2127,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
     </Task>
     <Task>
         <Key>Ask</Key>
-        <Priority>50018</Priority>
+        <Priority>50048</Priority>
         <AutoFillPriority>2</AutoFillPriority>
         <Type>General</Type>
         <Command>ask about %text%</Command>
@@ -4195,7 +4195,7 @@ This task runs the Say Something to Character task, passing %AloneWithChar% key 
     </Task>
     <Task>
         <Key>AskAboutLazy</Key>
-        <Priority>50048</Priority>
+        <Priority>50018</Priority>
         <Type>General</Type>
         <Command>ask about %text%</Command>
         <Description>Ask about (lazy)</Description>
