@@ -2070,7 +2070,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>There is no route &lt;# IF(%direction% = "Up" OR %direction% = "Down" OR %direction% = "In" OR %direction% = "Out", "", "to the ") #&gt;%LCase[%direction%]%&lt;# IF(%Player%.Location.Exits.Count = 0, ".", ", only " + %Player%.Location.Exits.List + ".") #&gt;</Text>
+                        <Text>There is no route &lt;# IF(%direction% = "Up" OR %direction% = "Down" OR %direction% = "In" OR %direction% = "Out", "", "to the ") #&gt;%LCase[%direction%]%&lt;# IF(%Player%.Location.Exits.Count = 0, ".", ", only " + %ListExits[%Player%]% + ".") #&gt;</Text>
                     </Description>
                 </Message>
             </Restriction>
