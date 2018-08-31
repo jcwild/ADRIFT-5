@@ -1126,7 +1126,7 @@
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% can't can't put anything onto %TheObject[%object2%]%!</Text>
+                        <Text>%CharacterName% can't put anything onto %TheObject[%object2%]%!</Text>
                     </Description>
                 </Message>
             </Restriction>
