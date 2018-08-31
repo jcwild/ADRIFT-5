@@ -1081,6 +1081,24 @@
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
+        <FailOverride>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% cannot put anything on %TheObject[%object2%]%!</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% MustNot BeHoldingObject AnyObject</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% [am/are/is] not carrying anything!
+</Text>
+                <TabLabel>Nothing Held</TabLabel>
+            </Description>
+        </FailOverride>
         <Restrictions>
             <Restriction>
                 <Object>ReferencedObjects Must HaveBeenSeenByCharacter %Player%</Object>
@@ -2989,6 +3007,24 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
+        <FailOverride>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% cannot put anything in %TheObject[%object2%]%!</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% MustNot BeHoldingObject AnyObject</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% [am/are/is] not carrying anything!
+</Text>
+                <TabLabel>Nothing Held</TabLabel>
+            </Description>
+        </FailOverride>
         <Restrictions>
             <Restriction>
                 <Object>ReferencedObjects Must Exist </Object>
@@ -3023,15 +3059,6 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>You cannot see %TheObject[%object2%]%!</Text>
-                    </Description>
-                </Message>
-            </Restriction>
-            <Restriction>
-                <Object>ReferencedObjects Must BeHeldByCharacter %Player%</Object>
-                <Message>
-                    <Description>
-                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% [am/are/is] not carrying %TheObjects[%objects%]%!</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -3084,6 +3111,15 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                 <Object>ReferencedObjects MustNot BeObject ReferencedObject2</Object>
             </Restriction>
             <Restriction>
+                <Object>ReferencedObjects Must BeHeldByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% [am/are/is] not carrying %TheObjects[%objects%]%!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
                 <Object>ReferencedObject2 MustNot HaveProperty Capacity</Object>
             </Restriction>
             <Restriction>
@@ -3104,7 +3140,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A(#O#)A#A#A#A(#O#A#)</BracketSequence>
+            <BracketSequence>#A#A#A#A#A(#O#)A#A#A#A#A(#O#A#)</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects InsideObject ReferencedObject2</MoveObject>
