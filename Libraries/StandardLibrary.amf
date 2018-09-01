@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-04-13 17:42:00</LastUpdated>
+    <LastUpdated>2018-08-31 23:59:00</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -1153,7 +1153,7 @@
         <Actions>
             <MoveObject>Object ReferencedObjects OntoObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2015-10-29 23:10:49</LastUpdated>
+        <LastUpdated>2018-08-31 23:58:49</LastUpdated>
         <Created>2015-10-29 23:10:49</Created>
     </Task>
     <Task>
@@ -2080,7 +2080,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             <MoveCharacter>Character %Player% InDirection ReferencedDirection</MoveCharacter>
             <SetTasks>Execute Look</SetTasks>
         </Actions>
-        <LastUpdated>2015-10-30 00:32:26</LastUpdated>
+        <LastUpdated>2018-08-30 00:32:26</LastUpdated>
         <Created>2015-10-30 00:32:26</Created>
     </Task>
     <Task>
@@ -2149,7 +2149,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute AskCharacter (%convcharacter%|%text%)</SetTasks>
         </Actions>
-        <LastUpdated>2011-06-04 17:05:47</LastUpdated>
+        <LastUpdated>2018-08-31 23:05:47</LastUpdated>
         <Created>2011-06-04 17:05:47</Created>
     </Task>
     <Task>
@@ -3145,7 +3145,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <MoveObject>Object ReferencedObjects InsideObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2018-04-13 17:42:00</LastUpdated>
+        <LastUpdated>2018-08-31 17:42:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
     <Task>
@@ -4223,7 +4223,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute AskCharacter (%AloneWithChar%|%text%)</SetTasks>
         </Actions>
-        <LastUpdated>2011-08-10 11:25:35</LastUpdated>
+        <LastUpdated>2018-08-31 11:25:35</LastUpdated>
         <Created>2011-08-10 11:25:35</Created>
     </Task>
     <Task>
