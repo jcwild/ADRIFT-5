@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-08-31 23:59:00</LastUpdated>
+    <LastUpdated>2018-09-02 23:59:00</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -2499,7 +2499,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <MoveCharacter>Character %Player% InsideObject ReferencedObject</MoveCharacter>
         </Actions>
-        <LastUpdated>2011-10-11 20:18:27</LastUpdated>
+        <LastUpdated>2018-08-02 20:18:27</LastUpdated>
         <Created>2011-10-11 20:18:27</Created>
     </Task>
     <Task>
