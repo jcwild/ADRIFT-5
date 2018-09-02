@@ -274,6 +274,7 @@
         <Member>MaxWeight</Member>
         <Member>MaxBulk</Member>
         <Member>Size</Member>
+        <Member>Folder15</Member>
         <Height>446</Height>
         <Width>306</Width>
         <X>512</X>
@@ -459,6 +460,23 @@
         <ShowPriority>1</ShowPriority>
         <LastUpdated>2011-05-05 13:48:46</LastUpdated>
         <Created>2011-05-05 13:48:46</Created>
+    </Folder>
+    <Folder>
+        <Key>Folder15</Key>
+        <Name>Take object we are on or in</Name>
+        <Member>CheckIfThe1</Member>
+        <Member>CheckIfThe</Member>
+        <Member>IfStackBot</Member>
+        <Member>Match</Member>
+        <Member>ScanParent</Member>
+        <Member>ExitParent</Member>
+        <Height>369</Height>
+        <Width>776</Width>
+        <X>45</X>
+        <Y>119</Y>
+        <ShowPriority>1</ShowPriority>
+        <LastUpdated>2018-09-01 15:08:47</LastUpdated>
+        <Created>2018-09-01 15:08:47</Created>
     </Folder>
     <Property>
         <Key>ListDescription</Key>
@@ -5580,6 +5598,201 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
+    <Task>
+        <Key>CheckIfThe1</Key>
+        <Priority>50100</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>TakeObjectsFromOthers</GeneralTask>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>1</Multiple>
+            <Key />
+        </Specific>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Description>Exit object before taking from object2</Description>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>BeforeTextAndActions</SpecificOverrideType>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Restrictions>
+            <Restriction>
+                <Property>CharacterLocation %Player% MustNot EqualTo At Location</Property>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetVariable>Match = "1"</SetVariable>
+            <SetTasks>Execute ScanParent (%Player%.Parent|%objects%)</SetTasks>
+            <SetTasks>Execute ExitParent (%Player%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-02 13:59:20</LastUpdated>
+        <Created>2018-09-01 21:29:13</Created>
+        <Aggregate>0</Aggregate>
+    </Task>
+    <Task>
+        <Key>ScanParent</Key>
+        <Priority>50101</Priority>
+        <Type>General</Type>
+        <Command># Scan parents of %item% for %object%</Command>
+        <Description># Scan parent items of player for wanted object</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>
+</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Expression>%item% &lt;&gt; %Player%.Location</Expression>
+            </Restriction>
+            <Restriction>
+                <Expression>%item% &lt;&gt; %object%</Expression>
+            </Restriction>
+            <BracketSequence>#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <IncVariable>Match = "1"</IncVariable>
+            <SetTasks>Execute IfStackBot (%item%.Parent)</SetTasks>
+            <SetTasks>Execute ScanParent (%item%.Parent|%object%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-02 12:10:41</LastUpdated>
+        <Created>2018-09-01 21:25:26</Created>
+        <Aggregate>0</Aggregate>
+    </Task>
+    <Task>
+        <Key>CheckIfThe</Key>
+        <Priority>50102</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>TakeObjectFromLocation</GeneralTask>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>1</Multiple>
+            <Key />
+        </Specific>
+        <Description>Exit object before taking</Description>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>BeforeTextAndActions</SpecificOverrideType>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Restrictions>
+            <Restriction>
+                <Property>CharacterLocation %Player% MustNot EqualTo At Location</Property>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetVariable>Match = "1"</SetVariable>
+            <SetTasks>Execute ScanParent (%Player%.Parent|%objects%)</SetTasks>
+            <SetTasks>Execute ExitParent (%Player%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-02 13:59:12</LastUpdated>
+        <Created>2018-09-01 21:28:54</Created>
+        <Aggregate>0</Aggregate>
+    </Task>
+    <Task>
+        <Key>IfStackBot</Key>
+        <Priority>50103</Priority>
+        <Type>General</Type>
+        <Command># Test %item% for bottom of stack</Command>
+        <Description># Test item for bottom of stack</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;!--If we reach the location without finding taken object then we set variable to force quick exit--&gt;</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Expression>%item% = %Player%.Location</Expression>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetVariable>Match = "0"</SetVariable>
+        </Actions>
+        <LastUpdated>2018-09-02 12:10:36</LastUpdated>
+        <Created>2018-09-01 21:26:58</Created>
+        <Aggregate>0</Aggregate>
+    </Task>
+    <Task>
+        <Key>ExitParent</Key>
+        <Priority>50104</Priority>
+        <Type>General</Type>
+        <Command># Exit ParentScanDepth parent items of %item%</Command>
+        <Description># Exit Each  Parent Item</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(Getting </Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Item>ReferencedItem Must BeType Object</Item>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%item%.DynamicLocation = "Inside Object"</Expression>
+                    </Restriction>
+                    <Restriction>
+                        <Item>ReferencedItem Must BeType Character</Item>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%item%.CharacterLocation = "In Object"</Expression>
+                    </Restriction>
+                    <BracketSequence>(#A#)O(#A#)</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>out</Text>
+                <TabLabel>Out of</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Item>ReferencedItem Must BeType Object</Item>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%item%.DynamicLocation &lt;&gt; "Inside Object"</Expression>
+                    </Restriction>
+                    <Restriction>
+                        <Item>ReferencedItem Must BeType Character</Item>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%item%.CharacterLocation &lt;&gt; "In Object"</Expression>
+                    </Restriction>
+                    <BracketSequence>(#A#)O(#A#)</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>off</Text>
+                <TabLabel>Off of</TabLabel>
+            </Description>
+            <Description>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text> of %item%.Parent.Name)&lt;/c&gt;
+</Text>
+                <TabLabel>Finish</TabLabel>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Variable>Match Must BeGreaterThan 0</Variable>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <DecVariable>Match = "1"</DecVariable>
+            <SetTasks>Execute ExitParent (%item%.Parent)</SetTasks>
+            <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
+        </Actions>
+        <LastUpdated>2018-09-02 13:58:42</LastUpdated>
+        <Created>2018-09-01 21:27:44</Created>
+        <Aggregate>0</Aggregate>
+    </Task>
     <Character>
         <Key>Player</Key>
         <Name>Player</Name>
@@ -5626,6 +5839,14 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <InitialValue>0</InitialValue>
         <LastUpdated>2010-06-06 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
+    </Variable>
+    <Variable>
+        <Key>Match</Key>
+        <Name>ParentScanDepth</Name>
+        <Type>Numeric</Type>
+        <InitialValue>0</InitialValue>
+        <LastUpdated>2018-09-01 16:23:59</LastUpdated>
+        <Created>2018-09-01 16:23:59</Created>
     </Variable>
     <Group>
         <Key>AllLocations</Key>
