@@ -2138,9 +2138,9 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             <BracketSequence>#O(#A(#O#]A#</BracketSequence>
         </Restrictions>
         <Actions>
-            <MoveObject>Object ReferencedObjects ToCarriedBy Player</MoveObject>
+            <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2012-09-16 14:32:06</LastUpdated>
+        <LastUpdated>2018-09-02 14:32:06</LastUpdated>
         <Created>2012-09-16 14:32:06</Created>
     </Task>
     <Task>
