@@ -2481,7 +2481,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% can't go inside something that %CharacterName% [am/are/is] %CharacterName% can'tholding!</Text>
+                        <Text>%CharacterName% can't go inside something that %CharacterName% [am/are/is] holding!</Text>
                     </Description>
                 </Message>
             </Restriction>
