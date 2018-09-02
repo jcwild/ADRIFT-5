@@ -464,10 +464,10 @@
     <Folder>
         <Key>Folder15</Key>
         <Name>Take object we are on or in</Name>
-        <Member>CheckIfThe1</Member>
-        <Member>CheckIfThe</Member>
+        <Member>ExitBeforeTakeFrom</Member>
+        <Member>ExitBeforeTake</Member>
         <Member>IfStackBot</Member>
-        <Member>Match</Member>
+        <Member>ParentScanDepth</Member>
         <Member>ScanParent</Member>
         <Member>ExitParent</Member>
         <Height>369</Height>
@@ -5599,8 +5599,8 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
-        <Key>CheckIfThe1</Key>
-        <Priority>50100</Priority>
+        <Key>ExitBeforetakeFrom</Key>
+        <Priority>50012</Priority>
         <Type>Specific</Type>
         <GeneralTask>TakeObjectsFromOthers</GeneralTask>
         <Specific>
@@ -5624,7 +5624,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
-            <SetVariable>Match = "1"</SetVariable>
+            <SetVariable>ParentScanDepth = "1"</SetVariable>
             <SetTasks>Execute ScanParent (%Player%.Parent|%objects%)</SetTasks>
             <SetTasks>Execute ExitParent (%Player%)</SetTasks>
         </Actions>
@@ -5634,7 +5634,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>ScanParent</Key>
-        <Priority>50101</Priority>
+        <Priority>50011</Priority>
         <Type>General</Type>
         <Command># Scan parents of %item% for %object%</Command>
         <Description># Scan parent items of player for wanted object</Description>
@@ -5656,7 +5656,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
         <Actions>
-            <IncVariable>Match = "1"</IncVariable>
+            <IncVariable>ParentScanDepth = "1"</IncVariable>
             <SetTasks>Execute IfStackBot (%item%.Parent)</SetTasks>
             <SetTasks>Execute ScanParent (%item%.Parent|%object%)</SetTasks>
         </Actions>
@@ -5665,8 +5665,8 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Aggregate>0</Aggregate>
     </Task>
     <Task>
-        <Key>CheckIfThe</Key>
-        <Priority>50102</Priority>
+        <Key>ExitBeforetake</Key>
+        <Priority>50010</Priority>
         <Type>Specific</Type>
         <GeneralTask>TakeObjectFromLocation</GeneralTask>
         <Specific>
@@ -5685,7 +5685,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
-            <SetVariable>Match = "1"</SetVariable>
+            <SetVariable>ParentScanDepth = "1"</SetVariable>
             <SetTasks>Execute ScanParent (%Player%.Parent|%objects%)</SetTasks>
             <SetTasks>Execute ExitParent (%Player%)</SetTasks>
         </Actions>
@@ -5695,7 +5695,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>IfStackBot</Key>
-        <Priority>50103</Priority>
+        <Priority>50036</Priority>
         <Type>General</Type>
         <Command># Test %item% for bottom of stack</Command>
         <Description># Test item for bottom of stack</Description>
@@ -5713,7 +5713,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
-            <SetVariable>Match = "0"</SetVariable>
+            <SetVariable>ParentScanDepth = "0"</SetVariable>
         </Actions>
         <LastUpdated>2018-09-02 12:10:36</LastUpdated>
         <Created>2018-09-01 21:26:58</Created>
@@ -5721,7 +5721,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>ExitParent</Key>
-        <Priority>50104</Priority>
+        <Priority>50037</Priority>
         <Type>General</Type>
         <Command># Exit ParentScanDepth parent items of %item%</Command>
         <Description># Exit Each  Parent Item</Description>
@@ -5780,12 +5780,12 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Repeatable>1</Repeatable>
         <Restrictions>
             <Restriction>
-                <Variable>Match Must BeGreaterThan 0</Variable>
+                <Variable>ParentScanDepth Must BeGreaterThan 0</Variable>
             </Restriction>
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
-            <DecVariable>Match = "1"</DecVariable>
+            <DecVariable>ParentScanDepth = "1"</DecVariable>
             <SetTasks>Execute ExitParent (%item%.Parent)</SetTasks>
             <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
         </Actions>
@@ -5841,7 +5841,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Created>2010-06-06 15:19:35</Created>
     </Variable>
     <Variable>
-        <Key>Match</Key>
+        <Key>ParentScanDepth</Key>
         <Name>ParentScanDepth</Name>
         <Type>Numeric</Type>
         <InitialValue>0</InitialValue>
