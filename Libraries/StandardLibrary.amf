@@ -1700,19 +1700,28 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Object>ReferencedObject Must BeInState Open</Object>
-                    </Restriction>
-                    <Restriction>
                         <Object>AnyObject Must BeInsideObject ReferencedObject</Object>
                     </Restriction>
-                    <BracketSequence>#A#</BracketSequence>
+                    <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
                 <Text>Inside %TheObject[%object%]% is %ListObjectsIn[%object%]%.</Text>
+                <TabLabel>Objs</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>AnyCharacter Must BeInsideObject ReferencedObject</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>
+%CharacterName% discover[//s] %ListCharactersIn[%object%]% hiding inside %TheObject[%object%]%.</Text>
+                <TabLabel>Chars</TabLabel>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
         <Restrictions>
             <Restriction>
                 <Object>ReferencedObject Must Exist </Object>
@@ -1772,9 +1781,10 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         </Restrictions>
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
+            <SetTasks>Execute BringChar (%object%.Hiddenchar|%object%)</SetTasks>
         </Actions>
-        <LastUpdated>2011-08-07 18:15:59</LastUpdated>
-        <Created>2011-08-07 18:15:59</Created>
+        <LastUpdated>2018-09-04 15:31:21</LastUpdated>
+        <Created>2018-09-03 23:10:50</Created>
     </Task>
     <Task>
         <Key>ExamineObjects</Key>
@@ -2185,6 +2195,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 </Restrictions>
                 <DisplayWhen>StartAfterDefaultDescription</DisplayWhen>
                 <Text>%CharacterName[%character%]% [am/are/is] wearing %ListWorn[%character%]%, and [am/are/is] carrying %ListHeld[%character%]%.</Text>
+                <TabLabel>Worn and Held</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
@@ -2198,6 +2209,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 </Restrictions>
                 <DisplayWhen>StartAfterDefaultDescription</DisplayWhen>
                 <Text>%CharacterName[%character%]% [am/are/is] wearing %ListWorn[%character%]%.</Text>
+                <TabLabel>Worn only</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
@@ -2211,16 +2223,35 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 </Restrictions>
                 <DisplayWhen>StartAfterDefaultDescription</DisplayWhen>
                 <Text>%CharacterName[%character%]% [am/are/is] carrying %ListHeld[%character%]%.</Text>
+                <TabLabel>Held only</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
                         <Character>ReferencedCharacter Must BeSittingOnObject AnyObject</Character>
                     </Restriction>
+                    <Restriction>
+                        <Character>ReferencedCharacter Must BeLyingOnObject AnyObject</Character>
+                    </Restriction>
+                    <Restriction>
+                        <Character>ReferencedCharacter Must BeStandingOnObject AnyObject</Character>
+                    </Restriction>
+                    <BracketSequence>#O#O#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>%CharacterName[%character%]% [am/are/is] %character%.CharacterPosition on %TheObject[%ParentOf[%character%]%]%.</Text>
+                <TabLabel>On Obj</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>ReferencedCharacter Must BeInsideObject AnyObject</Character>
+                    </Restriction>
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>%CharacterName[%character%]% [am/are/is] sitting on %TheObject[%ParentOf[%character%]%]%.</Text>
+                <Text>%CharacterName[%character%]% [am/are/is] %character%.CharacterPosition inside %TheObject[%ParentOf[%character%]%]%.</Text>
+                <TabLabel>In Obj</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
@@ -2234,6 +2265,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 </Restrictions>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>It is too dark to make anything out clearly.</Text>
+                <TabLabel>Dark</TabLabel>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -2258,7 +2290,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2011-08-06 14:28:34</LastUpdated>
+        <LastUpdated>2018-09-04 15:23:04</LastUpdated>
         <Created>2011-08-06 14:28:34</Created>
     </Task>
     <Task>
