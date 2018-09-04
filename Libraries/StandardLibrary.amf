@@ -280,12 +280,13 @@
         <Member>ParentScanDepth</Member>
         <Member>ScanParent</Member>
         <Member>ExitParent</Member>
+        <Member>Insidepart</Member>
         <Height>446</Height>
         <Width>306</Width>
         <X>512</X>
         <Y>71</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-04 10:22:51</LastUpdated>
+        <LastUpdated>2018-09-04 15:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -1074,6 +1075,17 @@
         <LastUpdated>2012-11-17 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Property>
+    <Property>
+        <Key>Insidepart</Key>
+        <Description>Cannot be removed from container</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <Tooltip>Prevents this part from being removed from inside container, eg. a shelf.</Tooltip>
+        <DependentKey>StaticOrDynamic</DependentKey>
+        <DependentValue>Dynamic</DependentValue>
+        <LastUpdated>2018-09-04 15:47:26</LastUpdated>
+        <Created>2018-09-03 22:47:26</Created>
+    </Property>
     <Task>
         <Key>PutObjectsOnOthers</Key>
         <Priority>50000</Priority>
@@ -1677,13 +1689,23 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A#A#A(#O#)A(#O#A#)A(#O#A#)</BracketSequence>
+            <Restriction>
+                <Object>ReferencedObjects MustNot HaveProperty Insidepart</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.Name is part of %object2%.Name and cannot be removed.
+</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A#A#A#A#A(#O#)A(#O#A#)A(#O#A#)A#</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2013-08-26 11:58:00</LastUpdated>
-        <Created>2013-08-26 11:58:00</Created>
+        <LastUpdated>2018-09-04 15:36:15</LastUpdated>
+        <Created>2018-09-04 15:36:15</Created>
     </Task>
     <Task>
         <Key>OpenObjects</Key>
