@@ -274,13 +274,18 @@
         <Member>MaxWeight</Member>
         <Member>MaxBulk</Member>
         <Member>Size</Member>
-        <Member>Folder15</Member>
+        <Member>ExitBeforeTakeFrom</Member>
+        <Member>ExitBeforeTake</Member>
+        <Member>IfStackBot</Member>
+        <Member>ParentScanDepth</Member>
+        <Member>ScanParent</Member>
+        <Member>ExitParent</Member>
         <Height>446</Height>
         <Width>306</Width>
         <X>512</X>
         <Y>71</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-10-07 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-04 10:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -439,13 +444,14 @@
         <Member>CharactersCanGoInOb</Member>
         <Member>GetOffBeforeMoving</Member>
         <Member>StandBeforeMoving</Member>
+        <Member>PrevLoc</Member>
         <Expanded>0</Expanded>
         <Height>387</Height>
         <Width>415</Width>
         <X>338</X>
         <Y>84</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-10-09 12:03:37</LastUpdated>
+        <LastUpdated>2018-09-04 10:03:37</LastUpdated>
         <Created>2010-10-09 12:03:37</Created>
     </Folder>
     <Folder>
@@ -460,23 +466,6 @@
         <ShowPriority>1</ShowPriority>
         <LastUpdated>2011-05-05 13:48:46</LastUpdated>
         <Created>2011-05-05 13:48:46</Created>
-    </Folder>
-    <Folder>
-        <Key>Folder15</Key>
-        <Name>Take object we are on or in</Name>
-        <Member>ExitBeforeTakeFrom</Member>
-        <Member>ExitBeforeTake</Member>
-        <Member>IfStackBot</Member>
-        <Member>ParentScanDepth</Member>
-        <Member>ScanParent</Member>
-        <Member>ExitParent</Member>
-        <Height>369</Height>
-        <Width>776</Width>
-        <X>45</X>
-        <Y>119</Y>
-        <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-01 15:08:47</LastUpdated>
-        <Created>2018-09-01 15:08:47</Created>
     </Folder>
     <Property>
         <Key>ListDescription</Key>
@@ -2095,10 +2084,12 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
+            <RemoveLocationFromGroup>EverywhereInGroup PrevLoc FromGroup PrevLoc</RemoveLocationFromGroup>
+            <AddLocationToGroup>LocationOf %Player% ToGroup PrevLoc</AddLocationToGroup>
             <MoveCharacter>Character %Player% InDirection ReferencedDirection</MoveCharacter>
             <SetTasks>Execute Look</SetTasks>
         </Actions>
-        <LastUpdated>2018-08-30 00:32:26</LastUpdated>
+        <LastUpdated>2018-09-04 10:32:26</LastUpdated>
         <Created>2015-10-30 00:32:26</Created>
     </Task>
     <Task>
@@ -5599,7 +5590,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
-        <Key>ExitBeforetakeFrom</Key>
+        <Key>ExitBeforeTakeFrom</Key>
         <Priority>50012</Priority>
         <Type>Specific</Type>
         <GeneralTask>TakeObjectsFromOthers</GeneralTask>
@@ -5628,7 +5619,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <SetTasks>Execute ScanParent (%Player%.Parent|%objects%)</SetTasks>
             <SetTasks>Execute ExitParent (%Player%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-02 13:59:20</LastUpdated>
+        <LastUpdated>2018-09-04 09:59:20</LastUpdated>
         <Created>2018-09-01 21:29:13</Created>
         <Aggregate>0</Aggregate>
     </Task>
@@ -5660,12 +5651,12 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <SetTasks>Execute IfStackBot (%item%.Parent)</SetTasks>
             <SetTasks>Execute ScanParent (%item%.Parent|%object%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-02 12:10:41</LastUpdated>
+        <LastUpdated>2018-09-04 10:10:41</LastUpdated>
         <Created>2018-09-01 21:25:26</Created>
         <Aggregate>0</Aggregate>
     </Task>
     <Task>
-        <Key>ExitBeforetake</Key>
+        <Key>ExitBeforeTake</Key>
         <Priority>50010</Priority>
         <Type>Specific</Type>
         <GeneralTask>TakeObjectFromLocation</GeneralTask>
@@ -5689,7 +5680,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <SetTasks>Execute ScanParent (%Player%.Parent|%objects%)</SetTasks>
             <SetTasks>Execute ExitParent (%Player%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-02 13:59:12</LastUpdated>
+        <LastUpdated>2018-09-04 10:59:12</LastUpdated>
         <Created>2018-09-01 21:28:54</Created>
         <Aggregate>0</Aggregate>
     </Task>
@@ -5715,7 +5706,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetVariable>ParentScanDepth = "0"</SetVariable>
         </Actions>
-        <LastUpdated>2018-09-02 12:10:36</LastUpdated>
+        <LastUpdated>2018-09-04 10:10:36</LastUpdated>
         <Created>2018-09-01 21:26:58</Created>
         <Aggregate>0</Aggregate>
     </Task>
@@ -5789,7 +5780,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <SetTasks>Execute ExitParent (%item%.Parent)</SetTasks>
             <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
         </Actions>
-        <LastUpdated>2018-09-02 13:58:42</LastUpdated>
+        <LastUpdated>2018-09-04 10:58:42</LastUpdated>
         <Created>2018-09-01 21:27:44</Created>
         <Aggregate>0</Aggregate>
     </Task>
@@ -5845,7 +5836,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Name>ParentScanDepth</Name>
         <Type>Numeric</Type>
         <InitialValue>0</InitialValue>
-        <LastUpdated>2018-09-01 16:23:59</LastUpdated>
+        <LastUpdated>2018-09-04 10:23:59</LastUpdated>
         <Created>2018-09-01 16:23:59</Created>
     </Variable>
     <Group>
@@ -5884,4 +5875,11 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <LastUpdated>2011-05-02 16:29:40</LastUpdated>
         <Created>2011-05-02 16:29:40</Created>
     </Group>
+    <Group>
+        <Key>PrevLoc</Key>
+        <Type>Locations</Type>
+        <Name>Previous Player Location</Name>
+        <LastUpdated>2018-09-04 10:20:14</LastUpdated>
+        <Created>2018-09-03 23:20:14</Created>
+    </Group>    
 </Adventure>
