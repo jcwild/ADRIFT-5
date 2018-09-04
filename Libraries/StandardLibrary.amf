@@ -1803,7 +1803,6 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         </Restrictions>
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
-            <SetTasks>Execute BringChar (%object%.Hiddenchar|%object%)</SetTasks>
         </Actions>
         <LastUpdated>2018-09-04 15:31:21</LastUpdated>
         <Created>2018-09-03 23:10:50</Created>
