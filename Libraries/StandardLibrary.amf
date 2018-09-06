@@ -281,12 +281,13 @@
         <Member>ScanParent</Member>
         <Member>ExitParent</Member>
         <Member>Insidepart</Member>
+        <Member>TakeChar</Member>
         <Height>446</Height>
         <Width>306</Width>
         <X>512</X>
         <Y>71</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-04 15:22:51</LastUpdated>
+        <LastUpdated>2018-09-06 13:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -5836,6 +5837,44 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <LastUpdated>2018-09-04 10:58:42</LastUpdated>
         <Created>2018-09-01 21:27:44</Created>
         <Aggregate>0</Aggregate>
+    </Task>
+    <Task>
+        <Key>TakeChar</Key>
+        <Priority>50046</Priority>
+        <Type>General</Type>
+        <Command>[get/take/pick up/remove] %character%</Command>
+        <Command>pick %character% up</Command>
+        <Description>Take Character</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%character%.Name(Objective) does not let %Player%.Name(Objective) pick &lt;#IF(%character%.Gender=Male,"him","her")#&gt; up.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Character>%Player% Must HaveSeenCharacter ReferencedCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which character you are referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeVisibleToCharacter ReferencedCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't see %character%.Name!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#</BracketSequence>
+        </Restrictions>
+        <LastUpdated>2018-09-06 13:33:51</LastUpdated>
+        <Created>2018-09-06 12:50:26</Created>
     </Task>
     <Character>
         <Key>Player</Key>
