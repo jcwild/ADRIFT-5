@@ -368,12 +368,19 @@
         <Member>LockObWithKey</Member>
         <Member>LockObject</Member>
         <Member>LockObjectLazy</Member>
+        <Member>AutoOpen</Member>
+        <Member>AutoUnlock</Member>
+        <Member>OpenLocked</Member>
+        <Member>OpenDoor</Member>
+        <Member>OpenUnlock</Member>
+        <Member>ManualShut</Member>
+        <Member>CloseNLock</Member>        
         <Height>371</Height>
         <Width>393</Width>
         <X>244</X>
         <Y>271</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-10-07 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-06 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -1089,6 +1096,36 @@
         <LastUpdated>2018-09-04 15:47:26</LastUpdated>
         <Created>2018-09-03 22:47:26</Created>
     </Property>
+    <Property>
+        <Key>AutoOpen</Key>
+        <Description>Player must explicitly open objects after unlocking them</Description>
+        <PropertyOf>Characters</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <PrivateTo>Player</PrivateTo>
+        <Tooltip>Causes all unlocked doors to open automatically when you try to move through them.</Tooltip>
+        <LastUpdated>2018-09-06 14:14:00</LastUpdated>
+        <Created>2018-09-04 17:14:01</Created>
+    </Property>
+    <Property>
+        <Key>AutoUnlock</Key>
+        <Description>Automatically unlock objects if you have the proper key and try to open them</Description>
+        <PropertyOf>Characters</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <PrivateTo>Player</PrivateTo>
+        <Tooltip>Causes all locked doors to be unlocked automatically if you try to open them and you have the key.</Tooltip>
+        <LastUpdated>2018-09-06 14:14:30</LastUpdated>
+        <Created>2018-09-04 16:07:50</Created>
+    </Property>
+    <Property>
+        <Key>ManualShut</Key>
+        <Description>Player must explicitly close objects before locking them</Description>
+        <PropertyOf>Characters</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <PrivateTo>Player</PrivateTo>
+        <Tooltip>Select this if you don't want to allow locking an open object</Tooltip>
+        <LastUpdated>2018-09-06 14:15:37</LastUpdated>
+        <Created>2018-09-06 14:00:15</Created>
+    </Property>
     <Task>
         <Key>PutObjectsOnOthers</Key>
         <Priority>50000</Priority>
@@ -1712,7 +1749,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
     </Task>
     <Task>
         <Key>OpenObjects</Key>
-        <Priority>50036</Priority>
+        <Priority>50037</Priority>
         <AutoFillPriority>5</AutoFillPriority>
         <Type>General</Type>
         <Command>open %object%</Command>
@@ -1807,8 +1844,8 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-04 15:31:21</LastUpdated>
-        <Created>2018-09-03 23:10:50</Created>
+        <LastUpdated>2018-09-04 23:02:45</LastUpdated>
+        <Created>2018-09-04 23:02:45</Created>
     </Task>
     <Task>
         <Key>ExamineObjects</Key>
@@ -2354,7 +2391,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
     </Task>
     <Task>
         <Key>UnlockObWithKey</Key>
-        <Priority>50037</Priority>
+        <Priority>50038</Priority>
         <AutoFillPriority>5</AutoFillPriority>
         <Type>General</Type>
         <Command># Unlock %object1% with %object2% </Command>
@@ -2364,19 +2401,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>&lt;c&gt;(using %TheObject[%object2%]%)&lt;/c&gt;
 </Text>
-            </Description>
-            <Description>
-                <Restrictions>
-                    <Restriction>
-                        <Object>ReferencedObject Must BeInState Open</Object>
-                    </Restriction>
-                    <Restriction>
-                        <Object>AnyObject Must BeInsideObject ReferencedObject</Object>
-                    </Restriction>
-                    <BracketSequence>#A#</BracketSequence>
-                </Restrictions>
-                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>Inside %TheObject[%object%]% is %ListObjectsIn[%object%]%.</Text>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -2396,8 +2420,8 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute UnlockObject (%object1%|%PropertyValue[%object1%,LockKey]%)</SetTasks>
         </Actions>
-        <LastUpdated>2011-06-04 16:47:46</LastUpdated>
-        <Created>2011-06-04 16:47:46</Created>
+        <LastUpdated>2018-09-06 13:52:48</LastUpdated>
+        <Created>2018-09-04 23:19:47</Created>
     </Task>
     <Task>
         <Key>SitOnObject</Key>
@@ -2857,30 +2881,11 @@ This task executes the 'Take objects from others' task, giving it the parent of 
     </Task>
     <Task>
         <Key>UnlockObjectLazy</Key>
-        <Priority>50038</Priority>
+        <Priority>50039</Priority>
         <AutoFillPriority>5</AutoFillPriority>
         <Type>General</Type>
         <Command>unlock %object%</Command>
         <Description>Unlock objects (lazy)</Description>
-        <CompletionMessage>
-            <Description>
-                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text />
-            </Description>
-            <Description>
-                <Restrictions>
-                    <Restriction>
-                        <Object>ReferencedObject Must BeInState Open</Object>
-                    </Restriction>
-                    <Restriction>
-                        <Object>AnyObject Must BeInsideObject ReferencedObject</Object>
-                    </Restriction>
-                    <BracketSequence>#A#</BracketSequence>
-                </Restrictions>
-                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>Inside %TheObject[%object%]% is %ListObjectsIn[%object%]%.</Text>
-            </Description>
-        </CompletionMessage>
         <Repeatable>1</Repeatable>
         <PreventOverriding>1</PreventOverriding>
         <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
@@ -2935,8 +2940,8 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <SetTasks>Execute UnlockObWithKey (%object1%|%PropertyValue[%object1%,LockKey]%)</SetTasks>
         </Actions>
-        <LastUpdated>2012-09-11 15:42:57</LastUpdated>
-        <Created>2012-09-11 15:42:57</Created>
+        <LastUpdated>2018-09-06 13:52:11</LastUpdated>
+        <Created>2018-09-04 23:19:29</Created>
     </Task>
     <Task>
         <Key>StandOnFloor</Key>
@@ -3825,7 +3830,7 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
     </Task>
     <Task>
         <Key>UnlockObject</Key>
-        <Priority>50039</Priority>
+        <Priority>50040</Priority>
         <AutoFillPriority>5</AutoFillPriority>
         <Type>General</Type>
         <Command>unlock %object1% with %object2%</Command>
@@ -3834,19 +3839,6 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% unlock[//s] %TheObject[%object1%]% with %TheObject[%object2%]%.</Text>
-            </Description>
-            <Description>
-                <Restrictions>
-                    <Restriction>
-                        <Object>ReferencedObject Must BeInState Open</Object>
-                    </Restriction>
-                    <Restriction>
-                        <Object>AnyObject Must BeInsideObject ReferencedObject</Object>
-                    </Restriction>
-                    <BracketSequence>#A#</BracketSequence>
-                </Restrictions>
-                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>Inside %TheObject[%object%]% is %ListObjectsIn[%object%]%.</Text>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -3920,8 +3912,8 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Closed</SetProperty>
         </Actions>
-        <LastUpdated>2011-08-07 18:15:46</LastUpdated>
-        <Created>2011-08-07 18:15:46</Created>
+        <LastUpdated>2018-09-04 23:03:06</LastUpdated>
+        <Created>2018-09-04 23:03:06</Created>
     </Task>
     <Task>
         <Key>PullObjects</Key>
@@ -4327,7 +4319,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>LockObject</Key>
-        <Priority>50039</Priority>
+        <Priority>50040</Priority>
         <AutoFillPriority>5</AutoFillPriority>
         <Type>General</Type>
         <Command>lock %object1% [with/using] %object2%</Command>
@@ -4378,15 +4370,6 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 </Message>
             </Restriction>
             <Restriction>
-                <Object>ReferencedObject1 Must BeInState Closed</Object>
-                <Message>
-                    <Description>
-                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% can't lock %object1%.Name as it is not closed!</Text>
-                    </Description>
-                </Message>
-            </Restriction>
-            <Restriction>
                 <Object>ReferencedObject2 Must HaveBeenSeenByCharacter %Player%</Object>
                 <Message>
                     <Description>
@@ -4413,12 +4396,12 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A#A#</BracketSequence>
+            <BracketSequence>#A#A#A#A#A#A#</BracketSequence>
         </Restrictions>
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Locked</SetProperty>
         </Actions>
-        <LastUpdated>2011-12-21 15:38:51</LastUpdated>
+        <LastUpdated>2018-09-06 14:10:37</LastUpdated>
         <Created>2011-12-21 15:38:51</Created>
     </Task>
     <Task>
@@ -5997,6 +5980,141 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <LastUpdated>2018-09-06 13:33:51</LastUpdated>
         <Created>2018-09-06 12:50:26</Created>
     </Task>
+    <Task>
+        <Key>OpenLocked</Key>
+        <Priority>50035</Priority>
+        <Type>General</Type>
+        <Command>open %object%</Command>
+        <Description>Open object unlocks automatically</Description>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObject Must BeInState Locked</Object>
+            </Restriction>
+            <Restriction>
+                <Character>Player Must HaveProperty AutoUnlock</Character>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject Must HaveProperty LockKey</Object>
+            </Restriction>
+            <BracketSequence>#A#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Execute OpenUnlock (%object%|%object%.LockKey)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-04 18:07:10</LastUpdated>
+        <Created>2018-09-04 18:07:10</Created>
+    </Task>
+    <Task>
+        <Key>OpenDoor</Key>
+        <Priority>50043</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>UnlockObject</GeneralTask>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Description>Open after unlocking</Description>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>AfterTextAndActions</SpecificOverrideType>
+        <Restrictions>
+            <Restriction>
+                <Character>Player MustNot HaveProperty AutoOpen</Character>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Execute OpenObjects (%object%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-06 14:16:58</LastUpdated>
+        <Created>2018-09-04 18:07:53</Created>
+    </Task>
+    <Task>
+        <Key>OpenUnlock</Key>
+        <Priority>50044</Priority>
+        <Type>General</Type>
+        <Command># Auto-unlock %object1% with %object2%</Command>
+        <Description># Auto-unlock object with key</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(First unlocking %object1%.Name with %object2%.Name)&lt;/c&gt;
+</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObject2 Must BeHeldByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%object1%.Name is locked. </Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetProperty>ReferencedObject1 OpenStatus Closed</SetProperty>
+            <SetTasks>Execute OpenObjects (%object1%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-04 22:56:33</LastUpdated>
+        <Created>2018-09-04 22:56:33</Created>
+    </Task>
+    <Task>
+        <Key>CloseNLock</Key>
+        <Priority>50047</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>LockObject</GeneralTask>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Description>Close object before locking</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(First closing %object1%.Name)&lt;/c&gt;
+%CharacterName% lock[//s] %object1%.Name with %object2%.Name.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>Override</SpecificOverrideType>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObject1 Must BeInState Open</Object>
+            </Restriction>
+            <Restriction>
+                <Character>Player MustNot HaveProperty ManualShut</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't lock %object1%.Name as it is not closed!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetProperty>ReferencedObject1 OpenStatus Locked</SetProperty>
+        </Actions>
+        <LastUpdated>2018-09-06 14:11:22</LastUpdated>
+        <Created>2018-09-06 14:10:36</Created>
+    </Task>    
     <Character>
         <Key>Player</Key>
         <Name>Player</Name>
