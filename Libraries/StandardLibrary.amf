@@ -281,13 +281,15 @@
         <Member>ScanParent</Member>
         <Member>ExitParent</Member>
         <Member>Insidepart</Member>
+        <Member>TakeFromCh</Member>
+        <Member>TakeFromCh1</Member>        
         <Member>TakeChar</Member>
         <Height>446</Height>
         <Width>306</Width>
         <X>512</X>
         <Y>71</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-06 13:22:51</LastUpdated>
+        <LastUpdated>2018-09-06 13:23:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -5838,6 +5840,125 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Created>2018-09-01 21:27:44</Created>
         <Aggregate>0</Aggregate>
     </Task>
+    <Task>
+        <Key>TakeFromCh</Key>
+        <Priority>50014</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>TakeObjects</GeneralTask>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>1</Multiple>
+            <Key />
+        </Specific>
+        <Description>Take Objects From Character (Lazy)</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(from %objects%.Parent.Name)&lt;/c&gt;</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>Override</SpecificOverrideType>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeExactText All</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeWornByCharacter AnyCharacter</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeHeldByCharacter AnyCharacter</Object>
+            </Restriction>
+            <BracketSequence>#A(#O#)</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Execute TakeFromCh1 (%objects%|%objects%.Parent)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-06 12:35:38</LastUpdated>
+        <Created>2018-09-06 12:14:34</Created>
+    </Task>
+    <Task>
+        <Key>TakeFromCh1</Key>
+        <Priority>50045</Priority>
+        <Type>General</Type>
+        <Command>[get/take/pick up/remove] %objects% from %character%</Command>
+        <Command>pick %objects% up from %character%</Command>
+        <Description>Take Objects From Character</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%character%.Name grabs %Player%.Name(Possessive) wrist and stops %Player%.Name(Objective) from taking %object%.Name!&lt;!--
+
+     Override this task to allow objects to be taken from specific characters--&gt;</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Character>ReferencedCharacter Must Exist </Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which character you are referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must HaveSeenCharacter ReferencedCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which character you are referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeVisibleToCharacter ReferencedCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't see %character%.Name!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must Exist </Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you are trying to take.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must HaveBeenSeenByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you are trying to take.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeVisibleToCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't see %objects%.Name!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeWornByCharacter ReferencedCharacter</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeHeldByCharacter ReferencedCharacter</Object>
+            </Restriction>
+            <BracketSequence>#A#A#A#A#A#A(#O#)</BracketSequence>
+        </Restrictions>
+        <LastUpdated>2018-09-06 12:49:05</LastUpdated>
+        <Created>2018-09-06 12:19:07</Created>
+    </Task>    
     <Task>
         <Key>TakeChar</Key>
         <Priority>50046</Priority>
