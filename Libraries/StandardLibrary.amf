@@ -310,12 +310,13 @@
         <Member>Sittable</Member>
         <Member>Standable</Member>
         <Member>Lieable</Member>
+        <Member>StandOnObj1</Member>
         <Height>321</Height>
         <Width>244</Width>
         <X>244</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-10-07 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-09 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
