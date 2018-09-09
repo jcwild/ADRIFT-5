@@ -1126,6 +1126,17 @@
         <LastUpdated>2018-09-06 14:15:37</LastUpdated>
         <Created>2018-09-06 14:00:15</Created>
     </Property>
+    <Property>
+        <Key>StandOnObj1</Key>
+        <Description>Standing when sitting/lying will stand on object </Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>SelectionOnly</Type>
+        <Tooltip>Normally standing up while sitting on a chair will stand you on the ground. Select this if player should stand up on top of the chair.</Tooltip>
+        <DependentKey>Standable</DependentKey>
+        <DependentValue>True</DependentValue>
+        <LastUpdated>2018-09-09 15:54:54</LastUpdated>
+        <Created>2018-09-09 15:51:43</Created>
+    </Property>    
     <Task>
         <Key>PutObjectsOnOthers</Key>
         <Priority>50000</Priority>
@@ -1423,7 +1434,7 @@
         <Priority>50023</Priority>
         <AutoFillPriority>4</AutoFillPriority>
         <Type>General</Type>
-        <Command>stand {up/down}</Command>
+        <Command>stand {up/on}</Command>
         <Description>Stand On Current Object</Description>
         <CompletionMessage>
             <Description>
@@ -1443,6 +1454,12 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                 <Character>%Player% Must BeOnObject AnyObject</Character>
             </Restriction>
             <Restriction>
+                <Expression>%Player%.Parent.Standable=1</Expression>
+            </Restriction>
+            <Restriction>
+                <Expression>%player%.Parent.StandOnObj1=1</Expression>
+            </Restriction>
+            <Restriction>
                 <Character>%Player% MustNot BeInPosition Standing</Character>
                 <Message>
                     <Description>
@@ -1451,12 +1468,12 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#</BracketSequence>
+            <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
         <Actions>
             <SetTasks>Execute StandOnObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <LastUpdated>2011-06-04 17:01:46</LastUpdated>
+        <LastUpdated>2018-09-09 16:25:07</LastUpdated>
         <Created>2011-06-04 17:01:46</Created>
     </Task>
     <Task>
@@ -2596,15 +2613,15 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Priority>50026</Priority>
         <AutoFillPriority>4</AutoFillPriority>
         <Type>General</Type>
-        <Command>[stand/get/move] up {on {the} floor/ground}</Command>
+        <Command>[stand{ up/ down/ off}/[get/move] [up/down/off]]{ [on/to/onto] {the} [floor/ground]}</Command>
         <Command>exit</Command>
-        <Command>get off</Command>
+        <Command>stand</Command>
         <Command>leave</Command>
         <Description>Leave Current Object</Description>
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>&lt;c&gt;(%TheObject[%ParentOf[%Player%]%]%)&lt;/c&gt;&lt;!--
+                <Text>&lt;c&gt;(Leave %TheObject[%ParentOf[%Player%]%]%)&lt;/c&gt;&lt;!--
 
 This task executes the 'Leave Object' task, giving it the parent of the player as a parameter
 
@@ -2618,30 +2635,12 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
             <Restriction>
                 <Character>%Player% Must BeOnObject AnyObject</Character>
             </Restriction>
-            <Restriction>
-                <Character>%Player% Must BeInPosition Sitting</Character>
-                <Message>
-                    <Description>
-                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% [am/are/is] not sitting down!</Text>
-                    </Description>
-                </Message>
-            </Restriction>
-            <Restriction>
-                <Character>%Player% Must BeInPosition Lying</Character>
-                <Message>
-                    <Description>
-                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% [am/are/is] not lying down!</Text>
-                    </Description>
-                </Message>
-            </Restriction>
-            <BracketSequence>#A(#O#)</BracketSequence>
+            <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
             <SetTasks>Execute MoveOffObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <LastUpdated>2012-09-06 13:35:10</LastUpdated>
+        <LastUpdated>2018-09-09 16:51:53</LastUpdated>
         <Created>2012-09-06 13:35:10</Created>
     </Task>
     <Task>
