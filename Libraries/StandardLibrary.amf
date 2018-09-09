@@ -2148,7 +2148,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>There is no route &lt;# IF(%direction% = "Up" OR %direction% = "Down" OR %direction% = "In" OR %direction% = "Out", "", "to the ") #&gt;%LCase[%direction%]%&lt;# IF(%Player%.Location.Exits.Count = 0, ".", ", only " + %ListExits[%Player%]% + ".") #&gt;</Text>
+                        <Text>There is no route &lt;# IF(%direction% = "Up" OR %direction% = "Down" OR %direction% = "In" OR %direction% = "Out", "", "to the ") #&gt;%LCase[%direction%]%&lt;# IF(%Player%.Location.Exits.Count = 0, ".", ", only " + "%ListExits[%Player%]%" + ".") #&gt;</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -5870,7 +5870,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%character%.Name grabs %Player%.Name(Possessive) wrist and stops %Player%.Name(Objective) from taking %object%.Name!&lt;!--
+                <Text>%character%.Name grabs %Player%.Name(Possessive) wrist and stops %Player%.Name(Objective) from taking %objects%.Name!&lt;!--
 
      Override this task to allow objects to be taken from specific characters--&gt;</Text>
             </Description>
