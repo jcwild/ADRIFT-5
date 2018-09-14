@@ -1747,7 +1747,10 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     <Restriction>
                         <Character>AnyCharacter Must BeInsideObject ReferencedObject</Character>
                     </Restriction>
-                    <BracketSequence>#</BracketSequence>
+                    <Restriction>
+                        <Character>%Player% MustNot BeInsideObject ReferencedObject</Character>
+                    </Restriction>
+                    <BracketSequence>#A#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
                 <Text>
@@ -1816,8 +1819,8 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-04 23:02:45</LastUpdated>
-        <Created>2018-09-04 23:02:45</Created>
+        <LastUpdated>2018-09-14 16:06:14</LastUpdated>
+        <Created>2013-09-04 23:02:45</Created>
     </Task>
     <Task>
         <Key>ExamineObjects</Key>
@@ -1938,7 +1941,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Type>General</Type>
         <Command>stand {up/down} [in/on] %object%</Command>
         <Command>get on %object%</Command>
-        <Description>Stand On Objects</Description>
+        <Description>Stand On Object</Description>
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
@@ -1946,6 +1949,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
         <Restrictions>
             <Restriction>
                 <Object>ReferencedObject Must Exist </Object>
@@ -2004,9 +2008,10 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             <BracketSequence>#A#A#A#A#A#</BracketSequence>
         </Restrictions>
         <Actions>
+            <SetTasks>Execute CheckExit (%Player%.Parent|%object%)</SetTasks>
             <MoveCharacter>Character %Player% ToStandingOn ReferencedObject</MoveCharacter>
         </Actions>
-        <LastUpdated>2011-08-07 18:14:09</LastUpdated>
+        <LastUpdated>2018-09-14 15:54:01</LastUpdated>
         <Created>2011-08-07 18:14:09</Created>
     </Task>
     <Task>
@@ -2472,7 +2477,7 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
         <Type>General</Type>
         <Command>sit {up/down} [in/on] %object%</Command>
         <Command>get on %object%</Command>
-        <Description>Sit On Objects</Description>
+        <Description>Sit On Object</Description>
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
@@ -2480,6 +2485,7 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
         <Restrictions>
             <Restriction>
                 <Object>ReferencedObject Must Exist </Object>
@@ -2538,9 +2544,10 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
             <BracketSequence>#A#A#A#A#A#</BracketSequence>
         </Restrictions>
         <Actions>
+            <SetTasks>Execute CheckExit (%Player%.Parent|%object%)</SetTasks>
             <MoveCharacter>Character %Player% ToSittingOn ReferencedObject</MoveCharacter>
         </Actions>
-        <LastUpdated>2011-08-07 18:13:42</LastUpdated>
+        <LastUpdated>2018-09-14 15:53:23</LastUpdated>
         <Created>2011-08-07 18:13:42</Created>
     </Task>
     <Task>
@@ -3609,6 +3616,7 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
+        <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
         <Restrictions>
             <Restriction>
                 <Object>ReferencedObject Must Exist </Object>
@@ -3667,10 +3675,73 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
             <BracketSequence>#A#A#A#A#A#</BracketSequence>
         </Restrictions>
         <Actions>
+            <SetTasks>Execute CheckExit (%Player%Parent|%object%)</SetTasks>
             <MoveCharacter>Character %Player% ToLyingOn ReferencedObject</MoveCharacter>
         </Actions>
-        <LastUpdated>2011-08-07 18:14:33</LastUpdated>
+        <LastUpdated>2018-09-14 15:54:24</LastUpdated>
         <Created>2011-08-07 18:14:33</Created>
+    </Task>
+    <Task>
+        <Key>CheckExit</Key>
+        <Priority>50027</Priority>
+        <Type>General</Type>
+        <Command># Check if leaving %object2% to go to %object1%</Command>
+        <Description># Check if leaving current parent to go to new object</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(first getting </Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% Must BeOnObject AnyObject</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>off</Text>
+                <TabLabel>off</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% Must BeInsideObject AnyObject</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>out</Text>
+                <TabLabel>out</TabLabel>
+            </Description>
+            <Description>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text> %object2%.Name)&lt;/c&gt;
+</Text>
+                <TabLabel>Default end</TabLabel>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Character>%Player% Must BeInsideObject AnyObject</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% MustNot BeInsideObject ReferencedObject1</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeOnObject AnyObject</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% MustNot BeOnObject ReferencedObject1</Character>
+            </Restriction>
+            <Restriction>
+                <Expression>%object2% != %object1%.Parent</Expression>
+            </Restriction>
+            <BracketSequence>[#A#)O(#A#]A#</BracketSequence>
+        </Restrictions>
+        <LastUpdated>2018-09-14 15:52:49</LastUpdated>
+        <Created>2018-09-10 14:04:07</Created>
     </Task>
     <Task>
         <Key>CloseObject</Key>
