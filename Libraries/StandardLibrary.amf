@@ -2151,13 +2151,6 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Type>General</Type>
         <Command>{[go/walk/move/run] {to {the}}} %direction%</Command>
         <Description>Player Movement</Description>
-        <CompletionMessage>
-            <Description>
-                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%CharacterName% move[//s] %LCase[%direction%]%.
-</Text>
-            </Description>
-        </CompletionMessage>
         <Repeatable>1</Repeatable>
         <LowPriority>1</LowPriority>
         <Restrictions>
@@ -2173,13 +2166,10 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
-            <RemoveLocationFromGroup>EverywhereInGroup PrevLoc FromGroup PrevLoc</RemoveLocationFromGroup>
-            <AddLocationToGroup>LocationOf %Player% ToGroup PrevLoc</AddLocationToGroup>
-            <MoveCharacter>Character %Player% InDirection ReferencedDirection</MoveCharacter>
-            <SetTasks>Execute Look</SetTasks>
+            <SetTasks>Execute ExitBeforeMoving (%Player%.Parent)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-04 10:32:26</LastUpdated>
-        <Created>2015-10-30 00:32:26</Created>
+        <LastUpdated>2018-09-14 13:37:51</LastUpdated>
+        <Created>2018-09-05 10:32:26</Created>
     </Task>
     <Task>
         <Key>RemoveBeforePut</Key>
@@ -4480,9 +4470,13 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     <Task>
         <Key>GetOffBeforeMoving</Key>
         <Priority>50011</Priority>
-        <AutoFillPriority>1</AutoFillPriority>
-        <Type>General</Type>
-        <Command>{[go/walk/move/run] {to {the}}} %direction%</Command>
+        <Type>Specific</Type>
+        <GeneralTask>PlayerMovement</GeneralTask>
+        <Specific>
+            <Type>Direction</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
         <Description>Get off objects before moving</Description>
         <CompletionMessage>
             <Description>
@@ -4493,27 +4487,29 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <Continue>ContinueAlways</Continue>
+        <SpecificOverrideType>BeforeTextAndActions</SpecificOverrideType>
         <Restrictions>
             <Restriction>
                 <Character>%Player% Must BeOnObject AnyObject</Character>
             </Restriction>
-            <Restriction>
-                <Character>%Player% Must HaveRouteInDirection ReferencedDirection</Character>
-            </Restriction>
-            <BracketSequence>#A#</BracketSequence>
+            <BracketSequence>#</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
         </Actions>
-        <LastUpdated>2012-09-11 15:43:27</LastUpdated>
+        <LastUpdated>2018-09-14 12:35:28</LastUpdated>
         <Created>2012-09-11 15:43:27</Created>
     </Task>
     <Task>
         <Key>StandBeforeMoving</Key>
         <Priority>50012</Priority>
-        <AutoFillPriority>1</AutoFillPriority>
-        <Type>General</Type>
-        <Command>{[go/walk/move/run] {to {the}}} %direction%</Command>
+        <Type>Specific</Type>
+        <GeneralTask>PlayerMovement</GeneralTask>
+        <Specific>
+            <Type>Direction</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
         <Description>Stand before moving</Description>
         <CompletionMessage>
             <Description>
@@ -4522,8 +4518,9 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
 </Text>
             </Description>
         </CompletionMessage>
-        <Repeatable>1</Repeatable>
+        <Repeatable>0</Repeatable>
         <Continue>ContinueAlways</Continue>
+        <SpecificOverrideType>BeforeTextAndActions</SpecificOverrideType>
         <Restrictions>
             <Restriction>
                 <Character>%Player% Must BeInPosition Sitting</Character>
@@ -4532,15 +4529,107 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Character>%Player% Must BeInPosition Lying</Character>
             </Restriction>
             <Restriction>
-                <Character>%Player% Must HaveRouteInDirection ReferencedDirection</Character>
+                <Character>%Player% MustNot BeInsideObject AnyObject</Character>
             </Restriction>
-            <BracketSequence>(#O#)A#</BracketSequence>
+            <Restriction>
+                <Character>%Player% MustNot BeOnObject AnyObject</Character>
+            </Restriction>
+            <BracketSequence>(#O#)A#A#</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
         </Actions>
-        <LastUpdated>2012-09-11 15:43:27</LastUpdated>
+        <LastUpdated>2018-09-14 12:36:53</LastUpdated>
         <Created>2012-09-11 15:43:27</Created>
+    </Task>
+    <Task>
+        <Key>MovePlayer</Key>
+        <Priority>50029</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>PlayerMovement</GeneralTask>
+        <Specific>
+            <Type>Direction</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Description>Move Player</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% move[//s] %LCase[%direction%]%.
+</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>AfterTextAndActions</SpecificOverrideType>
+        <Restrictions>
+            <Restriction>
+                <Character>%Player% MustNot BeOnObject AnyObject</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% MustNot BeInsideObject AnyObject</Character>
+            </Restriction>
+            <BracketSequence>#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <RemoveLocationFromGroup>EverywhereInGroup PrevLoc FromGroup PrevLoc</RemoveLocationFromGroup>
+            <AddLocationToGroup>LocationOf %Player% ToGroup PrevLoc</AddLocationToGroup>
+            <MoveCharacter>Character %Player% InDirection ReferencedDirection</MoveCharacter>
+            <SetTasks>Execute Look</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-14 12:33:56</LastUpdated>
+        <Created>2018-09-14 12:33:56</Created>
+    </Task>
+    <Task>
+        <Key>ExitBeforeMoving</Key>
+        <Priority>50030</Priority>
+        <Type>General</Type>
+        <Command># Exit %object% before moving</Command>
+        <Description># Exit Before Moving</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(getting out of %object%.Name first)&lt;/c&gt;
+</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must BeInState Closed</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(Opening %object%.Name and getting out first)&lt;/c&gt;
+</Text>
+                <TabLabel>in closed object</TabLabel>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObject Must Exist </Object>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeInsideObject ReferencedObject</Character>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject MustNot BeInState Locked</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% [am/are/is] locked inside %object%.name.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
+            <MoveCharacter>Character %Player% ToStandingOn TheFloor</MoveCharacter>
+        </Actions>
+        <LastUpdated>2018-09-14 13:40:57</LastUpdated>
+        <Created>2018-09-14 12:41:08</Created>
     </Task>
     <Task>
         <Key>jcw_Task1</Key>
