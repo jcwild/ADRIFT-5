@@ -1179,7 +1179,7 @@
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% [am/are/is] not carrying %TheObject[%objects%]%!</Text>
+                        <Text>%CharacterName% [am/are/is] not carrying %objects%.List(Or)!</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -1224,7 +1224,7 @@
         <Actions>
             <MoveObject>Object ReferencedObjects OntoObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2018-08-31 23:58:49</LastUpdated>
+        <LastUpdated>2018-09-14 23:58:49</LastUpdated>
         <Created>2015-10-29 23:10:49</Created>
     </Task>
     <Task>
@@ -1534,7 +1534,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%CharacterName[%character%, subject]% doesn't seem interested in %objects%.Name.</Text>
+                <Text>%CharacterName[%character%, subject]% doesn't seem interested in %objects%.List(Or).</Text>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -1589,7 +1589,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             </Restriction>
             <BracketSequence>#A#A#A#A(#O#)</BracketSequence>
         </Restrictions>
-        <LastUpdated>2012-09-16 14:31:49</LastUpdated>
+        <LastUpdated>2018-09-14 14:31:49</LastUpdated>
         <Created>2012-09-16 14:31:49</Created>
     </Task>
     <Task>
@@ -5870,7 +5870,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%character%.Name grabs %Player%.Name(Possessive) wrist and stops %Player%.Name(Objective) from taking %objects%.Name!&lt;!--
+                <Text>%character%.Name grabs %Player%.Name(Possessive) wrist and stops %Player%.Name(Objective) from taking %objects%.List(Or)!&lt;!--
 
      Override this task to allow objects to be taken from specific characters--&gt;</Text>
             </Description>
@@ -5939,7 +5939,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#A#A#A#A(#O#)</BracketSequence>
         </Restrictions>
-        <LastUpdated>2018-09-06 12:49:05</LastUpdated>
+        <LastUpdated>2018-09-14 12:49:05</LastUpdated>
         <Created>2018-09-06 12:19:07</Created>
     </Task>    
     <Task>
