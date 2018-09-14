@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-09-14 23:59:00</LastUpdated>
+    <LastUpdated>2018-09-14 23:59:01</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -311,6 +311,8 @@
         <Member>Standable</Member>
         <Member>Lieable</Member>
         <Member>StandOnObj1</Member>
+        <Member>CheckExit</Member>
+        <Member>ExitBeforeMoving</Member>
         <Height>321</Height>
         <Width>244</Width>
         <X>244</X>
@@ -457,6 +459,7 @@
         <Member>GetOffBeforeMoving</Member>
         <Member>StandBeforeMoving</Member>
         <Member>PrevLoc</Member>
+        <Member>MovePlayer</Member>
         <Expanded>0</Expanded>
         <Height>387</Height>
         <Width>415</Width>
@@ -4688,7 +4691,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% [am/are/is] locked inside %object%.name.</Text>
+                        <Text>%CharacterName% [am/are/is] locked inside %object%.Name.</Text>
                     </Description>
                 </Message>
             </Restriction>
