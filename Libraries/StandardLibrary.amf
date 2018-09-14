@@ -2168,8 +2168,8 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute ExitBeforeMoving (%Player%.Parent)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-14 13:37:51</LastUpdated>
-        <Created>2018-09-05 10:32:26</Created>
+        <LastUpdated>2018-09-14 14:37:51</LastUpdated>
+        <Created>2015-10-30 00:32:26</Created>
     </Task>
     <Task>
         <Key>RemoveBeforePut</Key>
@@ -4518,7 +4518,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
 </Text>
             </Description>
         </CompletionMessage>
-        <Repeatable>0</Repeatable>
+        <Repeatable>1</Repeatable>
         <Continue>ContinueAlways</Continue>
         <SpecificOverrideType>BeforeTextAndActions</SpecificOverrideType>
         <Restrictions>
