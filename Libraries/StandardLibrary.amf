@@ -1144,7 +1144,7 @@
     </Property>    
     <Task>
         <Key>PutObjectsOnOthers</Key>
-        <Priority>50000</Priority>
+        <Priority>49999</Priority>
         <AutoFillPriority>3</AutoFillPriority>
         <Type>General</Type>
         <Command>put %objects% on{to} {{the} top of} %object2%</Command>
@@ -1184,6 +1184,16 @@
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>%CharacterName% [am/are/is] not carrying %objects%.List(Or)!</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Object>ReferencedObjects Must BeExactText All</Object>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text />
                     </Description>
                 </Message>
             </Restriction>
@@ -1228,7 +1238,7 @@
         <Actions>
             <MoveObject>Object ReferencedObjects OntoObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2018-09-14 23:58:49</LastUpdated>
+        <LastUpdated>2018-09-17 23:15:24</LastUpdated>
         <Created>2015-10-29 23:10:49</Created>
     </Task>
     <Task>
@@ -1552,7 +1562,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
     </Task>
     <Task>
         <Key>TakeObjectsFromOthers</Key>
-        <Priority>50011</Priority>
+        <Priority>50010</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
         <Command>[get/take/pick up/remove] %objects% from %object2%</Command>
@@ -1661,6 +1671,39 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>%PCase[%TheObject[%objects%]%]% is not on or inside %TheObject[%object2%]%!</Text>
                     </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Object>ReferencedObject2 MustNot HaveProperty Container</Object>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%PCase[%TheObject[%objects%]%]% is not on %TheObject[%object2%]%!</Text>
+                        <TabLabel>ON</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Object>ReferencedObject2 MustNot HaveProperty Surface</Object>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%PCase[%TheObject[%objects%]%]% is not inside %TheObject[%object2%]%!</Text>
+                        <TabLabel>IN</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Object>ReferencedObjects Must BeExactText All</Object>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text />
+                        <TabLabel>All</TabLabel>
+                    </Description>
                 </Message>
             </Restriction>
             <Restriction>
@@ -1720,7 +1763,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2018-09-04 15:36:15</LastUpdated>
+        <LastUpdated>2018-09-17 19:32:27</LastUpdated>
         <Created>2018-09-04 15:36:15</Created>
     </Task>
     <Task>
@@ -3273,6 +3316,17 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>%CharacterName% [am/are/is] not carrying %TheObjects[%objects%]%!</Text>
                     </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Object>ReferencedObjects Must BeExactText All</Object>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text />
+                        <TabLabel>All</TabLabel>
+                    </Description>
                 </Message>
             </Restriction>
             <Restriction>
@@ -3301,7 +3355,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         <Actions>
             <MoveObject>Object ReferencedObjects InsideObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2018-08-31 17:42:00</LastUpdated>
+        <LastUpdated>2018-09-17 23:47:21</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
     <Task>
