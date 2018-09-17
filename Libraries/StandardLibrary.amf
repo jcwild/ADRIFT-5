@@ -3050,14 +3050,14 @@ This task executes the 'Take objects from others' task, giving it the parent of 
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <Actions>
-            <SetTasks>Execute ListObjsIn (%Player%.WornAndHeld)</SetTasks>
+            <SetTasks>Execute ListObjsIn (%Player%.WornAndHeld(False))</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-15 17:53:16</LastUpdated>
+        <LastUpdated>2018-09-17 15:43:08</LastUpdated>
         <Created>2012-10-12 17:53:02</Created>
     </Task>
     <Task>
         <Key>ListObjsIn</Key>
-        <Priority>50042</Priority>
+        <Priority>50043</Priority>
         <Type>General</Type>
         <Command># ListObjectsIn %object%</Command>
         <Description># List Objects Inside and On Object</Description>
@@ -3120,7 +3120,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                     <BracketSequence>#A(#O#)A#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>Inside %object%.Name is %object%.Contents.List.</Text>
+                <Text>Inside %object%.Name is %object%.Contents.List(False).</Text>
                 <TabLabel>Open</TabLabel>
             </Description>
             <Description>
@@ -3134,7 +3134,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                     <BracketSequence>#A#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>%object%.Children(Objects, On).List is on %object%.Name.</Text>
+                <Text>On top of %object%.Name is %object%.Children(Objects, On).List(False).</Text>
                 <TabLabel>On</TabLabel>
             </Description>
         </CompletionMessage>
@@ -3145,8 +3145,9 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Restriction>
             <BracketSequence>#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2018-09-15 17:53:31</LastUpdated>
+        <LastUpdated>2018-09-17 16:32:39</LastUpdated>
         <Created>2018-09-15 17:53:31</Created>
+        <Aggregate>0</Aggregate>
     </Task>
     <Task>
         <Key>PutObjectsInOther</Key>
