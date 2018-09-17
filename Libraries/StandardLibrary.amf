@@ -3470,6 +3470,21 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                 </Restrictions>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%PropertyValue[%object%,ReadText]%</Text>
+                <TabLabel>Descr when read</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>%Player% Must BeWithinLocationGroup DarkLocations</Character>
+                    </Restriction>
+                    <Restriction>
+                        <Character>%Player% MustNot BeInSameLocationAsObject LightSources</Character>
+                    </Restriction>
+                    <BracketSequence>#A#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>It is much too dark to be able to read %object%.Name.</Text>
+                <TabLabel>Too Dark</TabLabel>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -3512,7 +3527,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2010-10-14 13:56:22</LastUpdated>
+        <LastUpdated>2018-09-18 00:21:58</LastUpdated>
         <Created>2010-10-14 13:56:22</Created>
     </Task>
     <Task>
