@@ -3306,10 +3306,10 @@ This task executes the 'Take objects from others' task, giving it the parent of 
     <Task>
         <Key>Look</Key>
         <Priority>50001</Priority>
-        <AutoFillPriority>1</AutoFillPriority>
+        <AutoFillPriority>2</AutoFillPriority>
         <Type>General</Type>
         <Command>[look/l]{ room}</Command>
-        <Command>[x/examine] room</Command>
+        <Command>[examine/x] room</Command>
         <Description>Look</Description>
         <CompletionMessage>
             <Description>
@@ -3332,7 +3332,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <LastUpdated>2012-12-30 14:11:03</LastUpdated>
+        <LastUpdated>2018-08-17 14:11:03</LastUpdated>
         <Created>2012-12-30 14:11:03</Created>
     </Task>
     <Task>
