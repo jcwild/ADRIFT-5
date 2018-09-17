@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-09-14 23:59:01</LastUpdated>
+    <LastUpdated>2018-09-15 17:53:31</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -191,6 +191,7 @@
         <Key>Folder2</Key>
         <Name>Tasks - Uncategorised</Name>
         <Member>Inventory</Member>
+        <Member>ListObjsIn</Member>
         <Member>BurnObject</Member>
         <Member>BuyObject</Member>
         <Member>CutObject</Member>
@@ -225,7 +226,7 @@
         <X>0</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-08-13 22:24:02</LastUpdated>
+        <LastUpdated>2018-09-15 17:53:31</LastUpdated>
         <Created>2010-08-13 22:24:02</Created>
     </Folder>
     <Folder>
@@ -3036,7 +3037,7 @@ This task executes the 'Take objects from others' task, giving it the parent of 
     </Task>
     <Task>
         <Key>Inventory</Key>
-        <Priority>50009</Priority>
+        <Priority>50008</Priority>
         <AutoFillPriority>2</AutoFillPriority>
         <Type>General</Type>
         <Command>[inventory/inv/i]</Command>
@@ -3046,21 +3047,106 @@ This task executes the 'Take objects from others' task, giving it the parent of 
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% [am/are/is] wearing %Player%.Worn(False).List(Indefinite, False), and [am/are/is] carrying %Player%.Held(False).List(Indefinite, False).</Text>
             </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <Actions>
+            <SetTasks>Execute ListObjsIn (%Player%.WornAndHeld)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-15 17:53:16</LastUpdated>
+        <Created>2012-10-12 17:53:02</Created>
+    </Task>
+    <Task>
+        <Key>ListObjsIn</Key>
+        <Priority>50042</Priority>
+        <Type>General</Type>
+        <Command># ListObjectsIn %object%</Command>
+        <Description># List Objects Inside and On Object</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text />
+            </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Expression>%Player%.Held.Count + %Player%.Worn.Count &gt; %Player%.Held(False).Count + %Player%.Worn(False).Count</Expression>
+                        <Object>ReferencedObject Must HaveProperty Container</Object>
                     </Restriction>
-                    <BracketSequence>#</BracketSequence>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty Openable</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Object>ReferencedObject MustNot BeInState Open</Object>
+                    </Restriction>
+                    <BracketSequence>#A#A#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.Name is closed.</Text>
+                <TabLabel>Closed</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty Container</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Object>ReferencedObject MustNot HaveProperty Openable</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Object>ReferencedObject Must BeInState Open</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%object%.Contents.Count = 0</Expression>
+                    </Restriction>
+                    <BracketSequence>#A(#O#)A#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>%ListObjectsOnAndIn[%Player%.WornAndHeld]%</Text>
-                <TabLabel>Items inside worn/held</TabLabel>
+                <Text>%object%.Name is empty.</Text>
+                <TabLabel>Empty</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty Container</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Object>ReferencedObject MustNot HaveProperty Openable</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Object>ReferencedObject Must BeInState Open</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%object%.Contents.Count &gt; 0</Expression>
+                    </Restriction>
+                    <BracketSequence>#A(#O#)A#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>Inside %object%.Name is %object%.Contents.List.</Text>
+                <TabLabel>Open</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty Surface</Object>
+                    </Restriction>
+                    <Restriction>
+                        <Expression>%object%.Children(Objects, On).Count &gt; 0</Expression>
+                    </Restriction>
+                    <BracketSequence>#A#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>%object%.Children(Objects, On).List is on %object%.Name.</Text>
+                <TabLabel>On</TabLabel>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
-        <LastUpdated>2012-10-12 17:53:02</LastUpdated>
-        <Created>2012-10-12 17:53:02</Created>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObject Must Exist </Object>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <LastUpdated>2018-09-15 17:53:31</LastUpdated>
+        <Created>2018-09-15 17:53:31</Created>
     </Task>
     <Task>
         <Key>PutObjectsInOther</Key>
