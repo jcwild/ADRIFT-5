@@ -1092,13 +1092,18 @@
     </Property>
     <Property>
         <Key>Insidepart</Key>
-        <Description>Cannot be removed from container</Description>
+        <Description>Prevent movement</Description>
         <PropertyOf>Objects</PropertyOf>
-        <Type>SelectionOnly</Type>
-        <Tooltip>Prevents this part from being removed from inside container, eg. a shelf.</Tooltip>
+        <Type>StateList</Type>
+        <State>Internal_Part</State>
+        <State>Out_Of_Reach</State>
+        <State>Held_In_Place</State>
+        <State>Stuck</State>
+        <State>Movable</State>
+        <Tooltip>Prevents this part from being moved, eg. a shelf inside a container or an object temporarily out of reach or locked in place.</Tooltip>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <LastUpdated>2018-09-04 15:47:26</LastUpdated>
+        <LastUpdated>2018-09-18 10:00:50</LastUpdated>
         <Created>2018-09-03 22:47:26</Created>
     </Property>
     <Property>
@@ -1280,7 +1285,7 @@
     </Task>
     <Task>
         <Key>TakeObjectFromLocation</Key>
-        <Priority>50012</Priority>
+        <Priority>50011</Priority>
         <Type>Specific</Type>
         <GeneralTask>TakeObjects</GeneralTask>
         <Specific>
@@ -1353,12 +1358,57 @@
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A(#O#A#)A(#O#A#)</BracketSequence>
+            <Restriction>
+                <Object>ReferencedObjects MustNot HaveProperty Insidepart</Object>
+            </Restriction>
+            <Restriction>
+                <Property>Insidepart ReferencedObjects Must Movable</Property>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.List &lt;#IF(%objects%.Count=1,"is","are")#&gt; fixed in place.</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Held_In_Place</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Something is locking %objects%.List in place and %CharacterName% can't take &lt;#IF(%objects%.Count=1,"it","them")#&gt; at the moment.</Text>
+                        <TabLabel>Held</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Out_Of_Reach</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% cannot reach %objects%.List(Or) from here.</Text>
+                        <TabLabel>Out of Reach</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Stuck</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.List appear&lt;#IF(%objects%.Count=1,"s","")#&gt; to be stuck!</Text>
+                        <TabLabel>Stuck</TabLabel>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A(#O#A#)A(#O#A#)A(#O#)</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2013-08-26 11:58:00</LastUpdated>
+        <LastUpdated>2018-09-18 14:45:00</LastUpdated>
         <Created>2013-08-26 11:58:00</Created>
     </Task>
     <Task>
@@ -1750,20 +1800,55 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             </Restriction>
             <Restriction>
                 <Object>ReferencedObjects MustNot HaveProperty Insidepart</Object>
+            </Restriction>
+            <Restriction>
+                <Property>Insidepart ReferencedObjects Must Movable</Property>
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%objects%.Name is part of %object2%.Name and cannot be removed.
-</Text>
+                        <Text>%objects%.Name &lt;#IF(%objects%.Count=1,"is","are")#&gt; part of %object2%.Name and cannot be removed.</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Held_In_Place</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.Name &lt;#IF(%objects%.Count=1,"is","are")#&gt; securely held by %object2%.Name and cannot be removed at the moment.</Text>
+                        <TabLabel>Held by Object</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Out_Of_Reach</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't reach %objects%.Name from here.</Text>
+                        <TabLabel>Out of Reach</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Stuck</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.Name appear&lt;#IF(%objects%.Count=1,"s","")#&gt; to be stuck!</Text>
+                        <TabLabel>Stuck</TabLabel>
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A#A#A(#O#)A(#O#A#)A(#O#A#)A#</BracketSequence>
+            <BracketSequence>#A#A#A#A#A#A#A#A(#O#)A(#O#A#)A(#O#A#)A(#O#)</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2018-09-17 19:32:27</LastUpdated>
+        <LastUpdated>2018-09-18 14:53:00</LastUpdated>
         <Created>2018-09-04 15:36:15</Created>
     </Task>
     <Task>
@@ -6255,9 +6340,54 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <Restriction>
                 <Object>ReferencedObjects Must BeHeldByCharacter ReferencedCharacter</Object>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A(#O#)</BracketSequence>
+            <Restriction>
+                <Object>ReferencedObjects MustNot HaveProperty Insidepart</Object>
+            </Restriction>
+            <Restriction>
+                <Property>Insidepart ReferencedObjects Must Movable</Property>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.List &lt;#IF(%objects%.Count=1,"is","are")#&gt; out of reach.</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Internal_Part</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.List &lt;#IF(%objects%.Count=1,"is","are")#&gt; part of %character%.Name and cannot be removed.</Text>
+                        <TabLabel>Part Of</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Held_In_Place</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%character%.Name is holding on to %objects%.List too tightly. </Text>
+                        <TabLabel>Held</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Property>Insidepart ReferencedObjects Must Stuck</Property>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.List &lt;#IF(%objects%.Count=1,"is","are")#&gt; stuck.</Text>
+                        <TabLabel>Stuck</TabLabel>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A#A#A(#O#)A(#O#)</BracketSequence>
         </Restrictions>
-        <LastUpdated>2018-09-14 12:49:05</LastUpdated>
+        <LastUpdated>2018-09-18 14:52:29</LastUpdated>
         <Created>2018-09-06 12:19:07</Created>
     </Task>    
     <Task>
