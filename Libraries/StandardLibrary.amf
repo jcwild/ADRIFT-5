@@ -541,8 +541,9 @@
         <Type>Integer</Type>
         <Tooltip>Select this property if you want to restrict the capacity of the object.</Tooltip>
         <DependentKey>Container</DependentKey>
+        <DependentValue>True</DependentValue>
         <RestrictProperty>Size</RestrictProperty>
-        <LastUpdated>2011-12-16 09:12:00</LastUpdated>
+        <LastUpdated>2018-09-19 10:28:48</LastUpdated>
         <Created>2011-12-16 09:12:00</Created>
     </Property>
     <Property>
@@ -855,8 +856,11 @@
         <Description>... and the surface can hold</Description>
         <PropertyOf>Objects</PropertyOf>
         <Type>Integer</Type>
+        <Tooltip>Select this property if you want to restrict the surface capacity of the object.</Tooltip>
         <DependentKey>Surface</DependentKey>
-        <LastUpdated>2010-06-06 15:19:35</LastUpdated>
+        <DependentValue>True</DependentValue>
+        <RestrictProperty>Size</RestrictProperty>
+        <LastUpdated>2018-09-19 10:28:47</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
     <Property>
@@ -1238,12 +1242,36 @@
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#</BracketSequence>
+            <Restriction>
+                <Object>ReferencedObjects MustNot BeObject ReferencedObject2</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject2 MustNot HaveProperty SurfaceHold</Object>
+            </Restriction>
+            <Restriction>
+                <Property>SurfaceHold ReferencedObject2 Must GreaterThanOrEqualTo %objects%.Size.Sum</Property>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.Name is too big to fit on top of %object2%.Name.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Property>SurfaceHold ReferencedObject2 Must GreaterThanOrEqualTo %object2%.Children(Objects, On).Size.Sum+%objects%.Size.Sum</Property>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%objects%.Name can't fit on top of %object2%.Name unless you clear sufficient space for it, or put it on or in something already on the desk.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A#A#A#A#O(#A#)</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects OntoObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2018-09-17 23:15:24</LastUpdated>
+        <LastUpdated>2018-09-19 17:53:23</LastUpdated>
         <Created>2015-10-29 23:10:49</Created>
     </Task>
     <Task>
