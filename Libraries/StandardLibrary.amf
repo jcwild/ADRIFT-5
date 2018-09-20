@@ -392,6 +392,7 @@
         <Name>Look and Examine</Name>
         <Member>ExamineCharacter</Member>
         <Member>ExamineObjects</Member>
+        <Member>ExCharsObj</Member>
         <Member>Look</Member>
         <Member>ReadObjects</Member>
         <Member>Readable</Member>
@@ -406,7 +407,7 @@
         <X>587</X>
         <Y>39</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-10-07 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-20 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -2093,6 +2094,82 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         </Restrictions>
         <LastUpdated>2013-01-29 19:44:07</LastUpdated>
         <Created>2013-01-29 19:44:07</Created>
+    </Task>
+    <Task>
+        <Key>ExCharsObj</Key>
+        <Priority>50046</Priority>
+        <Type>General</Type>
+        <Command>[examine/exam/ex/x/look {at/in{side}/under}] %character%{{'}s} %objects%</Command>
+        <Description>Examine Character's Object</Description>
+        <Repeatable>1</Repeatable>
+        <Restrictions>
+            <Restriction>
+                <Object>ReferencedObjects Must Exist </Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you are trying to examine.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must HaveBeenSeenByCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which object you are trying to examine.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeVisibleToCharacter %Player%</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't see %objects%.Name!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must HaveSeenCharacter ReferencedCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>Sorry, I'm not sure which character you are referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeVisibleToCharacter ReferencedCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% can't see %character%.Name!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BePartOfCharacter ReferencedCharacter</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeHeldByCharacter ReferencedCharacter</Object>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObjects Must BeWornByCharacter ReferencedCharacter</Object>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%character%.Name is not holding or wearing %objects%.List(Indefinite,Or).</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#A#A#A#A(#O#O#)</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Execute ExamineObjects (%objects%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-20 13:31:21</LastUpdated>
+        <Created>2018-09-20 12:32:03</Created>
     </Task>
     <Task>
         <Key>StandOnObject</Key>
