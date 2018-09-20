@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-09-15 17:53:31</LastUpdated>
+    <LastUpdated>2018-09-20 16:23:31</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
+    <DirectionIn>In/Inside/Enter</DirectionIn>
+    <DirectionOut>Out/O/Outside/Exit/Leave</DirectionOut>
     <Folder>
         <Key>ROOT</Key>
         <Name>Desktop</Name>
@@ -446,7 +448,6 @@
         <Name>Player Movement</Name>
         <Member>PlayerMovement</Member>
         <Member>MoveInObject</Member>
-        <Member>MoveOutObject</Member>
         <Member>ClimbObject</Member>
         <Member>CharHereDesc</Member>
         <Member>ShowEnterExit</Member>
@@ -468,7 +469,7 @@
         <X>338</X>
         <Y>84</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-14 10:03:37</LastUpdated>
+        <LastUpdated>2018-09-20 14:33:37</LastUpdated>
         <Created>2010-10-09 12:03:37</Created>
     </Folder>
     <Folder>
@@ -2342,7 +2343,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
     </Task>
     <Task>
         <Key>PlayerMovement</Key>
-        <Priority>50013</Priority>
+        <Priority>50026</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
         <Command>{[go/walk/move/run] {to {the}}} %direction%</Command>
@@ -2364,7 +2365,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Actions>
             <SetTasks>Execute ExitBeforeMoving (%Player%.Parent)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-14 14:37:51</LastUpdated>
+        <LastUpdated>2018-09-20 16:37:51</LastUpdated>
         <Created>2015-10-30 00:32:26</Created>
     </Task>
     <Task>
@@ -2637,11 +2638,12 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
     </Task>
     <Task>
         <Key>MoveOffCurrentObject</Key>
-        <Priority>50026</Priority>
+        <Priority>50013</Priority>
         <AutoFillPriority>4</AutoFillPriority>
         <Type>General</Type>
         <Command>[stand{ up/ down/ off}/[get/move] [up/down/off]]{ [on/to/onto] {the} [floor/ground]}</Command>
         <Command>exit</Command>
+        <Command>out</Command>
         <Command>stand</Command>
         <Command>leave</Command>
         <Description>Leave Current Object</Description>
@@ -2670,7 +2672,7 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
         <Actions>
             <SetTasks>Execute MoveOffObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-14 14:54:37</LastUpdated>
+        <LastUpdated>2018-09-20 16:34:37</LastUpdated>
         <Created>2012-09-06 13:35:10</Created>
     </Task>
     <Task>
