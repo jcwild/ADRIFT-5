@@ -6773,6 +6773,5 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Name>Previous Player Location</Name>
         <LastUpdated>2018-09-04 10:20:14</LastUpdated>
         <Created>2018-09-03 23:20:14</Created>
-    </Group> 
-    <Exclude>MoveOutObject</Exclude>    
+    </Group>     
 </Adventure>
