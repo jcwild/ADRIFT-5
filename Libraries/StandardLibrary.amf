@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-09-20 16:23:31</LastUpdated>
+    <LastUpdated>2018-09-20 17:23:31</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -309,6 +309,7 @@
         <Member>LieOnObject</Member>
         <Member>MoveOffObject</Member>
         <Member>MoveOffCurrentObject</Member>
+        <Member>MoveOutObject</Member>        
         <Member>CharacterPosition</Member>
         <Member>Sittable</Member>
         <Member>Standable</Member>
@@ -321,7 +322,7 @@
         <X>244</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-14 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-20 17:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -2560,6 +2561,50 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <Created>2011-08-06 14:28:34</Created>
     </Task>
     <Task>
+        <Key>MoveOutObject</Key>
+        <Priority>50032</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>MoveOffObject</GeneralTask>
+        <Specific>
+            <Type>Object</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Description>Get Out of Object</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% get[//s] out of %TheObject[%object%]%.</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>Override</SpecificOverrideType>
+        <Restrictions>
+            <Restriction>
+                <Character>%Player% Must BeInsideObject ReferencedObject</Character>
+            </Restriction>
+            <Restriction>
+                <Object>ReferencedObject MustNot HaveProperty Openable</Object>
+            </Restriction>
+            <Restriction>
+                <Property>OpenStatus ReferencedObject Must EqualTo Open</Property>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%PCase[%TheObject[%object%]%]% is closed!</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A(#O#)</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <MoveCharacter>Character %Player% ToParentLocation </MoveCharacter>
+            <SetProperty>%Player% CharacterPosition Standing</SetProperty>
+        </Actions>
+        <LastUpdated>2018-09-20 17:12:28</LastUpdated>
+        <Created>2012-08-06 19:58:15</Created>
+    </Task>
+    <Task>
         <Key>MoveOffObject</Key>
         <Priority>50033</Priority>
         <AutoFillPriority>4</AutoFillPriority>
@@ -2571,52 +2616,13 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%CharacterName% get[//s]</Text>
-            </Description>
-            <Description>
-                <Restrictions>
-                    <Restriction>
-                        <Character>%Player% Must BeOnObject ReferencedObject</Character>
-                    </Restriction>
-                    <BracketSequence>#</BracketSequence>
-                </Restrictions>
-                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text> off</Text>
-                <TabLabel>off</TabLabel>
-            </Description>
-            <Description>
-                <Restrictions>
-                    <Restriction>
-                        <Character>%Player% Must BeInsideObject ReferencedObject</Character>
-                    </Restriction>
-                    <BracketSequence>#</BracketSequence>
-                </Restrictions>
-                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text> out</Text>
-                <TabLabel>out</TabLabel>
-            </Description>
-            <Description>
-                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text> of %TheObject[%object%]%.</Text>
-                <TabLabel>Default ending</TabLabel>
+                <Text>%CharacterName% get[//s] off of %TheObject[%object%]%.</Text>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <Restrictions>
             <Restriction>
                 <Character>%Player% Must BeInsideObject ReferencedObject</Character>
-            </Restriction>
-            <Restriction>
-                <Object>ReferencedObject MustNot HaveProperty Openable</Object>
-            </Restriction>
-            <Restriction>
-                <Property>OpenStatus ReferencedObject Must Open</Property>
-                <Message>
-                    <Description>
-                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%PCase[%TheObject[%object%]%]% is closed!</Text>
-                    </Description>
-                </Message>
             </Restriction>
             <Restriction>
                 <Character>%Player% Must BeOnObject ReferencedObject</Character>
@@ -2627,13 +2633,13 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>(#A(#O#]O#</BracketSequence>
+            <BracketSequence>#O#</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveCharacter>Character %Player% ToParentLocation </MoveCharacter>
             <SetProperty>%Player% CharacterPosition Standing</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-14 14:52:01</LastUpdated>
+        <LastUpdated>2018-09-20 17:13:20</LastUpdated>
         <Created>2012-09-06 13:34:58</Created>
     </Task>
     <Task>
@@ -2672,7 +2678,7 @@ This task executes the 'Leave Object' task, giving it the parent of the player a
         <Actions>
             <SetTasks>Execute MoveOffObject (%ParentOf[%Player%]%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-20 16:34:37</LastUpdated>
+        <LastUpdated>2018-09-20 17:34:37</LastUpdated>
         <Created>2012-09-06 13:35:10</Created>
     </Task>
     <Task>
