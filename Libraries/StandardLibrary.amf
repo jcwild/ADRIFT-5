@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-09-20 17:23:31</LastUpdated>
+    <LastUpdated>2018-09-23 17:23:31</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -343,18 +343,20 @@
         <Key>Folder7</Key>
         <Name>Conversation</Name>
         <Member>Ask</Member>
+        <Member>AskAboutLazy</Member>
         <Member>AskCharacter</Member>
+        <Member>Tell</Member>
+        <Member>TellLazy</Member>
         <Member>TellCharacter</Member>
         <Member>Say</Member>
         <Member>SayLazy</Member>
         <Member>SayToCharacter</Member>
-        <Member>AskAboutLazy</Member>
         <Height>321</Height>
         <Width>244</Width>
         <X>0</X>
         <Y>321</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2010-10-07 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-23 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -4204,6 +4206,96 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Created>2011-06-04 17:05:55</Created>
     </Task>
     <Task>
+        <Key>Tell</Key>
+        <Priority>50001</Priority>
+        <AutoFillPriority>2</AutoFillPriority>
+        <Type>General</Type>
+        <Command>tell about %text%</Command>
+        <Description>Tell about subject</Description>
+        <Repeatable>1</Repeatable>
+        <PreventOverriding>1</PreventOverriding>
+        <Restrictions>
+            <Restriction>
+                <Character>%Player% Must BeInConversationWith AnyCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>I'm not sure who you are referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Execute TellCharacter (%convcharacter%|%text%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-23 11:54:29</LastUpdated>
+        <Created>2018-09-23 11:57:55</Created>
+    </Task>
+    <Task>
+        <Key>TellLazy</Key>
+        <Priority>50000</Priority>
+        <AutoFillPriority>2</AutoFillPriority>
+        <Type>General</Type>
+        <Command>tell about %text%</Command>
+        <Description>Tell about (Lazy)</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>&lt;c&gt;(%CharacterName[%AloneWithChar%]%)&lt;/c&gt;&lt;!--
+
+This task runs the Tell Something to Character task, passing %AloneWithChar% key as a parameter.
+
+--&gt;
+</Text>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <PreventOverriding>1</PreventOverriding>
+        <Restrictions>
+            <Restriction>
+                <Character>%Player% MustNot BeInConversationWith AnyCharacter</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeAloneWith AnyCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>There is nobody here to tell!</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Expression>%Player%.Location.Characters.Count!=0</Expression>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>I'm not sure whom you want to tell.&lt;!--AloneWith incorrectly counts char hidden inside containers, whereas Location.Characters does not--&gt;</Text>
+                        <TabLabel>Unsure</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Expression>%Player%.Location.Characters.Count&gt;1</Expression>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                        <Text>%Player%.Location.Characters.List are here.</Text>
+                        <TabLabel>List</TabLabel>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <SetTasks>Execute TellCharacter (%AloneWithChar%|%text%)</SetTasks>
+        </Actions>
+        <LastUpdated>2018-09-23 11:57:55</LastUpdated>
+        <Created>2018-09-23 11:57:55</Created>
+    </Task>    
+    <Task>
         <Key>RemoveObjects</Key>
         <Priority>50031</Priority>
         <AutoFillPriority>1</AutoFillPriority>
@@ -4555,13 +4647,41 @@ This task runs the Say Something to Character task, passing %AloneWithChar% key 
             </Restriction>
             <Restriction>
                 <Character>%Player% Must BeAloneWith AnyCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>There is nobody here to hear you!</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Expression>%Player%.Location.Characters.Count!=0</Expression>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>I'm not sure whom you want to talk to.&lt;!--AloneWith incorrectly counts char hidden inside containers, whereas Location.Characters does not--&gt;</Text>
+                        <TabLabel>Unsure</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Expression>%Player%.Location.Characters.Count&gt;1</Expression>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                        <Text>%Player%.Location.Characters.List are here.</Text>
+                        <TabLabel>List</TabLabel>
+                    </Description>
+                </Message>
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
         <Actions>
             <SetTasks>Execute SayToCharacter (%text%|%AloneWithChar%)</SetTasks>
         </Actions>
-        <LastUpdated>2011-08-10 11:16:57</LastUpdated>
+        <LastUpdated>2018-09-23 11:57:38</LastUpdated>
         <Created>2011-08-10 11:16:57</Created>
     </Task>
     <Task>
@@ -4691,13 +4811,41 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <Restriction>
                 <Character>%Player% Must BeAloneWith AnyCharacter</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>There is nobody here to ask!</Text>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Expression>%Player%.Location.Characters.Count!=0</Expression>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>I'm not sure whom you want to ask.&lt;!--AloneWith incorrectly counts char hidden inside containers, whereas Location.Characters does not--&gt;</Text>
+                        <TabLabel>Too many</TabLabel>
+                    </Description>
+                    <Description>
+                        <Restrictions>
+                            <Restriction>
+                                <Expression>%Player%.Location.Characters.Count&gt;1</Expression>
+                            </Restriction>
+                            <BracketSequence>#</BracketSequence>
+                        </Restrictions>
+                        <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                        <Text>%Player%.Location.Characters.List are here.</Text>
+                        <TabLabel>List</TabLabel>
+                    </Description>
+                </Message>
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
         <Actions>
             <SetTasks>Execute AskCharacter (%AloneWithChar%|%text%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-08-31 11:25:35</LastUpdated>
+        <LastUpdated>2018-09-23 11:36:06</LastUpdated>
         <Created>2011-08-10 11:25:35</Created>
     </Task>
     <Task>
