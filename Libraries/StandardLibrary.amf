@@ -608,7 +608,7 @@
     </Property>
     <Property>
         <Key>StaticLocation</Key>
-        <Description>Location of the object</Description>
+        <Description>Location of the object (Static)</Description>
         <Mandatory>1</Mandatory>
         <PropertyOf>Objects</PropertyOf>
         <Type>StateList</Type>
@@ -620,7 +620,7 @@
         <State>Part of Object</State>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Static</DependentValue>
-        <LastUpdated>2010-06-06 15:19:35</LastUpdated>
+        <LastUpdated>2018-09-23 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
     <Property>
@@ -964,7 +964,7 @@
     </Property>
     <Property>
         <Key>DynamicLocation</Key>
-        <Description>Location of the object</Description>
+        <Description>Location of the object (Dynamic)</Description>
         <Mandatory>1</Mandatory>
         <PropertyOf>Objects</PropertyOf>
         <Type>StateList</Type>
@@ -976,7 +976,7 @@
         <State>On Object</State>
         <DependentKey>StaticOrDynamic</DependentKey>
         <DependentValue>Dynamic</DependentValue>
-        <LastUpdated>2010-06-06 15:19:35</LastUpdated>
+        <LastUpdated>2018-09-23 15:19:35</LastUpdated>
         <Created>2010-06-06 15:19:35</Created>
     </Property>
     <Property>
