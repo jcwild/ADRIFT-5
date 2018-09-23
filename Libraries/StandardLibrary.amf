@@ -177,6 +177,7 @@
         <Member>Folder7</Member>
         <Member>Folder8</Member>
         <Member>Folder9</Member>
+        <Member>Folder10</Member>
         <Member>Folder11</Member>
         <Member>Folder12</Member>
         <Member>Folder14</Member>
@@ -186,7 +187,7 @@
         <Width>267</Width>
         <X>100</X>
         <Y>100</Y>
-        <LastUpdated>2010-08-13 22:24:02</LastUpdated>
+        <LastUpdated>2018-09-23 16:24:02</LastUpdated>
         <Created>2010-08-13 22:24:02</Created>
     </Folder>
     <Folder>
@@ -205,21 +206,14 @@
         <Member>RubObject</Member>
         <Member>ScoreCommand</Member>
         <Member>SearchObject</Member>
-        <Member>SetObjectTo</Member>
         <Member>ShowObjectToCharacter</Member>
         <Member>Sing</Member>
         <Member>Whistle</Member>
         <Member>Sleep</Member>
         <Member>SmellObject</Member>
         <Member>SqueezeObject</Member>
-        <Member>CanBeTurnOffAndOn</Member>
-        <Member>SwitchObjectOn</Member>
-        <Member>SwitchObjectOff</Member>
-        <Member>SwitchObjectOnLazy</Member>
-        <Member>SwitchObjectOffLazy</Member>
         <Member>Think</Member>
         <Member>TouchObject</Member>
-        <Member>TurnObjectOver</Member>
         <Member>WakeUp</Member>
         <Member>Wave</Member>
         <Member>WaveObject</Member>
@@ -228,7 +222,7 @@
         <X>0</X>
         <Y>0</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-15 17:53:31</LastUpdated>
+        <LastUpdated>2018-09-23 17:53:31</LastUpdated>
         <Created>2010-08-13 22:24:02</Created>
     </Folder>
     <Folder>
@@ -383,13 +377,17 @@
         <Member>OpenDoor</Member>
         <Member>OpenUnlock</Member>
         <Member>ManualShut</Member>
-        <Member>CloseNLock</Member>        
+        <Member>CloseNLock</Member>
+        <Member>WhenOpened</Member>
+        <Member>WhenClosed</Member>
+        <Member>WhenUnlock</Member>
+        <Member>WhenLocked</Member>
         <Height>371</Height>
         <Width>393</Width>
         <X>244</X>
         <Y>271</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-06 22:22:51</LastUpdated>
+        <LastUpdated>2018-09-23 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -414,6 +412,27 @@
         <ShowPriority>1</ShowPriority>
         <LastUpdated>2018-09-20 22:22:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
+    </Folder>
+    <Folder>
+        <Key>Folder10</Key>
+        <Name>On and Off</Name>
+        <Member>TurnObjectOver</Member>
+        <Member>SetObjectTo</Member>
+        <Member>CanBeTurnOffAndOn</Member>
+        <Member>SwitchObjectOn</Member>
+        <Member>SwitchObjectOff</Member>
+        <Member>SwitchObjectOnLazy</Member>
+        <Member>SwitchObjectOffLazy</Member>
+        <Member>WhenOn</Member>
+        <Member>WhenOff</Member>
+        <Height>611</Height>
+        <Width>399</Width>
+        <Visible>1</Visible>
+        <X>566</X>
+        <Y>5</Y>
+        <ShowKey>1</ShowKey>
+        <LastUpdated>2018-09-23 16:12:51</LastUpdated>
+        <Created>2018-09-23 15:12:35</Created>
     </Folder>
     <Folder>
         <Key>Folder11</Key>
@@ -1155,6 +1174,65 @@
         <DependentValue>True</DependentValue>
         <LastUpdated>2018-09-09 15:54:54</LastUpdated>
         <Created>2018-09-09 15:51:43</Created>
+    </Property>
+    <Property>
+        <Key>WhenOpened</Key>
+        <Description>When opened, display this</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Text</Type>
+        <Tooltip>Detailed description of the act of opening the object.</Tooltip>
+        <DependentKey>Openable</DependentKey>
+        <DependentValue>True</DependentValue>
+        <LastUpdated>2018-09-23 15:17:59</LastUpdated>
+        <Created>2018-09-23 15:10:12</Created>
+    </Property>
+    <Property>
+        <Key>WhenClosed</Key>
+        <Description>When closed, display this</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Text</Type>
+        <DependentKey>Openable</DependentKey>
+        <DependentValue>True</DependentValue>
+        <LastUpdated>2018-09-23 15:18:10</LastUpdated>
+        <Created>2018-09-23 15:10:44</Created>
+    </Property>
+    <Property>
+        <Key>WhenUnlock</Key>
+        <Description>When unlocked, display this</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Text</Type>
+        <DependentKey>Lockable</DependentKey>
+        <DependentValue>True</DependentValue>
+        <LastUpdated>2018-09-23 15:18:20</LastUpdated>
+        <Created>2018-09-23 15:11:16</Created>
+    </Property>
+    <Property>
+        <Key>WhenLocked</Key>
+        <Description>When locked, display this</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Text</Type>
+        <DependentKey>Lockable</DependentKey>
+        <DependentValue>True</DependentValue>
+        <LastUpdated>2018-09-23 15:18:31</LastUpdated>
+        <Created>2018-09-23 15:11:34</Created>
+    </Property>
+    <Property>
+        <Key>WhenOn</Key>
+        <Description>When switched ON, display this</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Text</Type>
+        <DependentKey>CanBeTurnOffAndOn</DependentKey>
+        <LastUpdated>2018-09-23 15:16:25</LastUpdated>
+        <Created>2018-09-23 15:15:38</Created>
+    </Property>
+    <Property>
+        <Key>WhenOff</Key>
+        <Description>When switched OFF, display this</Description>
+        <PropertyOf>Objects</PropertyOf>
+        <Type>Text</Type>
+        <DependentKey>CanBeTurnOffAndOn</DependentKey>
+        <LastUpdated>2018-09-23 15:17:41</LastUpdated>
+        <Created>2018-09-23 15:16:02</Created>
     </Property>    
     <Task>
         <Key>PutObjectsOnOthers</Key>
@@ -1899,6 +1977,17 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
             <Description>
                 <Restrictions>
                     <Restriction>
+                        <Object>ReferencedObject Must HaveProperty WhenOpened</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenOpened</Text>
+                <TabLabel>WhenOpened</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
                         <Object>AnyObject Must BeInsideObject ReferencedObject</Object>
                     </Restriction>
                     <BracketSequence>#</BracketSequence>
@@ -1984,7 +2073,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Open</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-14 16:06:14</LastUpdated>
+        <LastUpdated>2018-09-23 15:27:17</LastUpdated>
         <Created>2013-09-04 23:02:45</Created>
     </Task>
     <Task>
@@ -4125,6 +4214,17 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% close[//s] %TheObject[%object%]%.</Text>
             </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty WhenClosed</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenClosed</Text>
+                <TabLabel>WhenClosed</TabLabel>
+            </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <Restrictions>
@@ -4178,7 +4278,7 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
         <Actions>
             <SetProperty>ReferencedObject OpenStatus Closed</SetProperty>
         </Actions>
-        <LastUpdated>2011-08-07 18:15:27</LastUpdated>
+        <LastUpdated>2018-09-23 15:28:14</LastUpdated>
         <Created>2011-08-07 18:15:27</Created>
     </Task>
     <Task>
@@ -4360,6 +4460,17 @@ This task runs the Tell Something to Character task, passing %AloneWithChar% key
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% unlock[//s] %TheObject[%object1%]% with %TheObject[%object2%]%.</Text>
             </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject1 Must HaveProperty WhenUnlock</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object1%.WhenUnlock</Text>
+                <TabLabel>WhenUnlock</TabLabel>
+            </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
@@ -4432,7 +4543,7 @@ This task runs the Tell Something to Character task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Closed</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-04 23:03:06</LastUpdated>
+        <LastUpdated>2018-09-23 15:30:22</LastUpdated>
         <Created>2018-09-04 23:03:06</Created>
     </Task>
     <Task>
@@ -4905,6 +5016,17 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% lock[//s] %object1%.Name with %object2%.Name.</Text>
             </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject1 Must HaveProperty WhenLocked</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenLocked</Text>
+                <TabLabel>WhenLock</TabLabel>
+            </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <MessageBeforeOrAfter>After</MessageBeforeOrAfter>
@@ -4977,7 +5099,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Locked</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-06 14:10:37</LastUpdated>
+        <LastUpdated>2018-09-23 15:32:06</LastUpdated>
         <Created>2011-12-21 15:38:51</Created>
     </Task>
     <Task>
@@ -5866,6 +5988,17 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% switch[//es] on %object%.Name.</Text>
             </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty WhenOn</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenOn</Text>
+                <TabLabel>When ON</TabLabel>
+            </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <Restrictions>
@@ -5919,7 +6052,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn on</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-23 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-23 15:25:12</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
@@ -5927,7 +6060,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Priority>50002</Priority>
         <Type>General</Type>
         <Command>[switch/turn/flick/shut] %object% off</Command>
-        <Command>[switch/turn/flick/shut] off %object%</Command>
+        <Command>[switch/turn/flick] off %object%</Command>
         <Command>[shut/power][off/down] %object%</Command>
         <Command>[deactivate/disengage] %object%</Command>
         <Description>switch object off</Description>
@@ -5935,6 +6068,17 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>%CharacterName% switch[//es] off %object%.Name.</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject Must HaveProperty WhenOff</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenOff</Text>
+                <TabLabel>When OFF</TabLabel>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -5989,7 +6133,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn off</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-23 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-23 15:25:05</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
@@ -6770,6 +6914,18 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Text>&lt;c&gt;(First unlocking %object1%.Name with %object2%.Name)&lt;/c&gt;
 </Text>
             </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject1 Must HaveProperty WhenUnlock</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenUnlock
+</Text>
+                <TabLabel>WhenUnlock</TabLabel>
+            </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
         <Restrictions>
@@ -6788,7 +6944,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <SetProperty>ReferencedObject1 OpenStatus Closed</SetProperty>
             <SetTasks>Execute OpenObjects (%object1%)</SetTasks>
         </Actions>
-        <LastUpdated>2018-09-04 22:56:33</LastUpdated>
+        <LastUpdated>2018-09-23 16:10:46</LastUpdated>
         <Created>2018-09-04 22:56:33</Created>
     </Task>
     <Task>
@@ -6811,7 +6967,41 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                 <Text>&lt;c&gt;(First closing %object1%.Name)&lt;/c&gt;
-%CharacterName% lock[//s] %object1%.Name with %object2%.Name.</Text>
+</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject1 Must HaveProperty WhenClosed</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%object%.WhenClosed
+</Text>
+                <TabLabel>WhenClosed</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject1 MustNot HaveProperty WhenLocked</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>%CharacterName% lock[//s] %object1%.Name with %object2%.Name.</Text>
+                <TabLabel>Lock</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Object>ReferencedObject1 Must HaveProperty WhenLocked</Object>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>%object%.WhenLocked</Text>
+                <TabLabel>WhenLocked</TabLabel>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -6835,7 +7025,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject1 OpenStatus Locked</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-06 14:11:22</LastUpdated>
+        <LastUpdated>2018-09-23 16:09:08</LastUpdated>
         <Created>2018-09-06 14:10:36</Created>
     </Task>    
     <Character>
