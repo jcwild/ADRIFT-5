@@ -5210,7 +5210,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Key>jcw_Task1</Key>
         <Priority>50000</Priority>
         <Type>General</Type>
-        <Command>blow %object%</Command>
+        <Command>blow {in{to}} %object%</Command>
         <Description>blow object</Description>
         <CompletionMessage>
             <Description>
@@ -5249,7 +5249,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-23 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
