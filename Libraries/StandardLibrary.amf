@@ -4300,7 +4300,7 @@ This task runs the Tell Something to Character task, passing %AloneWithChar% key
         <Priority>50031</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
-        <Command>[remove/take off] %objects%</Command>
+        <Command>[remove/take off/disrobe/doff/shed] %objects%</Command>
         <Command>take %objects% off</Command>
         <Description>Remove objects</Description>
         <CompletionMessage>
@@ -4334,7 +4334,7 @@ This task runs the Tell Something to Character task, passing %AloneWithChar% key
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2011-08-07 18:17:51</LastUpdated>
+        <LastUpdated>2018-09-23 18:17:51</LastUpdated>
         <Created>2011-08-07 18:17:51</Created>
     </Task>
     <Task>
