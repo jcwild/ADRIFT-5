@@ -5848,6 +5848,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Type>General</Type>
         <Command>[switch/turn/flick] %object% on</Command>
         <Command>[switch/turn/flick] on %object%</Command>
+        <Command>[power [up/on]/engage/activate] %object%</Command>
         <Description>switch object on</Description>
         <CompletionMessage>
             <Description>
@@ -5907,15 +5908,17 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn on</SetProperty>
         </Actions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-23 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
         <Key>SwitchObjectOff</Key>
         <Priority>50002</Priority>
         <Type>General</Type>
-        <Command>[switch/turn/flick] %object% off</Command>
-        <Command>[switch/turn/flick] off %object%</Command>
+        <Command>[switch/turn/flick/shut] %object% off</Command>
+        <Command>[switch/turn/flick/shut] off %object%</Command>
+        <Command>[shut/power][off/down] %object%</Command>
+        <Command>[deactivate/disengage] %object%</Command>
         <Description>switch object off</Description>
         <CompletionMessage>
             <Description>
@@ -5975,7 +5978,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn off</SetProperty>
         </Actions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-23 16:47:32</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
