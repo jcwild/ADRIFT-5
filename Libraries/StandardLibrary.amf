@@ -2525,6 +2525,17 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             <Description>
                 <Restrictions>
                     <Restriction>
+                        <Character>ReferencedCharacter Must BeOnCharacter AnyCharacter</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>%CharacterName[%character%]% [am/are/is] %character%.CharacterPosition on %character%.CharOnWho.Name.&lt;!-- it is currently not possible to list the characters sitting on %character% --&gt;</Text>
+                <TabLabel>OnChar</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
                         <Character>%Player% Must BeWithinLocationGroup DarkLocations</Character>
                     </Restriction>
                     <Restriction>
@@ -2559,7 +2570,7 @@ This task executes the 'Lie On Objects' task, giving it the parent of the player
             </Restriction>
             <BracketSequence>#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2018-09-04 15:23:04</LastUpdated>
+        <LastUpdated>2018-09-23 14:56:58</LastUpdated>
         <Created>2011-08-06 14:28:34</Created>
     </Task>
     <Task>
