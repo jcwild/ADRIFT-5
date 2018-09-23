@@ -281,12 +281,15 @@
         <Member>TakeFromCh</Member>
         <Member>TakeFromCh1</Member>        
         <Member>TakeChar</Member>
+        <Member>WhenGetCha</Member>
+        <Member>CanTakeCha</Member>
+        <Member>TakingChar</Member>
         <Height>446</Height>
         <Width>306</Width>
         <X>512</X>
         <Y>71</Y>
         <ShowPriority>1</ShowPriority>
-        <LastUpdated>2018-09-06 13:23:51</LastUpdated>
+        <LastUpdated>2018-09-23 13:23:51</LastUpdated>
         <Created>2010-10-07 22:22:51</Created>
     </Folder>
     <Folder>
@@ -1234,6 +1237,32 @@
         <LastUpdated>2018-09-23 15:17:41</LastUpdated>
         <Created>2018-09-23 15:16:02</Created>
     </Property>    
+    <Property>
+        <Key>WhenGetCha</Key>
+        <Description>When player picks-up character, display this</Description>
+        <Mandatory>1</Mandatory>
+        <PropertyOf>Characters</PropertyOf>
+        <Type>Text</Type>
+        <DependentKey>CanTakeCha</DependentKey>
+        <DependentValue>Display_This</DependentValue>
+        <LastUpdated>2018-09-23 18:05:44</LastUpdated>
+        <Created>2018-09-23 17:38:05</Created>
+    </Property>
+    <Property>
+        <Key>CanTakeCha</Key>
+        <Description>Player can pick-up this character</Description>
+        <PropertyOf>Characters</PropertyOf>
+        <Type>StateList</Type>
+        <State>Held_In_Arms</State>
+        <State>On_Shoulders</State>
+        <State>PiggyBack</State>
+        <State>Sit_On_Shoulder</State>
+        <State>Sit_On_Head</State>
+        <State>Display_This</State>
+        <Tooltip>The character allows themselves to be picked-up.</Tooltip>
+        <LastUpdated>2018-09-23 18:05:34</LastUpdated>
+        <Created>2018-09-23 17:38:40</Created>
+    </Property>
     <Task>
         <Key>PutObjectsOnOthers</Key>
         <Priority>49999</Priority>
@@ -7027,7 +7056,105 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         </Actions>
         <LastUpdated>2018-09-23 16:09:08</LastUpdated>
         <Created>2018-09-06 14:10:36</Created>
-    </Task>    
+    </Task>
+    <Task>
+        <Key>TakingChar</Key>
+        <Priority>50050</Priority>
+        <Type>Specific</Type>
+        <GeneralTask>TakeChar</GeneralTask>
+        <Specific>
+            <Type>Character</Type>
+            <Multiple>0</Multiple>
+            <Key />
+        </Specific>
+        <Description>Taking character</Description>
+        <CompletionMessage>
+            <Description>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%CharacterName% pick[//s]-up %Character%.Name</Text>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Property>CanTakeCha ReferencedCharacter Must Held_In_Arms</Property>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>and holds %character%.Name(Objective) in [my/your/%character%.Name(Possessive)] arms.</Text>
+                <TabLabel>Held</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Property>CanTakeCha ReferencedCharacter Must On_Shoulders</Property>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>and let[//s] %character%.Name(Objective) sit up high on [my/your/%character%.Name(Possessive)] shoulders.</Text>
+                <TabLabel>Shoulders</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Property>CanTakeCha ReferencedCharacter Must PiggyBack</Property>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>and give[//s] %character%.Name(Objective) a piggy-back ride.</Text>
+                <TabLabel>Piggyback</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Property>CanTakeCha ReferencedCharacter Must Sit_On_Head</Property>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>letting %character%.Name(Objective) climb onto [my/your/%character%.Name(Possessive)] head.</Text>
+                <TabLabel>OnHead</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Property>CanTakeCha ReferencedCharacter Must Sit_On_Shoulder</Property>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
+                <Text>sitting %character%.Name(Objective) on one of [my/your/%character%.Name(Possessive)] shoulders.</Text>
+                <TabLabel>OnShoulder</TabLabel>
+            </Description>
+            <Description>
+                <Restrictions>
+                    <Restriction>
+                        <Character>ReferencedCharacter Must HaveProperty WhenGetCha</Character>
+                    </Restriction>
+                    <BracketSequence>#</BracketSequence>
+                </Restrictions>
+                <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                <Text>%character%.WhenGetCha</Text>
+                <TabLabel>WhenTakeCha</TabLabel>
+            </Description>
+        </CompletionMessage>
+        <Repeatable>1</Repeatable>
+        <SpecificOverrideType>Override</SpecificOverrideType>
+        <Restrictions>
+            <Restriction>
+                <Character>ReferencedCharacter Must HaveProperty CanTakeCha</Character>
+            </Restriction>
+            <BracketSequence>#</BracketSequence>
+        </Restrictions>
+        <Actions>
+            <MoveCharacter>Character ReferencedCharacter OntoCharacter ReferencedCharacter</MoveCharacter>
+            <SetProperty>ReferencedCharacter CharacterPosition Sitting</SetProperty>
+        </Actions>
+        <LastUpdated>2018-09-23 18:06:04</LastUpdated>
+        <Created>2018-09-23 17:47:34</Created>
+    </Task>
     <Character>
         <Key>Player</Key>
         <Name>Player</Name>
