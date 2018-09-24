@@ -430,11 +430,10 @@
         <Member>WhenOff</Member>
         <Height>611</Height>
         <Width>399</Width>
-        <Visible>1</Visible>
         <X>566</X>
         <Y>5</Y>
         <ShowKey>1</ShowKey>
-        <LastUpdated>2018-09-23 16:12:51</LastUpdated>
+        <LastUpdated>2018-09-24 16:12:51</LastUpdated>
         <Created>2018-09-23 15:12:35</Created>
     </Folder>
     <Folder>
@@ -1752,7 +1751,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
     </Task>
     <Task>
         <Key>TakeObjectsFromOthers</Key>
-        <Priority>50010</Priority>
+        <Priority>50009</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
         <Command>[get/take/pick up/remove] %objects% from %object2%</Command>
@@ -1806,6 +1805,24 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>Sorry, I'm not sure which object or character you are trying to take from.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Location>PlayerLocation MustNot BeInGroup DarkLocations</Location>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeOnObject ReferencedObject2</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeInsideObject ReferencedObject2</Character>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeInSameLocationAsObject LightSources</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>It is too dark to find %object2%.Name.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -1942,7 +1959,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                 <Object>ReferencedObjects MustNot HaveProperty Insidepart</Object>
             </Restriction>
             <Restriction>
-                <Property>Insidepart ReferencedObjects Must Movable</Property>
+                <Property>Insidepart ReferencedObjects Must EqualTo Movable</Property>
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
@@ -1951,7 +1968,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     <Description>
                         <Restrictions>
                             <Restriction>
-                                <Property>Insidepart ReferencedObjects Must Held_In_Place</Property>
+                                <Property>Insidepart ReferencedObjects Must EqualTo Held_In_Place</Property>
                             </Restriction>
                             <BracketSequence>#</BracketSequence>
                         </Restrictions>
@@ -1962,7 +1979,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     <Description>
                         <Restrictions>
                             <Restriction>
-                                <Property>Insidepart ReferencedObjects Must Out_Of_Reach</Property>
+                                <Property>Insidepart ReferencedObjects Must EqualTo Out_Of_Reach</Property>
                             </Restriction>
                             <BracketSequence>#</BracketSequence>
                         </Restrictions>
@@ -1973,7 +1990,7 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     <Description>
                         <Restrictions>
                             <Restriction>
-                                <Property>Insidepart ReferencedObjects Must Stuck</Property>
+                                <Property>Insidepart ReferencedObjects Must EqualTo Stuck</Property>
                             </Restriction>
                             <BracketSequence>#</BracketSequence>
                         </Restrictions>
@@ -1983,12 +2000,12 @@ This task executes the 'Stand On Objects' task, giving it the parent of the play
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A#A#A(#O#)A(#O#A#)A(#O#A#)A(#O#)</BracketSequence>
+            <BracketSequence>#A#A#A#A(#O#O#O#)A#A#A#A#A(#O#)A(#O#A#)A(#O#A#)A(#O#)</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects ToCarriedBy %Player%</MoveObject>
         </Actions>
-        <LastUpdated>2018-09-18 14:53:00</LastUpdated>
+        <LastUpdated>2018-09-24 11:40:35</LastUpdated>
         <Created>2018-09-04 15:36:15</Created>
     </Task>
     <Task>
@@ -3996,7 +4013,7 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
     </Task>
     <Task>
         <Key>TakeObjects</Key>
-        <Priority>50013</Priority>
+        <Priority>50012</Priority>
         <AutoFillPriority>1</AutoFillPriority>
         <Type>General</Type>
         <Command>[get/take/pick up] %objects%</Command>
@@ -4027,6 +4044,18 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>Sorry, I'm not sure which object you are trying to take.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Location>PlayerLocation MustNot BeInGroup DarkLocations</Location>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeInSameLocationAsObject LightSources</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>It is too dark to find %objects%.List(Or).</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -4084,9 +4113,9 @@ This task executes the 'Sit On Objects' task, giving it the parent of the player
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A[#A#A#A#A#)O#)A#A#</BracketSequence>
+            <BracketSequence>#A#A(#O#)A#A#A[#A#A#A#A#)O#)A#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2012-01-18 13:50:43</LastUpdated>
+        <LastUpdated>2018-09-24 11:35:12</LastUpdated>
         <Created>2012-01-18 13:50:43</Created>
     </Task>
     <Task>
@@ -6713,7 +6742,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>TakeFromCh1</Key>
-        <Priority>50045</Priority>
+        <Priority>50044</Priority>
         <Type>General</Type>
         <Command>[get/take/pick up/remove] %objects% from %character%</Command>
         <Command>pick %objects% up from %character%</Command>
@@ -6743,6 +6772,18 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
                         <Text>Sorry, I'm not sure which character you are referring to.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <Restriction>
+                <Location>PlayerLocation MustNot BeInGroup DarkLocations</Location>
+            </Restriction>
+            <Restriction>
+                <Character>%Player% Must BeInSameLocationAsObject LightSources</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>It is too dark to see %character%.Name.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6792,7 +6833,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Object>ReferencedObjects MustNot HaveProperty Insidepart</Object>
             </Restriction>
             <Restriction>
-                <Property>Insidepart ReferencedObjects Must Movable</Property>
+                <Property>Insidepart ReferencedObjects Must EqualTo Movable</Property>
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
@@ -6801,7 +6842,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     <Description>
                         <Restrictions>
                             <Restriction>
-                                <Property>Insidepart ReferencedObjects Must Internal_Part</Property>
+                                <Property>Insidepart ReferencedObjects Must EqualTo Internal_Part</Property>
                             </Restriction>
                             <BracketSequence>#</BracketSequence>
                         </Restrictions>
@@ -6812,7 +6853,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     <Description>
                         <Restrictions>
                             <Restriction>
-                                <Property>Insidepart ReferencedObjects Must Held_In_Place</Property>
+                                <Property>Insidepart ReferencedObjects Must EqualTo Held_In_Place</Property>
                             </Restriction>
                             <BracketSequence>#</BracketSequence>
                         </Restrictions>
@@ -6823,7 +6864,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     <Description>
                         <Restrictions>
                             <Restriction>
-                                <Property>Insidepart ReferencedObjects Must Stuck</Property>
+                                <Property>Insidepart ReferencedObjects Must EqualTo Stuck</Property>
                             </Restriction>
                             <BracketSequence>#</BracketSequence>
                         </Restrictions>
@@ -6833,9 +6874,9 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A(#O#)A(#O#)</BracketSequence>
+            <BracketSequence>#A#A(#O#)A#A#A#A#A(#O#)A(#O#)</BracketSequence>
         </Restrictions>
-        <LastUpdated>2018-09-18 14:52:29</LastUpdated>
+        <LastUpdated>2018-09-24 11:50:00</LastUpdated>
         <Created>2018-09-06 12:19:07</Created>
     </Task>    
     <Task>
