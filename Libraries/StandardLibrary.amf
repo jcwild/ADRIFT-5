@@ -1264,7 +1264,7 @@
     </Property>
     <Task>
         <Key>PutObjectsOnOthers</Key>
-        <Priority>49999</Priority>
+        <Priority>49998</Priority>
         <AutoFillPriority>3</AutoFillPriority>
         <Type>General</Type>
         <Command>put %objects% on{to} {{the} top of} %object2%</Command>
@@ -1377,12 +1377,12 @@
                     </Description>
                 </Message>
             </Restriction>
-            <BracketSequence>#A#A#A#A#A#A#A#O(#A#)</BracketSequence>
+            <BracketSequence>#A#A#A#A#A#A#A(#O(#A#]</BracketSequence>
         </Restrictions>
         <Actions>
             <MoveObject>Object ReferencedObjects OntoObject ReferencedObject2</MoveObject>
         </Actions>
-        <LastUpdated>2018-09-19 17:53:23</LastUpdated>
+        <LastUpdated>2018-09-30 11:06:51</LastUpdated>
         <Created>2015-10-29 23:10:49</Created>
     </Task>
     <Task>
@@ -5776,9 +5776,9 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>SetObjectTo</Key>
-        <Priority>50028</Priority>
+        <Priority>50027</Priority>
         <Type>General</Type>
-        <Command>set %object% to %text%</Command>
+        <Command>[set/turn/flick/rotate/switch] %object% to %text%</Command>
         <Description>set object to something</Description>
         <CompletionMessage>
             <Description>
@@ -5817,7 +5817,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             </Restriction>
             <BracketSequence>#A#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-30 11:12:28</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
@@ -6035,7 +6035,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>SwitchObjectOn</Key>
-        <Priority>50035</Priority>
+        <Priority>50034</Priority>
         <Type>General</Type>
         <Command>[switch/turn/flick] %object% on</Command>
         <Command>[switch/turn/flick] on %object%</Command>
@@ -6065,7 +6065,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6074,7 +6074,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6110,12 +6110,12 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn on</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-23 15:25:12</LastUpdated>
+        <LastUpdated>2018-09-30 10:27:44</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
         <Key>SwitchObjectOff</Key>
-        <Priority>50002</Priority>
+        <Priority>50001</Priority>
         <Type>General</Type>
         <Command>[switch/turn/flick/shut] %object% off</Command>
         <Command>[switch/turn/flick] off %object%</Command>
@@ -6146,7 +6146,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6155,7 +6155,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6191,12 +6191,12 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetProperty>ReferencedObject CanBeTurnOffAndOn off</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-23 15:25:05</LastUpdated>
+        <LastUpdated>2018-09-30 10:26:30</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
         <Key>SwitchObjectOnLazy</Key>
-        <Priority>50003</Priority>
+        <Priority>50002</Priority>
         <Type>General</Type>
         <Command>[switch/turn/flick] %object%</Command>
         <Description>switch object (on)</Description>
@@ -6207,7 +6207,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6216,7 +6216,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6246,12 +6246,12 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute SwitchObjectOn (%object%)</SetTasks>
         </Actions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-30 10:25:50</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
         <Key>SwitchObjectOffLazy</Key>
-        <Priority>50004</Priority>
+        <Priority>50003</Priority>
         <Type>General</Type>
         <Command>[switch/turn/flick] %object%</Command>
         <Description>switch object (off)</Description>
@@ -6262,7 +6262,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6271,7 +6271,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to switch/turn/flick.</Text>
+                        <Text>Sorry, I'm not sure which object you are referring to.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6301,7 +6301,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <Actions>
             <SetTasks>Execute SwitchObjectOff (%object%)</SetTasks>
         </Actions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-30 10:25:10</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
@@ -6368,14 +6368,14 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
     </Task>
     <Task>
         <Key>TurnObjectOver</Key>
-        <Priority>50038</Priority>
+        <Priority>50037</Priority>
         <Type>General</Type>
         <Command>[turn/flip] %object% {over/upside{-/ }down}</Command>
         <Description>turn object</Description>
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%CharacterName% turn[//s] %object%.Name but nothing appears to happen.</Text>
+                <Text>%CharacterName% turn[//s] %object%.Name upside-down but nothing appears to happen.</Text>
             </Description>
         </CompletionMessage>
         <Repeatable>1</Repeatable>
@@ -6385,7 +6385,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to turn/flip.</Text>
+                        <Text>Sorry, I'm not sure which object you are trying to turn over.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6394,7 +6394,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>Sorry, I'm not sure which object you are trying to turn/flip.</Text>
+                        <Text>Sorry, I'm not sure which object you are trying to turn over.</Text>
                     </Description>
                 </Message>
             </Restriction>
@@ -6412,13 +6412,13 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                 <Message>
                     <Description>
                         <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                        <Text>%CharacterName% can't turn %object%.Name.</Text>
+                        <Text>%CharacterName% can't turn %object%.Name over unless you are holding it.</Text>
                     </Description>
                 </Message>
             </Restriction>
             <BracketSequence>#A#A#A#</BracketSequence>
         </Restrictions>
-        <LastUpdated>2012-11-17 16:47:32</LastUpdated>
+        <LastUpdated>2018-09-30 10:19:38</LastUpdated>
         <Created>2012-11-17 16:47:32</Created>
     </Task>
     <Task>
