@@ -7177,7 +7177,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>--&gt;%character%.WhenGetCha</Text>
+                <Text>%character%.WhenGetCha</Text>
                 <TabLabel>WhenTakeCha</TabLabel>
             </Description>
         </CompletionMessage>
@@ -7202,7 +7202,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <MoveCharacter>Character ReferencedCharacter OntoCharacter %Player%</MoveCharacter>
             <SetProperty>ReferencedCharacter CharacterPosition Sitting</SetProperty>
         </Actions>
-        <LastUpdated>2018-10-01 10:26:54</LastUpdated>
+        <LastUpdated>2018-10-01 13:27:17</LastUpdated>
         <Created>2018-09-23 17:47:34</Created>
     </Task>
     <Character>
