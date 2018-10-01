@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Adventure>
     <Version>5.000036</Version>
-    <LastUpdated>2018-09-23 17:23:31</LastUpdated>
+    <LastUpdated>2018-10-01 17:23:31</LastUpdated>
     <Title>ADRIFT Standard Library</Title>
     <Author>Campbell Wild</Author>
     <Description>The ADRIFT Standard Library contains the most common tasks and properties required in order to make a text adventure, such as player movement, taking and dropping objects, and interacting with characters.</Description>
@@ -7112,61 +7112,61 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
         <CompletionMessage>
             <Description>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%CharacterName% pick[//s]-up %Character%.Name</Text>
+                <Text>%CharacterName% pick[//s]-up %Character%.Name&lt;!-- </Text>
             </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Property>CanTakeCha ReferencedCharacter Must Held_In_Arms</Property>
+                        <Property>CanTakeCha ReferencedCharacter Must EqualTo Held_In_Arms</Property>
                     </Restriction>
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>and holds %character%.Name(Objective) in [my/your/%character%.Name(Possessive)] arms.</Text>
+                <Text>--&gt; and hold[//s] %character%.Name(Force,Objective) in %Player%.Name(Force,Possessive) arms.</Text>
                 <TabLabel>Held</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Property>CanTakeCha ReferencedCharacter Must On_Shoulders</Property>
+                        <Property>CanTakeCha ReferencedCharacter Must EqualTo On_Shoulders</Property>
                     </Restriction>
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>and let[//s] %character%.Name(Objective) sit up high on [my/your/%character%.Name(Possessive)] shoulders.</Text>
+                <Text>--&gt; and let[//s] %character%.Name(Force,Objective) sit up high on %Player%.Name(Force,Possessive) shoulders.</Text>
                 <TabLabel>Shoulders</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Property>CanTakeCha ReferencedCharacter Must PiggyBack</Property>
+                        <Property>CanTakeCha ReferencedCharacter Must EqualTo PiggyBack</Property>
                     </Restriction>
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>and give[//s] %character%.Name(Objective) a piggy-back ride.</Text>
+                <Text>--&gt; and give[//s] %character%.Name(Force,Objective) a piggy-back ride.</Text>
                 <TabLabel>Piggyback</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Property>CanTakeCha ReferencedCharacter Must Sit_On_Head</Property>
+                        <Property>CanTakeCha ReferencedCharacter Must EqualTo Sit_On_Head</Property>
                     </Restriction>
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>letting %character%.Name(Objective) climb onto [my/your/%character%.Name(Possessive)] head.</Text>
+                <Text>--&gt;, letting %character%.Name(Force,Objective) climb onto %Player%.Name(Force,Possessive) head.</Text>
                 <TabLabel>OnHead</TabLabel>
             </Description>
             <Description>
                 <Restrictions>
                     <Restriction>
-                        <Property>CanTakeCha ReferencedCharacter Must Sit_On_Shoulder</Property>
+                        <Property>CanTakeCha ReferencedCharacter Must EqualTo Sit_On_Shoulder</Property>
                     </Restriction>
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>AppendToPreviousDescription</DisplayWhen>
-                <Text>sitting %character%.Name(Objective) on one of [my/your/%character%.Name(Possessive)] shoulders.</Text>
+                <Text>--&gt;, sitting %character%.Name(Force,Objective) on one of %Player%.Name(Force,Possessive) shoulders.</Text>
                 <TabLabel>OnShoulder</TabLabel>
             </Description>
             <Description>
@@ -7177,7 +7177,7 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
                     <BracketSequence>#</BracketSequence>
                 </Restrictions>
                 <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
-                <Text>%character%.WhenGetCha</Text>
+                <Text>--&gt;%character%.WhenGetCha</Text>
                 <TabLabel>WhenTakeCha</TabLabel>
             </Description>
         </CompletionMessage>
@@ -7187,13 +7187,22 @@ This task runs the Ask Character About Subject task, passing %AloneWithChar% key
             <Restriction>
                 <Character>ReferencedCharacter Must HaveProperty CanTakeCha</Character>
             </Restriction>
-            <BracketSequence>#</BracketSequence>
+            <Restriction>
+                <Character>ReferencedCharacter MustNot BeOnCharacter %Player%</Character>
+                <Message>
+                    <Description>
+                        <DisplayWhen>StartDescriptionWithThis</DisplayWhen>
+                        <Text>%CharacterName% [am/are/is] already holding %character%.Name.</Text>
+                    </Description>
+                </Message>
+            </Restriction>
+            <BracketSequence>#A#</BracketSequence>
         </Restrictions>
         <Actions>
-            <MoveCharacter>Character ReferencedCharacter OntoCharacter ReferencedCharacter</MoveCharacter>
+            <MoveCharacter>Character ReferencedCharacter OntoCharacter %Player%</MoveCharacter>
             <SetProperty>ReferencedCharacter CharacterPosition Sitting</SetProperty>
         </Actions>
-        <LastUpdated>2018-09-23 18:06:04</LastUpdated>
+        <LastUpdated>2018-10-01 10:26:54</LastUpdated>
         <Created>2018-09-23 17:47:34</Created>
     </Task>
     <Character>
