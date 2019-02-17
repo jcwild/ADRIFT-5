@@ -114,7 +114,7 @@ Partial Class Map
         'btnAddNode
         '
         Me.btnAddNode.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnAddNode.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Me.btnAddNode.Image = Global.ADRIFT.My.Resources.imgLocation16
         Me.btnAddNode.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnAddNode.Name = "btnAddNode"
         Me.btnAddNode.Size = New System.Drawing.Size(23, 22)
@@ -141,7 +141,7 @@ Partial Class Map
         'btnZoomIn
         '
         Me.btnZoomIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnZoomIn.Image = Global.ADRIFT.My.Resources.Resources.imgZoomIn16
+        Me.btnZoomIn.Image = Global.ADRIFT.My.Resources.imgZoomIn16
         Me.btnZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnZoomIn.Name = "btnZoomIn"
         Me.btnZoomIn.Size = New System.Drawing.Size(23, 22)
@@ -150,7 +150,7 @@ Partial Class Map
         'btnZoomOut
         '
         Me.btnZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnZoomOut.Image = Global.ADRIFT.My.Resources.Resources.imgZoomOut16
+        Me.btnZoomOut.Image = Global.ADRIFT.My.Resources.imgZoomOut16
         Me.btnZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnZoomOut.Name = "btnZoomOut"
         Me.btnZoomOut.Size = New System.Drawing.Size(23, 22)
@@ -177,7 +177,7 @@ Partial Class Map
         '
         'miDeleteNode
         '
-        Me.miDeleteNode.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Me.miDeleteNode.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.miDeleteNode.Name = "miDeleteNode"
         Me.miDeleteNode.Size = New System.Drawing.Size(180, 22)
         Me.miDeleteNode.Text = "Delete Location"
@@ -240,7 +240,7 @@ Partial Class Map
         '
         'miDeleteLink
         '
-        Me.miDeleteLink.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Me.miDeleteLink.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.miDeleteLink.Name = "miDeleteLink"
         Me.miDeleteLink.Size = New System.Drawing.Size(160, 22)
         Me.miDeleteLink.Text = "Delete Link"

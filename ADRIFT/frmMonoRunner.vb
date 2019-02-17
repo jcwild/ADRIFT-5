@@ -1306,7 +1306,7 @@
                 'End If
             End If
 
-            UserSession.Display("ADRIFT Runner Version 5.0<br><>© Campbell Wild 1998-2016<br>Last build: 6th June 2016 (Release " & SafeInt(Application.ProductVersion.Replace("5.0.", "")).ToString("0") & ")", True) '©
+            UserSession.Display("ADRIFT Runner Version 5.0<br><>© Campbell Wild 1998-2019<br>Last build: 6th June 2016 (Release " & SafeInt(Application.ProductVersion.Replace("5.0.", "")).ToString("0") & ")", True) '©
 
         Catch ex As Exception
             ErrMsg("Startup Error", ex)

@@ -478,7 +478,7 @@ Public Class frmGenerator
         Me.UTMMain.Ribbon.ApplicationMenu.ToolAreaRight.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {LabelTool1})
         Me.UTMMain.Ribbon.ApplicationMenu.ToolAreaRight.Settings.LabelDisplayStyle = Infragistics.Win.UltraWinToolbars.LabelMenuDisplayStyle.Header
         Me.UTMMain.Ribbon.ApplicationMenu.ToolAreaRight.Settings.UseLargeImages = Infragistics.Win.DefaultableBoolean.[False]
-        Me.UTMMain.Ribbon.ApplicationMenuButtonImage = Global.ADRIFT.My.Resources.Resources.imgDeveloper24
+        Me.UTMMain.Ribbon.ApplicationMenuButtonImage = Global.ADRIFT.My.Resources.imgDeveloper24
         ContextualTabGroup1.Caption = "Map Tools"
         ContextualTabGroup1.Key = "ctgMapTools"
         ContextualTabGroup1.Visible = False
@@ -560,9 +560,9 @@ Public Class frmGenerator
         ButtonTool3.InstanceProps.IsFirstInGroup = True
         ButtonTool94.InstanceProps.IsFirstInGroup = True
         PopupMenuTool27.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool90, ButtonTool91, ButtonTool92, ButtonTool93, PopupMenuTool28, PopupMenuTool29, PopupMenuTool30, ButtonTool3, ButtonTool94})
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgNew32
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgNew32
         ButtonTool95.SharedPropsInternal.AppearancesLarge.Appearance = Appearance3
-        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgNew16
+        Appearance4.Image = Global.ADRIFT.My.Resources.imgNew16
         ButtonTool95.SharedPropsInternal.AppearancesSmall.Appearance = Appearance4
         ButtonTool95.SharedPropsInternal.Caption = "&New"
         ButtonTool95.SharedPropsInternal.Category = "Imported"
@@ -606,44 +606,44 @@ Public Class frmGenerator
         MdiWindowListTool4.SharedPropsInternal.Caption = "MDIWindowListTool1"
         Appearance7.Image = CType(resources.GetObject("Appearance7.Image"), Object)
         ButtonTool110.SharedPropsInternal.AppearancesLarge.Appearance = Appearance7
-        Appearance8.Image = Global.ADRIFT.My.Resources.Resources.imgSave16
+        Appearance8.Image = Global.ADRIFT.My.Resources.imgSave16
         ButtonTool110.SharedPropsInternal.AppearancesSmall.Appearance = Appearance8
         ButtonTool110.SharedPropsInternal.Caption = "&Save"
         ButtonTool110.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlS
-        Appearance9.Image = Global.ADRIFT.My.Resources.Resources.imgCut
+        Appearance9.Image = Global.ADRIFT.My.Resources.imgCut
         ButtonTool111.SharedPropsInternal.AppearancesSmall.Appearance = Appearance9
         ButtonTool111.SharedPropsInternal.Caption = "&Cut"
         ButtonTool111.SharedPropsInternal.Enabled = False
         ButtonTool111.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlX
-        Appearance10.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
+        Appearance10.Image = Global.ADRIFT.My.Resources.imgCopy
         ButtonTool112.SharedPropsInternal.AppearancesSmall.Appearance = Appearance10
         ButtonTool112.SharedPropsInternal.Caption = "&Copy"
         ButtonTool112.SharedPropsInternal.Enabled = False
         ButtonTool112.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlC
-        Appearance11.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
+        Appearance11.Image = Global.ADRIFT.My.Resources.imgPaste
         ButtonTool113.SharedPropsInternal.AppearancesSmall.Appearance = Appearance11
         ButtonTool113.SharedPropsInternal.Caption = "&Paste"
         ButtonTool113.SharedPropsInternal.Enabled = False
         ButtonTool113.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlV
         Appearance12.Image = CType(resources.GetObject("Appearance12.Image"), Object)
         ButtonTool114.SharedPropsInternal.AppearancesLarge.Appearance = Appearance12
-        Appearance13.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Appearance13.Image = Global.ADRIFT.My.Resources.imgDelete
         ButtonTool114.SharedPropsInternal.AppearancesSmall.Appearance = Appearance13
         ButtonTool114.SharedPropsInternal.Caption = "&Delete"
         ButtonTool114.SharedPropsInternal.Enabled = False
-        Appearance14.Image = Global.ADRIFT.My.Resources.Resources.imgFind
+        Appearance14.Image = Global.ADRIFT.My.Resources.imgFind
         ButtonTool115.SharedPropsInternal.AppearancesSmall.Appearance = Appearance14
         ButtonTool115.SharedPropsInternal.Caption = "Find"
         ButtonTool115.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlF
-        Appearance15.Image = Global.ADRIFT.My.Resources.Resources.imgLocation32
+        Appearance15.Image = Global.ADRIFT.My.Resources.imgLocation32
         ButtonTool116.SharedPropsInternal.AppearancesLarge.Appearance = Appearance15
-        Appearance16.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Appearance16.Image = Global.ADRIFT.My.Resources.imgLocation16
         ButtonTool116.SharedPropsInternal.AppearancesSmall.Appearance = Appearance16
         ButtonTool116.SharedPropsInternal.Caption = "Location"
         ButtonTool116.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlL
         ButtonTool116.SharedPropsInternal.ToolTipText = "Locations are the places characters can visit"
         ButtonTool116.SharedPropsInternal.ToolTipTitle = "Add Location"
-        Appearance17.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic32
+        Appearance17.Image = Global.ADRIFT.My.Resources.imgObjectDynamic32
         ButtonTool117.SharedPropsInternal.AppearancesLarge.Appearance = Appearance17
         Appearance18.Image = CType(resources.GetObject("Appearance18.Image"), Object)
         ButtonTool117.SharedPropsInternal.AppearancesSmall.Appearance = Appearance18
@@ -651,7 +651,7 @@ Public Class frmGenerator
         ButtonTool117.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlO
         ButtonTool117.SharedPropsInternal.ToolTipText = "Objects are anything within a location that can be looked at or manipulated"
         ButtonTool117.SharedPropsInternal.ToolTipTitle = "Add Object"
-        Appearance19.Image = Global.ADRIFT.My.Resources.Resources.imgTaskGeneral32
+        Appearance19.Image = Global.ADRIFT.My.Resources.imgTaskGeneral32
         ButtonTool118.SharedPropsInternal.AppearancesLarge.Appearance = Appearance19
         Appearance20.Image = CType(resources.GetObject("Appearance20.Image"), Object)
         ButtonTool118.SharedPropsInternal.AppearancesSmall.Appearance = Appearance20
@@ -659,7 +659,7 @@ Public Class frmGenerator
         ButtonTool118.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlT
         ButtonTool118.SharedPropsInternal.ToolTipText = "Tasks allow you to create custom actions in your game"
         ButtonTool118.SharedPropsInternal.ToolTipTitle = "Add Task"
-        Appearance21.Image = Global.ADRIFT.My.Resources.Resources.imgEvent32
+        Appearance21.Image = Global.ADRIFT.My.Resources.imgEvent32
         ButtonTool119.SharedPropsInternal.AppearancesLarge.Appearance = Appearance21
         Appearance22.Image = CType(resources.GetObject("Appearance22.Image"), Object)
         ButtonTool119.SharedPropsInternal.AppearancesSmall.Appearance = Appearance22
@@ -667,23 +667,23 @@ Public Class frmGenerator
         ButtonTool119.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlE
         ButtonTool119.SharedPropsInternal.ToolTipText = "Events allow you to make things happen at particular times in your game"
         ButtonTool119.SharedPropsInternal.ToolTipTitle = "Add Event"
-        Appearance23.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter32
+        Appearance23.Image = Global.ADRIFT.My.Resources.imgCharacter32
         ButtonTool120.SharedPropsInternal.AppearancesLarge.Appearance = Appearance23
-        Appearance24.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
+        Appearance24.Image = Global.ADRIFT.My.Resources.imgCharacter16
         ButtonTool120.SharedPropsInternal.AppearancesSmall.Appearance = Appearance24
         ButtonTool120.SharedPropsInternal.Caption = "Character"
         ButtonTool120.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlC
         ButtonTool120.SharedPropsInternal.ToolTipText = "Characters are people or animals you may encounter in your game"
         ButtonTool120.SharedPropsInternal.ToolTipTitle = "Add Character"
-        Appearance25.Image = Global.ADRIFT.My.Resources.Resources.imgVariable32
+        Appearance25.Image = Global.ADRIFT.My.Resources.imgVariable32
         ButtonTool121.SharedPropsInternal.AppearancesLarge.Appearance = Appearance25
-        Appearance26.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
+        Appearance26.Image = Global.ADRIFT.My.Resources.imgVariable16
         ButtonTool121.SharedPropsInternal.AppearancesSmall.Appearance = Appearance26
         ButtonTool121.SharedPropsInternal.Caption = "Variable"
         ButtonTool121.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftV
         ButtonTool121.SharedPropsInternal.ToolTipText = "Variables allow you to keep track of numbers or text in your game"
         ButtonTool121.SharedPropsInternal.ToolTipTitle = "Add Variable"
-        Appearance27.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Appearance27.Image = Global.ADRIFT.My.Resources.imgAdd16
         PopupMenuTool37.SharedPropsInternal.AppearancesSmall.Appearance = Appearance27
         PopupMenuTool37.SharedPropsInternal.Caption = "Add New"
         PopupMenuTool37.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool122, ButtonTool123, ButtonTool124, ButtonTool125, ButtonTool126, ButtonTool127, ButtonTool128, ButtonTool129, ButtonTool130, ButtonTool131})
@@ -694,24 +694,24 @@ Public Class frmGenerator
         PopupMenuTool38.SharedPropsInternal.Caption = "Recent Adventures"
         StateButtonTool4.MenuDisplayStyle = Infragistics.Win.UltraWinToolbars.StateButtonMenuDisplayStyle.DisplayCheckmark
         StateButtonTool4.SharedPropsInternal.Caption = "Tab Windows"
-        Appearance29.Image = Global.ADRIFT.My.Resources.Resources.imgGroup32
+        Appearance29.Image = Global.ADRIFT.My.Resources.imgGroup32
         ButtonTool133.SharedPropsInternal.AppearancesLarge.Appearance = Appearance29
-        Appearance30.Image = Global.ADRIFT.My.Resources.Resources.imgGroup16
+        Appearance30.Image = Global.ADRIFT.My.Resources.imgGroup16
         ButtonTool133.SharedPropsInternal.AppearancesSmall.Appearance = Appearance30
         ButtonTool133.SharedPropsInternal.Caption = "Group"
         ButtonTool133.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlG
         ButtonTool133.SharedPropsInternal.ToolTipText = "Locations, Objects and Characters can all be added to groups to all be treated th" & _
     "e same"
         ButtonTool133.SharedPropsInternal.ToolTipTitle = "Add Group"
-        Appearance31.Image = Global.ADRIFT.My.Resources.Resources.imgALR32
+        Appearance31.Image = Global.ADRIFT.My.Resources.imgALR32
         ButtonTool134.SharedPropsInternal.AppearancesLarge.Appearance = Appearance31
-        Appearance32.Image = Global.ADRIFT.My.Resources.Resources.imgALR16
+        Appearance32.Image = Global.ADRIFT.My.Resources.imgALR16
         ButtonTool134.SharedPropsInternal.AppearancesSmall.Appearance = Appearance32
         ButtonTool134.SharedPropsInternal.Caption = "Text Override"
         ButtonTool134.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlX
         ButtonTool134.SharedPropsInternal.ToolTipText = "Text Overrides allow you to change any final output text in Runner"
         ButtonTool134.SharedPropsInternal.ToolTipTitle = "Add Text Override"
-        Appearance33.Image = Global.ADRIFT.My.Resources.Resources.imgHint32
+        Appearance33.Image = Global.ADRIFT.My.Resources.imgHint32
         ButtonTool135.SharedPropsInternal.AppearancesLarge.Appearance = Appearance33
         Appearance34.Image = CType(resources.GetObject("Appearance34.Image"), Object)
         ButtonTool135.SharedPropsInternal.AppearancesSmall.Appearance = Appearance34
@@ -721,67 +721,67 @@ Public Class frmGenerator
         ButtonTool135.SharedPropsInternal.ToolTipTitle = "Add Hint"
         ButtonTool136.SharedPropsInternal.Caption = "Module"
         ButtonTool136.SharedPropsInternal.DescriptionOnMenu = "Insert everything from a module into this adventure"
-        Appearance35.Image = Global.ADRIFT.My.Resources.Resources.imgGroup32
+        Appearance35.Image = Global.ADRIFT.My.Resources.imgGroup32
         ButtonTool137.SharedPropsInternal.AppearancesLarge.Appearance = Appearance35
         ButtonTool137.SharedPropsInternal.Caption = "Module"
         ButtonTool137.SharedPropsInternal.DescriptionOnMenu = "Export a module for distribution, or for use as a library"
-        Appearance36.Image = Global.ADRIFT.My.Resources.Resources.imgImport32
+        Appearance36.Image = Global.ADRIFT.My.Resources.imgImport32
         PopupMenuTool39.SharedPropsInternal.AppearancesLarge.Appearance = Appearance36
-        Appearance37.Image = Global.ADRIFT.My.Resources.Resources.imgImport16
+        Appearance37.Image = Global.ADRIFT.My.Resources.imgImport16
         PopupMenuTool39.SharedPropsInternal.AppearancesSmall.Appearance = Appearance37
         PopupMenuTool39.SharedPropsInternal.Caption = "&Import"
         PopupMenuTool39.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.DefaultForToolType
         PopupMenuTool39.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool138, ButtonTool153, ButtonTool162, ButtonTool159})
-        Appearance38.Image = Global.ADRIFT.My.Resources.Resources.imgExport32
+        Appearance38.Image = Global.ADRIFT.My.Resources.imgExport32
         PopupMenuTool40.SharedPropsInternal.AppearancesLarge.Appearance = Appearance38
-        Appearance39.Image = Global.ADRIFT.My.Resources.Resources.imgExport16
+        Appearance39.Image = Global.ADRIFT.My.Resources.imgExport16
         PopupMenuTool40.SharedPropsInternal.AppearancesSmall.Appearance = Appearance39
         PopupMenuTool40.SharedPropsInternal.Caption = "&Export"
         PopupMenuTool40.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool139, ButtonTool9, ButtonTool26, ButtonTool151, ButtonTool168})
-        Appearance40.Image = Global.ADRIFT.My.Resources.Resources.imgSettings32
+        Appearance40.Image = Global.ADRIFT.My.Resources.imgSettings32
         ButtonTool140.SharedPropsInternal.AppearancesLarge.Appearance = Appearance40
-        Appearance41.Image = Global.ADRIFT.My.Resources.Resources.imgSettings16
+        Appearance41.Image = Global.ADRIFT.My.Resources.imgSettings16
         ButtonTool140.SharedPropsInternal.AppearancesSmall.Appearance = Appearance41
         ButtonTool140.SharedPropsInternal.Caption = "Settings..."
-        Appearance42.Image = Global.ADRIFT.My.Resources.Resources.imgProperty32
+        Appearance42.Image = Global.ADRIFT.My.Resources.imgProperty32
         ButtonTool141.SharedPropsInternal.AppearancesLarge.Appearance = Appearance42
-        Appearance43.Image = Global.ADRIFT.My.Resources.Resources.imgProperty16
+        Appearance43.Image = Global.ADRIFT.My.Resources.imgProperty16
         ButtonTool141.SharedPropsInternal.AppearancesSmall.Appearance = Appearance43
         ButtonTool141.SharedPropsInternal.Caption = "Property"
         ButtonTool141.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlP
         ButtonTool141.SharedPropsInternal.ToolTipText = "Locations, Objects and Characters can all be given particular attributes"
         ButtonTool141.SharedPropsInternal.ToolTipTitle = "Add Property"
-        Appearance44.Image = Global.ADRIFT.My.Resources.Resources.imgInfo16
+        Appearance44.Image = Global.ADRIFT.My.Resources.imgInfo16
         ButtonTool142.SharedPropsInternal.AppearancesSmall.Appearance = Appearance44
         ButtonTool142.SharedPropsInternal.Caption = "About ADRIFT Developer"
-        Appearance45.Image = Global.ADRIFT.My.Resources.Resources.imgRun32
+        Appearance45.Image = Global.ADRIFT.My.Resources.imgRun32
         ButtonTool143.SharedPropsInternal.AppearancesLarge.Appearance = Appearance45
-        Appearance46.Image = Global.ADRIFT.My.Resources.Resources.imgRun16
+        Appearance46.Image = Global.ADRIFT.My.Resources.imgRun16
         ButtonTool143.SharedPropsInternal.AppearancesSmall.Appearance = Appearance46
         ButtonTool143.SharedPropsInternal.Caption = "Run Adventure"
         ButtonTool143.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.F5
-        Appearance47.Image = Global.ADRIFT.My.Resources.Resources.imgCancel16
+        Appearance47.Image = Global.ADRIFT.My.Resources.imgCancel16
         ButtonTool144.SharedPropsInternal.AppearancesSmall.Appearance = Appearance47
         ButtonTool144.SharedPropsInternal.Caption = "E&xit Developer"
         ButtonTool144.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText
-        Appearance48.Image = Global.ADRIFT.My.Resources.Resources.imgSynonym32
+        Appearance48.Image = Global.ADRIFT.My.Resources.imgSynonym32
         ButtonTool2.SharedPropsInternal.AppearancesLarge.Appearance = Appearance48
         ButtonTool2.SharedPropsInternal.Caption = "Introduction && End of Game"
-        Appearance49.Image = Global.ADRIFT.My.Resources.Resources.imgOptions32
+        Appearance49.Image = Global.ADRIFT.My.Resources.imgOptions32
         ButtonTool5.SharedPropsInternal.AppearancesLarge.Appearance = Appearance49
-        Appearance50.Image = Global.ADRIFT.My.Resources.Resources.imgOptions16
+        Appearance50.Image = Global.ADRIFT.My.Resources.imgOptions16
         ButtonTool5.SharedPropsInternal.AppearancesSmall.Appearance = Appearance50
         ButtonTool5.SharedPropsInternal.Caption = "Options"
         ButtonTool8.SharedPropsInternal.Caption = "iFiction Record"
         ButtonTool8.SharedPropsInternal.DescriptionOnMenu = "Export the bibliographic record for this text adventure"
         ButtonTool14.SharedPropsInternal.Caption = "Arrange Icons"
-        Appearance51.Image = Global.ADRIFT.My.Resources.Resources.imgCascade16
+        Appearance51.Image = Global.ADRIFT.My.Resources.imgCascade16
         ButtonTool15.SharedPropsInternal.AppearancesSmall.Appearance = Appearance51
         ButtonTool15.SharedPropsInternal.Caption = "Cascade"
-        Appearance52.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Appearance52.Image = Global.ADRIFT.My.Resources.imgDelete
         ButtonTool16.SharedPropsInternal.AppearancesSmall.Appearance = Appearance52
         ButtonTool16.SharedPropsInternal.Caption = "Close All Windows"
-        Appearance53.Image = Global.ADRIFT.My.Resources.Resources.imgArrangeHorz16
+        Appearance53.Image = Global.ADRIFT.My.Resources.imgArrangeHorz16
         ButtonTool17.SharedPropsInternal.AppearancesSmall.Appearance = Appearance53
         ButtonTool17.SharedPropsInternal.Caption = "Tile Horizontally"
         Appearance54.Image = CType(resources.GetObject("Appearance54.Image"), Object)
@@ -791,11 +791,11 @@ Public Class frmGenerator
         ButtonTool19.SharedPropsInternal.AppearancesSmall.Appearance = Appearance55
         ButtonTool19.SharedPropsInternal.Caption = "Replace"
         ButtonTool19.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlR
-        Appearance56.Image = Global.ADRIFT.My.Resources.Resources.imgFindNext
+        Appearance56.Image = Global.ADRIFT.My.Resources.imgFindNext
         ButtonTool23.SharedPropsInternal.AppearancesLarge.Appearance = Appearance56
-        Appearance57.Image = Global.ADRIFT.My.Resources.Resources.imgFindNext
+        Appearance57.Image = Global.ADRIFT.My.Resources.imgFindNext
         ButtonTool23.SharedPropsInternal.AppearancesSmall.Appearance = Appearance57
-        Appearance58.Image = Global.ADRIFT.My.Resources.Resources.imgFindNext
+        Appearance58.Image = Global.ADRIFT.My.Resources.imgFindNext
         ButtonTool23.SharedPropsInternal.AppearancesSmall.AppearanceOnMenu = Appearance58
         ButtonTool23.SharedPropsInternal.Caption = "Find Next"
         ButtonTool23.SharedPropsInternal.Enabled = False
@@ -803,14 +803,14 @@ Public Class frmGenerator
         ButtonTool24.SharedPropsInternal.Caption = "Windows Executable"
         ButtonTool24.SharedPropsInternal.DescriptionOnMenu = "Create a file that can be distributed as a standalone executable"
         LabelTool2.SharedPropsInternal.Caption = "Recent Documents"
-        Appearance59.Image = Global.ADRIFT.My.Resources.Resources.imgUnlock32
+        Appearance59.Image = Global.ADRIFT.My.Resources.imgUnlock32
         ButtonTool60.SharedPropsInternal.AppearancesLarge.Appearance = Appearance59
         ButtonTool60.SharedPropsInternal.Caption = "Protect Adventure"
-        Appearance60.Image = Global.ADRIFT.My.Resources.Resources.imgFolderList32
+        Appearance60.Image = Global.ADRIFT.My.Resources.imgFolderList32
         ButtonTool62.SharedPropsInternal.AppearancesLarge.Appearance = Appearance60
         ButtonTool62.SharedPropsInternal.Caption = "Folder List"
         ButtonTool62.SharedPropsInternal.Enabled = False
-        Appearance61.Image = Global.ADRIFT.My.Resources.Resources.imgKey16
+        Appearance61.Image = Global.ADRIFT.My.Resources.imgKey16
         ButtonTool63.SharedPropsInternal.AppearancesSmall.Appearance = Appearance61
         ButtonTool63.SharedPropsInternal.Caption = "Unlock ADRIFT"
         Appearance62.Image = CType(resources.GetObject("Appearance62.Image"), Object)
@@ -819,35 +819,35 @@ Public Class frmGenerator
         ButtonTool66.SharedPropsInternal.AppearancesSmall.Appearance = Appearance63
         ButtonTool66.SharedPropsInternal.Caption = "Map"
         ButtonTool66.SharedPropsInternal.Enabled = False
-        Appearance64.Image = Global.ADRIFT.My.Resources.Resources.imgLocation32
+        Appearance64.Image = Global.ADRIFT.My.Resources.imgLocation32
         ButtonTool72.SharedPropsInternal.AppearancesLarge.Appearance = Appearance64
         ButtonTool72.SharedPropsInternal.Caption = "Add Location"
-        Appearance65.Image = Global.ADRIFT.My.Resources.Resources.imgPlanView32
+        Appearance65.Image = Global.ADRIFT.My.Resources.imgPlanView32
         ButtonTool101.SharedPropsInternal.AppearancesLarge.Appearance = Appearance65
         ButtonTool101.SharedPropsInternal.Caption = "Plan View"
         ButtonTool101.SharedPropsInternal.ToolTipText = "Reset map to plan view"
-        Appearance66.Image = Global.ADRIFT.My.Resources.Resources.imgCentre32
+        Appearance66.Image = Global.ADRIFT.My.Resources.imgCentre32
         ButtonTool108.SharedPropsInternal.AppearancesLarge.Appearance = Appearance66
         ButtonTool108.SharedPropsInternal.Caption = "Centralise Map"
-        Appearance67.Image = Global.ADRIFT.My.Resources.Resources.imgZoomIn32
+        Appearance67.Image = Global.ADRIFT.My.Resources.imgZoomIn32
         ButtonTool145.SharedPropsInternal.AppearancesLarge.Appearance = Appearance67
         ButtonTool145.SharedPropsInternal.Caption = "Zoom In"
-        Appearance68.Image = Global.ADRIFT.My.Resources.Resources.imgZoomOut32
+        Appearance68.Image = Global.ADRIFT.My.Resources.imgZoomOut32
         ButtonTool146.SharedPropsInternal.AppearancesLarge.Appearance = Appearance68
         ButtonTool146.SharedPropsInternal.Caption = "Zoom Out"
-        Appearance69.Image = Global.ADRIFT.My.Resources.Resources.imgWarn16
+        Appearance69.Image = Global.ADRIFT.My.Resources.imgWarn16
         ButtonTool148.SharedPropsInternal.AppearancesSmall.Appearance = Appearance69
         ButtonTool148.SharedPropsInternal.Caption = "Map Layout Warning"
         ButtonTool148.SharedPropsInternal.Visible = False
-        Appearance70.Image = Global.ADRIFT.My.Resources.Resources.imgAxes32
+        Appearance70.Image = Global.ADRIFT.My.Resources.imgAxes32
         StateButtonTool2.SharedPropsInternal.AppearancesLarge.Appearance = Appearance70
         StateButtonTool2.SharedPropsInternal.Caption = "Show Axes"
-        Appearance71.Image = Global.ADRIFT.My.Resources.Resources.imgGrid16
+        Appearance71.Image = Global.ADRIFT.My.Resources.imgGrid16
         StateButtonTool5.SharedPropsInternal.AppearancesLarge.Appearance = Appearance71
-        Appearance72.Image = Global.ADRIFT.My.Resources.Resources.imgGrid16
+        Appearance72.Image = Global.ADRIFT.My.Resources.imgGrid16
         StateButtonTool5.SharedPropsInternal.AppearancesSmall.Appearance = Appearance72
         StateButtonTool5.SharedPropsInternal.Caption = "Show Grid Lines"
-        Appearance73.Image = Global.ADRIFT.My.Resources.Resources.imgTile16
+        Appearance73.Image = Global.ADRIFT.My.Resources.imgTile16
         ButtonTool150.SharedPropsInternal.AppearancesSmall.Appearance = Appearance73
         ButtonTool150.SharedPropsInternal.Caption = "Tile"
         ButtonTool152.SharedPropsInternal.Caption = "Blorb"
@@ -855,34 +855,34 @@ Public Class frmGenerator
         ButtonTool154.SharedPropsInternal.Caption = "Blorb"
         ButtonTool154.SharedPropsInternal.DescriptionOnMenu = "Extract all the media from a Blorb file"
         ButtonTool156.SharedPropsInternal.Caption = "Properties"
-        Appearance74.Image = Global.ADRIFT.My.Resources.Resources.imgNew32
+        Appearance74.Image = Global.ADRIFT.My.Resources.imgNew32
         ButtonTool41.SharedPropsInternal.AppearancesLarge.Appearance = Appearance74
-        Appearance75.Image = Global.ADRIFT.My.Resources.Resources.imgNew16
+        Appearance75.Image = Global.ADRIFT.My.Resources.imgNew16
         ButtonTool41.SharedPropsInternal.AppearancesSmall.Appearance = Appearance75
         ButtonTool41.SharedPropsInternal.Caption = "Add Page"
         ButtonTool160.SharedPropsInternal.Caption = "Trizbort"
         ButtonTool160.SharedPropsInternal.DescriptionOnMenu = "Import map layout"
         ButtonTool161.SharedPropsInternal.Caption = "Language Resource"
         ButtonTool161.SharedPropsInternal.DescriptionOnMenu = "Import Text Overrides from a text file"
-        Appearance76.Image = Global.ADRIFT.My.Resources.Resources.imgPrint32
+        Appearance76.Image = Global.ADRIFT.My.Resources.imgPrint32
         ButtonTool163.SharedPropsInternal.AppearancesLarge.Appearance = Appearance76
-        Appearance77.Image = Global.ADRIFT.My.Resources.Resources.imgPrint16
+        Appearance77.Image = Global.ADRIFT.My.Resources.imgPrint16
         ButtonTool163.SharedPropsInternal.AppearancesSmall.Appearance = Appearance77
         ButtonTool163.SharedPropsInternal.Caption = "Print"
         ButtonTool164.SharedPropsInternal.Caption = "Print Preview..."
         ButtonTool166.SharedPropsInternal.Caption = "Language Resource"
         ButtonTool166.SharedPropsInternal.DescriptionOnMenu = "Export Text Overrides into a text file"
-        Appearance78.Image = Global.ADRIFT.My.Resources.Resources.imgHelp16
+        Appearance78.Image = Global.ADRIFT.My.Resources.imgHelp16
         ButtonTool169.SharedPropsInternal.AppearancesSmall.Appearance = Appearance78
         ButtonTool169.SharedPropsInternal.Caption = "Help"
-        Appearance79.Image = Global.ADRIFT.My.Resources.Resources.imgFunction32
+        Appearance79.Image = Global.ADRIFT.My.Resources.imgFunction32
         ButtonTool171.SharedPropsInternal.AppearancesLarge.Appearance = Appearance79
-        Appearance80.Image = Global.ADRIFT.My.Resources.Resources.imgFunction16
+        Appearance80.Image = Global.ADRIFT.My.Resources.imgFunction16
         ButtonTool171.SharedPropsInternal.AppearancesSmall.Appearance = Appearance80
         ButtonTool171.SharedPropsInternal.Caption = "User Function"
-        Appearance81.Image = Global.ADRIFT.My.Resources.Resources.imgSynonym32
+        Appearance81.Image = Global.ADRIFT.My.Resources.imgSynonym32
         ButtonTool173.SharedPropsInternal.AppearancesLarge.Appearance = Appearance81
-        Appearance82.Image = Global.ADRIFT.My.Resources.Resources.imgSynonym16
+        Appearance82.Image = Global.ADRIFT.My.Resources.imgSynonym16
         ButtonTool173.SharedPropsInternal.AppearancesSmall.Appearance = Appearance82
         ButtonTool173.SharedPropsInternal.Caption = "Synonym"
         Me.UTMMain.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {PopupMenuTool27, ButtonTool95, ButtonTool96, PopupMenuTool31, PopupMenuTool32, ButtonTool105, ButtonTool106, ButtonTool107, PopupMenuTool33, PopupMenuTool35, PopupMenuTool36, MdiWindowListTool4, ButtonTool110, ButtonTool111, ButtonTool112, ButtonTool113, ButtonTool114, ButtonTool115, ButtonTool116, ButtonTool117, ButtonTool118, ButtonTool119, ButtonTool120, ButtonTool121, PopupMenuTool37, ButtonTool132, PopupMenuTool38, StateButtonTool4, ButtonTool133, ButtonTool134, ButtonTool135, ButtonTool136, ButtonTool137, PopupMenuTool39, PopupMenuTool40, ButtonTool140, ButtonTool141, ButtonTool142, ButtonTool143, ButtonTool144, ButtonTool2, ButtonTool5, ButtonTool8, ButtonTool14, ButtonTool15, ButtonTool16, ButtonTool17, ButtonTool18, ButtonTool19, ButtonTool23, ButtonTool24, LabelTool2, ButtonTool60, ButtonTool62, ButtonTool63, ButtonTool66, ButtonTool72, ButtonTool101, ButtonTool108, ButtonTool145, ButtonTool146, ButtonTool148, StateButtonTool2, StateButtonTool5, ButtonTool150, ButtonTool152, ButtonTool154, ButtonTool156, ButtonTool41, ButtonTool160, ButtonTool161, ButtonTool163, ButtonTool164, ButtonTool166, ButtonTool169, ButtonTool171, ButtonTool173})
@@ -929,7 +929,7 @@ Public Class frmGenerator
         DockableControlPane1.Control = Me.FolderList1
         DockableControlPane1.FlyoutSize = New System.Drawing.Size(194, -1)
         DockableControlPane1.OriginalControlBounds = New System.Drawing.Rectangle(12, 54, 192, 429)
-        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgFolder16
+        Appearance1.Image = Global.ADRIFT.My.Resources.imgFolder16
         DockableControlPane1.Settings.TabAppearance = Appearance1
         DockableControlPane1.Size = New System.Drawing.Size(100, 100)
         DockableControlPane1.Text = "Folders"
@@ -1066,7 +1066,7 @@ Public Class frmGenerator
         '
         'miAddFolder
         '
-        Me.miAddFolder.Image = Global.ADRIFT.My.Resources.Resources.imgFolder16
+        Me.miAddFolder.Image = Global.ADRIFT.My.Resources.imgFolder16
         Me.miAddFolder.Name = "miAddFolder"
         Me.miAddFolder.Size = New System.Drawing.Size(132, 22)
         Me.miAddFolder.Text = "Add Folder"
@@ -1171,6 +1171,26 @@ Public Class frmGenerator
                 bSimpleMode = value
                 SaveSetting("ADRIFT", "Generator", "SimpleMode", CInt(bSimpleMode).ToString)
                 SetSimple(bSimpleMode)
+            End If
+        End Set
+    End Property
+
+
+
+    Private _AutoComplete As Boolean = False
+    Private _LoadedAutoComplete As Boolean = False
+    Public Property AutoComplete As Boolean
+        Get
+            If Not _LoadedAutoComplete Then
+                _AutoComplete = SafeBool(GetSetting("ADRIFT", "Generator", "AutoComplete", CInt(True).ToString))
+                _LoadedAutoComplete = True
+            End If
+            Return _AutoComplete
+        End Get
+        Set(value As Boolean)
+            If value <> _AutoComplete Then
+                _AutoComplete = value
+                SaveSetting("ADRIFT", "Generator", "AutoComplete", CInt(_AutoComplete).ToString)
             End If
         End Set
     End Property

@@ -382,7 +382,7 @@ Public Class frmRunner
         UltraToolbar2.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool1, ButtonTool14, ButtonTool6, ButtonTool28, ButtonTool29, StateButtonTool10, StateButtonTool8})
         UltraToolbar2.Text = "ToolBar"
         Me.UTMMain.Toolbars.AddRange(New Infragistics.Win.UltraWinToolbars.UltraToolbar() {UltraToolbar1, UltraToolbar2})
-        Appearance32.Image = Global.ADRIFT.My.Resources.Resources.imgOpen
+        Appearance32.Image = Global.ADRIFT.My.Resources.imgOpen
         ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = Appearance32
         ButtonTool2.SharedPropsInternal.Caption = "Open Adventure..."
         ButtonTool2.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlA
@@ -410,7 +410,7 @@ Public Class frmRunner
         PopupMenuTool11.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool10, ButtonTool11})
         MdiWindowListTool1.SharedPropsInternal.Caption = "MDIWindowListTool1"
         PopupMenuTool12.SharedPropsInternal.Caption = "Recent Adventures"
-        Appearance12.Image = Global.ADRIFT.My.Resources.Resources.imgCancel16
+        Appearance12.Image = Global.ADRIFT.My.Resources.imgCancel16
         ButtonTool5.SharedPropsInternal.AppearancesSmall.Appearance = Appearance12
         ButtonTool5.SharedPropsInternal.Caption = "E&xit"
         StateButtonTool5.MenuDisplayStyle = Infragistics.Win.UltraWinToolbars.StateButtonMenuDisplayStyle.DisplayCheckmark
@@ -424,12 +424,12 @@ Public Class frmRunner
         ButtonTool13.SharedPropsInternal.Caption = "About ADRIFT"
         StateButtonTool7.MenuDisplayStyle = Infragistics.Win.UltraWinToolbars.StateButtonMenuDisplayStyle.DisplayCheckmark
         StateButtonTool7.SharedPropsInternal.Caption = "Auto Complete"
-        Appearance33.Image = Global.ADRIFT.My.Resources.Resources.imgSave16
+        Appearance33.Image = Global.ADRIFT.My.Resources.imgSave16
         ButtonTool7.SharedPropsInternal.AppearancesSmall.Appearance = Appearance33
         ButtonTool7.SharedPropsInternal.Caption = "Save Game"
         ButtonTool7.SharedPropsInternal.Enabled = False
         ButtonTool7.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlS
-        Appearance34.Image = Global.ADRIFT.My.Resources.Resources.imgFolderBlue16
+        Appearance34.Image = Global.ADRIFT.My.Resources.imgFolderBlue16
         ButtonTool15.SharedPropsInternal.AppearancesSmall.Appearance = Appearance34
         ButtonTool15.SharedPropsInternal.Caption = "Open Game..."
         ButtonTool15.SharedPropsInternal.Enabled = False
@@ -447,16 +447,16 @@ Public Class frmRunner
         ButtonTool25.SharedPropsInternal.Caption = "Restart Game"
         ButtonTool25.SharedPropsInternal.Enabled = False
         ButtonTool25.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlR
-        Appearance35.Image = Global.ADRIFT.My.Resources.Resources.imgZoomIn16
+        Appearance35.Image = Global.ADRIFT.My.Resources.imgZoomIn16
         ButtonTool30.SharedPropsInternal.AppearancesSmall.Appearance = Appearance35
         ButtonTool30.SharedPropsInternal.Caption = "Zoom In"
-        Appearance36.Image = Global.ADRIFT.My.Resources.Resources.imgZoomOut16
+        Appearance36.Image = Global.ADRIFT.My.Resources.imgZoomOut16
         ButtonTool31.SharedPropsInternal.AppearancesSmall.Appearance = Appearance36
         ButtonTool31.SharedPropsInternal.Caption = "Zoom Out"
-        Appearance37.Image = Global.ADRIFT.My.Resources.Resources.imgCentre16
+        Appearance37.Image = Global.ADRIFT.My.Resources.imgCentre16
         StateButtonTool9.SharedPropsInternal.AppearancesSmall.Appearance = Appearance37
         StateButtonTool9.SharedPropsInternal.Caption = "Player Location lock"
-        Appearance38.Image = Global.ADRIFT.My.Resources.Resources.imgCentre16
+        Appearance38.Image = Global.ADRIFT.My.Resources.imgCentre16
         StateButtonTool11.SharedPropsInternal.AppearancesSmall.Appearance = Appearance38
         StateButtonTool11.SharedPropsInternal.Caption = "Centre Map lock"
         ButtonTool33.SharedPropsInternal.Caption = "About Adventure"
@@ -1708,7 +1708,7 @@ Public Class frmRunner
                 'End If
             End If
 
-            UserSession.Display("ADRIFT Runner Version 5.0<br><>© Campbell Wild 1998-2016<br>Last build: 6th June 2016 (Release " & CInt(Double.Parse(Application.ProductVersion.Replace("5.0.", ""), Globalization.CultureInfo.InvariantCulture.NumberFormat)).ToString("0") & ")", True) '©
+            UserSession.Display("ADRIFT Runner Version 5.0<br><>© Campbell Wild 1998-2019<br>Last build: 6th June 2016 (Release " & CInt(Double.Parse(Application.ProductVersion.Replace("5.0.", ""), Globalization.CultureInfo.InvariantCulture.NumberFormat)).ToString("0") & ")", True) '©
 
         Catch ex As Exception
             ErrMsg("Startup Error", ex)

@@ -45,7 +45,7 @@ Partial Class XtoYturns
         '
         Me.btnExpand.Anchor = System.Windows.Forms.AnchorStyles.Left
         Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgOneToOne
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgOneToOne
         Me.btnExpand.Appearance = Appearance3
         Me.btnExpand.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnExpand.Cursor = System.Windows.Forms.Cursors.Hand

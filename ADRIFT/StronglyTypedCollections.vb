@@ -35,7 +35,9 @@ Module StronglyTypedCollections
 
         Default Public Property Item(ByVal key As String) As clsItem
             Get
-                Return AllItems.Item(key)
+                Dim itm As clsItem = Nothing
+                If TryGetValue(key, itm) Then Return itm
+                Return Nothing
             End Get
             Set(ByVal value As clsItem)
                 AllItems(key) = value

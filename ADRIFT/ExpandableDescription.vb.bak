@@ -52,6 +52,7 @@
         End Set
     End Property
 
+  
 
 
     Private Sub txtShortDesc_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtShortDesc.TextChanged        
@@ -71,7 +72,8 @@
 
 
     Private Sub ExpandableDescription_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        GenTextbox1.Tabs.Tabs("tabGraphics").Visible = False
+        'GenTextbox1.tabpageGraphics.Hide()
+        GenTextbox1.Tabs.Tabs("tabGraphics").Visible = False        
         GenTextbox1.Visible = False
     End Sub
 

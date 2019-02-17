@@ -49,7 +49,7 @@ Partial Class Expression
         '
         Me.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Right
         Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.btnEdit.Appearance = Appearance3
         Me.btnEdit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand

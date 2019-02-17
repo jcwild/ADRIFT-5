@@ -151,7 +151,7 @@ Partial Class frmRegister
         'imgExclamation
         '
         Me.imgExclamation.BackColor = System.Drawing.Color.Transparent
-        Me.imgExclamation.Image = Global.ADRIFT.My.Resources.Resources.imgKey16
+        Me.imgExclamation.Image = Global.ADRIFT.My.Resources.imgKey16
         Me.imgExclamation.Location = New System.Drawing.Point(19, 41)
         Me.imgExclamation.Name = "imgExclamation"
         Me.imgExclamation.Size = New System.Drawing.Size(48, 48)
