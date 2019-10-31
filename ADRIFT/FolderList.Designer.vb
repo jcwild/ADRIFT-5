@@ -91,7 +91,7 @@ Partial Class FolderList
         '
         'miCopyFolder
         '
-        Me.miCopyFolder.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
+        Me.miCopyFolder.Image = Global.ADRIFT.My.Resources.imgCopy
         Me.miCopyFolder.Name = "miCopyFolder"
         Me.miCopyFolder.Size = New System.Drawing.Size(186, 22)
         Me.miCopyFolder.Text = "Copy"
@@ -103,7 +103,7 @@ Partial Class FolderList
         '
         'miDeleteFolder
         '
-        Me.miDeleteFolder.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Me.miDeleteFolder.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.miDeleteFolder.Name = "miDeleteFolder"
         Me.miDeleteFolder.Size = New System.Drawing.Size(186, 22)
         Me.miDeleteFolder.Text = "Delete"
@@ -122,14 +122,14 @@ Partial Class FolderList
         'miNew
         '
         Me.miNew.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miNewFolder, Me.ToolStripSeparator5, Me.miLocation, Me.miObject, Me.miTask, Me.miEvent, Me.miCharacter, Me.miVariable, Me.miGroup, Me.miTextOverride, Me.miHint, Me.miProperty})
-        Me.miNew.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Me.miNew.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.miNew.Name = "miNew"
         Me.miNew.Size = New System.Drawing.Size(186, 22)
         Me.miNew.Text = "Add New"
         '
         'miNewFolder
         '
-        Me.miNewFolder.Image = Global.ADRIFT.My.Resources.Resources.imgFolderClosed16
+        Me.miNewFolder.Image = Global.ADRIFT.My.Resources.imgFolderClosed16
         Me.miNewFolder.Name = "miNewFolder"
         Me.miNewFolder.Size = New System.Drawing.Size(144, 22)
         Me.miNewFolder.Text = "Folder"
@@ -141,7 +141,7 @@ Partial Class FolderList
         '
         'miLocation
         '
-        Me.miLocation.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Me.miLocation.Image = Global.ADRIFT.My.Resources.imgLocation16
         Me.miLocation.Name = "miLocation"
         Me.miLocation.Size = New System.Drawing.Size(144, 22)
         Me.miLocation.Text = "Location"
@@ -169,42 +169,42 @@ Partial Class FolderList
         '
         'miCharacter
         '
-        Me.miCharacter.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
+        Me.miCharacter.Image = Global.ADRIFT.My.Resources.imgCharacter16
         Me.miCharacter.Name = "miCharacter"
         Me.miCharacter.Size = New System.Drawing.Size(144, 22)
         Me.miCharacter.Text = "Character"
         '
         'miVariable
         '
-        Me.miVariable.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
+        Me.miVariable.Image = Global.ADRIFT.My.Resources.imgVariable16
         Me.miVariable.Name = "miVariable"
         Me.miVariable.Size = New System.Drawing.Size(144, 22)
         Me.miVariable.Text = "Variable"
         '
         'miGroup
         '
-        Me.miGroup.Image = Global.ADRIFT.My.Resources.Resources.imgGroup16
+        Me.miGroup.Image = Global.ADRIFT.My.Resources.imgGroup16
         Me.miGroup.Name = "miGroup"
         Me.miGroup.Size = New System.Drawing.Size(144, 22)
         Me.miGroup.Text = "Group"
         '
         'miTextOverride
         '
-        Me.miTextOverride.Image = Global.ADRIFT.My.Resources.Resources.imgALR16
+        Me.miTextOverride.Image = Global.ADRIFT.My.Resources.imgALR16
         Me.miTextOverride.Name = "miTextOverride"
         Me.miTextOverride.Size = New System.Drawing.Size(144, 22)
         Me.miTextOverride.Text = "Text Override"
         '
         'miHint
         '
-        Me.miHint.Image = Global.ADRIFT.My.Resources.Resources.imgHint16
+        Me.miHint.Image = Global.ADRIFT.My.Resources.imgHint16
         Me.miHint.Name = "miHint"
         Me.miHint.Size = New System.Drawing.Size(144, 22)
         Me.miHint.Text = "Hint"
         '
         'miProperty
         '
-        Me.miProperty.Image = Global.ADRIFT.My.Resources.Resources.imgProperty16
+        Me.miProperty.Image = Global.ADRIFT.My.Resources.imgProperty16
         Me.miProperty.Name = "miProperty"
         Me.miProperty.Size = New System.Drawing.Size(144, 22)
         Me.miProperty.Text = "Property"
@@ -216,7 +216,7 @@ Partial Class FolderList
         '
         'miExportFolder
         '
-        Me.miExportFolder.Image = Global.ADRIFT.My.Resources.Resources.imgExport16
+        Me.miExportFolder.Image = Global.ADRIFT.My.Resources.imgExport16
         Me.miExportFolder.Name = "miExportFolder"
         Me.miExportFolder.Size = New System.Drawing.Size(186, 22)
         Me.miExportFolder.Text = "Export Folder"
@@ -239,7 +239,7 @@ Partial Class FolderList
         UltraTreeNode1.Nodes.AddRange(New Infragistics.Win.UltraWinTree.UltraTreeNode() {UltraTreeNode2, UltraTreeNode3, UltraTreeNode4})
         UltraTreeNode1.Text = "Desktop"
         Me.treeFolders.Nodes.AddRange(New Infragistics.Win.UltraWinTree.UltraTreeNode() {UltraTreeNode1})
-        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgFolder16
+        Appearance1.Image = Global.ADRIFT.My.Resources.imgFolder16
         Override1.ExpandedNodeAppearance = Appearance1
         Override1.ItemHeight = 21
         Override1.SelectionType = Infragistics.Win.UltraWinTree.SelectType.SingleAutoDrag

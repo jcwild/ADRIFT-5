@@ -48,7 +48,7 @@ Partial Class AboutBox
         'LogoPictureBox
         '
         Me.LogoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LogoPictureBox.Image = Global.ADRIFT.My.Resources.Resources.Adrift
+        Me.LogoPictureBox.Image = Global.ADRIFT.My.Resources.Adrift
         Me.LogoPictureBox.Location = New System.Drawing.Point(9, 13)
         Me.LogoPictureBox.Name = "LogoPictureBox"
         Me.LogoPictureBox.Size = New System.Drawing.Size(337, 252)

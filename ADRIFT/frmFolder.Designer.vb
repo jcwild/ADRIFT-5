@@ -55,7 +55,7 @@ Partial Class frmFolder
         '
         Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Appearance2.BackColor = System.Drawing.Color.Transparent
-        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgCancel16
+        Appearance2.Image = Global.ADRIFT.My.Resources.imgCancel16
         Me.btnClose.Appearance = Appearance2
         Me.btnClose.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Flat
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
@@ -74,7 +74,7 @@ Partial Class frmFolder
         Me.btnColumns.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Appearance3.BackColor = System.Drawing.Color.Transparent
         Appearance3.BorderColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgFilter
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgFilter
         Me.btnColumns.Appearance = Appearance3
         Me.btnColumns.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnColumns.Location = New System.Drawing.Point(234, 2)

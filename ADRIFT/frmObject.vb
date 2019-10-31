@@ -190,7 +190,7 @@ Public Class frmObject
         '
         'chkDynamic
         '
-        Appearance5.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
+        Appearance5.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
         Appearance5.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance5.TextHAlignAsString = "Center"
         Me.chkDynamic.Appearance = Appearance5
@@ -207,7 +207,7 @@ Public Class frmObject
         '
         'chkStatic
         '
-        Appearance6.Image = Global.ADRIFT.My.Resources.Resources.imgObjectStatic16
+        Appearance6.Image = Global.ADRIFT.My.Resources.imgObjectStatic16
         Appearance6.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance6.TextHAlignAsString = "Center"
         Me.chkStatic.Appearance = Appearance6
@@ -580,8 +580,15 @@ Public Class frmObject
 
 
     Private Function ValidateObject() As Boolean
-        If Not Properties1.ValidateProperties Then
-            tabsObject.SelectedTab = tabsObject.Tabs("Properties")
+
+        Dim sFailingProperty As String = Nothing
+        If Not Properties1.ValidateProperties(sFailingProperty) Then
+            Select Case sFailingProperty
+                Case "InLocation"
+                    tabsObject.SelectedTab = tabsObject.Tabs("Description")
+                Case Else
+                    tabsObject.SelectedTab = tabsObject.Tabs("Properties")
+            End Select
             Return False
         End If
 

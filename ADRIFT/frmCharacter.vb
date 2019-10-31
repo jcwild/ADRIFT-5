@@ -818,9 +818,9 @@ Public Class frmCharacter
 
     Private Sub TopicIcons(ByVal topic As clsTopic, ByVal node As Infragistics.Win.UltraWinTree.UltraTreeNode)
         If topic.bIntroduction Then
-            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.Resources.imgRight
+            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.imgRight
         ElseIf topic.bFarewell Then
-            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.Resources.imgLeft
+            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.imgLeft
         End If
     End Sub
 

@@ -397,13 +397,13 @@ Public Class GenTextbox
         Appearance22.AlphaLevel = CType(128, Short)
         Appearance22.BackColor = System.Drawing.Color.Transparent
         Appearance22.BorderColor = System.Drawing.Color.Transparent
-        Appearance22.Image = Global.ADRIFT.My.Resources.Resources.imgStop48
+        Appearance22.Image = Global.ADRIFT.My.Resources.imgStop48
         Appearance22.ImageAlpha = Infragistics.Win.Alpha.UseAlphaLevel
         Me.chkStop.Appearance = Appearance22
         Me.chkStop.BackColor = System.Drawing.Color.Transparent
         Me.chkStop.BackColorInternal = System.Drawing.Color.Transparent
         Me.chkStop.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Button
-        Appearance24.Image = Global.ADRIFT.My.Resources.Resources.imgStopShadow48
+        Appearance24.Image = Global.ADRIFT.My.Resources.imgStopShadow48
         Appearance24.ImageAlpha = Infragistics.Win.Alpha.Opaque
         Me.chkStop.CheckedAppearance = Appearance24
         Appearance31.BorderColor = System.Drawing.SystemColors.ActiveBorder
@@ -422,13 +422,13 @@ Public Class GenTextbox
         Appearance25.AlphaLevel = CType(128, Short)
         Appearance25.BackColor = System.Drawing.Color.Transparent
         Appearance25.BorderColor = System.Drawing.Color.Transparent
-        Appearance25.Image = Global.ADRIFT.My.Resources.Resources.imgPause48
+        Appearance25.Image = Global.ADRIFT.My.Resources.imgPause48
         Appearance25.ImageAlpha = Infragistics.Win.Alpha.UseAlphaLevel
         Me.chkPause.Appearance = Appearance25
         Me.chkPause.BackColor = System.Drawing.Color.Transparent
         Me.chkPause.BackColorInternal = System.Drawing.Color.Transparent
         Me.chkPause.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Button
-        Appearance26.Image = Global.ADRIFT.My.Resources.Resources.imgPauseShadow48
+        Appearance26.Image = Global.ADRIFT.My.Resources.imgPauseShadow48
         Appearance26.ImageAlpha = Infragistics.Win.Alpha.Opaque
         Me.chkPause.CheckedAppearance = Appearance26
         Appearance30.BorderColor = System.Drawing.SystemColors.ActiveBorder
@@ -447,13 +447,13 @@ Public Class GenTextbox
         Appearance27.AlphaLevel = CType(128, Short)
         Appearance27.BackColor = System.Drawing.Color.Transparent
         Appearance27.BorderColor = System.Drawing.Color.Transparent
-        Appearance27.Image = Global.ADRIFT.My.Resources.Resources.imgPlay48
+        Appearance27.Image = Global.ADRIFT.My.Resources.imgPlay48
         Appearance27.ImageAlpha = Infragistics.Win.Alpha.UseAlphaLevel
         Me.chkPlay.Appearance = Appearance27
         Me.chkPlay.BackColor = System.Drawing.Color.Transparent
         Me.chkPlay.BackColorInternal = System.Drawing.Color.Transparent
         Me.chkPlay.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Button
-        Appearance28.Image = Global.ADRIFT.My.Resources.Resources.imgPlayShadow48
+        Appearance28.Image = Global.ADRIFT.My.Resources.imgPlayShadow48
         Appearance28.ImageAlpha = Infragistics.Win.Alpha.Opaque
         Me.chkPlay.CheckedAppearance = Appearance28
         Appearance29.BorderColor = System.Drawing.SystemColors.ActiveBorder
@@ -601,15 +601,15 @@ Public Class GenTextbox
         UltraToolbar2.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool1})
         UltraToolbar2.Text = "Format"
         Me.UTMText.Toolbars.AddRange(New Infragistics.Win.UltraWinToolbars.UltraToolbar() {UltraToolbar2})
-        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgSpelling
+        Appearance1.Image = Global.ADRIFT.My.Resources.imgSpelling
         ButtonTool2.SharedPropsInternal.AppearancesLarge.Appearance = Appearance1
-        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgSpelling
+        Appearance2.Image = Global.ADRIFT.My.Resources.imgSpelling
         ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = Appearance2
         ButtonTool2.SharedPropsInternal.Caption = "Spelling..."
         ButtonTool2.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.F7
         PopupMenuTool1.SharedPropsInternal.Caption = "PopupMenuTool1"
         PopupMenuTool1.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool3, ButtonTool4})
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgNew16
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgNew16
         ButtonTool5.SharedPropsInternal.AppearancesSmall.Appearance = Appearance3
         ButtonTool5.SharedPropsInternal.Caption = "Add Alternative Description"
         Me.UTMText.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool2, PopupMenuTool1, ButtonTool5})
@@ -663,7 +663,7 @@ Public Class GenTextbox
         Me.tabsDescriptions.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.BottomLeft
         UltraTab4.Key = "tabDefault"
         UltraTab4.Text = "Default Description"
-        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgNew16
+        Appearance4.Image = Global.ADRIFT.My.Resources.imgNew16
         UltraTab5.HotTrackAppearance = Appearance4
         UltraTab5.Key = "tabNew"
         UltraTab5.Text = " "
@@ -683,7 +683,7 @@ Public Class GenTextbox
         '
         'mnuDeleteTab
         '
-        Me.mnuDeleteTab.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Me.mnuDeleteTab.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.mnuDeleteTab.Name = "mnuDeleteTab"
         Me.mnuDeleteTab.Size = New System.Drawing.Size(140, 22)
         Me.mnuDeleteTab.Text = "Delete Tab"
@@ -1446,20 +1446,20 @@ Public Class GenTextbox
 
                     AddToMenu("mnuPopup", "Language", "&Language").InstanceProps.IsFirstInGroup = True
                     With AddToMenu("mnuPopup", "CheckSpelling", "&Spelling...").InstanceProps
-                        .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgSpelling
+                        .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgSpelling
                     End With
 
                     With AddToMenu("mnuPopup", "Cut", "Cu&t")
                         .InstanceProps.IsFirstInGroup = True
-                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCut
+                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCut
                         .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
                     End With
                     With AddToMenu("mnuPopup", "Copy", "&Copy")
-                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
+                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCopy
                         .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
                     End With
                     With AddToMenu("mnuPopup", "Paste", "&Paste")
-                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
+                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgPaste
                         .SharedProps.Enabled = Clipboard.ContainsText
                     End With
 
@@ -1469,22 +1469,22 @@ Public Class GenTextbox
 
             sWord = ""
             With AddToMenu("mnuPopup", "Cut", "Cu&t")
-                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCut
+                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCut
                 .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
             End With
             With AddToMenu("mnuPopup", "Copy", "&Copy")
-                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
+                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCopy
                 .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
             End With
             With AddToMenu("mnuPopup", "Paste", "&Paste")
-                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
+                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgPaste
                 .SharedProps.Enabled = Clipboard.ContainsText
             End With
 
             If bAllowAlternateDescriptions Then
                 With AddToMenu("mnuPopup", "AddAlternateDescription", "Add Alternative Description").InstanceProps
                     .IsFirstInGroup = True
-                    .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgNew16
+                    .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgNew16
                 End With
             End If
 

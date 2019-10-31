@@ -17,8 +17,8 @@ Imports System.Security
 <Assembly: AssemblyProduct("ADRIFT Runner")> 
 #End If
 <Assembly: AssemblyDescription("Interactive Fiction Development System for Windows")> 
-<Assembly: AssemblyCompany("Campbell Wild")> 
-<Assembly: AssemblyCopyright("© Campbell Wild 1998-2016")> 
+<Assembly: AssemblyCompany("Campbell Wild")>
+<Assembly: AssemblyCopyright("© Campbell Wild 1998-2019")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: CLSCompliant(True)> 
 

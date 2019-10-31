@@ -829,7 +829,7 @@ Public Class frmLocation
         '
         Me.btnAddCharacter.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance1.BackColor = System.Drawing.Color.Transparent
-        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
+        Appearance1.Image = Global.ADRIFT.My.Resources.imgCharacter16
         Me.btnAddCharacter.Appearance = Appearance1
         Me.btnAddCharacter.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnAddCharacter.Location = New System.Drawing.Point(297, 413)
@@ -837,13 +837,13 @@ Public Class frmLocation
         Me.btnAddCharacter.Size = New System.Drawing.Size(122, 25)
         Me.btnAddCharacter.TabIndex = 10
         Me.btnAddCharacter.Text = "Add Character"
-        Me.ToolTip1.SetToolTip(Me.btnAddCharacter, "Add Static Object to this Location")
+        Me.ToolTip1.SetToolTip(Me.btnAddCharacter, "Add Character to this Location")
         '
         'btnAddDynamicOb
         '
         Me.btnAddDynamicOb.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance2.BackColor = System.Drawing.Color.Transparent
-        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
+        Appearance2.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
         Me.btnAddDynamicOb.Appearance = Appearance2
         Me.btnAddDynamicOb.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnAddDynamicOb.Location = New System.Drawing.Point(148, 413)
@@ -851,13 +851,13 @@ Public Class frmLocation
         Me.btnAddDynamicOb.Size = New System.Drawing.Size(143, 25)
         Me.btnAddDynamicOb.TabIndex = 9
         Me.btnAddDynamicOb.Text = "Add Dynamic Object"
-        Me.ToolTip1.SetToolTip(Me.btnAddDynamicOb, "Add Static Object to this Location")
+        Me.ToolTip1.SetToolTip(Me.btnAddDynamicOb, "Add Dynamic Object to this Location")
         '
         'btnRemoveItem
         '
         Me.btnRemoveItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.btnRemoveItem.Appearance = Appearance3
         Me.btnRemoveItem.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnRemoveItem.Location = New System.Drawing.Point(425, 413)
@@ -882,7 +882,7 @@ Public Class frmLocation
         '
         Me.btnAddObject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance4.BackColor = System.Drawing.Color.Transparent
-        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgObjectStatic16
+        Appearance4.Image = Global.ADRIFT.My.Resources.imgObjectStatic16
         Me.btnAddObject.Appearance = Appearance4
         Me.btnAddObject.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnAddObject.Location = New System.Drawing.Point(8, 413)
@@ -1093,6 +1093,8 @@ Public Class frmLocation
 
             UpdateListItem(.Key, .ShortDescription.ToString)
             btnAddObject.Enabled = True
+            btnAddDynamicOb.Enabled = True
+            btnAddCharacter.Enabled = True
 
             ' Check reciprocal directions
             For eDirection As DirectionsEnum = DirectionsEnum.North To DirectionsEnum.NorthWest
@@ -1157,9 +1159,6 @@ Public Class frmLocation
         CloseLocation(Me)
     End Sub
 
-    Private Sub StuffChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtLongDesc.Changed
-        Changed = True
-    End Sub
 
 
     Private Sub LoadForm(ByRef cLocation As clsLocation, ByVal bShow As Boolean)
@@ -1226,7 +1225,15 @@ Public Class frmLocation
                 Rest.LoadRestrictions(.arlDirections(eDirection).Restrictions)
             Next
 
-            If .Key = "" Then btnAddObject.Enabled = False Else btnAddObject.Enabled = True
+            If .Key = "" Then
+                btnAddObject.Enabled = False
+                btnAddDynamicOb.Enabled = False
+                btnAddCharacter.Enabled = False
+            Else
+                btnAddObject.Enabled = True
+                btnAddDynamicOb.Enabled = True
+                btnAddCharacter.Enabled = True
+            End If
 
             ' Pad out the local Location hashtable with unselected properties
             .ResetInherited()
@@ -1263,6 +1270,10 @@ Public Class frmLocation
 
     End Sub
 
+
+    Private Sub StuffChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtShortDesc.Changed, txtLongDesc.Changed
+        Changed = True
+    End Sub
 
     Private Sub cmb_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmbNorth.SelectionChanged, cmbNorthEast.SelectionChanged, cmbEast.SelectionChanged, cmbSouthEast.SelectionChanged, cmbSouth.SelectionChanged, cmbSouthWest.SelectionChanged, cmbWest.SelectionChanged, cmbNorthWest.SelectionChanged, cmbUp.SelectionChanged, cmbDown.SelectionChanged, cmbIn.SelectionChanged, cmbOut.SelectionChanged
 

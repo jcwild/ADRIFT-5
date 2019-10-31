@@ -66,6 +66,7 @@ Public Class frmSettings
     Friend WithEvents UltraLabel6 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents cmbReplaceNames As Infragistics.Win.UltraWinEditors.UltraComboEditor
     Friend WithEvents chkSimpleMode As Infragistics.Win.UltraWinEditors.UltraCheckEditor
+    Friend WithEvents chkAutoComplete As Infragistics.Win.UltraWinEditors.UltraCheckEditor
     Friend WithEvents chkAudio As Infragistics.Win.UltraWinEditors.UltraCheckEditor
     Friend WithEvents chkGraphics As Infragistics.Win.UltraWinEditors.UltraCheckEditor
     Friend WithEvents chkPreview As Infragistics.Win.UltraWinEditors.UltraCheckEditor
@@ -139,6 +140,7 @@ Public Class frmSettings
         Me.cmbColour = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.UltraLabel14 = New Infragistics.Win.Misc.UltraLabel()
         Me.chkSimpleMode = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
+        Me.chkAutoComplete = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.UltraLabel8 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel13 = New Infragistics.Win.Misc.UltraLabel()
         Me.UltraLabel12 = New Infragistics.Win.Misc.UltraLabel()
@@ -159,6 +161,8 @@ Public Class frmSettings
         Me._lblInfo = New Infragistics.Win.Misc.UltraLabel()
         Me.lvwLibraries = New System.Windows.Forms.ListView()
         Me.Library = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
+        Me.chkKeyNames = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.btnApply = New Infragistics.Win.Misc.UltraButton()
         Me.btnCancel = New Infragistics.Win.Misc.UltraButton()
         Me.btnOK = New Infragistics.Win.Misc.UltraButton()
@@ -166,8 +170,6 @@ Public Class frmSettings
         Me.tabsOptions = New Infragistics.Win.UltraWinTabControl.UltraTabControl()
         Me.UltraTabSharedControlsPage1 = New Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage()
         Me.ofd = New System.Windows.Forms.OpenFileDialog()
-        Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.chkKeyNames = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.tabGeneral.SuspendLayout()
         CType(Me.UltraGroupBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraGroupBox4.SuspendLayout()
@@ -189,16 +191,17 @@ Public Class frmSettings
         CType(Me.chkShowInTaskbar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbColour, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkSimpleMode, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkAutoComplete, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbDefaultTaskActions, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkVersion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabLibraries.SuspendLayout()
         CType(Me.cmbOverwriteLibraries, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkHideLibraryItems, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UltraTabPageControl1.SuspendLayout()
+        CType(Me.chkKeyNames, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UltraStatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tabsOptions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabsOptions.SuspendLayout()
-        Me.UltraTabPageControl1.SuspendLayout()
-        CType(Me.chkKeyNames, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabGeneral
@@ -210,7 +213,7 @@ Public Class frmSettings
         Me.tabGeneral.Controls.Add(Me.cmbDefaultTaskActions)
         Me.tabGeneral.Controls.Add(Me.UltraLabel7)
         Me.tabGeneral.Controls.Add(Me.chkVersion)
-        Me.tabGeneral.Location = New System.Drawing.Point(-10000, -10000)
+        Me.tabGeneral.Location = New System.Drawing.Point(1, 22)
         Me.tabGeneral.Name = "tabGeneral"
         Me.tabGeneral.Size = New System.Drawing.Size(568, 458)
         '
@@ -450,6 +453,7 @@ Public Class frmSettings
         Me.UltraGroupBox1.Controls.Add(Me.cmbColour)
         Me.UltraGroupBox1.Controls.Add(Me.UltraLabel14)
         Me.UltraGroupBox1.Controls.Add(Me.chkSimpleMode)
+        Me.UltraGroupBox1.Controls.Add(Me.chkAutoComplete)
         Me.UltraGroupBox1.Controls.Add(Me.UltraLabel8)
         Me.UltraGroupBox1.Controls.Add(Me.UltraLabel13)
         Me.UltraGroupBox1.Controls.Add(Me.UltraLabel12)
@@ -483,7 +487,7 @@ Public Class frmSettings
         '
         Me.chkShowKeys.BackColor = System.Drawing.Color.Transparent
         Me.chkShowKeys.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkShowKeys.Location = New System.Drawing.Point(20, 75)
+        Me.chkShowKeys.Location = New System.Drawing.Point(24, 65)
         Me.chkShowKeys.Name = "chkShowKeys"
         Me.chkShowKeys.Size = New System.Drawing.Size(160, 20)
         Me.chkShowKeys.TabIndex = 21
@@ -493,7 +497,7 @@ Public Class frmSettings
         '
         Me.chkShowInTaskbar.BackColor = System.Drawing.Color.Transparent
         Me.chkShowInTaskbar.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkShowInTaskbar.Location = New System.Drawing.Point(197, 75)
+        Me.chkShowInTaskbar.Location = New System.Drawing.Point(262, 65)
         Me.chkShowInTaskbar.Name = "chkShowInTaskbar"
         Me.chkShowInTaskbar.Size = New System.Drawing.Size(198, 20)
         Me.chkShowInTaskbar.TabIndex = 30
@@ -521,11 +525,21 @@ Public Class frmSettings
         '
         Me.chkSimpleMode.BackColor = System.Drawing.Color.Transparent
         Me.chkSimpleMode.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkSimpleMode.Location = New System.Drawing.Point(419, 75)
+        Me.chkSimpleMode.Location = New System.Drawing.Point(24, 91)
         Me.chkSimpleMode.Name = "chkSimpleMode"
         Me.chkSimpleMode.Size = New System.Drawing.Size(98, 20)
         Me.chkSimpleMode.TabIndex = 38
         Me.chkSimpleMode.Text = "Simple Mode"
+        '
+        'chkAutoComplete
+        '
+        Me.chkAutoComplete.BackColor = System.Drawing.Color.Transparent
+        Me.chkAutoComplete.BackColorInternal = System.Drawing.Color.Transparent
+        Me.chkAutoComplete.Location = New System.Drawing.Point(262, 91)
+        Me.chkAutoComplete.Name = "chkAutoComplete"
+        Me.chkAutoComplete.Size = New System.Drawing.Size(184, 20)
+        Me.chkAutoComplete.TabIndex = 38
+        Me.chkAutoComplete.Text = "Auto Complete dropdown lists"
         '
         'UltraLabel8
         '
@@ -721,7 +735,7 @@ Public Class frmSettings
         Me._lblInfo.Name = "_lblInfo"
         Me._lblInfo.Size = New System.Drawing.Size(464, 24)
         Me._lblInfo.TabIndex = 1
-        Me._lblInfo.Text = "The following Libraries will be pre-loaded in all new games and older version upg" & _
+        Me._lblInfo.Text = "The following Libraries will be pre-loaded in all new games and older version upg" &
     "rades."
         '
         'lvwLibraries
@@ -744,6 +758,23 @@ Public Class frmSettings
         'Library
         '
         Me.Library.Width = 284
+        '
+        'UltraTabPageControl1
+        '
+        Me.UltraTabPageControl1.Controls.Add(Me.chkKeyNames)
+        Me.UltraTabPageControl1.Location = New System.Drawing.Point(-10000, -10000)
+        Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
+        Me.UltraTabPageControl1.Size = New System.Drawing.Size(568, 458)
+        '
+        'chkKeyNames
+        '
+        Me.chkKeyNames.BackColor = System.Drawing.Color.Transparent
+        Me.chkKeyNames.BackColorInternal = System.Drawing.Color.Transparent
+        Me.chkKeyNames.Location = New System.Drawing.Point(30, 39)
+        Me.chkKeyNames.Name = "chkKeyNames"
+        Me.chkKeyNames.Size = New System.Drawing.Size(237, 20)
+        Me.chkKeyNames.TabIndex = 22
+        Me.chkKeyNames.Text = "Generate Key names from item names"
         '
         'btnApply
         '
@@ -811,23 +842,6 @@ Public Class frmSettings
         Me.UltraTabSharedControlsPage1.Name = "UltraTabSharedControlsPage1"
         Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(568, 458)
         '
-        'UltraTabPageControl1
-        '
-        Me.UltraTabPageControl1.Controls.Add(Me.chkKeyNames)
-        Me.UltraTabPageControl1.Location = New System.Drawing.Point(1, 22)
-        Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
-        Me.UltraTabPageControl1.Size = New System.Drawing.Size(568, 458)
-        '
-        'chkKeyNames
-        '
-        Me.chkKeyNames.BackColor = System.Drawing.Color.Transparent
-        Me.chkKeyNames.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkKeyNames.Location = New System.Drawing.Point(30, 39)
-        Me.chkKeyNames.Name = "chkKeyNames"
-        Me.chkKeyNames.Size = New System.Drawing.Size(237, 20)
-        Me.chkKeyNames.TabIndex = 22
-        Me.chkKeyNames.Text = "Generate Key names from item names"
-        '
         'frmSettings
         '
         Me.AcceptButton = Me.btnOK
@@ -871,17 +885,18 @@ Public Class frmSettings
         CType(Me.chkShowInTaskbar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbColour, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkSimpleMode, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkAutoComplete, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbDefaultTaskActions, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkVersion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabLibraries.ResumeLayout(False)
         Me.tabLibraries.PerformLayout()
         CType(Me.cmbOverwriteLibraries, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkHideLibraryItems, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UltraTabPageControl1.ResumeLayout(False)
+        CType(Me.chkKeyNames, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UltraStatusBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tabsOptions, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabsOptions.ResumeLayout(False)
-        Me.UltraTabPageControl1.ResumeLayout(False)
-        CType(Me.chkKeyNames, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -967,6 +982,7 @@ Public Class frmSettings
         chkHideLibraryItems.Checked = SafeBool(GetSetting("ADRIFT", "Generator", "HideLibraryItems", "-1"))
         chkShowInTaskbar.Checked = SafeBool(GetSetting("ADRIFT", "Generator", "ShowInTaskBar", "0"))
         chkSimpleMode.Checked = fGenerator.SimpleMode
+        chkAutoComplete.Checked = fGenerator.AutoComplete
         chkVersion.Checked = SafeBool(CInt(GetSetting("ADRIFT", "Shared", "AutoCheck", "1")))
         chkKeyNames.Checked = SafeBool(CInt(GetSetting("ADRIFT", "Generator", "KeyNames", "-1")))
 
@@ -1030,6 +1046,7 @@ Public Class frmSettings
 
         SaveSetting("ADRIFT", "Generator", "ShowInTaskbar", CInt(chkShowInTaskbar.Checked).ToString)
         fGenerator.SimpleMode = chkSimpleMode.Checked
+        fGenerator.AutoComplete = chkAutoComplete.Checked
         tabsOptions.Tabs("Advanced").Visible = Not fGenerator.SimpleMode
 
         eStyle = CType(cmbViewStyle.SelectedItem.DataValue, Infragistics.Win.UltraWinToolbars.ToolbarStyle)
@@ -1305,7 +1322,7 @@ Public Class frmSettings
 
     End Sub
 
-    Private Sub Checkboxes_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkHideLibraryItems.Click, chkShowInTaskbar.Click, chkShowKeys.Click, chkSimpleMode.Click
+    Private Sub Checkboxes_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles chkHideLibraryItems.Click, chkShowInTaskbar.Click, chkShowKeys.Click, chkSimpleMode.Click, chkAutoComplete.Click
         Changed = True
     End Sub
 

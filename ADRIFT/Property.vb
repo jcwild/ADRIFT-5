@@ -41,7 +41,7 @@ Public Class GenericProperty
     Friend WithEvents txtNumber As Infragistics.Win.UltraWinEditors.UltraTextEditor
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim ValueListItem1 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
@@ -78,8 +78,8 @@ Public Class GenericProperty
         '
         'txtNumber
         '
-        Appearance5.TextHAlignAsString = "Right"
-        Me.txtNumber.Appearance = Appearance5
+        Appearance1.TextHAlignAsString = "Right"
+        Me.txtNumber.Appearance = Appearance1
         Me.txtNumber.Enabled = False
         Me.txtNumber.Location = New System.Drawing.Point(216, 5)
         Me.txtNumber.Name = "txtNumber"
@@ -144,7 +144,6 @@ Public Class GenericProperty
         Me.chkSelected.BackColorInternal = System.Drawing.Color.Transparent
         Me.chkSelected.Location = New System.Drawing.Point(8, 3)
         Me.chkSelected.Name = "chkSelected"
-        Me.chkSelected.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkSelected.Size = New System.Drawing.Size(192, 26)
         Me.chkSelected.TabIndex = 0
         Me.chkSelected.Text = "UltraCheckEditor1"

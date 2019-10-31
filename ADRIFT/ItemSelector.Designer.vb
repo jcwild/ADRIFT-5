@@ -22,23 +22,23 @@ Partial Class ItemSelector
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance
-        Me.btnItemType = New Infragistics.Win.Misc.UltraButton
-        Me.btnNew = New Infragistics.Win.Misc.UltraButton
-        Me.cmbList = New Infragistics.Win.UltraWinEditors.UltraComboEditor
-        Me.btnEdit = New Infragistics.Win.Misc.UltraButton
+        Me.components = New System.ComponentModel.Container()
+        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
+        Me.btnItemType = New Infragistics.Win.Misc.UltraButton()
+        Me.btnNew = New Infragistics.Win.Misc.UltraButton()
+        Me.cmbList = New AutoCompleteCombo
+        Me.btnEdit = New Infragistics.Win.Misc.UltraButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Expression = New ADRIFT.Expression
+        Me.Expression = New ADRIFT.Expression()
         CType(Me.cmbList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnItemType
         '
         Appearance1.BackColor = System.Drawing.Color.Transparent
-        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Appearance1.Image = Global.ADRIFT.My.Resources.imgLocation16
         Me.btnItemType.Appearance = Appearance1
         Me.btnItemType.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnItemType.Cursor = System.Windows.Forms.Cursors.Hand
@@ -53,7 +53,7 @@ Partial Class ItemSelector
         '
         Me.btnNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Appearance2.BackColor = System.Drawing.Color.Transparent
-        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Appearance2.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.btnNew.Appearance = Appearance2
         Me.btnNew.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnNew.Cursor = System.Windows.Forms.Cursors.Hand
@@ -66,9 +66,10 @@ Partial Class ItemSelector
         'cmbList
         '
         Me.cmbList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbList.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmbList.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.SuggestAppend
+        Me.cmbList.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains
         Me.cmbList.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
         Me.cmbList.Location = New System.Drawing.Point(21, 0)
         Me.cmbList.Name = "cmbList"
@@ -80,7 +81,7 @@ Partial Class ItemSelector
         '
         Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgEdit16
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgEdit16
         Me.btnEdit.Appearance = Appearance3
         Me.btnEdit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand
@@ -94,8 +95,9 @@ Partial Class ItemSelector
         'Expression
         '
         Me.Expression.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Expression.BackColor = System.Drawing.Color.Transparent
         Me.Expression.Location = New System.Drawing.Point(21, 0)
         Me.Expression.Name = "Expression"
         Me.Expression.Size = New System.Drawing.Size(186, 21)
@@ -124,7 +126,7 @@ Partial Class ItemSelector
     End Sub
     Friend WithEvents btnItemType As Infragistics.Win.Misc.UltraButton
     Friend WithEvents btnNew As Infragistics.Win.Misc.UltraButton
-    Friend WithEvents cmbList As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbList As AutoCompleteCombo
     Friend WithEvents btnEdit As Infragistics.Win.Misc.UltraButton
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 

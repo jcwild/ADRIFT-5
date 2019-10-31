@@ -31,7 +31,7 @@ Partial Class Splash
         '
         'imgAdrift
         '
-        Me.imgAdrift.Image = Global.ADRIFT.My.Resources.Resources.Adrift
+        Me.imgAdrift.Image = Global.ADRIFT.My.Resources.Adrift
         Me.imgAdrift.Location = New System.Drawing.Point(3, 3)
         Me.imgAdrift.Name = "imgAdrift"
         Me.imgAdrift.Size = New System.Drawing.Size(550, 416)

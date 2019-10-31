@@ -35,53 +35,53 @@ Public Class frmRestriction
     Friend WithEvents UltraTabPageControl3 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents UltraTabPageControl4 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents UltraTabPageControl5 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents cmbLocationExtra As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbLocation As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbLocationExtra As AutoCompleteCombo
+    Friend WithEvents cmbLocation As AutoCompleteCombo
     Friend WithEvents lblElse As System.Windows.Forms.Label
     Friend WithEvents btnOK As Infragistics.Win.Misc.UltraButton
     Friend WithEvents btnCancel As Infragistics.Win.Misc.UltraButton
-    Friend WithEvents cmbWhatL As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotL As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbObjectExtra As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbWhatO As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotO As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbObject As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotT As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbTask As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbWhatL As AutoCompleteCombo
+    Friend WithEvents cmbMustNotL As AutoCompleteCombo
+    Friend WithEvents cmbObjectExtra As AutoCompleteCombo
+    Friend WithEvents cmbWhatO As AutoCompleteCombo
+    Friend WithEvents cmbMustNotO As AutoCompleteCombo
+    Friend WithEvents cmbObject As AutoCompleteCombo
+    Friend WithEvents cmbMustNotT As AutoCompleteCombo
+    Friend WithEvents cmbTask As AutoCompleteCombo
     Friend WithEvents lblComplete As System.Windows.Forms.Label
     Friend WithEvents txtMessage As ADRIFT.GenTextbox
     Friend WithEvents tabsRestrictions As Infragistics.Win.UltraWinTabControl.UltraTabControl
-    Friend WithEvents cmbCharacterExtra As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbWhatC As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotC As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbCharacter As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbCharacterExtra As AutoCompleteCombo
+    Friend WithEvents cmbWhatC As AutoCompleteCombo
+    Friend WithEvents cmbMustNotC As AutoCompleteCombo
+    Friend WithEvents cmbCharacter As AutoCompleteCombo
     Friend WithEvents UltraTabPageControl6 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents cmbPropertyOb As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotP As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbProperty As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbPropertyOb As AutoCompleteCombo
+    Friend WithEvents cmbMustNotP As AutoCompleteCombo
+    Friend WithEvents cmbProperty As AutoCompleteCombo
     Friend WithEvents isVariable As ADRIFT.ItemSelector
-    Friend WithEvents cmbWhatV As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotV As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbVariable As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbWhatV As AutoCompleteCombo
+    Friend WithEvents cmbMustNotV As AutoCompleteCombo
+    Friend WithEvents cmbVariable As AutoCompleteCombo
     Friend WithEvents UltraTabPageControl7 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents cmbMustNotD As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbDirection As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbMustNotD As AutoCompleteCombo
+    Friend WithEvents cmbDirection As AutoCompleteCombo
     Friend WithEvents lblBe As System.Windows.Forms.Label
     Friend WithEvents lblReferencedDirection As System.Windows.Forms.Label
     Friend WithEvents cmbPropertyValue As ADRIFT.PropertyValue
-    Friend WithEvents cmbPropEqual As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbIndexEdit As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbIndex As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbPropEqual As AutoCompleteCombo
+    Friend WithEvents cmbIndexEdit As AutoCompleteCombo
+    Friend WithEvents cmbIndex As AutoCompleteCombo
     Friend WithEvents lblRight As System.Windows.Forms.Label
     Friend WithEvents lblLeft As System.Windows.Forms.Label
     Friend WithEvents UltraTabPageControl8 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Expression As ADRIFT.Expression
     Friend WithEvents UltraTabPageControl9 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents cmbItemExtra As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbWhatI As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbMustNotI As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbItem As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbItemExtra As AutoCompleteCombo
+    Friend WithEvents cmbWhatI As AutoCompleteCombo
+    Friend WithEvents cmbMustNotI As AutoCompleteCombo
+    Friend WithEvents cmbItem As AutoCompleteCombo
     Friend WithEvents lblFor As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim ValueListItem3 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
@@ -137,49 +137,49 @@ Public Class frmRestriction
         Dim Appearance9 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRestriction))
         Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbWhatL = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbLocationExtra = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbMustNotL = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbLocation = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbWhatL = New AutoCompleteCombo()
+        Me.cmbLocationExtra = New AutoCompleteCombo()
+        Me.cmbMustNotL = New AutoCompleteCombo()
+        Me.cmbLocation = New AutoCompleteCombo()
         Me.UltraTabPageControl2 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbObjectExtra = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbWhatO = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbMustNotO = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbObject = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbObjectExtra = New AutoCompleteCombo()
+        Me.cmbWhatO = New AutoCompleteCombo()
+        Me.cmbMustNotO = New AutoCompleteCombo()
+        Me.cmbObject = New AutoCompleteCombo()
         Me.UltraTabPageControl4 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbCharacterExtra = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbWhatC = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbMustNotC = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbCharacter = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbCharacterExtra = New AutoCompleteCombo()
+        Me.cmbWhatC = New AutoCompleteCombo()
+        Me.cmbMustNotC = New AutoCompleteCombo()
+        Me.cmbCharacter = New AutoCompleteCombo()
         Me.UltraTabPageControl9 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbItemExtra = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbWhatI = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbMustNotI = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbItem = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbItemExtra = New AutoCompleteCombo()
+        Me.cmbWhatI = New AutoCompleteCombo()
+        Me.cmbMustNotI = New AutoCompleteCombo()
+        Me.cmbItem = New AutoCompleteCombo()
         Me.UltraTabPageControl3 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.lblComplete = New System.Windows.Forms.Label()
-        Me.cmbMustNotT = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbTask = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbMustNotT = New AutoCompleteCombo()
+        Me.cmbTask = New AutoCompleteCombo()
         Me.UltraTabPageControl5 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbVariable = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbIndex = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbVariable = New AutoCompleteCombo()
+        Me.cmbIndex = New AutoCompleteCombo()
         Me.lblRight = New System.Windows.Forms.Label()
         Me.lblLeft = New System.Windows.Forms.Label()
-        Me.cmbIndexEdit = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbIndexEdit = New AutoCompleteCombo()
         Me.isVariable = New ADRIFT.ItemSelector()
-        Me.cmbWhatV = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbMustNotV = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbWhatV = New AutoCompleteCombo()
+        Me.cmbMustNotV = New AutoCompleteCombo()
         Me.UltraTabPageControl6 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbPropEqual = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbMustNotP = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbPropEqual = New AutoCompleteCombo()
+        Me.cmbMustNotP = New AutoCompleteCombo()
         Me.cmbPropertyValue = New ADRIFT.PropertyValue()
         Me.lblFor = New System.Windows.Forms.Label()
-        Me.cmbPropertyOb = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbProperty = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbPropertyOb = New AutoCompleteCombo()
+        Me.cmbProperty = New AutoCompleteCombo()
         Me.UltraTabPageControl7 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbDirection = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbDirection = New AutoCompleteCombo()
         Me.lblBe = New System.Windows.Forms.Label()
-        Me.cmbMustNotD = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbMustNotD = New AutoCompleteCombo()
         Me.lblReferencedDirection = New System.Windows.Forms.Label()
         Me.UltraTabPageControl8 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.Expression = New ADRIFT.Expression()
@@ -808,48 +808,48 @@ Public Class frmRestriction
         Me.tabsRestrictions.SharedControlsPage = Me.UltraTabSharedControlsPage2
         Me.tabsRestrictions.Size = New System.Drawing.Size(618, 64)
         Me.tabsRestrictions.TabIndex = 1
-        Appearance8.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Appearance8.Image = Global.ADRIFT.My.Resources.imgLocation16
         UltraTab1.Appearance = Appearance8
         UltraTab1.Key = "Location"
         UltraTab1.TabPage = Me.UltraTabPageControl1
         UltraTab1.Text = "Location"
-        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
+        Appearance2.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
         UltraTab2.Appearance = Appearance2
         UltraTab2.Key = "Object"
         UltraTab2.TabPage = Me.UltraTabPageControl2
         UltraTab2.Text = "Object"
-        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
+        Appearance4.Image = Global.ADRIFT.My.Resources.imgCharacter16
         UltraTab4.Appearance = Appearance4
         UltraTab4.Key = "Character"
         UltraTab4.TabPage = Me.UltraTabPageControl4
         UltraTab4.Text = "Character"
-        Appearance10.Image = Global.ADRIFT.My.Resources.Resources.imgHelp16
+        Appearance10.Image = Global.ADRIFT.My.Resources.imgHelp16
         UltraTab9.Appearance = Appearance10
         UltraTab9.Key = "Item"
         UltraTab9.TabPage = Me.UltraTabPageControl9
         UltraTab9.Text = "Item"
         UltraTab9.Visible = False
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSpecific16
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgTaskSpecific16
         UltraTab3.Appearance = Appearance3
         UltraTab3.Key = "Task"
         UltraTab3.TabPage = Me.UltraTabPageControl3
         UltraTab3.Text = "Task"
-        Appearance5.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
+        Appearance5.Image = Global.ADRIFT.My.Resources.imgVariable16
         UltraTab5.Appearance = Appearance5
         UltraTab5.Key = "Variable"
         UltraTab5.TabPage = Me.UltraTabPageControl5
         UltraTab5.Text = "Variable"
-        Appearance6.Image = Global.ADRIFT.My.Resources.Resources.imgProperty16
+        Appearance6.Image = Global.ADRIFT.My.Resources.imgProperty16
         UltraTab6.Appearance = Appearance6
         UltraTab6.Key = "Property"
         UltraTab6.TabPage = Me.UltraTabPageControl6
         UltraTab6.Text = "Property"
-        Appearance7.Image = Global.ADRIFT.My.Resources.Resources.imgChildren
+        Appearance7.Image = Global.ADRIFT.My.Resources.imgChildren
         UltraTab7.Appearance = Appearance7
         UltraTab7.Key = "Direction"
         UltraTab7.TabPage = Me.UltraTabPageControl7
         UltraTab7.Text = "Direction"
-        Appearance9.Image = Global.ADRIFT.My.Resources.Resources.imgExpression
+        Appearance9.Image = Global.ADRIFT.My.Resources.imgExpression
         UltraTab8.Appearance = Appearance9
         UltraTab8.Key = "Expression"
         UltraTab8.TabPage = Me.UltraTabPageControl8
@@ -990,7 +990,7 @@ Public Class frmRestriction
     Private Sub frmRestriction_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Resize
 
         For Each ctrl As Control In Me.Controls
-            If TypeOf ctrl Is Infragistics.Win.UltraWinEditors.UltraComboEditor Then ctrl.Visible = False
+            If TypeOf ctrl Is AutoCompleteCombo Then ctrl.Visible = False
         Next
 
         cmbLocation.Width = Me.cmbMustNotL.Left - cmbLocation.Left + 1
@@ -1039,7 +1039,7 @@ Public Class frmRestriction
         cmbDirection.Width = Me.Width - cmbDirection.Left - 24
 
         For Each ctrl As Control In Me.Controls
-            If TypeOf ctrl Is Infragistics.Win.UltraWinEditors.UltraComboEditor Then ctrl.Visible = True
+            If TypeOf ctrl Is AutoCompleteCombo Then ctrl.Visible = True
         Next
 
     End Sub
@@ -1345,43 +1345,45 @@ Public Class frmRestriction
 
     Private Sub cmbWhatL_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbWhatL.ValueChanged
 
-        With cmbLocationExtra
+        If cmbWhatL.SelectedItem IsNot Nothing Then
+            With cmbLocationExtra
 
-            .Items.Clear()
-            .SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
-            .Enabled = True
+                .Items.Clear()
+                .SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
+                .Enabled = True
 
-            Select Case cmbWhatL.SelectedItem.DataValue.ToString
-                Case clsRestriction.LocationEnum.HaveBeenSeenByCharacter.ToString
-                    .Items.Add(THEPLAYER, "[ The Player Character ]")
-                    .Items.Add(ANYCHARACTER, "[ Any Character ]")
-                    For Each c As String In arlCharacterRefs
-                        .Items.Add(c, Adventure.GetNameFromKey(c, False))
-                    Next
-                    For Each chr As clsCharacter In Adventure.htblCharacters.Values
-                        .Items.Add(chr.Key, chr.Name)
-                    Next
-                Case clsRestriction.LocationEnum.BeInGroup.ToString
-                    For Each g As clsGroup In Adventure.htblGroups.Values
-                        If g.GroupType = clsGroup.GroupTypeEnum.Locations Then
-                            .Items.Add(g.Key, g.Name)
-                        End If
-                    Next
-                Case clsRestriction.LocationEnum.HaveProperty.ToString
-                    For Each p As clsProperty In Adventure.htblLocationProperties.Values
-                        .Items.Add(p.Key, p.Description)
-                    Next
-                Case clsRestriction.LocationEnum.BeLocation.ToString
-                    For Each l As clsLocation In Adventure.htblLocations.Values
-                        .Items.Add(l.Key, l.ShortDescription.ToString)
-                    Next
-                Case clsRestriction.LocationEnum.Exist.ToString
-                    .Enabled = False
-                Case Else
-                    TODO("Location option " & cmbWhatL.SelectedItem.DataValue.ToString)
-            End Select
+                Select Case cmbWhatL.SelectedItem.DataValue.ToString
+                    Case clsRestriction.LocationEnum.HaveBeenSeenByCharacter.ToString
+                        .Items.Add(THEPLAYER, "[ The Player Character ]")
+                        .Items.Add(ANYCHARACTER, "[ Any Character ]")
+                        For Each c As String In arlCharacterRefs
+                            .Items.Add(c, Adventure.GetNameFromKey(c, False))
+                        Next
+                        For Each chr As clsCharacter In Adventure.htblCharacters.Values
+                            .Items.Add(chr.Key, chr.Name)
+                        Next
+                    Case clsRestriction.LocationEnum.BeInGroup.ToString
+                        For Each g As clsGroup In Adventure.htblGroups.Values
+                            If g.GroupType = clsGroup.GroupTypeEnum.Locations Then
+                                .Items.Add(g.Key, g.Name)
+                            End If
+                        Next
+                    Case clsRestriction.LocationEnum.HaveProperty.ToString
+                        For Each p As clsProperty In Adventure.htblLocationProperties.Values
+                            .Items.Add(p.Key, p.Description)
+                        Next
+                    Case clsRestriction.LocationEnum.BeLocation.ToString
+                        For Each l As clsLocation In Adventure.htblLocations.Values
+                            .Items.Add(l.Key, l.ShortDescription.ToString)
+                        Next
+                    Case clsRestriction.LocationEnum.Exist.ToString
+                        .Enabled = False
+                    Case Else
+                        TODO("Location option " & cmbWhatL.SelectedItem.DataValue.ToString)
+                End Select
 
-        End With
+            End With
+        End If
 
     End Sub
 

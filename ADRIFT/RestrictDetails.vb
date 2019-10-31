@@ -222,35 +222,35 @@ Public Class RestrictDetails
         '
         'miAdd
         '
-        Me.miAdd.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Me.miAdd.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.miAdd.Name = "miAdd"
         Me.miAdd.Size = New System.Drawing.Size(152, 22)
         Me.miAdd.Text = "&Add"
         '
         'miEdit
         '
-        Me.miEdit.Image = Global.ADRIFT.My.Resources.Resources.imgEdit16
+        Me.miEdit.Image = Global.ADRIFT.My.Resources.imgEdit16
         Me.miEdit.Name = "miEdit"
         Me.miEdit.Size = New System.Drawing.Size(152, 22)
         Me.miEdit.Text = "&Edit"
         '
         'miDelete
         '
-        Me.miDelete.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Me.miDelete.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.miDelete.Name = "miDelete"
         Me.miDelete.Size = New System.Drawing.Size(152, 22)
         Me.miDelete.Text = "&Delete"
         '
         'miCopy
         '
-        Me.miCopy.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
+        Me.miCopy.Image = Global.ADRIFT.My.Resources.imgCopy
         Me.miCopy.Name = "miCopy"
         Me.miCopy.Size = New System.Drawing.Size(152, 22)
         Me.miCopy.Text = "&Copy"
         '
         'miPaste
         '
-        Me.miPaste.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
+        Me.miPaste.Image = Global.ADRIFT.My.Resources.imgPaste
         Me.miPaste.Name = "miPaste"
         Me.miPaste.Size = New System.Drawing.Size(152, 22)
         Me.miPaste.Text = "&Paste"

@@ -5,7 +5,6 @@ Public Class ItemSelector
     Public Event SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs)
     Private bNeedsReload As Boolean = False
 
-    ' TODO: Make this cool so that you can type in the combo but it works as a filter on all items within it
 
     <Flags()> _
     Public Enum ItemEnum
@@ -305,7 +304,7 @@ Public Class ItemSelector
             Case ItemEnum.Character
                 Dim chNew As New clsCharacter
                 Dim fCharacter As New frmCharacter(chNew, False)
-                fCharacter.ShowDialog()                
+                fCharacter.ShowDialog()
                 sKey = chNew.Key
                 LoadList(ItemEnum.Character)
                 fCharacter.Dispose()
@@ -389,7 +388,7 @@ CheckNextGroup:
         ' cmbList.SuspendLayout()
 
         Dim bCmbVisible As Boolean = True
-        cmbList.Items.Clear()        
+        cmbList.Items.Clear()
         cmbList.SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
 
         Select Case eListType
@@ -425,7 +424,7 @@ CheckNextGroup:
                 cmbList.Items.Add("", "[ No Group Selected ]")
                 'Application.DoEvents()
                 For Each grp As clsGroup In Adventure.htblGroups.Values
-                    If grp.GroupType = clsGroup.GroupTypeEnum.Locations Then                        
+                    If grp.GroupType = clsGroup.GroupTypeEnum.Locations Then
                         cmbList.Items.Add(grp.Key, grp.Name)
                     End If
                 Next
@@ -495,7 +494,7 @@ CheckNextGroup:
         'cmbList.ResumeLayout()
 
     End Sub
-   
+
 
 
     Private Sub cmbList_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbList.SelectionChanged

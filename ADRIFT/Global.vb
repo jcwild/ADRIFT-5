@@ -6528,6 +6528,32 @@ Module SharedModule
         Next
 
     End Sub
+
+#If Not Runner Then
+
+    Public Sub SetCombo(ByRef cmb As AutoCompleteCombo, ByVal sKey As String, Optional ByVal bBoldSelections As Boolean = False)
+
+        For Each vli As Infragistics.Win.ValueListItem In cmb.Items
+            If CStr(vli.DataValue) = sKey Then
+                cmb.SelectedItem = vli
+                If bBoldSelections AndAlso sKey <> "" Then cmb.Font = New Font(cmb.Font, FontStyle.Bold) Else cmb.Font = New Font(cmb.Font, FontStyle.Regular)
+                Exit Sub
+            End If
+        Next
+
+    End Sub
+    Public Sub SetCombo(ByRef cmb As AutoCompleteCombo, ByVal iKey As Integer, Optional ByVal bBoldSelections As Boolean = False)
+
+        For Each vli As Infragistics.Win.ValueListItem In cmb.Items
+            If CInt(vli.DataValue) = iKey Then
+                cmb.SelectedItem = vli
+                If bBoldSelections AndAlso iKey > -1 Then cmb.Font = New Font(cmb.Font, FontStyle.Bold) Else cmb.Font = New Font(cmb.Font, FontStyle.Regular)
+                Exit Sub
+            End If
+        Next
+
+    End Sub
+#End If
 #End If
 
 End Module

@@ -84,7 +84,7 @@ Partial Class Password
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.ADRIFT.My.Resources.Resources.imgUnlock32
+        Me.PictureBox1.Image = Global.ADRIFT.My.Resources.imgUnlock32
         Me.PictureBox1.Location = New System.Drawing.Point(22, 29)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 32)

@@ -79,7 +79,7 @@
                 e.Graphics.DrawString("Runner", f, New SolidBrush(Color.White), New Point(8, 96))
 #End If
                 f = New Font(ff, 11.25, FontStyle.Regular)
-                e.Graphics.DrawString("© Campbell Wild 1998-2016", f, New SolidBrush(Color.White), New Point(369, 393))
+                e.Graphics.DrawString("© Campbell Wild 1998-2019", f, New SolidBrush(Color.White), New Point(369, 393))
                 f = New Font(ff, 9.75, FontStyle.Regular)
                 e.Graphics.DrawString("Adventure Development & Runner - Interactive Fiction Toolkit", f, New SolidBrush(Color.White), New Point(10, 81))
 #If Mono Then

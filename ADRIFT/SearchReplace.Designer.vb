@@ -246,7 +246,7 @@ Partial Class SearchReplace
         '
         'btnSelectFind
         '
-        Me.btnSelectFind.Image = Global.ADRIFT.My.Resources.Resources.imgFind
+        Me.btnSelectFind.Image = Global.ADRIFT.My.Resources.imgFind
         Me.btnSelectFind.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSelectFind.Name = "btnSelectFind"
         Me.btnSelectFind.Size = New System.Drawing.Size(50, 20)
@@ -254,7 +254,7 @@ Partial Class SearchReplace
         '
         'btnSelectReplace
         '
-        Me.btnSelectReplace.Image = Global.ADRIFT.My.Resources.Resources.imgReplace16
+        Me.btnSelectReplace.Image = Global.ADRIFT.My.Resources.imgReplace16
         Me.btnSelectReplace.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSelectReplace.Name = "btnSelectReplace"
         Me.btnSelectReplace.Size = New System.Drawing.Size(68, 20)

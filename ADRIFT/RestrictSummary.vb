@@ -64,7 +64,7 @@ Public Class RestrictSummary
         'btnEdit
         '
         Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgEdit16
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgEdit16
         Me.btnEdit.Appearance = Appearance3
         Me.btnEdit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand
@@ -79,7 +79,7 @@ Public Class RestrictSummary
         'btnAdd
         '
         Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Appearance4.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.btnAdd.Appearance = Appearance4
         Me.btnAdd.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand

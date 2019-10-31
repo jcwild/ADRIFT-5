@@ -186,49 +186,49 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Infragistics4.Shared.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Shared.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Shared.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Shared.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.Misc.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.Misc.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.Misc.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.Misc.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinDock.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinDock.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinDock.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinDock.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinEditors.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinEditors.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinEditors.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinListView.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinListView.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinListView.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinListView.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinSpellChecker.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinSpellChecker.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinStatusBar.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinStatusBar.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinTabControl.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinTabControl.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinTabControl.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinToolbars.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinToolbars.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinToolbars.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinTree.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinTree.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.UltraWinTree.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinTree.v18.2.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.v13.2, Version=13.2.20132.2098, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\Infragistics4.Win.v13.2.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.v18.2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
@@ -275,6 +275,9 @@
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoCompleteCombo.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Babel.vb" />
     <Compile Include="Blorb.vb" />
@@ -736,7 +739,7 @@
       <SubType>Designer</SubType>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <CustomToolNamespace>My</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="NumericTextbox.resx">
       <DependentUpon>NumericTextbox.vb</DependentUpon>

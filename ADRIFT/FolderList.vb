@@ -34,7 +34,7 @@ Public Class FolderList
                 Else
                     For Each sKey As String In Adventure.dictFolders(node.Key).Members
                         Dim itmGen As clsItem = Adventure.dictAllItems(sKey)
-                        If Not (itmGen.IsLibrary AndAlso (TypeOf itmGen Is clsTask OrElse TypeOf itmGen Is clsProperty)) Then
+                        If itmGen IsNot Nothing AndAlso Not (itmGen.IsLibrary AndAlso (TypeOf itmGen Is clsTask OrElse TypeOf itmGen Is clsProperty)) Then
                             bAllHidden = False
                             Exit For
                         End If

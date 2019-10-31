@@ -1,5 +1,7 @@
 ﻿Public Class ExpandableDescription
 
+    Public Event Changed(ByVal sender As Object, ByVal e As System.EventArgs)
+
     'Private Sub btnDropdown_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnDropdown.Click
     '    If GenTextbox1.tabsDescriptions.SelectedTab IsNot Nothing AndAlso GenTextbox1.tabsDescriptions.SelectedTab.VisibleIndex = 0 AndAlso txtShortDesc.IsInEditMode Then
     '        GenTextbox1.rtxtSource.SelectionStart = txtShortDesc.SelectionStart
@@ -50,7 +52,6 @@
         End Set
     End Property
 
-  
 
 
     Private Sub txtShortDesc_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtShortDesc.TextChanged        
@@ -58,7 +59,7 @@
         If GenTextbox1.tabsDescriptions.SelectedTab IsNot Nothing AndAlso GenTextbox1.tabsDescriptions.SelectedTab.VisibleIndex = 0 Then
             GenTextbox1.rtxtSource.Text = txtShortDesc.Text
         End If
-        'GenTextbox1.Description = Description
+        RaiseEvent Changed(Me, e)
     End Sub
 
 
@@ -70,9 +71,13 @@
 
 
     Private Sub ExpandableDescription_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        'GenTextbox1.tabpageGraphics.Hide()
-        GenTextbox1.Tabs.Tabs("tabGraphics").Visible = False        
+        GenTextbox1.Tabs.Tabs("tabGraphics").Visible = False
         GenTextbox1.Visible = False
+    End Sub
+
+
+    Private Sub GenTextbox1_Changed(sender As Object, e As EventArgs) Handles GenTextbox1.Changed
+        RaiseEvent Changed(Me, e)
     End Sub
 
 End Class

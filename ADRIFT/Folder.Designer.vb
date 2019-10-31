@@ -98,7 +98,7 @@ Partial Class Folder
         'miEdit
         '
         Me.miEdit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.miEdit.Image = Global.ADRIFT.My.Resources.Resources.imgEdit16
+        Me.miEdit.Image = Global.ADRIFT.My.Resources.imgEdit16
         Me.miEdit.Name = "miEdit"
         Me.miEdit.Size = New System.Drawing.Size(197, 22)
         Me.miEdit.Text = "Edit"
@@ -112,7 +112,7 @@ Partial Class Folder
         '
         'miAddObjectToLocation
         '
-        Me.miAddObjectToLocation.Image = Global.ADRIFT.My.Resources.Resources.imgObjectStatic16
+        Me.miAddObjectToLocation.Image = Global.ADRIFT.My.Resources.imgObjectStatic16
         Me.miAddObjectToLocation.Name = "miAddObjectToLocation"
         Me.miAddObjectToLocation.Size = New System.Drawing.Size(197, 22)
         Me.miAddObjectToLocation.Text = "Add Object to Location"
@@ -120,7 +120,7 @@ Partial Class Folder
         '
         'miAddSubObject
         '
-        Me.miAddSubObject.Image = Global.ADRIFT.My.Resources.Resources.imgObjectStatic16
+        Me.miAddSubObject.Image = Global.ADRIFT.My.Resources.imgObjectStatic16
         Me.miAddSubObject.Name = "miAddSubObject"
         Me.miAddSubObject.Size = New System.Drawing.Size(197, 22)
         Me.miAddSubObject.Text = "Add Sub-Object"
@@ -128,7 +128,7 @@ Partial Class Folder
         '
         'miAddSpecificTask
         '
-        Me.miAddSpecificTask.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSpecific16
+        Me.miAddSpecificTask.Image = Global.ADRIFT.My.Resources.imgTaskSpecific16
         Me.miAddSpecificTask.Name = "miAddSpecificTask"
         Me.miAddSpecificTask.Size = New System.Drawing.Size(197, 22)
         Me.miAddSpecificTask.Text = "Add Specific Task"
@@ -278,28 +278,28 @@ Partial Class Folder
         '
         'miCut
         '
-        Me.miCut.Image = Global.ADRIFT.My.Resources.Resources.imgCut
+        Me.miCut.Image = Global.ADRIFT.My.Resources.imgCut
         Me.miCut.Name = "miCut"
         Me.miCut.Size = New System.Drawing.Size(197, 22)
         Me.miCut.Text = "Cut"
         '
         'miCopy
         '
-        Me.miCopy.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
+        Me.miCopy.Image = Global.ADRIFT.My.Resources.imgCopy
         Me.miCopy.Name = "miCopy"
         Me.miCopy.Size = New System.Drawing.Size(197, 22)
         Me.miCopy.Text = "Copy"
         '
         'miPaste
         '
-        Me.miPaste.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
+        Me.miPaste.Image = Global.ADRIFT.My.Resources.imgPaste
         Me.miPaste.Name = "miPaste"
         Me.miPaste.Size = New System.Drawing.Size(197, 22)
         Me.miPaste.Text = "Paste"
         '
         'miDelete
         '
-        Me.miDelete.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
+        Me.miDelete.Image = Global.ADRIFT.My.Resources.imgDelete
         Me.miDelete.Name = "miDelete"
         Me.miDelete.Size = New System.Drawing.Size(197, 22)
         Me.miDelete.Text = "Delete"
@@ -312,14 +312,14 @@ Partial Class Folder
         'miNew
         '
         Me.miNew.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miNewFolder, Me.ToolStripSeparator3, Me.miNewLocation, Me.miNewObject, Me.miNewTask, Me.miNewCharacter, Me.miNewEvent, Me.miNewVariable, Me.miNewGroup, Me.miNewProperty, Me.miNewALR, Me.miNewHint, Me.miNewSynonym, Me.miNewUserFunction})
-        Me.miNew.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Me.miNew.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.miNew.Name = "miNew"
         Me.miNew.Size = New System.Drawing.Size(197, 22)
         Me.miNew.Text = "Add New"
         '
         'miNewFolder
         '
-        Me.miNewFolder.Image = Global.ADRIFT.My.Resources.Resources.imgFolderClosed16
+        Me.miNewFolder.Image = Global.ADRIFT.My.Resources.imgFolderClosed16
         Me.miNewFolder.Name = "miNewFolder"
         Me.miNewFolder.Size = New System.Drawing.Size(147, 22)
         Me.miNewFolder.Text = "Folder"
@@ -331,14 +331,14 @@ Partial Class Folder
         '
         'miNewLocation
         '
-        Me.miNewLocation.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Me.miNewLocation.Image = Global.ADRIFT.My.Resources.imgLocation16
         Me.miNewLocation.Name = "miNewLocation"
         Me.miNewLocation.Size = New System.Drawing.Size(147, 22)
         Me.miNewLocation.Text = "Location"
         '
         'miNewObject
         '
-        Me.miNewObject.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
+        Me.miNewObject.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
         Me.miNewObject.Name = "miNewObject"
         Me.miNewObject.Size = New System.Drawing.Size(147, 22)
         Me.miNewObject.Text = "Object"
@@ -352,63 +352,63 @@ Partial Class Folder
         '
         'miNewCharacter
         '
-        Me.miNewCharacter.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
+        Me.miNewCharacter.Image = Global.ADRIFT.My.Resources.imgCharacter16
         Me.miNewCharacter.Name = "miNewCharacter"
         Me.miNewCharacter.Size = New System.Drawing.Size(147, 22)
         Me.miNewCharacter.Text = "Character"
         '
         'miNewEvent
         '
-        Me.miNewEvent.Image = Global.ADRIFT.My.Resources.Resources.imgEvent16
+        Me.miNewEvent.Image = Global.ADRIFT.My.Resources.imgEvent16
         Me.miNewEvent.Name = "miNewEvent"
         Me.miNewEvent.Size = New System.Drawing.Size(147, 22)
         Me.miNewEvent.Text = "Event"
         '
         'miNewVariable
         '
-        Me.miNewVariable.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
+        Me.miNewVariable.Image = Global.ADRIFT.My.Resources.imgVariable16
         Me.miNewVariable.Name = "miNewVariable"
         Me.miNewVariable.Size = New System.Drawing.Size(147, 22)
         Me.miNewVariable.Text = "Variable"
         '
         'miNewGroup
         '
-        Me.miNewGroup.Image = Global.ADRIFT.My.Resources.Resources.imgGroup16
+        Me.miNewGroup.Image = Global.ADRIFT.My.Resources.imgGroup16
         Me.miNewGroup.Name = "miNewGroup"
         Me.miNewGroup.Size = New System.Drawing.Size(147, 22)
         Me.miNewGroup.Text = "Group"
         '
         'miNewProperty
         '
-        Me.miNewProperty.Image = Global.ADRIFT.My.Resources.Resources.imgProperty16
+        Me.miNewProperty.Image = Global.ADRIFT.My.Resources.imgProperty16
         Me.miNewProperty.Name = "miNewProperty"
         Me.miNewProperty.Size = New System.Drawing.Size(147, 22)
         Me.miNewProperty.Text = "Property"
         '
         'miNewALR
         '
-        Me.miNewALR.Image = Global.ADRIFT.My.Resources.Resources.imgALR16
+        Me.miNewALR.Image = Global.ADRIFT.My.Resources.imgALR16
         Me.miNewALR.Name = "miNewALR"
         Me.miNewALR.Size = New System.Drawing.Size(147, 22)
         Me.miNewALR.Text = "Text Override"
         '
         'miNewHint
         '
-        Me.miNewHint.Image = Global.ADRIFT.My.Resources.Resources.imgHint16
+        Me.miNewHint.Image = Global.ADRIFT.My.Resources.imgHint16
         Me.miNewHint.Name = "miNewHint"
         Me.miNewHint.Size = New System.Drawing.Size(147, 22)
         Me.miNewHint.Text = "Hint"
         '
         'miNewSynonym
         '
-        Me.miNewSynonym.Image = Global.ADRIFT.My.Resources.Resources.imgSynonym16
+        Me.miNewSynonym.Image = Global.ADRIFT.My.Resources.imgSynonym16
         Me.miNewSynonym.Name = "miNewSynonym"
         Me.miNewSynonym.Size = New System.Drawing.Size(147, 22)
         Me.miNewSynonym.Text = "Synonym"
         '
         'miNewUserFunction
         '
-        Me.miNewUserFunction.Image = Global.ADRIFT.My.Resources.Resources.imgFunction16
+        Me.miNewUserFunction.Image = Global.ADRIFT.My.Resources.imgFunction16
         Me.miNewUserFunction.Name = "miNewUserFunction"
         Me.miNewUserFunction.Size = New System.Drawing.Size(147, 22)
         Me.miNewUserFunction.Text = "User Function"
@@ -477,7 +477,7 @@ Partial Class Folder
         '
         'miExportFolder
         '
-        Me.miExportFolder.Image = Global.ADRIFT.My.Resources.Resources.imgExport16
+        Me.miExportFolder.Image = Global.ADRIFT.My.Resources.imgExport16
         Me.miExportFolder.Name = "miExportFolder"
         Me.miExportFolder.Size = New System.Drawing.Size(197, 22)
         Me.miExportFolder.Text = "Export Folder"

@@ -69,7 +69,7 @@ Public Class Properties
         'btnAddProperty
         '
         Me.btnAddProperty.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
+        Appearance1.Image = Global.ADRIFT.My.Resources.imgAdd16
         Me.btnAddProperty.Appearance = Appearance1
         Me.btnAddProperty.Location = New System.Drawing.Point(9, 315)
         Me.btnAddProperty.Name = "btnAddProperty"
@@ -492,7 +492,7 @@ Public Class Properties
     End Sub
 
 
-    Public Function ValidateProperties() As Boolean
+    Public Function ValidateProperties(Optional ByRef FailingProperty As String = Nothing) As Boolean
 
         ' Check all properties that are checked are also populated
         For Each prop As clsProperty In htblProperties.Values
@@ -500,6 +500,7 @@ Public Class Properties
                 Select Case prop.Type
                     Case clsProperty.PropertyTypeEnum.CharacterKey, clsProperty.PropertyTypeEnum.LocationGroupKey, clsProperty.PropertyTypeEnum.LocationKey, clsProperty.PropertyTypeEnum.ObjectKey, clsProperty.PropertyTypeEnum.StateList
                         If prop.Value = "" Then
+                            FailingProperty = prop.Key
                             ErrMsg("Property """ & prop.Description & """ cannot be blank")
                             Return False
                         End If

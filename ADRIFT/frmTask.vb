@@ -60,7 +60,7 @@ Public Class frmTask
     Friend WithEvents RestrictDetails1 As ADRIFT.RestrictDetails
     Friend WithEvents txtName As Infragistics.Win.UltraWinEditors.UltraTextEditor
     Friend WithEvents lblName As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents cmbGeneralTask As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbGeneralTask As AutoCompleteCombo
     Friend WithEvents lblSystem As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents lblComplete As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents tabsMain As Infragistics.Win.UltraWinTabControl.UltraTabControl
@@ -155,7 +155,7 @@ Public Class frmTask
         Me.cmbSpecificOverrideType = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.SpecificTask1 = New ADRIFT.SpecificTask()
         Me.chkExecuteParentActions = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.cmbGeneralTask = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbGeneralTask = New AutoCompleteCombo
         Me.BlueBorder = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.chkOutputParentText = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -462,7 +462,7 @@ Public Class frmTask
         '
         'chkSpecific
         '
-        Appearance5.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSpecific16
+        Appearance5.Image = Global.ADRIFT.My.Resources.imgTaskSpecific16
         Appearance5.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance5.TextHAlignAsString = "Center"
         Me.chkSpecific.Appearance = Appearance5
@@ -481,7 +481,7 @@ Public Class frmTask
         '
         'chkGeneral
         '
-        Appearance6.Image = Global.ADRIFT.My.Resources.Resources.imgTaskGeneral16
+        Appearance6.Image = Global.ADRIFT.My.Resources.imgTaskGeneral16
         Appearance6.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance6.TextHAlignAsString = "Center"
         Me.chkGeneral.Appearance = Appearance6
@@ -498,7 +498,7 @@ Public Class frmTask
         '
         'chkSystem
         '
-        Appearance7.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSystem16
+        Appearance7.Image = Global.ADRIFT.My.Resources.imgTaskSystem16
         Appearance7.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance7.TextHAlignAsString = "Center"
         Me.chkSystem.Appearance = Appearance7
@@ -525,7 +525,7 @@ Public Class frmTask
         'btnParent
         '
         Me.btnParent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance8.Image = Global.ADRIFT.My.Resources.Resources.imgParent
+        Appearance8.Image = Global.ADRIFT.My.Resources.imgParent
         Me.btnParent.Appearance = Appearance8
         Me.btnParent.Enabled = False
         Me.btnParent.Location = New System.Drawing.Point(501, 6)
@@ -537,7 +537,7 @@ Public Class frmTask
         'btnChildren
         '
         Me.btnChildren.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance9.Image = Global.ADRIFT.My.Resources.Resources.imgChildren
+        Appearance9.Image = Global.ADRIFT.My.Resources.imgChildren
         Me.btnChildren.Appearance = Appearance9
         Me.UTMPopup.SetContextMenuUltra(Me.btnChildren, "ctxmPopup")
         Me.btnChildren.Enabled = False
@@ -1461,12 +1461,13 @@ EndCheckRefs:
 
     Private Sub cmbGeneralTask_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbGeneralTask.ValueChanged
 
-        If Me.Visible Then ReDim cTask.Specifics(-1)
-        SpecificTask1.LoadSpecific(CStr(cmbGeneralTask.SelectedItem.DataValue), CType(cTask.Clone, clsTask))
-        RecalcRefs()
-        UpdateOverrideableCheckbox()
-        Changed = True
-        'chkExecuteParentActions.Enabled = (cmbGeneralTask.SelectedIndex > -1)
+        If cmbGeneralTask.SelectedItem IsNot Nothing Then
+            If Me.Visible Then ReDim cTask.Specifics(-1)
+            SpecificTask1.LoadSpecific(CStr(cmbGeneralTask.SelectedItem.DataValue), CType(cTask.Clone, clsTask))
+            RecalcRefs()
+            UpdateOverrideableCheckbox()
+            Changed = True
+        End If
 
     End Sub
 

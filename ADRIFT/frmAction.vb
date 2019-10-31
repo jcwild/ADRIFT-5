@@ -38,50 +38,50 @@ Public Class frmAction
     Friend WithEvents UltraTabPageControl2 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents UltraTabPageControl3 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents UltraTabPageControl4 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents cmbCharacterMoveTo As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbCharacterKey2 As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbCharacterKey1 As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbCharacterMoveTo As AutoCompleteCombo
+    Friend WithEvents cmbCharacterKey2 As AutoCompleteCombo
+    Friend WithEvents cmbCharacterKey1 As AutoCompleteCombo
     Friend WithEvents UltraTabPageControl6 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents UltraTabPageControl7 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents tabsActions As Infragistics.Win.UltraWinTabControl.UltraTabControl
-    Friend WithEvents cmbObjectKey2 As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbObjectKey1 As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbObjectMoveTo As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbObjectKey2 As AutoCompleteCombo
+    Friend WithEvents cmbObjectKey1 As AutoCompleteCombo
+    Friend WithEvents cmbObjectMoveTo As AutoCompleteCombo
     Friend WithEvents lblSet As System.Windows.Forms.Label
-    Friend WithEvents cmbPropertyKey2 As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbPropertyKey2 As AutoCompleteCombo
     Friend WithEvents lblFor As System.Windows.Forms.Label
     Friend WithEvents lblLoop As System.Windows.Forms.Label
-    Friend WithEvents cmbVariable As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbVariable As AutoCompleteCombo
     Friend WithEvents lblNext As System.Windows.Forms.Label
     Friend WithEvents lblTo2 As System.Windows.Forms.Label
     Friend WithEvents txtLoopTo As System.Windows.Forms.TextBox
     Friend WithEvents txtLoopFrom As System.Windows.Forms.TextBox
     Friend WithEvents lblRight As System.Windows.Forms.Label
     Friend WithEvents lblLeft As System.Windows.Forms.Label
-    Friend WithEvents cmbIndex As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbVariableArray As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbIndexEdit As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbTasks As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbWhatT As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbIndex As AutoCompleteCombo
+    Friend WithEvents cmbVariableArray As AutoCompleteCombo
+    Friend WithEvents cmbIndexEdit As AutoCompleteCombo
+    Friend WithEvents cmbTasks As AutoCompleteCombo
+    Friend WithEvents cmbWhatT As AutoCompleteCombo
     Friend WithEvents btnParams As Infragistics.Win.Misc.UltraButton
     Friend WithEvents Expression As ADRIFT.Expression
     Friend WithEvents isPropertyKey1 As ADRIFT.ItemSelector
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents cmbEndGame As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbObjectMoveWhat As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbObjectWhat As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbEndGame As AutoCompleteCombo
+    Friend WithEvents cmbObjectMoveWhat As AutoCompleteCombo
+    Friend WithEvents cmbObjectWhat As AutoCompleteCombo
     Friend WithEvents lblObjectsWithValue As System.Windows.Forms.Label
     Friend WithEvents cmbObjectPropertyValue As ADRIFT.PropertyValue
     Friend WithEvents cmbCharacterPropertyValue As ADRIFT.PropertyValue
     Friend WithEvents lblCharactersWithValue As System.Windows.Forms.Label
-    Friend WithEvents cmbCharacterMoveWho As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbCharacterWhat As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbCharacterMoveWho As AutoCompleteCombo
+    Friend WithEvents cmbCharacterWhat As AutoCompleteCombo
     Friend WithEvents UltraTabPageControl5 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents cmbLocationKey2 As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbLocationMoveWhat As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbLocationWhat As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbLocationMoveTo As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbLocationKey1 As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbLocationKey2 As AutoCompleteCombo
+    Friend WithEvents cmbLocationMoveWhat As AutoCompleteCombo
+    Friend WithEvents cmbLocationWhat As AutoCompleteCombo
+    Friend WithEvents cmbLocationMoveTo As AutoCompleteCombo
+    Friend WithEvents cmbLocationKey1 As AutoCompleteCombo
     Friend WithEvents cmbLocationPropertyValue As ADRIFT.PropertyValue
     Friend WithEvents lblLocationsWithValue As System.Windows.Forms.Label
     Friend WithEvents UltraStatusBar1 As Infragistics.Win.UltraWinStatusBar.UltraStatusBar
@@ -89,10 +89,10 @@ Public Class frmAction
     Friend WithEvents cmbPropertyValue As ADRIFT.PropertyValue
     Friend WithEvents UltraTabPageControl8 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents lblConvAbout As System.Windows.Forms.Label
-    Friend WithEvents cmbAskWho As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbWhatConv As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbAskWho As AutoCompleteCombo
+    Friend WithEvents cmbWhatConv As AutoCompleteCombo
     Friend WithEvents txtConvTopic As Infragistics.Win.UltraWinEditors.UltraTextEditor
-    Friend WithEvents cmbVariableSet As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbVariableSet As AutoCompleteCombo
     Friend WithEvents UltraTabPageControl9 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -139,36 +139,36 @@ Public Class frmAction
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAction))
         Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.lblObjectsWithValue = New System.Windows.Forms.Label()
-        Me.cmbObjectMoveWhat = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbObjectWhat = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbObjectKey2 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbObjectMoveTo = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbObjectKey1 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbObjectMoveWhat = New AutoCompleteCombo()
+        Me.cmbObjectWhat = New AutoCompleteCombo()
+        Me.cmbObjectKey2 = New AutoCompleteCombo()
+        Me.cmbObjectMoveTo = New AutoCompleteCombo()
+        Me.cmbObjectKey1 = New AutoCompleteCombo()
         Me.UltraTabPageControl2 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.lblCharactersWithValue = New System.Windows.Forms.Label()
-        Me.cmbCharacterMoveWho = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbCharacterWhat = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbCharacterMoveTo = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbCharacterKey2 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbCharacterKey1 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbCharacterMoveWho = New AutoCompleteCombo()
+        Me.cmbCharacterWhat = New AutoCompleteCombo()
+        Me.cmbCharacterMoveTo = New AutoCompleteCombo()
+        Me.cmbCharacterKey2 = New AutoCompleteCombo()
+        Me.cmbCharacterKey1 = New AutoCompleteCombo()
         Me.UltraTabPageControl5 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.lblLocationsWithValue = New System.Windows.Forms.Label()
-        Me.cmbLocationKey2 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbLocationMoveWhat = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbLocationWhat = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbLocationMoveTo = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbLocationKey1 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbLocationKey2 = New AutoCompleteCombo()
+        Me.cmbLocationMoveWhat = New AutoCompleteCombo()
+        Me.cmbLocationWhat = New AutoCompleteCombo()
+        Me.cmbLocationMoveTo = New AutoCompleteCombo()
+        Me.cmbLocationKey1 = New AutoCompleteCombo()
         Me.UltraTabPageControl6 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.btnParams = New Infragistics.Win.Misc.UltraButton()
-        Me.cmbTasks = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbWhatT = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbTasks = New AutoCompleteCombo()
+        Me.cmbWhatT = New AutoCompleteCombo()
         Me.UltraTabPageControl4 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbVariableSet = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbIndexEdit = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbVariable = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbVariableSet = New AutoCompleteCombo()
+        Me.cmbIndexEdit = New AutoCompleteCombo()
+        Me.cmbVariable = New AutoCompleteCombo()
         Me.lblRight = New System.Windows.Forms.Label()
-        Me.cmbIndex = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.cmbVariableArray = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbIndex = New AutoCompleteCombo()
+        Me.cmbVariableArray = New AutoCompleteCombo()
         Me.lblLeft = New System.Windows.Forms.Label()
         Me.lblLoop = New System.Windows.Forms.Label()
         Me.lblNext = New System.Windows.Forms.Label()
@@ -177,16 +177,16 @@ Public Class frmAction
         Me.txtLoopFrom = New System.Windows.Forms.TextBox()
         Me.lblFor = New System.Windows.Forms.Label()
         Me.UltraTabPageControl8 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbAskWho = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbAskWho = New AutoCompleteCombo()
         Me.txtConvTopic = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.lblConvAbout = New System.Windows.Forms.Label()
-        Me.cmbWhatConv = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbWhatConv = New AutoCompleteCombo()
         Me.UltraTabPageControl3 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.lblTo = New System.Windows.Forms.Label()
         Me.lblSet = New System.Windows.Forms.Label()
-        Me.cmbPropertyKey2 = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbPropertyKey2 = New AutoCompleteCombo()
         Me.UltraTabPageControl7 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.cmbEndGame = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbEndGame = New AutoCompleteCombo()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.chkLoop = New System.Windows.Forms.CheckBox()
         Me.btnCancel = New Infragistics.Win.Misc.UltraButton()
@@ -841,47 +841,47 @@ Public Class frmAction
         Me.tabsActions.SharedControlsPage = Me.UltraTabSharedControlsPage2
         Me.tabsActions.Size = New System.Drawing.Size(890, 64)
         Me.tabsActions.TabIndex = 8
-        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
+        Appearance2.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
         UltraTab1.Appearance = Appearance2
         UltraTab1.Key = "MoveObjects"
         UltraTab1.TabPage = Me.UltraTabPageControl1
         UltraTab1.Text = "Move Objects"
-        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
+        Appearance3.Image = Global.ADRIFT.My.Resources.imgCharacter16
         UltraTab2.Appearance = Appearance3
         UltraTab2.Key = "MoveCharacters"
         UltraTab2.TabPage = Me.UltraTabPageControl2
         UltraTab2.Text = "Move Characters"
-        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
+        Appearance4.Image = Global.ADRIFT.My.Resources.imgLocation16
         UltraTab3.Appearance = Appearance4
         UltraTab3.Key = "Locations"
         UltraTab3.TabPage = Me.UltraTabPageControl5
         UltraTab3.Text = "Locations"
-        Appearance5.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSpecific16
+        Appearance5.Image = Global.ADRIFT.My.Resources.imgTaskSpecific16
         UltraTab4.Appearance = Appearance5
         UltraTab4.Key = "Tasks"
         UltraTab4.TabPage = Me.UltraTabPageControl6
         UltraTab4.Text = "Tasks"
-        Appearance6.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
+        Appearance6.Image = Global.ADRIFT.My.Resources.imgVariable16
         UltraTab5.Appearance = Appearance6
         UltraTab5.Key = "Variables"
         UltraTab5.TabPage = Me.UltraTabPageControl4
         UltraTab5.Text = "Variables"
-        Appearance7.Image = Global.ADRIFT.My.Resources.Resources.imgRefresh16
+        Appearance7.Image = Global.ADRIFT.My.Resources.imgRefresh16
         UltraTab6.Appearance = Appearance7
         UltraTab6.Key = "Conversation"
         UltraTab6.TabPage = Me.UltraTabPageControl8
         UltraTab6.Text = "Conversation"
-        Appearance8.Image = Global.ADRIFT.My.Resources.Resources.imgProperty16
+        Appearance8.Image = Global.ADRIFT.My.Resources.imgProperty16
         UltraTab7.Appearance = Appearance8
         UltraTab7.Key = "SetProperties"
         UltraTab7.TabPage = Me.UltraTabPageControl3
         UltraTab7.Text = "Set Properties"
-        Appearance10.Image = Global.ADRIFT.My.Resources.Resources.imgEvent16
+        Appearance10.Image = Global.ADRIFT.My.Resources.imgEvent16
         UltraTab9.Appearance = Appearance10
         UltraTab9.Key = "Time"
         UltraTab9.TabPage = Me.UltraTabPageControl9
         UltraTab9.Text = "Time"
-        Appearance9.Image = Global.ADRIFT.My.Resources.Resources.imgCancel16
+        Appearance9.Image = Global.ADRIFT.My.Resources.imgCancel16
         UltraTab8.Appearance = Appearance9
         UltraTab8.Key = "EndGame"
         UltraTab8.TabPage = Me.UltraTabPageControl7
