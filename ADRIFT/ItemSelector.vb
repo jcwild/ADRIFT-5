@@ -489,6 +489,7 @@ CheckNextGroup:
 
         SetCombo(cmbList, sKey)
         If cmbList.SelectedIndex = -1 Then cmbList.SelectedIndex = 0
+        cmbList_SelectionChanged(cmbList, New EventArgs) ' force selection changed, because it now fires differently due to Nothing values
         RaiseEvent FilledList(Me, New EventArgs)
 
         'cmbList.ResumeLayout()
@@ -499,18 +500,17 @@ CheckNextGroup:
 
     Private Sub cmbList_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbList.SelectionChanged
 
-        If Not cmbList.SelectedItem Is Nothing Then
-            sKey = CStr(cmbList.SelectedItem.DataValue)
+        If cmbList.SelectedItem IsNot Nothing Then sKey = CStr(cmbList.SelectedItem.DataValue)
 
-            If sKey <> "" Then
-                sLastValidKey = sKey
-                btnEdit.Visible = True
-                btnNew.Visible = False
-            Else
-                btnEdit.Visible = False
-                If ListType <> ItemEnum.ValueList Then btnNew.Visible = True
-            End If
+        If sKey <> "" Then
+            sLastValidKey = sKey
+            btnEdit.Visible = True
+            btnNew.Visible = False
+        Else
+            btnEdit.Visible = False
+            If ListType <> ItemEnum.ValueList Then btnNew.Visible = True
         End If
+
         RaiseEvent SelectionChanged(Me, New EventArgs)
 
     End Sub

@@ -1389,6 +1389,8 @@ Public Class frmRestriction
 
     Private Sub cmbWhatI_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbWhatI.ValueChanged
 
+        If cmbWhatI.SelectedItem Is Nothing Then Exit Sub
+
         With cmbItemExtra
             .Items.Clear()
             .SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
@@ -1456,6 +1458,8 @@ Public Class frmRestriction
     End Sub
 
     Private Sub cmbWhatC_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbWhatC.ValueChanged
+
+        If cmbWhatC.SelectedItem Is Nothing Then Exit Sub
 
         With cmbCharacterExtra
 
@@ -1898,6 +1902,8 @@ Public Class frmRestriction
 
     Private Sub cmbWhatO_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbWhatO.ValueChanged
 
+        If cmbWhatO.SelectedItem Is Nothing Then Exit Sub
+
         cmbObjectExtra.Items.Clear()
         cmbObjectExtra.Enabled = True
 
@@ -2003,7 +2009,7 @@ Public Class frmRestriction
 
     Private Sub cmbObject_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbObject.ValueChanged
 
-        If cmbObject.SelectedItem.DisplayText = "[ Referenced Objects ]" Then
+        If cmbObject.SelectedItem?.DisplayText = "[ Referenced Objects ]" Then
             If Not cmbWhatO.IsItemInList("BeExactText") Then
                 Dim vli As New Infragistics.Win.ValueListItem
                 vli.DataValue = "BeExactText"
@@ -2021,7 +2027,7 @@ Public Class frmRestriction
             End If
         End If
 
-        If sInstr(cmbObject.SelectedItem.DisplayText, "[ Referenced ") > 0 Then
+        If sInstr(cmbObject.SelectedItem?.DisplayText, "[ Referenced ") > 0 Then
             If Not cmbWhatO.IsItemInList("Exist") Then
                 'If cmbWhatO.Items.Count = 11 Then
                 Dim vli As New Infragistics.Win.ValueListItem
@@ -2048,6 +2054,8 @@ Public Class frmRestriction
     End Sub
 
     Private Sub cmbProperty_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbProperty.SelectionChanged
+
+        If cmbProperty.SelectedItem Is Nothing Then Exit Sub
 
         Dim prop As clsProperty = Adventure.htblAllProperties(CStr(cmbProperty.SelectedItem.DataValue))
 

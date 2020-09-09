@@ -40,7 +40,7 @@ Friend Class RunnerSession
     Friend sRememberedVerb As String = ""
     Friend bTestingOutput As Boolean = False
 
-    Public Property bSound As Boolean
+    Public Property bSound As Boolean = True
     Private WithEvents tmrEvents As New Windows.Forms.Timer
 
 
@@ -310,16 +310,17 @@ Friend Class RunnerSession
 
             Adventure.eGameState = clsAction.EndGameEnum.Running
 
+#If Not www Then
             If fRunner.pbxGraphics IsNot Nothing AndAlso fRunner.pbxGraphics.Visible AndAlso Adventure.Images.Count = 0 Then
 #If Mono Then
                 fRunner.SplitContainerMapGraphics.Panel2Collapsed = True
-#ElseIf Not www Then
+#Else
                 fRunner.UDMRunner.PaneFromKey("Graphics").Close()
 #End If
                 'ElseIf bGraphics AndAlso Not fRunner.pbxGraphics.Visible AndAlso Adventure.Images.Count > 0 Then
                 '    fRunner.UDMRunner.PaneFromKey("Graphics").Show()
             End If
-
+#End If
 
             ' Initialise any array values
             For Each v As clsVariable In Adventure.htblVariables.Values

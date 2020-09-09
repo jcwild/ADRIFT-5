@@ -107,7 +107,7 @@ Public Class frmTask
     Friend WithEvents UltraCheckEditor1 As Infragistics.Win.UltraWinEditors.UltraCheckEditor
     Friend WithEvents UltraLabel4 As Infragistics.Win.Misc.UltraLabel
     Friend WithEvents cmbSystemTrigger As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents cmbSystemTriggerLocation As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbSystemTriggerLocation As AutoCompleteCombo
     Friend WithEvents cmbSpecificOverrideType As Infragistics.Win.UltraWinEditors.UltraComboEditor
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents chkOutputParentText As Infragistics.Win.UltraWinEditors.UltraCheckEditor
@@ -147,7 +147,7 @@ Public Class frmTask
         Me.UltraLabel3 = New Infragistics.Win.Misc.UltraLabel()
         Me.txtCommands = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.grpSystem = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.cmbSystemTriggerLocation = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbSystemTriggerLocation = New AutoCompleteCombo
         Me.cmbSystemTrigger = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.UltraLabel4 = New Infragistics.Win.Misc.UltraLabel()
         Me.lblSystem = New Infragistics.Win.Misc.UltraLabel()
@@ -155,7 +155,7 @@ Public Class frmTask
         Me.cmbSpecificOverrideType = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.SpecificTask1 = New ADRIFT.SpecificTask()
         Me.chkExecuteParentActions = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.cmbGeneralTask = New AutoCompleteCombo
+        Me.cmbGeneralTask = New ADRIFT.AutoCompleteCombo()
         Me.BlueBorder = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.chkOutputParentText = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -176,6 +176,7 @@ Public Class frmTask
         Me.UltraTabPageControl8 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.UltraTabPageControl7 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
+        Me.chkAggregate = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.txtFailOverride = New ADRIFT.GenTextbox()
         Me.chkContinue = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.lblAutofillDisabled = New System.Windows.Forms.Label()
@@ -205,7 +206,6 @@ Public Class frmTask
         Me._frmTask_Toolbars_Dock_Area_Top = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me._frmTask_Toolbars_Dock_Area_Bottom = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me.HelpProvider = New System.Windows.Forms.HelpProvider()
-        Me.chkAggregate = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.UltraTabPageControl1.SuspendLayout()
         CType(Me.grpGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpGeneral.SuspendLayout()
@@ -229,6 +229,7 @@ Public Class frmTask
         Me.UltraTabPageControl3.SuspendLayout()
         Me.UltraTabPageControl8.SuspendLayout()
         Me.UltraTabPageControl7.SuspendLayout()
+        CType(Me.chkAggregate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkContinue, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkPreventOverriding, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkReplaceKey, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,7 +243,6 @@ Public Class frmTask
         CType(Me.UltraStatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraStatusBar1.SuspendLayout()
         CType(Me.UTMPopup, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkAggregate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UltraTabPageControl1
@@ -260,7 +260,7 @@ Public Class frmTask
         Me.UltraTabPageControl1.Controls.Add(Me.txtCompletion)
         Me.UltraTabPageControl1.Controls.Add(Me.lblName)
         Me.UltraTabPageControl1.Controls.Add(Me.txtName)
-        Me.UltraTabPageControl1.Location = New System.Drawing.Point(-10000, -10000)
+        Me.UltraTabPageControl1.Location = New System.Drawing.Point(1, 23)
         Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
         Me.UltraTabPageControl1.Size = New System.Drawing.Size(569, 432)
         '
@@ -361,7 +361,7 @@ Public Class frmTask
         Me.lblSystem.Name = "lblSystem"
         Me.lblSystem.Size = New System.Drawing.Size(527, 41)
         Me.lblSystem.TabIndex = 0
-        Me.lblSystem.Text = "System tasks are not executed by matching player commands.  They can only be trig" & _
+        Me.lblSystem.Text = "System tasks are not executed by matching player commands.  They can only be trig" &
     "gered by other tasks, events, or by a scenario below. "
         '
         'grpSpecific
@@ -419,12 +419,14 @@ Public Class frmTask
         '
         Me.cmbGeneralTask.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbGeneralTask.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
+        'Me.cmbGeneralTask.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
+        'Me.cmbGeneralTask.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
         Me.cmbGeneralTask.Location = New System.Drawing.Point(177, 33)
         Me.cmbGeneralTask.Name = "cmbGeneralTask"
         Me.cmbGeneralTask.Size = New System.Drawing.Size(370, 21)
         Me.cmbGeneralTask.SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
         Me.cmbGeneralTask.TabIndex = 13
+        Me.cmbGeneralTask.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI
         '
         'BlueBorder
         '
@@ -658,9 +660,19 @@ Public Class frmTask
         Me.UltraTabPageControl7.Controls.Add(Me.chkLowPriority)
         Me.UltraTabPageControl7.Controls.Add(Me.udTaskPriority)
         Me.UltraTabPageControl7.Controls.Add(Me.Label1)
-        Me.UltraTabPageControl7.Location = New System.Drawing.Point(1, 23)
+        Me.UltraTabPageControl7.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabPageControl7.Name = "UltraTabPageControl7"
         Me.UltraTabPageControl7.Size = New System.Drawing.Size(569, 432)
+        '
+        'chkAggregate
+        '
+        Me.chkAggregate.BackColor = System.Drawing.Color.Transparent
+        Me.chkAggregate.BackColorInternal = System.Drawing.Color.Transparent
+        Me.chkAggregate.Location = New System.Drawing.Point(16, 162)
+        Me.chkAggregate.Name = "chkAggregate"
+        Me.chkAggregate.Size = New System.Drawing.Size(198, 20)
+        Me.chkAggregate.TabIndex = 22
+        Me.chkAggregate.Text = "Aggregate output, where possible"
         '
         'txtFailOverride
         '
@@ -758,7 +770,7 @@ Public Class frmTask
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(382, 13)
         Me.Label8.TabIndex = 11
-        Me.Label8.Text = "If task fails and input references 'all', display this instead of restriction com" & _
+        Me.Label8.Text = "If task fails and input references 'all', display this instead of restriction com" &
     "ments:"
         '
         'udAutoFillPriority
@@ -787,12 +799,12 @@ Public Class frmTask
         Me.chkLowPriority.Name = "chkLowPriority"
         Me.chkLowPriority.Size = New System.Drawing.Size(529, 20)
         Me.chkLowPriority.TabIndex = 7
-        Me.chkLowPriority.Text = "This task can be overridden by other task restriction failures (apart from other " & _
+        Me.chkLowPriority.Text = "This task can be overridden by other task restriction failures (apart from other " &
     "tasks with this checked)"
         '
         'udTaskPriority
         '
-        Me.HelpProvider.SetHelpString(Me.udTaskPriority, "If multiple tasks match the input from the player, the one with the highest prior" & _
+        Me.HelpProvider.SetHelpString(Me.udTaskPriority, "If multiple tasks match the input from the player, the one with the highest prior" &
         "ity will execute.")
         Me.udTaskPriority.Location = New System.Drawing.Point(93, 18)
         Me.udTaskPriority.Name = "udTaskPriority"
@@ -967,16 +979,6 @@ Public Class frmTask
         '
         Me.HelpProvider.HelpNamespace = "ADRIFT 5 Help.chm"
         '
-        'chkAggregate
-        '
-        Me.chkAggregate.BackColor = System.Drawing.Color.Transparent
-        Me.chkAggregate.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkAggregate.Location = New System.Drawing.Point(16, 162)
-        Me.chkAggregate.Name = "chkAggregate"
-        Me.chkAggregate.Size = New System.Drawing.Size(198, 20)
-        Me.chkAggregate.TabIndex = 22
-        Me.chkAggregate.Text = "Aggregate output, where possible"
-        '
         'frmTask
         '
         Me.AcceptButton = Me.btnOK
@@ -1033,6 +1035,7 @@ Public Class frmTask
         Me.UltraTabPageControl8.ResumeLayout(False)
         Me.UltraTabPageControl7.ResumeLayout(False)
         Me.UltraTabPageControl7.PerformLayout()
+        CType(Me.chkAggregate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkContinue, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkPreventOverriding, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkReplaceKey, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1047,7 +1050,6 @@ Public Class frmTask
         Me.UltraStatusBar1.ResumeLayout(False)
         Me.UltraStatusBar1.PerformLayout()
         CType(Me.UTMPopup, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkAggregate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

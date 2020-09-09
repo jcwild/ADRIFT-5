@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.21022</ProductVersion>
@@ -39,7 +40,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <SignAssembly>false</SignAssembly>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -56,6 +57,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -75,6 +78,8 @@
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>full</DebugType>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\Debug\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -95,6 +100,8 @@
     <DebugType>none</DebugType>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\Release\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugRunner|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -114,6 +121,8 @@
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>full</DebugType>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\DebugRunner\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -128,6 +137,8 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\x86\Debug\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DefineTrace>true</DefineTrace>
@@ -142,6 +153,8 @@
     </DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\x86\Release\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugRunner|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -156,6 +169,8 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\x86\DebugRunner\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug - Runner|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -170,6 +185,8 @@
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\Debug - Runner\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug - Runner|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -184,39 +201,41 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1CF0.tmp\x86\Debug - Runner\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Infragistics4.Shared.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Shared.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Shared.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Shared.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.Misc.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.Misc.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.Misc.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.Misc.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinDock.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinDock.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinDock.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinDock.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinEditors.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinEditors.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinEditors.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinStatusBar.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinStatusBar.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinTabControl.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinTabControl.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinTabControl.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinToolbars.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinToolbars.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.UltraWinToolbars.v20.1.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Win.v18.2, Version=18.2.20182.175, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+    <Reference Include="Infragistics4.Win.v20.1, Version=20.1.20201.12, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Infragistics\2018.2\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.v18.2.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin - Signed\Infragistics4.Win.v20.1.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
@@ -348,6 +367,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -450,6 +470,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
@@ -458,4 +479,10 @@
     <PostBuildEvent>
     </PostBuildEvent>
   </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
+  </Target>
 </Project>

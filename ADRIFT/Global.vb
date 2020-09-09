@@ -3,7 +3,7 @@ Module SharedModule
 #If www Then
     Public Property Adventure As clsAdventure
         Get
-            Return HttpContext.Current.Session.Item("Adventure")
+            Return CType(HttpContext.Current.Session.Item("Adventure"), clsAdventure)
         End Get
         Set(value As clsAdventure)
             HttpContext.Current.Session.Item("Adventure") = value
@@ -882,7 +882,7 @@ Module SharedModule
             ' Attempt to find the libarary in current directory
             Dim SL As String = "StandardLibrary.amf"
 
-            For Each sDir As String In New String() {IO.Path.GetDirectoryName(Application.ExecutablePath), DataPath}
+            For Each sDir As String In New String() {IO.Path.GetDirectoryName(SafeString(Application.ExecutablePath)), DataPath}
                 If IO.File.Exists(sDir & IO.Path.DirectorySeparatorChar & SL) Then
                     sLibraries = sDir & IO.Path.DirectorySeparatorChar & SL
                     Exit For

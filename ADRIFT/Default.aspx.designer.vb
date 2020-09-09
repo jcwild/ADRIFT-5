@@ -50,6 +50,15 @@ Partial Public Class _Default
     Protected WithEvents LinkAbout As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
+    '''muteButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents muteButton As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
     '''txtScore control.
     '''</summary>
     '''<remarks>

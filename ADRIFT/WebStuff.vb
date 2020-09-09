@@ -6,7 +6,7 @@
     Public Property sURL As String
         Get
             'Return _sURL
-            Return HttpContext.Current.Session.Item("sURL")
+            Return SafeString(HttpContext.Current.Session.Item("sURL"))
         End Get
         Set(value As String)
             '_sURL = value
@@ -17,7 +17,7 @@
 
     Public Property MapHeight As Integer
         Get
-            Return HttpContext.Current.Session.Item("MapHeight")
+            Return SafeInt(HttpContext.Current.Session.Item("MapHeight"))
         End Get
         Set(value As Integer)
             HttpContext.Current.Session.Item("MapHeight") = value
@@ -26,7 +26,7 @@
 
     Public Property MapWidth As Integer
         Get
-            Return HttpContext.Current.Session.Item("MapWidth")
+            Return SafeInt(HttpContext.Current.Session.Item("MapWidth"))
         End Get
         Set(value As Integer)
             HttpContext.Current.Session.Item("MapWidth") = value

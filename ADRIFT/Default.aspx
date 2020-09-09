@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="ADRIFT WebRunner" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false"
     CodeBehind="Default.aspx.vb" Inherits="ADRIFT._Default" MaintainScrollPositionOnPostback="false" %>
 
-<%@ Register assembly="Infragistics4.Web.v13.2, Version=13.2.20132.2294, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" namespace="Infragistics.Web.UI.LayoutControls" tagprefix="ig" %>
+<%@ Register assembly="Infragistics45.Web.v20.1, Version=20.1.20201.4, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" namespace="Infragistics.Web.UI.LayoutControls" tagprefix="ig" %>
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="HeadContent">
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="HeadContent">   
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -15,19 +15,32 @@
             var TextBox = document.getElementById("<%=txtInputWeb.ClientID%>");
             TextBox.focus();
         }
-        
+
+        function MuteAudio(v) {
+            audio1.muted = v;
+            audio2.muted = v;
+            audio3.muted = v;
+            audio4.muted = v;
+            audio5.muted = v;
+            audio6.muted = v;
+            audio7.muted = v;
+            audio8.muted = v;
+        }
     </script>
-      
+          
     <div style="height:100%; width:100%; background-color: purple" onclick="_FocusInput()">        
 
         <asp:UpdatePanel ID="UpdatePanelStatusBar" runat="server" UpdateMode="Conditional">
-            <ContentTemplate>   
+            <ContentTemplate>                   
                 <div style=" padding-top:2px; top:0px; height:24px; width:100%; right:0px; color: black; background-color: #D22527; font-size: 18px; font-family: Arial,Helvetica">
                 <div id="txtStatusBar" runat="server" style="float: left;">
                     Game Not Loaded</div>
                 <div style="float: right; padding-top:1px;">
-                    <asp:HyperLink ID="LinkAbout" ImageUrl="http://play.adrift.co/img/Help.png" NavigateUrl="~/About.aspx" runat="server" />
+                    <asp:HyperLink ID="LinkAbout" ImageUrl="http://play.adrift.co/img/Help.png" ToolTip="About" NavigateUrl="~/About.aspx" runat="server" />
                 </div>
+                <div id="mute" style="float: right; padding-top:1px; padding-right:5px;">
+                    <asp:ImageButton ID="muteButton" ImageUrl="http://play.adrift.co/img/mute.png" ToolTip="Unmute audio" runat="server" OnClientClick="MuteAudio(false)" Visible="false" />                    
+                </div>                
                 <div id="txtScore" runat="server" style="float: right; width: 150px;">
                     Score: 0</div>
                 <div id="txtUserStatus" runat="server" style="text-align: center;">
@@ -35,7 +48,7 @@
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
-
+        
         <asp:UpdatePanel ID="UpdatePanelAudioChannels" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div style="height:0px; width:0px;" name="Channel1" id="Channel1" runat="server"></div>
@@ -57,7 +70,7 @@
                     <ig:SplitterPane runat="server" BackColor="Black">
                         <Template>
                             <asp:UpdatePanel ID="UpdatePanelText" runat="server">
-                                <ContentTemplate>           
+                                <ContentTemplate>                                               
                                     <div id="txtOutputWeb" runat="server" style="left:0px; right: 0px; padding: 15px;
                                         background-color: black; font-size: 14px; font-family: Arial,Helvetica">
                                         To play a game, please set the value for the &quot;game&quot; parameter in the address
@@ -107,7 +120,7 @@
                         </Template>
                     </ig:SplitterPane>
                 </Panes>
-            </ig:WebSplitter>
+            </ig:WebSplitter>            
         </div>
     </div>
 </asp:Content>

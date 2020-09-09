@@ -91,6 +91,7 @@ Partial Class ItemSelector
         Me.btnEdit.Size = New System.Drawing.Size(22, 22)
         Me.btnEdit.TabIndex = 4
         Me.btnEdit.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
+        Me.btnEdit.Visible = False
         '
         'Expression
         '

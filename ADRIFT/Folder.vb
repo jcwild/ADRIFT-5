@@ -112,7 +112,7 @@ Public Class Folder
     End Function
 
 
-    Public Function GetItem(ByVal itemGen As clsItem, ByVal subitems() As UltraListViewSubItem) As UltraListViewItem
+    Public Shared Function GetItem(ByVal itemGen As clsItem, ByVal subitems() As UltraListViewSubItem) As UltraListViewItem
 
         Dim item As New UltraListViewItem(itemGen.CommonName, subitems)
 

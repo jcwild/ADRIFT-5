@@ -1708,7 +1708,7 @@ Public Class frmRunner
                 'End If
             End If
 
-            UserSession.Display("ADRIFT Runner Version 5.0<br><>© Campbell Wild 1998-2019<br>Last build: 6th June 2016 (Release " & CInt(Double.Parse(Application.ProductVersion.Replace("5.0.", ""), Globalization.CultureInfo.InvariantCulture.NumberFormat)).ToString("0") & ")", True) '©
+            UserSession.Display("ADRIFT Runner Version 5.0<br><>© Campbell Wild 1998-2020<br>Last build: 9th September 2020 (Release " & CInt(Double.Parse(Application.ProductVersion.Replace("5.0.", ""), Globalization.CultureInfo.InvariantCulture.NumberFormat)).ToString("0") & ")", True) '©
 
         Catch ex As Exception
             ErrMsg("Startup Error", ex)

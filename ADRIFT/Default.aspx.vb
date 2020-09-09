@@ -46,7 +46,7 @@ Public Class _Default
 
     Private Property KeyPressed As Boolean
         Get
-            Return HttpContext.Current.Session.Item("KeyPressed")
+            Return SafeBool(HttpContext.Current.Session.Item("KeyPressed"))
         End Get
         Set(value As Boolean)
             HttpContext.Current.Session.Item("KeyPressed") = value
@@ -105,7 +105,10 @@ Public Class _Default
                 ' Clear text and set to last message
                 UserSession.UpdateStatusBar()
                 txtOutputWeb.InnerHtml = ""
-                If Not Locked Then UserSession.Display(Adventure.htblLocations(Adventure.Player.Location.LocationKey).ViewLocation & vbCrLf & vbCrLf, True)
+                If Not Locked Then
+                    Dim sStartLoc As String = Adventure.Player.Location.LocationKey
+                    If Adventure.htblLocations.ContainsKey(sStartLoc) Then UserSession.Display(Adventure.htblLocations(sStartLoc).ViewLocation & vbCrLf & vbCrLf, True)
+                End If
             End If
         End If
 
@@ -472,7 +475,7 @@ Public Class _Default
                                 sFace = sBuffer
                             End If
 
-                            Dim iSize As Integer = fontPrevious.SizeInPoints
+                            Dim iSize As Integer = SafeInt(fontPrevious.SizeInPoints)
                             i = sInstr(sTag, "size=")
                             If i > 0 Then
                                 Dim sBuffer As String = sMid(sTag, i + 5, sTag.Length - i - 4)
@@ -694,18 +697,28 @@ Public Class _Default
                                                         Dim sound As ADRIFT.clsBlorb.SoundFile = Blorb.GetSound(iResource, , sExtn)
                                                         sound.Save(Server.MapPath(sImgPath) & "/Sound" & iResource & "." & sExtn)
                                                         sURL = sImgPath & "/Sound" & iResource & "." & sExtn
-                                                    End If                                                    
+                                                    End If
 
-                                                    'Channel.InnerHtml
-                                                    Channel.InnerHtml = "<NOEMBED><BGSOUND SRC=""" & sURL & """ LOOP=" & IIf(bLooping, "1", "0").ToString & "></NOEMBED>" _
-                                                   & "<EMBED SRC=""" & sURL & """ AUTOSTART=""True"" HIDDEN=""True"" LOOP=""" & bLooping.ToString.ToLower & """>"
+                                                    ' BGSOUND tag now obsolete
+                                                    'Channel.InnerHtml = "<NOEMBED><BGSOUND SRC=""" & sURL & """ LOOP=" & IIf(bLooping, "1", "0").ToString & "></NOEMBED>" _
+                                                    '& "<EMBED SRC=""" & sURL & """ AUTOSTART=""True"" HIDDEN=""True"" LOOP=""" & bLooping.ToString.ToLower & """>"
+
+                                                    'Channel.InnerText = $"<audio src=""{sURL}"" loop={If(bLooping, "Y", "N")} autoplay>Your browser does not support the <code>audio</code> element.</audio>"
+
+                                                    'Channel.InnerHtml = $"<NOEMBED><audio src=""{sURL}"" loop={If(bLooping, "Y", "N")} autoplay>Your browser does not support the <code>audio</code> element.</audio></NOEMBED>" &
+                                                    ' "<EMBED SRC=""{sURL}"" AUTOSTART=""True"" HIDDEN=""True"" LOOP=""{bLooping.ToString.ToLower}"">"
+
+                                                    Dim bMuted As Boolean = muteButton.ToolTip = "Unmute audio"
+                                                    Channel.InnerHtml = $"<video controls autoplay {If(bMuted, "muted", "")} id=""audio{iChannel}"" {If(bLooping, " loop", "")} src=""{sURL}"">Your browser does not support the <code>video</code> element.</video>"
+
+                                                    muteButton.Visible = True
                                                     UpdatePanelAudioChannels.Update()
                                                 End If
                                             Else
                                                 '    fRunner.pbxGraphics.Load(sBuffer)
                                             End If
 
-                                           
+
                                             'PlaySound(sSrc, iChannel, bLooping)
                                         End If
                                     End If
@@ -735,7 +748,7 @@ Public Class _Default
 
     Private Property WaitKeyBuffer As String
         Get
-            Return HttpContext.Current.Session.Item("WaitKeyBuffer")
+            Return SafeString(HttpContext.Current.Session.Item("WaitKeyBuffer"))
         End Get
         Set(value As String)
             HttpContext.Current.Session.Item("WaitKeyBuffer") = value
@@ -778,7 +791,7 @@ Public Class _Default
 
     Private Sub WebSplitter1_SplitterPaneSizeChanged(sender As Object, e As Infragistics.Web.UI.LayoutControls.SplitterPaneSizeChangedEventArgs) Handles WebSplitter1.SplitterPaneSizeChanged
         Debug.WriteLine(e.Pane.Size)
-        MapWidth = WebSplitter1.Panes(1).Size.Value
+        MapWidth = CInt(WebSplitter1.Panes(1).Size.Value)
     End Sub
 
     Public Sub RefreshMap()
@@ -786,6 +799,21 @@ Public Class _Default
         MapImage.ImageUrl = "~/MapHandler.ashx?" & New Random().Next
 
         UpdatePanelMap.Update()
+    End Sub
+
+
+    Private Sub muteButton_Click(sender As Object, e As ImageClickEventArgs) Handles muteButton.Click
+
+        If muteButton.ToolTip = "Unmute audio" Then
+            muteButton.ToolTip = "Mute audio"
+            muteButton.ImageUrl = "http://play.adrift.co/img/unmute.png"
+            muteButton.OnClientClick = "MuteAudio(true)"
+        Else
+            muteButton.ToolTip = "Unmute audio"
+            muteButton.ImageUrl = "http://play.adrift.co/img/mute.png"
+            muteButton.OnClientClick = "MuteAudio(false)"
+        End If
+
     End Sub
 
 End Class

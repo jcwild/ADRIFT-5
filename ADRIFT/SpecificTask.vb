@@ -15,174 +15,180 @@ Public Class SpecificTask
 
     Friend Sub LoadSpecific(ByVal sTaskGeneralKey As String, ByRef ParentTask As clsTask)
 
-        Dim sBlocks() As String
-        Dim iLength As Integer
-        Dim bReference As Boolean
-        Dim bLastBlock As Boolean
-        Dim iNumSpecific As Integer = 0
-        Dim sOrigBlock As String
+        Try
+            Dim sBlocks() As String
+            Dim iLength As Integer
+            Dim bReference As Boolean
+            Dim bLastBlock As Boolean
+            Dim iNumSpecific As Integer = 0
+            Dim sOrigBlock As String
 
-        tas = ParentTask
-        sGeneralKey = sTaskGeneralKey
+            tas = ParentTask
+            sGeneralKey = sTaskGeneralKey
 
-        Dim sTaskText As String = Adventure.htblTasks(sGeneralKey).MakeNice
+            Dim sTaskText As String = Adventure.htblTasks(sGeneralKey).MakeNice
 
-        With Me.txtSpecific
-            .Text = ""
+            With Me.txtSpecific
+                .Text = ""
 
-            sBlocks = Split(sTaskText, "%")
+                sBlocks = Split(sTaskText, "%")
 
-            For Each sBlock As String In sBlocks
+                For Each sBlock As String In sBlocks
 
-                bReference = False
-                sOrigBlock = sBlock
+                    bReference = False
+                    sOrigBlock = sBlock
 
-                Select Case sBlock.ToLower
-                    Case "character", "character1", "character2", "character3", "character4", "character5", "characters", "direction", "direction1", "direction2", "direction3", "direction4", "direction5", "number", "number1", "number2", "number3", "number4", "number5", "numbers", "object", "object1", "object2", "object3", "object4", "object5", "objects", "text", "text1", "text2", "text3", "text4", "text5", "location", "location1", "location2", "location3", "location4", "location5", "item", "item1", "item2", "item3", "item4", "item5"
-                        If sTaskText.Substring(iLength - 1, 1) = "%" AndAlso sTaskText.Substring(iLength + sBlock.Length, 1) = "%" Then
-                            bReference = True
-                            iNumSpecific += 1
-                            If iNumSpecific > tas.Specifics.Length Then
-                                ReDim Preserve tas.Specifics(iNumSpecific - 1)
-                                tas.Specifics(iNumSpecific - 1) = New clsTask.Specific
-                                tas.Specifics(iNumSpecific - 1).Keys.Add("")
-                            End If
-                            With tas.Specifics(iNumSpecific - 1)
-                                Select Case sBlock.ToLower
-                                    Case "character", "character1", "character2", "character3", "character4", "character5"
-                                        .Type = ReferencesType.Character
-                                        .Multiple = False
-                                    Case "characters"
-                                        .Type = ReferencesType.Character
-                                        .Multiple = True
-                                    Case "direction", "direction1", "direction2", "direction3", "direction4", "direction5"
-                                        .Type = ReferencesType.Direction
-                                        .Multiple = False
-                                    Case "number", "number1", "number2", "number3", "number4", "number5"
-                                        .Type = ReferencesType.Number
-                                        .Multiple = False
-                                    Case "numbers"
-                                        .Type = ReferencesType.Number
-                                        .Multiple = True
-                                    Case "object", "object1", "object2", "object3", "object4", "object5"
-                                        .Type = ReferencesType.Object
-                                        .Multiple = False
-                                    Case "objects"
-                                        .Type = ReferencesType.Object
-                                        .Multiple = True
-                                    Case "text", "text1", "text2", "text3", "text4", "text5"
-                                        .Type = ReferencesType.Text
-                                        .Multiple = False
-                                    Case "location", "location1", "location2", "location3", "location4", "location5"
-                                        .Type = ReferencesType.Location
-                                        .Multiple = False
-                                    Case "item", "item1", "item2", "item3", "item4", "item5"
-                                        .Type = ReferencesType.Item
-                                        .Multiple = False
-                                End Select
-
-                                If Not .Keys Is Nothing AndAlso .Keys.Count > 0 Then
-                                    sBlock = .List
-                                    If sBlock = "" Then sBlock = sOrigBlock
-                                    Select Case sBlock.ToLower
-                                        Case "object1"
-                                            sBlock = "first object"
-                                        Case "object2"
-                                            sBlock = "second object"
-                                        Case "object3"
-                                            sBlock = "third object"
-                                        Case "object4"
-                                            sBlock = "fourth object"
-                                        Case "object5"
-                                            sBlock = "fifth object"
-                                        Case "character1"
-                                            sBlock = "first character"
-                                        Case "character2"
-                                            sBlock = "second character"
-                                        Case "character3"
-                                            sBlock = "third character"
-                                        Case "character4"
-                                            sBlock = "fourth character"
-                                        Case "character5"
-                                            sBlock = "fifth character"
-                                        Case "direction1"
-                                            sBlock = "first direction"
-                                        Case "direction1"
-                                            sBlock = "second direction"
-                                        Case "direction1"
-                                            sBlock = "third direction"
-                                        Case "direction1"
-                                            sBlock = "fourth direction"
-                                        Case "direction1"
-                                            sBlock = "fifth direction"
-                                        Case "number1"
-                                            sBlock = "first number"
-                                        Case "number2"
-                                            sBlock = "second number"
-                                        Case "number3"
-                                            sBlock = "third number"
-                                        Case "number4"
-                                            sBlock = "fourth number"
-                                        Case "number5"
-                                            sBlock = "fifth number"
-                                        Case "text1"
-                                            sBlock = "first text"
-                                        Case "text2"
-                                            sBlock = "second text"
-                                        Case "text3"
-                                            sBlock = "third text"
-                                        Case "text4"
-                                            sBlock = "fourth text"
-                                        Case "text5"
-                                            sBlock = "fifth text"
-                                        Case "item1"
-                                            sBlock = "first item"
-                                        Case "item2"
-                                            sBlock = "second item"
-                                        Case "item3"
-                                            sBlock = "third item"
-                                        Case "item4"
-                                            sBlock = "fourth item"
-                                        Case "item5"
-                                            sBlock = "fifth item"
-                                        Case "location1"
-                                            sBlock = "first location"
-                                        Case "location2"
-                                            sBlock = "second location"
-                                        Case "location3"
-                                            sBlock = "third location"
-                                        Case "location4"
-                                            sBlock = "fourth location"
-                                        Case "location5"
-                                            sBlock = "fifth location"
-                                    End Select
+                    Select Case sBlock.ToLower
+                        Case "character", "character1", "character2", "character3", "character4", "character5", "characters", "direction", "direction1", "direction2", "direction3", "direction4", "direction5", "number", "number1", "number2", "number3", "number4", "number5", "numbers", "object", "object1", "object2", "object3", "object4", "object5", "objects", "text", "text1", "text2", "text3", "text4", "text5", "location", "location1", "location2", "location3", "location4", "location5", "item", "item1", "item2", "item3", "item4", "item5"
+                            If sTaskText.Substring(iLength - 1, 1) = "%" AndAlso sTaskText.Substring(iLength + sBlock.Length, 1) = "%" Then
+                                bReference = True
+                                iNumSpecific += 1
+                                If iNumSpecific > tas.Specifics.Length Then
+                                    ReDim Preserve tas.Specifics(iNumSpecific - 1)
+                                    tas.Specifics(iNumSpecific - 1) = New clsTask.Specific
+                                    tas.Specifics(iNumSpecific - 1).Keys.Add("")
                                 End If
+                                With tas.Specifics(iNumSpecific - 1)
+                                    Select Case sBlock.ToLower
+                                        Case "character", "character1", "character2", "character3", "character4", "character5"
+                                            .Type = ReferencesType.Character
+                                            .Multiple = False
+                                        Case "characters"
+                                            .Type = ReferencesType.Character
+                                            .Multiple = True
+                                        Case "direction", "direction1", "direction2", "direction3", "direction4", "direction5"
+                                            .Type = ReferencesType.Direction
+                                            .Multiple = False
+                                        Case "number", "number1", "number2", "number3", "number4", "number5"
+                                            .Type = ReferencesType.Number
+                                            .Multiple = False
+                                        Case "numbers"
+                                            .Type = ReferencesType.Number
+                                            .Multiple = True
+                                        Case "object", "object1", "object2", "object3", "object4", "object5"
+                                            .Type = ReferencesType.Object
+                                            .Multiple = False
+                                        Case "objects"
+                                            .Type = ReferencesType.Object
+                                            .Multiple = True
+                                        Case "text", "text1", "text2", "text3", "text4", "text5"
+                                            .Type = ReferencesType.Text
+                                            .Multiple = False
+                                        Case "location", "location1", "location2", "location3", "location4", "location5"
+                                            .Type = ReferencesType.Location
+                                            .Multiple = False
+                                        Case "item", "item1", "item2", "item3", "item4", "item5"
+                                            .Type = ReferencesType.Item
+                                            .Multiple = False
+                                    End Select
 
-                            End With
-                        End If
-                    Case Else
-                End Select
+                                    If Not .Keys Is Nothing AndAlso .Keys.Count > 0 Then
+                                        sBlock = .List
+                                        If sBlock = "" Then sBlock = sOrigBlock
+                                        Select Case sBlock.ToLower
+                                            Case "object1"
+                                                sBlock = "first object"
+                                            Case "object2"
+                                                sBlock = "second object"
+                                            Case "object3"
+                                                sBlock = "third object"
+                                            Case "object4"
+                                                sBlock = "fourth object"
+                                            Case "object5"
+                                                sBlock = "fifth object"
+                                            Case "character1"
+                                                sBlock = "first character"
+                                            Case "character2"
+                                                sBlock = "second character"
+                                            Case "character3"
+                                                sBlock = "third character"
+                                            Case "character4"
+                                                sBlock = "fourth character"
+                                            Case "character5"
+                                                sBlock = "fifth character"
+                                            Case "direction1"
+                                                sBlock = "first direction"
+                                            Case "direction1"
+                                                sBlock = "second direction"
+                                            Case "direction1"
+                                                sBlock = "third direction"
+                                            Case "direction1"
+                                                sBlock = "fourth direction"
+                                            Case "direction1"
+                                                sBlock = "fifth direction"
+                                            Case "number1"
+                                                sBlock = "first number"
+                                            Case "number2"
+                                                sBlock = "second number"
+                                            Case "number3"
+                                                sBlock = "third number"
+                                            Case "number4"
+                                                sBlock = "fourth number"
+                                            Case "number5"
+                                                sBlock = "fifth number"
+                                            Case "text1"
+                                                sBlock = "first text"
+                                            Case "text2"
+                                                sBlock = "second text"
+                                            Case "text3"
+                                                sBlock = "third text"
+                                            Case "text4"
+                                                sBlock = "fourth text"
+                                            Case "text5"
+                                                sBlock = "fifth text"
+                                            Case "item1"
+                                                sBlock = "first item"
+                                            Case "item2"
+                                                sBlock = "second item"
+                                            Case "item3"
+                                                sBlock = "third item"
+                                            Case "item4"
+                                                sBlock = "fourth item"
+                                            Case "item5"
+                                                sBlock = "fifth item"
+                                            Case "location1"
+                                                sBlock = "first location"
+                                            Case "location2"
+                                                sBlock = "second location"
+                                            Case "location3"
+                                                sBlock = "third location"
+                                            Case "location4"
+                                                sBlock = "fourth location"
+                                            Case "location5"
+                                                sBlock = "fifth location"
+                                        End Select
+                                    End If
+
+                                End With
+                            End If
+                        Case Else
+                    End Select
 
 
-                If bReference Then
-                    'sBlock = "%" & sBlock & "%"
-                    .SelectionFont = New Font(.SelectionFont, FontStyle.Underline)
-                    .SelectionColor = Color.Blue
-                Else
-                    If Not bLastBlock AndAlso iLength > 0 Then sBlock = "%" & sBlock
-                    .SelectionFont = New Font(.SelectionFont, FontStyle.Regular)
-                    .SelectionColor = Color.Black
-                End If
+                    If bReference Then
+                        'sBlock = "%" & sBlock & "%"
+                        .SelectionFont = New Font(.SelectionFont, FontStyle.Underline)
+                        .SelectionColor = Color.Blue
+                    Else
+                        If Not bLastBlock AndAlso iLength > 0 Then sBlock = "%" & sBlock
+                        .SelectionFont = New Font(.SelectionFont, FontStyle.Regular)
+                        .SelectionColor = Color.Black
+                    End If
 
-                If sBlock <> "" Then .SelectedText = sBlock
-                .SelectionStart = .TextLength
-                bLastBlock = bReference
+                    If sBlock <> "" Then .SelectedText = sBlock
+                    .SelectionStart = .TextLength
+                    bLastBlock = bReference
 
-                iLength += sOrigBlock.Length + 1
+                    iLength += sOrigBlock.Length + 1
 
-            Next
+                Next
 
-        End With
+            End With
+        Catch exD As ObjectDisposedException
+            ' Ignore
+        Catch ex As Exception
+            ErrMsg("LoadSpecific error", ex)
+        End Try
 
     End Sub
 
@@ -252,44 +258,44 @@ Public Class SpecificTask
             Select Case tas.Specifics(iSpecific - 1).Type
                 Case ReferencesType.Object
                     .Text &= "Object"
-                    AddLVI(fPickKeys, "[ Referenced Object ]", "")
+                    fPickKeys.AddItem("[ Referenced Object ]", "", My.Resources.imgObjectStatic16)
                     For Each ob As clsObject In Adventure.htblObjects.Values
-                        AddLVI(fPickKeys, ob.FullName, ob.Key)
+                        fPickKeys.AddItem(ob)
                     Next
                 Case ReferencesType.Character
                     .Text &= "Character"
-                    AddLVI(fPickKeys, "[ The Player Character ]", THEPLAYER)
-                    AddLVI(fPickKeys, "[ Referenced Character ]", "")
+                    fPickKeys.AddItem("[ The Player Character ]", THEPLAYER, My.Resources.imgPlayer16)
+                    fPickKeys.AddItem("[ Referenced Character ]", "", My.Resources.imgCharacter16)
                     For Each ch As clsCharacter In Adventure.htblCharacters.Values
-                        AddLVI(fPickKeys, ch.Name, ch.Key)
+                        fPickKeys.AddItem(ch)
                     Next
                 Case ReferencesType.Location
                     .Text &= "Location"
-                    AddLVI(fPickKeys, "[ Referenced Location ]", "")
+                    fPickKeys.AddItem("[ Referenced Location ]", "", My.Resources.imgLocation16)
                     For Each loc As clsLocation In Adventure.htblLocations.Values
-                        AddLVI(fPickKeys, loc.ShortDescription.ToString, loc.Key)
+                        fPickKeys.AddItem(loc)
                     Next
                 Case ReferencesType.Direction
                     .Text &= "Direction"
-                    AddLVI(fPickKeys, "[ Referenced Direction ]", "")
+                    fPickKeys.AddItem("[ Referenced Direction ]", "", My.Resources.imgCentre16)
                     For Each eDir As DirectionsEnum In [Enum].GetValues(GetType(DirectionsEnum))
-                        AddLVI(fPickKeys, DirectionName(eDir), eDir.ToString)
+                        fPickKeys.AddItem(DirectionName(eDir), eDir.ToString, My.Resources.imgCentre16)
                     Next
                 Case ReferencesType.Text
                     .Text &= "Text"
-                    AddLVI(fPickKeys, "[ Referenced Text ]", "")
-                    AddLVI(fPickKeys, "[ Specific Text ]", "SPECIFICTEXT")
+                    fPickKeys.AddItem("[ Referenced Text ]", "", My.Resources.imgALR16)
+                    fPickKeys.AddItem("[ Specific Text ]", "SPECIFICTEXT", My.Resources.imgALR16)
                 Case ReferencesType.Item
                     .Text &= "Item"
-                    AddLVI(fPickKeys, "[ Referenced Item ]", "")
+                    fPickKeys.AddItem("[ Referenced Item ]", "", My.Resources.imgHelp16)
                     For Each ob As clsObject In Adventure.htblObjects.Values
-                        AddLVI(fPickKeys, ob.FullName, ob.Key)
+                        fPickKeys.AddItem(ob)
                     Next
                     For Each ch As clsCharacter In Adventure.htblCharacters.Values
-                        AddLVI(fPickKeys, ch.Name, ch.Key)
+                        fPickKeys.AddItem(ch)
                     Next
                     For Each loc As clsLocation In Adventure.htblLocations.Values
-                        AddLVI(fPickKeys, loc.ShortDescription.ToString, loc.Key)
+                        fPickKeys.AddItem(loc)
                     Next
             End Select
             If tas.Specifics(iSpecific - 1).Multiple Then .Text &= "s"
@@ -300,7 +306,7 @@ Public Class SpecificTask
                     If sText = "" Then
                         SelectListItem(.lvwKeys, "")
                     Else
-                        .lvwKeys.Items(1).SubItems(1).Text = sText
+                        .lvwKeys.Items(1).SubItems(1).Value = sText
                         SelectListItem(.lvwKeys, sText)
                     End If
                 End If
@@ -323,8 +329,8 @@ Public Class SpecificTask
             If .lvwKeys.SelectedItems.Count > 0 Then
                 Dim sal As New StringArrayList
 
-                For Each lvi As ListViewItem In .lvwKeys.SelectedItems
-                    Dim sKey As String = lvi.SubItems(1).Text
+                For Each lvi As Infragistics.Win.UltraWinListView.UltraListViewItem In .lvwKeys.SelectedItems
+                    Dim sKey As String = lvi.Key ' .SubItems(1).Text
                     If tas.Specifics(iSpecific - 1).Type = ReferencesType.Text AndAlso sKey <> "" Then
                         sKey = InputBox("Enter specific text:", "Specific text", IIf(sKey = "SPECIFICTEXT", "", sKey).ToString)
                     End If
@@ -340,23 +346,27 @@ Public Class SpecificTask
     End Function
 
 
-    Private Sub SelectListItem(ByVal lvw As ListView, ByVal sKey As String)
+    'Private Sub SelectListItem(ByVal lvw As ListView, ByVal sKey As String)
 
-        For Each lvi As ListViewItem In lvw.Items
-            If lvi.SubItems(1).Text = sKey Then
-                lvi.Selected = True
+    '    For Each lvi As ListViewItem In lvw.Items
+    '        If lvi.SubItems(1).Text = sKey Then
+    '            lvi.Selected = True
+    '            Exit Sub
+    '        End If
+    '    Next
+
+    'End Sub
+    Private Sub SelectListItem(ByVal lvw As Infragistics.Win.UltraWinListView.UltraListView, ByVal sKey As String)
+
+        lvw.SelectedItems.Clear()
+        For Each lvi As Infragistics.Win.UltraWinListView.UltraListViewItem In lvw.Items
+            If lvi.Key = sKey Then ' lvi.SubItems(1).Text = sKey Then
+                lvw.SelectedItems.Add(lvi)
+                lvw.ActiveItem = lvi
                 Exit Sub
             End If
         Next
 
-    End Sub
-
-
-    Public Sub AddLVI(ByVal frm As frmPickKeys, ByVal sName As String, ByVal sKey As String)
-        Dim lvi As New ListViewItem '(ob.FullName)
-        lvi.SubItems(0).Text = sName
-        lvi.SubItems.Add(sKey)
-        frm.lvwKeys.Items.Add(lvi)
     End Sub
 
 End Class

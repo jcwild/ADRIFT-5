@@ -35,7 +35,7 @@
 		    </form>
 	    </div>
         <div ID="footer" style="position:absolute;bottom:0px;height:25px;background:orange;width:100%;text-align:center" runat="server">
-		    For an improved user experience, please <a href="http://www.adrift.co/download">download</a> ADRIFT Runner for your operating system.
+		    For an improved user experience, please <a href="http://www.adrift.co/download">download</a> ADRIFT Runner for your operating system.            
 	    </div>        
     </body>
 

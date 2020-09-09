@@ -18,12 +18,12 @@ Imports System.Security
 #End If
 <Assembly: AssemblyDescription("Interactive Fiction Development System for Windows")> 
 <Assembly: AssemblyCompany("Campbell Wild")>
-<Assembly: AssemblyCopyright("© Campbell Wild 1998-2019")>
+<Assembly: AssemblyCopyright("© Campbell Wild 1998-2020")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: CLSCompliant(True)> 
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("64B7CFEE-FB09-4F21-9205-EAD65A7208B7")> 
+<Assembly: Guid("64B7CFEE-FB09-4F21-9205-EAD65A7208B7")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -35,4 +35,4 @@ Imports System.Security
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("5.0.36.0")> 
+<Assembly: AssemblyVersion("5.0.36.3")>

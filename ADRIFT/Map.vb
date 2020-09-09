@@ -688,7 +688,10 @@ Public Class Map
 #ElseIf Not www Then
                 iPage = SafeInt(tabsMap.SelectedTab.Key)
 #Else
-                iPage = Map.FindNode(Adventure.Player.Location.LocationKey).Page
+                Dim node As MapNode = Map.FindNode(Adventure.Player.Location.LocationKey)
+                If node Is Nothing Then Exit Sub
+
+                iPage = node.Page
                 If Page Is Nothing OrElse Page.iKey <> iPage Then
                     Page = Map.Pages(iPage)
                     CentreMap()
@@ -1847,8 +1850,8 @@ Public Class Map
 #End If
 
         ElseIf HotTrackedAnchor Is Nothing Then
-            If e.Button = Windows.Forms.MouseButtons.Left AndAlso (System.Windows.Forms.Control.ModifierKeys And Keys.Shift) = 0 Then imgMap.Cursor = Cursors.NoMove2D
-            If e.Button = Windows.Forms.MouseButtons.Right Then imgMap.Cursor = Cursors.SizeAll
+            If e.Button = Windows.Forms.MouseButtons.Left AndAlso (System.Windows.Forms.Control.ModifierKeys And Keys.Shift) = 0 Then imgMap.Cursor = CType(Cursors.NoMove2D, Cursor)
+            If e.Button = Windows.Forms.MouseButtons.Right Then imgMap.Cursor = CType(Cursors.SizeAll, Cursor)
         End If
 
     End Sub
@@ -2079,10 +2082,10 @@ Public Class Map
             ElseIf (Control.ModifierKeys And Keys.Shift) = 0 Then
 #End If
 
-                ' Rotate the display
-                imgMap.Cursor = Cursors.NoMove2D
+            ' Rotate the display
+            imgMap.Cursor = CType(Cursors.NoMove2D, Cursor)
 
-                iOffsetX = Math.Max(Math.Min(iOffsetStartX + e.Location.X - ptStart.X, 400), 0)
+            iOffsetX = Math.Max(Math.Min(iOffsetStartX + e.Location.X - ptStart.X, 400), 0)
                 iOffsetY = Math.Max(Math.Min(iOffsetStartY - e.Location.Y + ptStart.Y, 250), 0)
                 RecalculateNodes()
 #If Generator Then
@@ -2092,7 +2095,7 @@ Public Class Map
             imgMap.Refresh()
         ElseIf e.Button = Windows.Forms.MouseButtons.Right Then
             ' Move the whole map
-            imgMap.Cursor = Cursors.SizeAll
+            imgMap.Cursor = CType(Cursors.SizeAll, Cursor)
             iBoundX = iBoundStartX - e.Location.X + ptStart.X
             iBoundY = iBoundStartY - e.Location.Y + ptStart.Y
             RecalculateNodes()
@@ -2264,9 +2267,9 @@ Public Class Map
                 HotTrackedNode = nodeHotTrack
 
                 If HotTrackedNode IsNot Nothing Then
-                    imgMap.Cursor = Cursors.Hand
+                    imgMap.Cursor = CType(Cursors.Hand, Cursor)
                 Else
-                    imgMap.Cursor = Cursors.Arrow
+                    imgMap.Cursor = CType(Cursors.Arrow, Cursor)
                 End If
 #End If
 

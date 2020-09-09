@@ -1231,6 +1231,8 @@ Public Class frmAction
 
     Private Sub cmbObjectMoveWhat_SelectionChanged(sender As Object, e As System.EventArgs) Handles cmbObjectMoveWhat.SelectionChanged
 
+        If cmbObjectMoveWhat.SelectedItem Is Nothing Then Exit Sub
+
         With cmbObjectKey1
             .Items.Clear()
 
@@ -1288,6 +1290,8 @@ Public Class frmAction
 
     Private Sub cmbCharacterMoveWho_SelectionChanged(sender As Object, e As System.EventArgs) Handles cmbCharacterMoveWho.SelectionChanged
 
+        If cmbCharacterMoveWho.SelectedItem Is Nothing Then Exit Sub
+
         With cmbCharacterKey1
             .Items.Clear()
 
@@ -1331,6 +1335,8 @@ Public Class frmAction
 
 
     Private Sub cmbLocationMoveWhat_SelectionChanged(sender As Object, e As System.EventArgs) Handles cmbLocationMoveWhat.SelectionChanged
+
+        If cmbLocationMoveWhat.SelectedItem Is Nothing Then Exit Sub
 
         With cmbLocationKey1
             .Items.Clear()
@@ -1545,6 +1551,8 @@ Public Class frmAction
 
     Private Sub cmbObjectMoveTo_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmbObjectMoveTo.ValueChanged
 
+        If cmbObjectMoveTo.SelectedItem Is Nothing Then Exit Sub
+
         With cmbObjectKey2
             Dim sCurrent As String = Nothing
             If .SelectedItem IsNot Nothing Then sCurrent = .SelectedItem.DataValue.ToString
@@ -1623,6 +1631,8 @@ Public Class frmAction
 
 
     Private Sub cmbCharacterMoveTo_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbCharacterMoveTo.ValueChanged
+
+        If cmbCharacterMoveTo.SelectedItem Is Nothing Then Exit Sub
 
         With cmbCharacterKey2
             Dim sCurrent As String = Nothing
@@ -1745,6 +1755,8 @@ Public Class frmAction
 
 
     Private Sub cmbLocationMoveTo_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbLocationMoveTo.ValueChanged
+
+        If cmbLocationMoveTo.SelectedItem Is Nothing Then Exit Sub
 
         With cmbLocationKey2
             Dim sCurrent As String = Nothing
@@ -2382,6 +2394,8 @@ Public Class frmAction
 
     Private Sub cmbVariableSet_ValueChanged(sender As Object, e As EventArgs) Handles cmbVariableSet.ValueChanged
 
+        If cmbVariableSet.SelectedItem Is Nothing Then Exit Sub
+
         Dim sPre As String = ""
         Dim v As clsVariable = Nothing
         If cmbVariable.SelectedItem IsNot Nothing Then v = Adventure.htblVariables(cmbVariable.SelectedItem.DataValue.ToString)
@@ -2602,6 +2616,8 @@ Public Class frmAction
 
 
     Private Sub cmbTasks_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbTasks.ValueChanged
+
+        If cmbTasks.SelectedItem Is Nothing Then Exit Sub
 
         Dim tasSelected As clsTask = Adventure.htblTasks(cmbTasks.SelectedItem.DataValue.ToString)
         Dim sParams As String = ""

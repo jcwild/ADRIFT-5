@@ -12,7 +12,7 @@ Module mdlRunner
         Get
 #If www Then
             If HttpContext.Current.Session Is Nothing Then Return Nothing
-            Return HttpContext.Current.Session.Item("RunnerSession")
+            Return CType(HttpContext.Current.Session.Item("RunnerSession"), RunnerSession)
 #Else
             Return _UserSession
 #End If

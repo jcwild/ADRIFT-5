@@ -2063,7 +2063,7 @@ Module FileIO
                         If Not Load500(Decompress(clsBlorb.ExecResource, dVersion >= 5.00002 AndAlso clsBlorb.bObfuscated, 16, clsBlorb.ExecResource.Length - 30), False) Then Return False
                         clsBlorb.bObfuscated = False
                         If clsBlorb.MetaData IsNot Nothing Then Adventure.BabelTreatyInfo.FromString(clsBlorb.MetaData.OuterXml)
-                        Adventure.FullPath = Application.ExecutablePath
+                        Adventure.FullPath = SafeString(Application.ExecutablePath)
                     Else
                         Return False
                     End If
