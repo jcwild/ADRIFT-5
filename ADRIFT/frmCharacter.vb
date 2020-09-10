@@ -1075,7 +1075,8 @@ Public Class frmCharacter
 
     Private Sub RemoveNode(ByVal node As UltraTreeNode)
 
-        For Each nodeChild As UltraTreeNode In node.Nodes
+        For i As Integer = node.Nodes.Count - 1 To 0 Step -1
+            Dim nodeChild As UltraTreeNode = node.Nodes(i)
             RemoveNode(nodeChild)
         Next
         htblTopics.Remove(node.Key)
