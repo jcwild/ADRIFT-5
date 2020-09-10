@@ -55,14 +55,14 @@ Public Class frmProperty
     Friend WithEvents grpDependencies As Infragistics.Win.Misc.UltraGroupBox
     Friend WithEvents lblValue As System.Windows.Forms.Label
     Friend WithEvents lblProperty As System.Windows.Forms.Label
-    Friend WithEvents cmbProperty As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbProperty As AutoCompleteCombo
     Friend WithEvents cmbValue As Infragistics.Win.UltraWinEditors.UltraComboEditor
     Friend WithEvents grpType As Infragistics.Win.Misc.UltraGroupBox
     Friend WithEvents chkMandatory As Infragistics.Win.UltraWinEditors.UltraCheckEditor
     Friend WithEvents lblType As System.Windows.Forms.Label
     Friend WithEvents cmbType As Infragistics.Win.UltraWinEditors.UltraComboEditor
     Friend WithEvents lblRestrictProperty As System.Windows.Forms.Label
-    Friend WithEvents cmbRestrictProperty As Infragistics.Win.UltraWinEditors.UltraComboEditor
+    Friend WithEvents cmbRestrictProperty As AutoCompleteCombo
     Friend WithEvents cmbRestrictValue As Infragistics.Win.UltraWinEditors.UltraComboEditor
     Friend WithEvents cmbPropertyOf As Infragistics.Win.UltraWinEditors.UltraComboEditor
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -109,7 +109,7 @@ Public Class frmProperty
         Dim UltraTab4 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.grpType = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.cmbRestrictProperty = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbRestrictProperty = New AutoCompleteCombo
         Me.cmbRestrictValue = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.cmbPropertyOf = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -123,7 +123,7 @@ Public Class frmProperty
         Me.lblValue = New System.Windows.Forms.Label()
         Me.cmbValue = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.lblProperty = New System.Windows.Forms.Label()
-        Me.cmbProperty = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
+        Me.cmbProperty = New AutoCompleteCombo
         Me.grpStateList = New Infragistics.Win.Misc.UltraGroupBox()
         Me.cmbAppendToProperty = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -201,7 +201,6 @@ Public Class frmProperty
         '
         Me.cmbRestrictProperty.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbRestrictProperty.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
         Me.cmbRestrictProperty.Enabled = False
         Me.cmbRestrictProperty.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbRestrictProperty.Location = New System.Drawing.Point(72, 83)
