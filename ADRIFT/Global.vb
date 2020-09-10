@@ -336,6 +336,17 @@ Module SharedModule
     End Sub
 
 
+    Private sWarnings As New List(Of String)
+    Public Sub WarnOnce(ByVal sMessage As String)
+
+        If Not sWarnings.Contains(sMessage) Then
+            ErrMsg(sMessage)
+            sWarnings.Add(sMessage)
+        End If
+
+    End Sub
+
+
     Public Function GetFontCollection() As Drawing.Text.PrivateFontCollection
 
         Dim _pfc As Drawing.Text.PrivateFontCollection = Nothing

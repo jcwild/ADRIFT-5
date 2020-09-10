@@ -1118,8 +1118,12 @@ restart:
         Private Function IsPropertySelected(ByVal prop As clsProperty) As Boolean
 
             If SafeString(prop.DependentKey) <> "" Then
-                If prop.DependentValue Is Nothing OrElse (MyBase.ContainsKey(prop.DependentKey) AndAlso Item(prop.DependentKey).Value = prop.DependentValue) Then
-                    Return IsPropertySelected(Item(prop.DependentKey))
+                If MyBase.ContainsKey(prop.DependentKey) Then
+                    If prop.DependentValue Is Nothing OrElse Item(prop.DependentKey).Value = prop.DependentValue Then
+                        Return IsPropertySelected(Item(prop.DependentKey))
+                    End If
+                Else
+                    WarnOnce($"Property ""{prop.Description}"" is dependent on ""{prop.DependentKey}"" but this property doesn't exist")
                 End If
             Else
                 Return prop.Selected
