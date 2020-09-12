@@ -15,6 +15,24 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0089BF2797CD45DA96B4DD72BF4EEA98"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_05AF28A1C0B448E0888FD65DCDDD65DB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0F7D475E265F401FB31A2AD1272ACCE0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1FEB23F1312D4DF990450D03BF803AAC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -45,7 +63,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6937F0259F414B6897F67C70D2AFA9D8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6BC3E85EF63A432181D9DE771D8B0B2D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6EE15379672E46F4AB21B12ECB33D7AC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7316187C12B44817BDC0A93F28EB8A49"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,6 +99,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9E724C24ABBD4DB9954AE1A13780BD88"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A397C18D38054F8DB6045A1633DDDFBF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B0F843FB894348DCBCA8CBB8AA2869A4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -70,6 +118,24 @@
         "Entry"
         {
         "MsmKey" = "8:_C4843DC8F0F649B398656BBFF109EE52"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D0DF7F04BC5648A7B2B9C7C535FE6E9F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D5A121634EAF4858A367DE36A3DE4EB0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D60861A921FF4538AB32A0A52EF9C474"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -154,11 +220,71 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0089BF2797CD45DA96B4DD72BF4EEA98"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Libraries\\StandardLibrary.amf"
+            "TargetName" = "8:StandardLibrary.amf"
+            "Tag" = "8:"
+            "Folder" = "8:_B82AB4D2EDCE4003AFDF3EF75D353D8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_05AF28A1C0B448E0888FD65DCDDD65DB"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\Conversation.taf"
+            "TargetName" = "8:Conversation.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F7D475E265F401FB31A2AD1272ACCE0"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Libraries\\TimeSystem.amf"
+            "TargetName" = "8:TimeSystem.amf"
+            "Tag" = "8:"
+            "Folder" = "8:_B82AB4D2EDCE4003AFDF3EF75D353D8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1FEB23F1312D4DF990450D03BF803AAC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:run500, Version=5.0.36.3, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:run500, Version=5.0.36.4, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_1FEB23F1312D4DF990450D03BF803AAC"
@@ -265,12 +391,72 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6937F0259F414B6897F67C70D2AFA9D8"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\Notebook.taf"
+            "TargetName" = "8:Notebook.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6BC3E85EF63A432181D9DE771D8B0B2D"
             {
             "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\ADRIFT 5 Help.chm"
             "TargetName" = "8:ADRIFT 5 Help.chm"
             "Tag" = "8:"
             "Folder" = "8:_D0223B47D3BD41748C5E7114AB94BA1B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6EE15379672E46F4AB21B12ECB33D7AC"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\TorchBattery.taf"
+            "TargetName" = "8:TorchBattery.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7316187C12B44817BDC0A93F28EB8A49"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\JackAndBeanstalk.taf"
+            "TargetName" = "8:JackAndBeanstalk.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -325,11 +511,51 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E724C24ABBD4DB9954AE1A13780BD88"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\DarkRoom.taf"
+            "TargetName" = "8:DarkRoom.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A397C18D38054F8DB6045A1633DDDFBF"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Libraries\\MoneySystem.amf"
+            "TargetName" = "8:MoneySystem.amf"
+            "Tag" = "8:"
+            "Folder" = "8:_B82AB4D2EDCE4003AFDF3EF75D353D8C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B0F843FB894348DCBCA8CBB8AA2869A4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:dev500, Version=5.0.36.3, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:dev500, Version=5.0.36.4, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_B0F843FB894348DCBCA8CBB8AA2869A4"
@@ -362,6 +588,66 @@
             "TargetName" = "8:amf.ico"
             "Tag" = "8:"
             "Folder" = "8:_03C52E13A5EC4F2ABFF4805592050A1C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D0DF7F04BC5648A7B2B9C7C535FE6E9F"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\BlockingExits.taf"
+            "TargetName" = "8:BlockingExits.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D5A121634EAF4858A367DE36A3DE4EB0"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\Cloak.taf"
+            "TargetName" = "8:Cloak.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D60861A921FF4538AB32A0A52EF9C474"
+            {
+            "SourcePath" = "8:\\\\nas.ad.wild.family\\home\\ADRIFT\\ADRIFT5\\Distribution\\Releases\\SetupProjectFiles\\Samples\\Doors.taf"
+            "TargetName" = "8:Doors.taf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6CFD42C968F412292D8F326B2715184"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -571,6 +857,28 @@
                         {
                         }
                     }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B82AB4D2EDCE4003AFDF3EF75D353D8C"
+                    {
+                    "Name" = "8:Libraries"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_89CED5BE09534420B3521908DF64B5C0"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E6CFD42C968F412292D8F326B2715184"
+                    {
+                    "Name" = "8:Samples"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_782F693A56AA4C1EBB98FE85480BA895"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -590,7 +898,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ADRIFT 5"
         "ProductCode" = "8:{8118B28C-B2D0-4A89-B825-5B96719A540F}"
-        "PackageCode" = "8:{52E67712-FEF6-4DF2-9AEC-DE7EFDB7F57D}"
+        "PackageCode" = "8:{183A8C8B-F9E5-493B-9AB9-B4B11620B7CC}"
         "UpgradeCode" = "8:{2CDBD759-DAF0-4824-9467-45CE15F706D4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
