@@ -196,3 +196,5 @@ ModelManifest.xml
 /.vs/ADRIFT5/config
 /ADRIFT/Icons/Thumbs.db
 /.vs/slnx.sqlite
+/ADRIFT Installer/ADRIFT Installer.msi
+/ADRIFT Installer/setup.exe
