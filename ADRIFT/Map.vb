@@ -1289,7 +1289,7 @@ Public Class Map
             'g.MultiplyTransform(myMatrix)
             g.DrawString(sText, fntText, brushNodeText, rectInner, sf)
             'g.Transform.Reset()
-            'g.DrawImage(My.Resources.imgOut32, New Rectangle(X2 - X, Y, 100, 100))   
+            'g.DrawImage(My.Resources.Resources.imgOut32, New Rectangle(X2 - X, Y, 100, 100))   
 
             Dim transformNode As System.Drawing.Drawing2D.Matrix = g.Transform
 

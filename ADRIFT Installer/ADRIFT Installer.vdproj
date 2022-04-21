@@ -175,6 +175,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -191,6 +199,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -838,7 +862,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_D0223B47D3BD41748C5E7114AB94BA1B"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -898,7 +922,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ADRIFT 5"
         "ProductCode" = "8:{8118B28C-B2D0-4A89-B825-5B96719A540F}"
-        "PackageCode" = "8:{183A8C8B-F9E5-493B-9AB9-B4B11620B7CC}"
+        "PackageCode" = "8:{178B274B-6AD7-4FBF-905B-0281AF722AEF}"
         "UpgradeCode" = "8:{2CDBD759-DAF0-4824-9467-45CE15F706D4}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1007,7 +1031,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:\"[ProgramFilesFolder][Manufacturer]\\[ProductName]\\dev500.exe\" \"%1\""
+                                                                    "Value" = "8:\"[ProgramFilesFolder]\\[ProductName]\\dev500.exe\" \"%1\""
                                                                     }
                                                                 }
                                                             }
@@ -1067,15 +1091,51 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_CA3E7DF6741E4129ACAD68653F9C63BF"
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_AFDD9154A0B54BC0BE943010DE066F06"
                             {
-                            "Name" = "8:[Manufacturer]"
+                            "Name" = "8:VB and VBA Program Settings"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:FALSE"
                             "Transitive" = "11:FALSE"
                                 "Keys"
                                 {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_94CFFF9ED70A497697B2E23D837AA893"
+                                    {
+                                    "Name" = "8:ADRIFT"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_98B452C98EC64515BAE3052CB46F0D1F"
+                                            {
+                                            "Name" = "8:Generator"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                }
+                                                "Values"
+                                                {
+                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_8329658ED2E54608A5CE7427A7F8E78E"
+                                                    {
+                                                    "Name" = "8:Libraries"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:[ProgramFilesFolder]\\[ProductName]\\Libraries\\StandardLibrary.amf#True|[ProgramFilesFolder]\\[ProductName]\\Libraries\\TimeSystem.amf#False|[ProgramFilesFolder]\\[ProductName]\\Libraries\\MoneySystem.amf#False|"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
                                 }
                                 "Values"
                                 {

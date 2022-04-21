@@ -264,7 +264,7 @@ Public Class frmTextOverride
 
 
     Private Sub frmHint_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgALR16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgALR16.GetHicon)
         GetFormPosition(Me)
     End Sub
 

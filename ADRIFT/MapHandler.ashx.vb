@@ -16,7 +16,7 @@ Public Class MapHandler
         '    image.Save(context.Response.OutputStream, ImageFormat.Jpeg)
         'End Using
         'If UserSession Is Nothing Then Exit Sub
-        '  CType(Page.Master, Site).footer.InnerHtml = "Please be aware that v5 is not yet 100% compatible with v4.  For this reason, please play this game on <a href=""http://www.adrift.co/files/ADRIFT40r.zip"">v4 Runner</a>."
+        '  CType(Page.Master, Site).footer.InnerHtml = "Please be aware that v5 is not yet 100% compatible with v4.  For this reason, please play this game on <a href=""https://www.adrift.co/files/ADRIFT40r.zip"">v4 Runner</a>."
         If UserSession Is Nothing Then Exit Sub
 
         Dim iHeight As Integer = MapHeight

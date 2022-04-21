@@ -829,7 +829,7 @@ Public Class frmLocation
         '
         Me.btnAddCharacter.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance1.BackColor = System.Drawing.Color.Transparent
-        Appearance1.Image = Global.ADRIFT.My.Resources.imgCharacter16
+        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
         Me.btnAddCharacter.Appearance = Appearance1
         Me.btnAddCharacter.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnAddCharacter.Location = New System.Drawing.Point(297, 413)
@@ -843,7 +843,7 @@ Public Class frmLocation
         '
         Me.btnAddDynamicOb.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance2.BackColor = System.Drawing.Color.Transparent
-        Appearance2.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
+        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
         Me.btnAddDynamicOb.Appearance = Appearance2
         Me.btnAddDynamicOb.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnAddDynamicOb.Location = New System.Drawing.Point(148, 413)
@@ -857,7 +857,7 @@ Public Class frmLocation
         '
         Me.btnRemoveItem.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.imgDelete
+        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgDelete
         Me.btnRemoveItem.Appearance = Appearance3
         Me.btnRemoveItem.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnRemoveItem.Location = New System.Drawing.Point(425, 413)
@@ -882,7 +882,7 @@ Public Class frmLocation
         '
         Me.btnAddObject.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Appearance4.BackColor = System.Drawing.Color.Transparent
-        Appearance4.Image = Global.ADRIFT.My.Resources.imgObjectStatic16
+        Appearance4.Image = Global.ADRIFT.My.Resources.Resources.imgObjectStatic16
         Me.btnAddObject.Appearance = Appearance4
         Me.btnAddObject.ButtonStyle = Infragistics.Win.UIElementButtonStyle.FlatBorderless
         Me.btnAddObject.Location = New System.Drawing.Point(8, 413)
@@ -1429,7 +1429,7 @@ Public Class frmLocation
 
     Private Sub frmLocation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Properties1.PropertyType = clsProperty.PropertyOfEnum.Locations
-        Me.Icon = Icon.FromHandle(My.Resources.imgLocation16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgLocation16.GetHicon)
 
         If DarkInterface() Then
             chkHideOnMap.ForeColor = Color.White

@@ -170,7 +170,7 @@ Public Class frmEvent
     End Sub
 
     Private Sub frmEvent_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        'Me.Icon = Icon.FromHandle(My.Resources.imgEvent16.GetHicon)
+        'Me.Icon = Icon.FromHandle(My.Resources.Resources.imgEvent16.GetHicon)
         GetFormPosition(Me)
     End Sub
 
@@ -504,11 +504,11 @@ Public Class frmEvent
 
         Select Case CType(optEventType.Value, clsEvent.EventTypeEnum)
             Case clsEvent.EventTypeEnum.TurnBased
-                Me.Icon = Icon.FromHandle(My.Resources.imgEvent16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgEvent16.GetHicon)
                 lblTurns.Text = "turns"
                 lblTurns2.Text = "turns"
             Case clsEvent.EventTypeEnum.TimeBased
-                Me.Icon = Icon.FromHandle(My.Resources.imgTimeEvent16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgTimeEvent16.GetHicon)
                 lblTurns.Text = "seconds"
                 lblTurns2.Text = "seconds"
         End Select

@@ -474,7 +474,7 @@ Public Class frmVariable
    
 
     Private Sub frmVariable_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgVariable16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgVariable16.GetHicon)
         GetFormPosition(Me)
     End Sub
 

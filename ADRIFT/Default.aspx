@@ -36,10 +36,10 @@
                 <div id="txtStatusBar" runat="server" style="float: left;">
                     Game Not Loaded</div>
                 <div style="float: right; padding-top:1px;">
-                    <asp:HyperLink ID="LinkAbout" ImageUrl="http://play.adrift.co/img/Help.png" ToolTip="About" NavigateUrl="~/About.aspx" runat="server" />
+                    <asp:HyperLink ID="LinkAbout" ImageUrl="https://play.adrift.co/img/Help.png" ToolTip="About" NavigateUrl="~/About.aspx" runat="server" />
                 </div>
                 <div id="mute" style="float: right; padding-top:1px; padding-right:5px;">
-                    <asp:ImageButton ID="muteButton" ImageUrl="http://play.adrift.co/img/mute.png" ToolTip="Unmute audio" runat="server" OnClientClick="MuteAudio(false)" Visible="false" />                    
+                    <asp:ImageButton ID="muteButton" ImageUrl="https://play.adrift.co/img/mute.png" ToolTip="Unmute audio" runat="server" OnClientClick="MuteAudio(false)" Visible="false" />                    
                 </div>                
                 <div id="txtScore" runat="server" style="float: right; width: 150px;">
                     Score: 0</div>
@@ -77,11 +77,11 @@
                                         bar to be the URL of an ADRIFT game file.<p></p>
                                         Or why not try one of the games below:
                                         <ul>
-                                            <li><a href="/?game=http://www.adrift.co/files/games/backtolife.taf" style="color: Red">
+                                            <li><a href="/?game=https://www.adrift.co/files/games/backtolife.taf" style="color: Red">
                                                 Back To Life... Unfortunately</a></li>
-                                            <li><a href="/?game=http://www.adrift.co/files/games/cursed.taf" style="color: Red">
+                                            <li><a href="/?game=https://www.adrift.co/files/games/cursed.taf" style="color: Red">
                                                 Cursed</a></li>
-                                            <li><a href="/?game=http://www.adrift.co/files/games/jim.blorb" style="color: Red">Jacaranda
+                                            <li><a href="/?game=https://www.adrift.co/files/games/jim.blorb" style="color: Red">Jacaranda
                                                 Jim</a></li>
                                         </ul>                                                                                                                
                                     </div>

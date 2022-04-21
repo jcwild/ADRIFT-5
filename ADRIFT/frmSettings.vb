@@ -1229,7 +1229,7 @@ Public Class frmSettings
     End Sub
 
     Private Sub frmOptions_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgSettings16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgSettings16.GetHicon)
         GetFormPosition(Me)
         tabsOptions.Tabs("Advanced").Visible = Not fGenerator.SimpleMode
     End Sub

@@ -241,41 +241,41 @@
 
                     Select Case .Item(0).SubItems(2).Text
                         Case "Location"
-                            cmsDrop.Items.Add("Location Name", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Location Key", My.Resources.imgLocation16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Display Location", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Exits from Location", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Objects at Location", My.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Location Name", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Location Key", My.Resources.Resources.imgLocation16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Display Location", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Exits from Location", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Objects at Location", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
                         Case "Object"
-                            cmsDrop.Items.Add("Object Name", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Object Key", My.Resources.imgObjectDynamic16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Object Description", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("List objects On", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("List objects Inside", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("List objects On and Inside", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Parent of Object", My.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Object Name", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Object Key", My.Resources.Resources.imgObjectDynamic16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Object Description", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("List objects On", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("List objects Inside", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("List objects On and Inside", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Parent of Object", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
                         Case "Task"
-                            cmsDrop.Items.Add("Task Key", My.Resources.imgTaskGeneral16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Task Completed", My.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Task Key", My.Resources.Resources.imgTaskGeneral16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Task Completed", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
                         Case "Character"
-                            cmsDrop.Items.Add("Character Name", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Character Key", My.Resources.imgCharacter16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Character Description", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("List objects held by Character", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("List objects worn by Character", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            'cmsDrop.Items.Add("List objects worn and held by Character", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Location of Character", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Parent of Character", My.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Character Name", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Character Key", My.Resources.Resources.imgCharacter16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Character Description", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("List objects held by Character", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("List objects worn by Character", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            'cmsDrop.Items.Add("List objects worn and held by Character", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Location of Character", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Parent of Character", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
                         Case "Property"
-                            cmsDrop.Items.Add("Property Value", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Property Key", My.Resources.imgProperty16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Property Value", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Property Key", My.Resources.Resources.imgProperty16, AddressOf SelectedMenuItem)
                         Case "Variable"
-                            cmsDrop.Items.Add("Variable Value", My.Resources.imgALR16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Variable Key", My.Resources.imgVariable16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Variable Value", My.Resources.Resources.imgALR16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Variable Key", My.Resources.Resources.imgVariable16, AddressOf SelectedMenuItem)
                         Case "Event"
-                            cmsDrop.Items.Add("Event Length", My.Resources.imgVariable16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Event Position", My.Resources.imgVariable16, AddressOf SelectedMenuItem)
-                            cmsDrop.Items.Add("Event Key", My.Resources.imgEvent16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Event Length", My.Resources.Resources.imgVariable16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Event Position", My.Resources.Resources.imgVariable16, AddressOf SelectedMenuItem)
+                            cmsDrop.Items.Add("Event Key", My.Resources.Resources.imgEvent16, AddressOf SelectedMenuItem)
                     End Select
                     cmsDrop.Show(MousePosition)
 
@@ -679,23 +679,23 @@ Start:
                     ' Functions that have arguments
                     Select Case sKeyword
                         Case "Children"
-                            AddTool("All", "All", My.Resources.imgProperty16, "Everything In and On this object.  This is the default.")
-                            AddTool("Characters, In", "Characters, In", My.Resources.imgProperty16, "All Characters inside this object")
-                            AddTool("Characters, On", "Characters, On", My.Resources.imgProperty16, "All Characters on this object")
-                            AddTool("Characters", "Characters", My.Resources.imgProperty16, "All Characters on and inside this object")
-                            AddTool("In", "In", My.Resources.imgProperty16, "Everything inside this object")
-                            AddTool("Objects, In", "Objects, In", My.Resources.imgProperty16, "All Objects inside this object")
-                            AddTool("Objects, On", "Objects, On", My.Resources.imgProperty16, "All Objects on this object")
-                            AddTool("Objects", "Objects", My.Resources.imgProperty16, "All Objects on and inside this object")
+                            AddTool("All", "All", My.Resources.Resources.imgProperty16, "Everything In and On this object.  This is the default.")
+                            AddTool("Characters, In", "Characters, In", My.Resources.Resources.imgProperty16, "All Characters inside this object")
+                            AddTool("Characters, On", "Characters, On", My.Resources.Resources.imgProperty16, "All Characters on this object")
+                            AddTool("Characters", "Characters", My.Resources.Resources.imgProperty16, "All Characters on and inside this object")
+                            AddTool("In", "In", My.Resources.Resources.imgProperty16, "Everything inside this object")
+                            AddTool("Objects, In", "Objects, In", My.Resources.Resources.imgProperty16, "All Objects inside this object")
+                            AddTool("Objects, On", "Objects, On", My.Resources.Resources.imgProperty16, "All Objects on this object")
+                            AddTool("Objects", "Objects", My.Resources.Resources.imgProperty16, "All Objects on and inside this object")
 
                         Case "Contents"
-                            AddTool("All", "All", My.Resources.imgProperty16, "Everything Inside this object.  This is the default.")
-                            AddTool("Characters", "Characters", My.Resources.imgProperty16, "All Characters inside this object")
-                            AddTool("Objects", "Objects", My.Resources.imgProperty16, "All Objects inside this object")
+                            AddTool("All", "All", My.Resources.Resources.imgProperty16, "Everything Inside this object.  This is the default.")
+                            AddTool("Characters", "Characters", My.Resources.Resources.imgProperty16, "All Characters inside this object")
+                            AddTool("Objects", "Objects", My.Resources.Resources.imgProperty16, "All Objects inside this object")
 
                         Case "Held"
-                            AddTool("True", "True", My.Resources.imgProperty16, "Returns held items recursively (i.e. objects inside held items).  This is the default.")
-                            AddTool("False", "False", My.Resources.imgProperty16, "Does not return items recursively (i.e. only directly held items)")
+                            AddTool("True", "True", My.Resources.Resources.imgProperty16, "Returns held items recursively (i.e. objects inside held items).  This is the default.")
+                            AddTool("False", "False", My.Resources.Resources.imgProperty16, "Does not return items recursively (i.e. only directly held items)")
 
                         Case "List"
                             Dim htblArgs As Dictionary(Of Integer, String) = Nothing
@@ -708,20 +708,20 @@ Start:
                             Dim bLocationList As Boolean = False
                             GetKeywordType(arlKeywords, htblArgs, bObject, bObjectList, Nothing, bChar, bCharList, Nothing, False, Nothing, False, False, Nothing, bLocationList, Nothing, Nothing, Nothing)
                             If bObject OrElse bObjectList Then
-                                AddTool("Definite", "Definite", My.Resources.imgProperty16, "Use the Definite article in names (e.g. *the* box).  This is the default.")
-                                AddTool("Indefinite", "Indefinite", My.Resources.imgProperty16, "Use the Indefinite article in names (e.g. *a* box)")
-                                AddTool("True", "True", My.Resources.imgProperty16, "List everything in/on every item in the list.  This is the default.")
-                                AddTool("False", "False", My.Resources.imgProperty16, "Do not list anything in/on every item in the list.")
+                                AddTool("Definite", "Definite", My.Resources.Resources.imgProperty16, "Use the Definite article in names (e.g. *the* box).  This is the default.")
+                                AddTool("Indefinite", "Indefinite", My.Resources.Resources.imgProperty16, "Use the Indefinite article in names (e.g. *a* box)")
+                                AddTool("True", "True", My.Resources.Resources.imgProperty16, "List everything in/on every item in the list.  This is the default.")
+                                AddTool("False", "False", My.Resources.Resources.imgProperty16, "Do not list anything in/on every item in the list.")
                             End If
-                            AddTool("And", "And", My.Resources.imgProperty16, "Use ""and"" as the list separator.  This is the default.")
-                            AddTool("Or", "Or", My.Resources.imgProperty16, "Use ""or"" as the list separator.")
-                            AddTool("Rows", "Rows", My.Resources.imgProperty16, "Display each item in the list on a separate row.")
+                            AddTool("And", "And", My.Resources.Resources.imgProperty16, "Use ""and"" as the list separator.  This is the default.")
+                            AddTool("Or", "Or", My.Resources.Resources.imgProperty16, "Use ""or"" as the list separator.")
+                            AddTool("Rows", "Rows", My.Resources.Resources.imgProperty16, "Display each item in the list on a separate row.")
 
                         Case "LocationTo"
                             For Each d As DirectionsEnum In [Enum].GetValues(GetType(DirectionsEnum))
-                                AddTool(DirectionName(d), d.ToString, My.Resources.imgChildren, "Returns the location " & DirectionName(d) & " from here.")
+                                AddTool(DirectionName(d), d.ToString, My.Resources.Resources.imgChildren, "Returns the location " & DirectionName(d) & " from here.")
                             Next
-                            AddTool("%direction%", "%direction%", My.Resources.imgChildren, "Returns the location in the Referenced Direction from here.")
+                            AddTool("%direction%", "%direction%", My.Resources.Resources.imgChildren, "Returns the location in the Referenced Direction from here.")
 
                         Case "Name"
                             Dim htblArgs As Dictionary(Of Integer, String) = Nothing
@@ -731,26 +731,26 @@ Start:
                             Dim bObject As Boolean = False
                             GetKeywordType(arlKeywords, htblArgs, bObject, False, Nothing, bChar, False, Nothing, False, Nothing, False, False, Nothing, Nothing, Nothing, Nothing, Nothing)
                             If bChar Then
-                                AddTool("None", "None", My.Resources.imgProperty16, "Do not replace with a pronoun at any time.", "Pronouns")
-                                AddTool("Force", "Force", My.Resources.imgProperty16, "Enforce the use of pronouns.", "Pronouns")
-                                AddTool("Objective", "Objective", My.Resources.imgProperty16, "Replace with the objective pronoun (me, you, him, her, it) when referred to multiple times.", "Pronouns")
-                                AddTool("Possessive", "Possessive", My.Resources.imgProperty16, "Replace with the possessive pronoun (my, your, his, her, its) when referred to multiple times.", "Pronouns")
-                                AddTool("Reflective", "Reflective", My.Resources.imgProperty16, "Replace with the reflective pronoun (myself, yourself, himself, herself, itself) when referred to multiple times.", "Pronouns")
-                                AddTool("Subjective", "Subjective", My.Resources.imgProperty16, "Replace with the subjective pronoun (I, you, he, she, it) when referred to multiple times.  This is the default", "Pronouns")
+                                AddTool("None", "None", My.Resources.Resources.imgProperty16, "Do not replace with a pronoun at any time.", "Pronouns")
+                                AddTool("Force", "Force", My.Resources.Resources.imgProperty16, "Enforce the use of pronouns.", "Pronouns")
+                                AddTool("Objective", "Objective", My.Resources.Resources.imgProperty16, "Replace with the objective pronoun (me, you, him, her, it) when referred to multiple times.", "Pronouns")
+                                AddTool("Possessive", "Possessive", My.Resources.Resources.imgProperty16, "Replace with the possessive pronoun (my, your, his, her, its) when referred to multiple times.", "Pronouns")
+                                AddTool("Reflective", "Reflective", My.Resources.Resources.imgProperty16, "Replace with the reflective pronoun (myself, yourself, himself, herself, itself) when referred to multiple times.", "Pronouns")
+                                AddTool("Subjective", "Subjective", My.Resources.Resources.imgProperty16, "Replace with the subjective pronoun (I, you, he, she, it) when referred to multiple times.  This is the default", "Pronouns")
                             End If
                             If bObject OrElse bChar Then
-                                AddTool("Definite", "Definite", My.Resources.imgProperty16, "Use the Definite article in names (e.g. *the* " & IIf(bObject, "box", "man").ToString & IIf(bObject, ").  This is the default.", ").").ToString)
-                                AddTool("Indefinite", "Indefinite", My.Resources.imgProperty16, "Use the Indefinite article in names (e.g. *a* " & IIf(bObject, "box", "man").ToString & IIf(bChar, ").", ").").ToString)
-                                AddTool("None", "None", My.Resources.imgProperty16, "Suppress the article in names (e.g. just " & IIf(bObject, "box", "man").ToString & IIf(bChar, ").", ").").ToString)
+                                AddTool("Definite", "Definite", My.Resources.Resources.imgProperty16, "Use the Definite article in names (e.g. *the* " & IIf(bObject, "box", "man").ToString & IIf(bObject, ").  This is the default.", ").").ToString)
+                                AddTool("Indefinite", "Indefinite", My.Resources.Resources.imgProperty16, "Use the Indefinite article in names (e.g. *a* " & IIf(bObject, "box", "man").ToString & IIf(bChar, ").", ").").ToString)
+                                AddTool("None", "None", My.Resources.Resources.imgProperty16, "Suppress the article in names (e.g. just " & IIf(bObject, "box", "man").ToString & IIf(bChar, ").", ").").ToString)
                             End If
 
                         Case "Worn"
-                            AddTool("True", "True", My.Resources.imgProperty16, "Returns worn items recursively (i.e. objects inside worn items).  This is the default.")
-                            AddTool("False", "False", My.Resources.imgProperty16, "Does not return items recursively (i.e. only directly worn items)")
+                            AddTool("True", "True", My.Resources.Resources.imgProperty16, "Returns worn items recursively (i.e. objects inside worn items).  This is the default.")
+                            AddTool("False", "False", My.Resources.Resources.imgProperty16, "Does not return items recursively (i.e. only directly worn items)")
 
                         Case "WornAndHeld"
-                            AddTool("True", "True", My.Resources.imgProperty16, "Returns held and worn items recursively (i.e. objects inside worn/held items).  This is the default.")
-                            AddTool("False", "False", My.Resources.imgProperty16, "Does not return items recursively (i.e. only directly worn or held items)")
+                            AddTool("True", "True", My.Resources.Resources.imgProperty16, "Returns held and worn items recursively (i.e. objects inside worn/held items).  This is the default.")
+                            AddTool("False", "False", My.Resources.Resources.imgProperty16, "Does not return items recursively (i.e. only directly worn or held items)")
 
                         Case Else
                             If Adventure.htblAllProperties.ContainsKey(sKeyword) Then
@@ -758,11 +758,11 @@ Start:
                                 Select Case prop.Type
                                     Case clsProperty.PropertyTypeEnum.ValueList
                                         For Each val As String In prop.ValueList.Keys
-                                            AddTool(val, val, My.Resources.imgVariable16, "")
+                                            AddTool(val, val, My.Resources.Resources.imgVariable16, "")
                                         Next
                                     Case clsProperty.PropertyTypeEnum.StateList
                                         For Each state As String In prop.arlStates
-                                            AddTool(state, state, My.Resources.imgALR16, "")
+                                            AddTool(state, state, My.Resources.Resources.imgALR16, "")
                                         Next
                                 End Select
                             End If
@@ -814,58 +814,58 @@ SkipArgs:
                     GetKeywordType(arlKeywords, htblArgs, bObject, bObjectList, oObject, bChar, bCharacterList, oCharacter, bLoc, oLocation, bExitList, bEvt, oEvent, bLocationList, bSummable, bItem, bDirection)
 
                     If bObjectList OrElse bCharacterList OrElse bExitList OrElse bLocationList Then
-                        AddTool("List", "List", My.Resources.imgALR16, "This returns a comma separated list" & vbCrLf & "The List function can take various parameter to control how the list outputs.  Multiple parameters can be supplied.", "List")
-                        AddTool("Count", "Count", My.Resources.imgVariable16, "This returns an integer value of the number of items in the list")
+                        AddTool("List", "List", My.Resources.Resources.imgALR16, "This returns a comma separated list" & vbCrLf & "The List function can take various parameter to control how the list outputs.  Multiple parameters can be supplied.", "List")
+                        AddTool("Count", "Count", My.Resources.Resources.imgVariable16, "This returns an integer value of the number of items in the list")
                     End If
 
                     If bSummable Then
-                        AddTool("Sum", "Sum", My.Resources.imgVariable16, "This returns an integer value of the sum of the value of the items in the list")
+                        AddTool("Sum", "Sum", My.Resources.Resources.imgVariable16, "This returns an integer value of the sum of the value of the items in the list")
                     End If
 
                     If bObjectList Then
                         For Each p As clsProperty In Adventure.htblObjectProperties.Values
                             Select Case p.Type
                                 Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList, clsProperty.PropertyTypeEnum.StateList, clsProperty.PropertyTypeEnum.SelectionOnly
-                                    AddTool(p.CommonName, p.Key, My.Resources.imgFilter, GetPropertyHelp(p, True))
+                                    AddTool(p.CommonName, p.Key, My.Resources.Resources.imgFilter, GetPropertyHelp(p, True))
                             End Select
                         Next
                     End If
 
                     If bObject Then
                         Dim sObject As String = If(bItem, "item", "object").ToString
-                        AddTool(PCase(sObject) & " Name", "Name", My.Resources.imgALR16, "This returns the full " & sObject & " name")
-                        AddTool("Description", "Description", My.Resources.imgALR16, "This returns the description of the " & sObject)
-                        AddTool("Article", "Article", My.Resources.imgALR16, "The indefinite article of the " & sObject)
-                        AddTool("Adjective", "Adjective", My.Resources.imgALR16, "The adjective (prefix) of the " & sObject)
-                        AddTool("Noun", "Noun", My.Resources.imgALR16, "The primary noun of the " & sObject)
-                        AddTool("Contents", "Contents", My.Resources.imgGroup16, "This returns a list of all objects/characters inside the " & sObject, "Contents([Objects/Characters])")
-                        AddTool("Children", "Children", My.Resources.imgGroup16, "This returns a list of all objects/characters in/on the " & sObject, "Children([Objects/Characters], [In/On/OnAndIn])")
-                        AddTool("Location", "Location", My.Resources.imgLocation16, "This returns the location of the " & sObject & ", regardless whether the object is in/on something else")
-                        AddTool("Parent", "Parent", My.Resources.imgObjectDynamic16, "This returns the parent object/character/location of the " & sObject)
+                        AddTool(PCase(sObject) & " Name", "Name", My.Resources.Resources.imgALR16, "This returns the full " & sObject & " name")
+                        AddTool("Description", "Description", My.Resources.Resources.imgALR16, "This returns the description of the " & sObject)
+                        AddTool("Article", "Article", My.Resources.Resources.imgALR16, "The indefinite article of the " & sObject)
+                        AddTool("Adjective", "Adjective", My.Resources.Resources.imgALR16, "The adjective (prefix) of the " & sObject)
+                        AddTool("Noun", "Noun", My.Resources.Resources.imgALR16, "The primary noun of the " & sObject)
+                        AddTool("Contents", "Contents", My.Resources.Resources.imgGroup16, "This returns a list of all objects/characters inside the " & sObject, "Contents([Objects/Characters])")
+                        AddTool("Children", "Children", My.Resources.Resources.imgGroup16, "This returns a list of all objects/characters in/on the " & sObject, "Children([Objects/Characters], [In/On/OnAndIn])")
+                        AddTool("Location", "Location", My.Resources.Resources.imgLocation16, "This returns the location of the " & sObject & ", regardless whether the object is in/on something else")
+                        AddTool("Parent", "Parent", My.Resources.Resources.imgObjectDynamic16, "This returns the parent object/character/location of the " & sObject)
                         For Each p As clsProperty In Adventure.htblObjectProperties.Values
                             Select Case p.Key
                                 Case OBJECTARTICLE, OBJECTPREFIX, OBJECTNOUN
                                     ' Suppress
                                 Case Else
-                                    Dim img As Image = My.Resources.imgProperty16
+                                    Dim img As Image = My.Resources.Resources.imgProperty16
                                     Select Case p.Type
                                         Case clsProperty.PropertyTypeEnum.CharacterKey
-                                            img = My.Resources.imgCharacter16
+                                            img = My.Resources.Resources.imgCharacter16
                                         Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList
-                                            img = My.Resources.imgVariable16
+                                            img = My.Resources.Resources.imgVariable16
                                         Case clsProperty.PropertyTypeEnum.LocationGroupKey
-                                            img = My.Resources.imgGroup16
+                                            img = My.Resources.Resources.imgGroup16
                                         Case clsProperty.PropertyTypeEnum.LocationKey
-                                            img = My.Resources.imgLocation16
+                                            img = My.Resources.Resources.imgLocation16
                                         Case clsProperty.PropertyTypeEnum.ObjectKey
-                                            img = My.Resources.imgObjectDynamic16
+                                            img = My.Resources.Resources.imgObjectDynamic16
                                         Case clsProperty.PropertyTypeEnum.Text, clsProperty.PropertyTypeEnum.StateList
-                                            img = My.Resources.imgALR16
+                                            img = My.Resources.Resources.imgALR16
                                         Case clsProperty.PropertyTypeEnum.SelectionOnly
                                             If bObjectList Then
-                                                img = My.Resources.imgFilter
+                                                img = My.Resources.Resources.imgFilter
                                             Else
-                                                img = My.Resources.imgVariable16
+                                                img = My.Resources.Resources.imgVariable16
                                             End If
                                     End Select                                    
                                     If oObject Is Nothing OrElse oObject.HasProperty(p.Key) Then AddTool(p.CommonName, p.Key, img, GetPropertyHelp(p))                                    
@@ -877,41 +877,41 @@ SkipArgs:
                         For Each p As clsProperty In Adventure.htblCharacterProperties.Values
                             Select Case p.Type
                                 Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList, clsProperty.PropertyTypeEnum.StateList, clsProperty.PropertyTypeEnum.SelectionOnly
-                                    AddTool(p.CommonName, p.Key, My.Resources.imgFilter, GetPropertyHelp(p, True))
+                                    AddTool(p.CommonName, p.Key, My.Resources.Resources.imgFilter, GetPropertyHelp(p, True))
                             End Select
                         Next
                     End If
 
                     If bChar Then
-                        AddTool("Proper Name", "ProperName", My.Resources.imgALR16, "This returns the Proper name of the character")
-                        AddTool("Descriptor", "Descriptor", My.Resources.imgALR16, "This returns the descriptor of the character")
-                        AddTool("Character Name", "Name", My.Resources.imgALR16, "This returns the proper name (if known) otherwise the descriptor, of the character.  This function can take parameters to specify the pronoun substitution.") ' Proper or Descriptor
-                        AddTool("Description", "Description", My.Resources.imgALR16, "This returns the description of the character")
-                        AddTool("Held", "Held", My.Resources.imgGroup16, "This returns a list of everything held by the character" & vbCrLf & "The Held function can take a Boolean parameter to specify whether the list should recursively list objects inside or on other objects.  The default is True.")
-                        AddTool("Location", "Location", My.Resources.imgLocation16, "This returns the location of the character, regardless whether the character is in/on something else")
-                        AddTool("Worn", "Worn", My.Resources.imgGroup16, "This returns a list of everything worn by the character" & vbCrLf & "The Worn function can take a Boolean parameter to specify whether the list should recursively list objects inside or on other objects.  The default is True.")
-                        AddTool("WornAndHeld", "WornAndHeld", My.Resources.imgGroup16, "This returns a list of everything worn and held by the character" & vbCrLf & "The WornAndHeld function can take a Boolean parameter to specify whether the list should recursively list objects inside or on other objects.  The default is True.")
-                        AddTool("Parent", "Parent", My.Resources.imgObjectStatic16, "This returns the parent object/character/location of the character")                        
+                        AddTool("Proper Name", "ProperName", My.Resources.Resources.imgALR16, "This returns the Proper name of the character")
+                        AddTool("Descriptor", "Descriptor", My.Resources.Resources.imgALR16, "This returns the descriptor of the character")
+                        AddTool("Character Name", "Name", My.Resources.Resources.imgALR16, "This returns the proper name (if known) otherwise the descriptor, of the character.  This function can take parameters to specify the pronoun substitution.") ' Proper or Descriptor
+                        AddTool("Description", "Description", My.Resources.Resources.imgALR16, "This returns the description of the character")
+                        AddTool("Held", "Held", My.Resources.Resources.imgGroup16, "This returns a list of everything held by the character" & vbCrLf & "The Held function can take a Boolean parameter to specify whether the list should recursively list objects inside or on other objects.  The default is True.")
+                        AddTool("Location", "Location", My.Resources.Resources.imgLocation16, "This returns the location of the character, regardless whether the character is in/on something else")
+                        AddTool("Worn", "Worn", My.Resources.Resources.imgGroup16, "This returns a list of everything worn by the character" & vbCrLf & "The Worn function can take a Boolean parameter to specify whether the list should recursively list objects inside or on other objects.  The default is True.")
+                        AddTool("WornAndHeld", "WornAndHeld", My.Resources.Resources.imgGroup16, "This returns a list of everything worn and held by the character" & vbCrLf & "The WornAndHeld function can take a Boolean parameter to specify whether the list should recursively list objects inside or on other objects.  The default is True.")
+                        AddTool("Parent", "Parent", My.Resources.Resources.imgObjectStatic16, "This returns the parent object/character/location of the character")                        
                         For Each p As clsProperty In Adventure.htblCharacterProperties.Values
-                            Dim img As Image = My.Resources.imgProperty16
+                            Dim img As Image = My.Resources.Resources.imgProperty16
                             Select Case p.Type
                                 Case clsProperty.PropertyTypeEnum.CharacterKey
-                                    img = My.Resources.imgCharacter16
+                                    img = My.Resources.Resources.imgCharacter16
                                 Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList
-                                    img = My.Resources.imgVariable16
+                                    img = My.Resources.Resources.imgVariable16
                                 Case clsProperty.PropertyTypeEnum.LocationGroupKey
-                                    img = My.Resources.imgGroup16
+                                    img = My.Resources.Resources.imgGroup16
                                 Case clsProperty.PropertyTypeEnum.LocationKey
-                                    img = My.Resources.imgLocation16
+                                    img = My.Resources.Resources.imgLocation16
                                 Case clsProperty.PropertyTypeEnum.ObjectKey
-                                    img = My.Resources.imgObjectDynamic16
+                                    img = My.Resources.Resources.imgObjectDynamic16
                                 Case clsProperty.PropertyTypeEnum.Text, clsProperty.PropertyTypeEnum.StateList
-                                    img = My.Resources.imgALR16
+                                    img = My.Resources.Resources.imgALR16
                                 Case clsProperty.PropertyTypeEnum.SelectionOnly
                                     If bCharacterList Then
-                                        img = My.Resources.imgFilter
+                                        img = My.Resources.Resources.imgFilter
                                     Else
-                                        img = My.Resources.imgVariable16
+                                        img = My.Resources.Resources.imgVariable16
                                     End If
                             End Select
                             'If p.Type <> clsProperty.PropertyTypeEnum.SelectionOnly Then
@@ -924,38 +924,38 @@ SkipArgs:
                         For Each p As clsProperty In Adventure.htblLocationProperties.Values
                             Select Case p.Type
                                 Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList, clsProperty.PropertyTypeEnum.StateList, clsProperty.PropertyTypeEnum.SelectionOnly
-                                    AddTool(p.CommonName, p.Key, My.Resources.imgFilter, GetPropertyHelp(p, True))
+                                    AddTool(p.CommonName, p.Key, My.Resources.Resources.imgFilter, GetPropertyHelp(p, True))
                             End Select
                         Next
                     End If
 
                     If bLoc Then
-                        AddTool("Short Description", "Name", My.Resources.imgALR16, "This returns the short description of the location")
-                        AddTool("Long Description", "Description", My.Resources.imgALR16, "This returns the long description of the location")
-                        AddTool("LocationTo", "LocationTo", My.Resources.imgLocation16, "This returns a location relative to this one.  Requires direction parameter.")
-                        AddTool("Objects", "Objects", My.Resources.imgGroup16, "This returns a list of the objects in the location")
-                        AddTool("Characters", "Characters", My.Resources.imgGroup16, "This returns a list of the characters at the location")
-                        AddTool("Exits", "Exits", My.Resources.imgGroup16, "This returns a list of the exits in the location")                        
+                        AddTool("Short Description", "Name", My.Resources.Resources.imgALR16, "This returns the short description of the location")
+                        AddTool("Long Description", "Description", My.Resources.Resources.imgALR16, "This returns the long description of the location")
+                        AddTool("LocationTo", "LocationTo", My.Resources.Resources.imgLocation16, "This returns a location relative to this one.  Requires direction parameter.")
+                        AddTool("Objects", "Objects", My.Resources.Resources.imgGroup16, "This returns a list of the objects in the location")
+                        AddTool("Characters", "Characters", My.Resources.Resources.imgGroup16, "This returns a list of the characters at the location")
+                        AddTool("Exits", "Exits", My.Resources.Resources.imgGroup16, "This returns a list of the exits in the location")                        
                         For Each p As clsProperty In Adventure.htblLocationProperties.Values
-                            Dim img As Image = My.Resources.imgProperty16
+                            Dim img As Image = My.Resources.Resources.imgProperty16
                             Select Case p.Type
                                 Case clsProperty.PropertyTypeEnum.CharacterKey
-                                    img = My.Resources.imgCharacter16
+                                    img = My.Resources.Resources.imgCharacter16
                                 Case clsProperty.PropertyTypeEnum.Integer, clsProperty.PropertyTypeEnum.ValueList
-                                    img = My.Resources.imgVariable16
+                                    img = My.Resources.Resources.imgVariable16
                                 Case clsProperty.PropertyTypeEnum.LocationGroupKey
-                                    img = My.Resources.imgGroup16
+                                    img = My.Resources.Resources.imgGroup16
                                 Case clsProperty.PropertyTypeEnum.LocationKey
-                                    img = My.Resources.imgLocation16
+                                    img = My.Resources.Resources.imgLocation16
                                 Case clsProperty.PropertyTypeEnum.ObjectKey
-                                    img = My.Resources.imgObjectDynamic16
+                                    img = My.Resources.Resources.imgObjectDynamic16
                                 Case clsProperty.PropertyTypeEnum.Text, clsProperty.PropertyTypeEnum.StateList
-                                    img = My.Resources.imgALR16
+                                    img = My.Resources.Resources.imgALR16
                                 Case clsProperty.PropertyTypeEnum.SelectionOnly
                                     If bLocationList Then
-                                        img = My.Resources.imgFilter
+                                        img = My.Resources.Resources.imgFilter
                                     Else
-                                        img = My.Resources.imgVariable16
+                                        img = My.Resources.Resources.imgVariable16
                                     End If
                             End Select
                             'If p.Type <> clsProperty.PropertyTypeEnum.SelectionOnly Then
@@ -966,12 +966,12 @@ SkipArgs:
                     End If
 
                     If bEvt Then
-                        AddTool("Length", "Length", My.Resources.imgVariable16, "This returns the number of turns the event will run for")
-                        AddTool("Position", "Position", My.Resources.imgVariable16, "This returns the current position within the event")
+                        AddTool("Length", "Length", My.Resources.Resources.imgVariable16, "This returns the number of turns the event will run for")
+                        AddTool("Position", "Position", My.Resources.Resources.imgVariable16, "This returns the current position within the event")
                     End If
 
                     If bDirection Then
-                        AddTool("Name", "Name", My.Resources.imgALR16, "This returns the custom name for this direction")
+                        AddTool("Name", "Name", My.Resources.Resources.imgALR16, "This returns the custom name for this direction")
                     End If
 
                     If .Items.Count > 0 Then

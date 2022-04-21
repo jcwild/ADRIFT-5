@@ -4082,7 +4082,7 @@ NextChar2:
 
         Try
 #If www Then
-            Display("Save function not currently available for online play.  Please <a href=""http://www.adrift.co/download"">download</a> Runner app for enhanced functionality.")
+            Display("Save function not currently available for online play.  Please <a href=""https://www.adrift.co/download"">download</a> Runner app for enhanced functionality.")
             Return False
 #End If
             Dim sFilename As String = Adventure.sGameFilename
@@ -4126,7 +4126,7 @@ NextChar2:
     Friend Sub Restore()
 
 #If www Then
-        Display("Restore function not currently available for online play.  Please <a href=""http://www.adrift.co/download"">download</a> Runner app for enhanced functionality."& vbCrLf & vbCrLf, True)
+        Display("Restore function not currently available for online play.  Please <a href=""https://www.adrift.co/download"">download</a> Runner app for enhanced functionality."& vbCrLf & vbCrLf, True)
         Exit Sub
 #End If
 

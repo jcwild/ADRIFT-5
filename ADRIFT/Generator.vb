@@ -1008,10 +1008,10 @@ Module GeneratorGlobal
             AddFileToList(Adventure.FullPath)
             If Adventure.Password <> "" Then
                 fGenerator.UTMMain.Tools("ProtectAdventure").SharedProps.Caption = "Unprotect Adventure"
-                fGenerator.UTMMain.Tools("ProtectAdventure").SharedProps.AppearancesLarge.Appearance.Image = My.Resources.imgLock32
+                fGenerator.UTMMain.Tools("ProtectAdventure").SharedProps.AppearancesLarge.Appearance.Image = My.Resources.Resources.imgLock32
             Else
                 fGenerator.UTMMain.Tools("ProtectAdventure").SharedProps.Caption = "Protect Adventure"
-                fGenerator.UTMMain.Tools("ProtectAdventure").SharedProps.AppearancesLarge.Appearance.Image = My.Resources.imgUnlock32
+                fGenerator.UTMMain.Tools("ProtectAdventure").SharedProps.AppearancesLarge.Appearance.Image = My.Resources.Resources.imgUnlock32
             End If
         Else
             Adventure = OldAdventure
@@ -1756,17 +1756,17 @@ Module GeneratorGlobal
                             Case "Task"
                                 Select Case Adventure.htblTasks(sKey).TaskType
                                     Case clsTask.TaskTypeEnum.General
-                                        lvi.Appearance.Image = My.Resources.imgTaskGeneral16
+                                        lvi.Appearance.Image = My.Resources.Resources.imgTaskGeneral16
                                     Case clsTask.TaskTypeEnum.Specific
-                                        lvi.Appearance.Image = My.Resources.imgTaskSpecific16
+                                        lvi.Appearance.Image = My.Resources.Resources.imgTaskSpecific16
                                     Case clsTask.TaskTypeEnum.System
-                                        lvi.Appearance.Image = My.Resources.imgTaskSystem16
+                                        lvi.Appearance.Image = My.Resources.Resources.imgTaskSystem16
                                 End Select
                             Case "Object"
                                 If Adventure.htblObjects(sKey).IsStatic Then
-                                    lvi.Appearance.Image = My.Resources.imgObjectStatic16
+                                    lvi.Appearance.Image = My.Resources.Resources.imgObjectStatic16
                                 Else
-                                    lvi.Appearance.Image = My.Resources.imgObjectDynamic16
+                                    lvi.Appearance.Image = My.Resources.Resources.imgObjectDynamic16
                                 End If
                         End Select
                         lvi.SubItems(1).Value = Now

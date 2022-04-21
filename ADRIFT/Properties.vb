@@ -69,7 +69,7 @@ Public Class Properties
         'btnAddProperty
         '
         Me.btnAddProperty.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Appearance1.Image = Global.ADRIFT.My.Resources.imgAdd16
+        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
         Me.btnAddProperty.Appearance = Appearance1
         Me.btnAddProperty.Location = New System.Drawing.Point(9, 315)
         Me.btnAddProperty.Name = "btnAddProperty"

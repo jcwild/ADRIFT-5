@@ -1910,7 +1910,7 @@ Module FileIO
                 Dim fPassword As New Password
                 fPassword.Text = "Open Adventure"
                 fPassword.lblText.Text = "Please enter password:"
-                fPassword.PictureBox1.Image = My.Resources.imgLock32
+                fPassword.PictureBox1.Image = My.Resources.Resources.imgLock32
 #If DEBUG Then
                 fPassword.txtPassword.Text = Adventure.Password.TrimEnd
 #End If
@@ -2025,7 +2025,7 @@ Module FileIO
                     Dim fPassword As New Password
                     fPassword.Text = "Open Adventure"
                     fPassword.lblText.Text = "Please enter password:"
-                    fPassword.PictureBox1.Image = My.Resources.imgLock32
+                    fPassword.PictureBox1.Image = My.Resources.Resources.imgLock32
 #If DEBUG Then
                     fPassword.txtPassword.Text = Adventure.Password.TrimEnd
 #End If

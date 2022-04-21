@@ -117,7 +117,7 @@ Public Class FolderList
             End If
         End If
         nodeNew.Tag = folder.Key
-        nodeNew.Override.NodeAppearance.Image = My.Resources.imgFolderClosed16
+        nodeNew.Override.NodeAppearance.Image = My.Resources.Resources.imgFolderClosed16
         nodeNew.Expanded = folder.Expanded
 
         For Each sMember As String In folder.Members

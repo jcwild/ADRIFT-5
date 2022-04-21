@@ -135,11 +135,11 @@ Public Class frmTask
         Dim Appearance10 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
         Dim ValueListItem7 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
         Dim ValueListItem8 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
-        Dim UltraTab6 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab7 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab8 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab9 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab10 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab1 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab2 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab3 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab4 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
+        Dim UltraTab5 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
         Dim UltraStatusPanel1 As Infragistics.Win.UltraWinStatusBar.UltraStatusPanel = New Infragistics.Win.UltraWinStatusBar.UltraStatusPanel()
         Dim PopupMenuTool1 As Infragistics.Win.UltraWinToolbars.PopupMenuTool = New Infragistics.Win.UltraWinToolbars.PopupMenuTool("ctxmPopup")
         Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
@@ -147,15 +147,12 @@ Public Class frmTask
         Me.UltraLabel3 = New Infragistics.Win.Misc.UltraLabel()
         Me.txtCommands = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.grpSystem = New Infragistics.Win.Misc.UltraGroupBox()
-        Me.cmbSystemTriggerLocation = New AutoCompleteCombo
         Me.cmbSystemTrigger = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
         Me.UltraLabel4 = New Infragistics.Win.Misc.UltraLabel()
         Me.lblSystem = New Infragistics.Win.Misc.UltraLabel()
         Me.grpSpecific = New Infragistics.Win.Misc.UltraGroupBox()
         Me.cmbSpecificOverrideType = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.SpecificTask1 = New ADRIFT.SpecificTask()
         Me.chkExecuteParentActions = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.cmbGeneralTask = New ADRIFT.AutoCompleteCombo()
         Me.BlueBorder = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.chkOutputParentText = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -166,18 +163,14 @@ Public Class frmTask
         Me.btnParent = New Infragistics.Win.Misc.UltraButton()
         Me.btnChildren = New Infragistics.Win.Misc.UltraButton()
         Me.lblComplete = New Infragistics.Win.Misc.UltraLabel()
-        Me.txtCompletion = New ADRIFT.GenTextbox()
         Me.lblName = New Infragistics.Win.Misc.UltraLabel()
         Me.txtName = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
         Me.UltraTabPageControl2 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.RestrictDetails1 = New ADRIFT.RestrictDetails()
         Me.UltraTabPageControl3 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.Actions1 = New ADRIFT.Actions()
         Me.UltraTabPageControl8 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.UltraTabPageControl7 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
         Me.chkAggregate = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.txtFailOverride = New ADRIFT.GenTextbox()
         Me.chkContinue = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
         Me.lblAutofillDisabled = New System.Windows.Forms.Label()
         Me.chkPreventOverriding = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
@@ -201,24 +194,29 @@ Public Class frmTask
         Me.btnOK = New Infragistics.Win.Misc.UltraButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me._frmTask_Toolbars_Dock_Area_Left = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
-        Me.UTMPopup = New Infragistics.Win.UltraWinToolbars.UltraToolbarsManager(Me.components)
         Me._frmTask_Toolbars_Dock_Area_Right = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me._frmTask_Toolbars_Dock_Area_Top = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me._frmTask_Toolbars_Dock_Area_Bottom = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
         Me.HelpProvider = New System.Windows.Forms.HelpProvider()
+        Me.cmbSystemTriggerLocation = New ADRIFT.AutoCompleteCombo()
+        Me.SpecificTask1 = New ADRIFT.SpecificTask()
+        Me.cmbGeneralTask = New ADRIFT.AutoCompleteCombo()
+        Me.txtCompletion = New ADRIFT.GenTextbox()
+        Me.RestrictDetails1 = New ADRIFT.RestrictDetails()
+        Me.Actions1 = New ADRIFT.Actions()
+        Me.txtFailOverride = New ADRIFT.GenTextbox()
+        Me.UTMPopup = New Infragistics.Win.UltraWinToolbars.UltraToolbarsManager(Me.components)
         Me.UltraTabPageControl1.SuspendLayout()
         CType(Me.grpGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpGeneral.SuspendLayout()
         CType(Me.txtCommands, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grpSystem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpSystem.SuspendLayout()
-        CType(Me.cmbSystemTriggerLocation, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cmbSystemTrigger, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grpSpecific, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpSpecific.SuspendLayout()
         CType(Me.cmbSpecificOverrideType, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkExecuteParentActions, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cmbGeneralTask, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlueBorder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkOutputParentText, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkSpecific, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,6 +240,8 @@ Public Class frmTask
         Me.tabsMain.SuspendLayout()
         CType(Me.UltraStatusBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UltraStatusBar1.SuspendLayout()
+        CType(Me.cmbSystemTriggerLocation, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cmbGeneralTask, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UTMPopup, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -316,18 +316,6 @@ Public Class frmTask
         Me.grpSystem.TabIndex = 21
         Me.grpSystem.Text = "System Task"
         '
-        'cmbSystemTriggerLocation
-        '
-        Me.cmbSystemTriggerLocation.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbSystemTriggerLocation.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
-        Me.cmbSystemTriggerLocation.Location = New System.Drawing.Point(288, 69)
-        Me.cmbSystemTriggerLocation.Name = "cmbSystemTriggerLocation"
-        Me.cmbSystemTriggerLocation.Size = New System.Drawing.Size(253, 21)
-        Me.cmbSystemTriggerLocation.SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
-        Me.cmbSystemTriggerLocation.TabIndex = 23
-        Me.cmbSystemTriggerLocation.Visible = False
-        '
         'cmbSystemTrigger
         '
         Me.cmbSystemTrigger.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
@@ -396,15 +384,6 @@ Public Class frmTask
         Me.cmbSpecificOverrideType.TabIndex = 21
         Me.cmbSpecificOverrideType.Text = "run before"
         '
-        'SpecificTask1
-        '
-        Me.SpecificTask1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SpecificTask1.Location = New System.Drawing.Point(13, 62)
-        Me.SpecificTask1.Name = "SpecificTask1"
-        Me.SpecificTask1.Size = New System.Drawing.Size(534, 24)
-        Me.SpecificTask1.TabIndex = 17
-        '
         'chkExecuteParentActions
         '
         Me.chkExecuteParentActions.BackColor = System.Drawing.Color.Transparent
@@ -414,19 +393,6 @@ Public Class frmTask
         Me.chkExecuteParentActions.Size = New System.Drawing.Size(170, 20)
         Me.chkExecuteParentActions.TabIndex = 17
         Me.chkExecuteParentActions.Text = "Execute parent actions"
-        '
-        'cmbGeneralTask
-        '
-        Me.cmbGeneralTask.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.cmbGeneralTask.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
-        'Me.cmbGeneralTask.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
-        Me.cmbGeneralTask.Location = New System.Drawing.Point(177, 33)
-        Me.cmbGeneralTask.Name = "cmbGeneralTask"
-        Me.cmbGeneralTask.Size = New System.Drawing.Size(370, 21)
-        Me.cmbGeneralTask.SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
-        Me.cmbGeneralTask.TabIndex = 13
-        Me.cmbGeneralTask.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI
         '
         'BlueBorder
         '
@@ -464,7 +430,7 @@ Public Class frmTask
         '
         'chkSpecific
         '
-        Appearance5.Image = Global.ADRIFT.My.Resources.imgTaskSpecific16
+        Appearance5.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSpecific16
         Appearance5.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance5.TextHAlignAsString = "Center"
         Me.chkSpecific.Appearance = Appearance5
@@ -483,7 +449,7 @@ Public Class frmTask
         '
         'chkGeneral
         '
-        Appearance6.Image = Global.ADRIFT.My.Resources.imgTaskGeneral16
+        Appearance6.Image = Global.ADRIFT.My.Resources.Resources.imgTaskGeneral16
         Appearance6.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance6.TextHAlignAsString = "Center"
         Me.chkGeneral.Appearance = Appearance6
@@ -500,7 +466,7 @@ Public Class frmTask
         '
         'chkSystem
         '
-        Appearance7.Image = Global.ADRIFT.My.Resources.imgTaskSystem16
+        Appearance7.Image = Global.ADRIFT.My.Resources.Resources.imgTaskSystem16
         Appearance7.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance7.TextHAlignAsString = "Center"
         Me.chkSystem.Appearance = Appearance7
@@ -527,7 +493,7 @@ Public Class frmTask
         'btnParent
         '
         Me.btnParent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance8.Image = Global.ADRIFT.My.Resources.imgParent
+        Appearance8.Image = Global.ADRIFT.My.Resources.Resources.imgParent
         Me.btnParent.Appearance = Appearance8
         Me.btnParent.Enabled = False
         Me.btnParent.Location = New System.Drawing.Point(501, 6)
@@ -539,7 +505,7 @@ Public Class frmTask
         'btnChildren
         '
         Me.btnChildren.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Appearance9.Image = Global.ADRIFT.My.Resources.imgChildren
+        Appearance9.Image = Global.ADRIFT.My.Resources.Resources.imgChildren
         Me.btnChildren.Appearance = Appearance9
         Me.UTMPopup.SetContextMenuUltra(Me.btnChildren, "ctxmPopup")
         Me.btnChildren.Enabled = False
@@ -557,20 +523,6 @@ Public Class frmTask
         Me.lblComplete.Size = New System.Drawing.Size(192, 16)
         Me.lblComplete.TabIndex = 14
         Me.lblComplete.Text = "Message to display on completion:"
-        '
-        'txtCompletion
-        '
-        Me.txtCompletion.AllowAlternateDescriptions = True
-        Me.txtCompletion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCompletion.BackColor = System.Drawing.Color.Transparent
-        Me.txtCompletion.FirstTabHasRestrictions = False
-        Me.txtCompletion.Location = New System.Drawing.Point(8, 217)
-        Me.txtCompletion.Name = "txtCompletion"
-        Me.txtCompletion.sCommand = Nothing
-        Me.txtCompletion.Size = New System.Drawing.Size(557, 205)
-        Me.txtCompletion.TabIndex = 13
         '
         'lblName
         '
@@ -598,34 +550,12 @@ Public Class frmTask
         Me.UltraTabPageControl2.Name = "UltraTabPageControl2"
         Me.UltraTabPageControl2.Size = New System.Drawing.Size(569, 432)
         '
-        'RestrictDetails1
-        '
-        Me.RestrictDetails1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RestrictDetails1.BackColor = System.Drawing.Color.Transparent
-        Me.RestrictDetails1.Location = New System.Drawing.Point(24, 8)
-        Me.RestrictDetails1.Name = "RestrictDetails1"
-        Me.RestrictDetails1.Size = New System.Drawing.Size(541, 416)
-        Me.RestrictDetails1.TabIndex = 0
-        '
         'UltraTabPageControl3
         '
         Me.UltraTabPageControl3.Controls.Add(Me.Actions1)
         Me.UltraTabPageControl3.Location = New System.Drawing.Point(-10000, -10000)
         Me.UltraTabPageControl3.Name = "UltraTabPageControl3"
         Me.UltraTabPageControl3.Size = New System.Drawing.Size(569, 432)
-        '
-        'Actions1
-        '
-        Me.Actions1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Actions1.BackColor = System.Drawing.Color.Transparent
-        Me.Actions1.Location = New System.Drawing.Point(24, 8)
-        Me.Actions1.Name = "Actions1"
-        Me.Actions1.Size = New System.Drawing.Size(541, 416)
-        Me.Actions1.TabIndex = 0
         '
         'UltraTabPageControl8
         '
@@ -673,20 +603,6 @@ Public Class frmTask
         Me.chkAggregate.Size = New System.Drawing.Size(198, 20)
         Me.chkAggregate.TabIndex = 22
         Me.chkAggregate.Text = "Aggregate output, where possible"
-        '
-        'txtFailOverride
-        '
-        Me.txtFailOverride.AllowAlternateDescriptions = True
-        Me.txtFailOverride.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFailOverride.BackColor = System.Drawing.Color.Transparent
-        Me.txtFailOverride.FirstTabHasRestrictions = False
-        Me.txtFailOverride.Location = New System.Drawing.Point(16, 259)
-        Me.txtFailOverride.Name = "txtFailOverride"
-        Me.txtFailOverride.sCommand = Nothing
-        Me.txtFailOverride.Size = New System.Drawing.Size(540, 163)
-        Me.txtFailOverride.TabIndex = 12
         '
         'chkContinue
         '
@@ -826,7 +742,7 @@ Public Class frmTask
         Me.chkRepeatable.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.chkRepeatable.AutoSize = True
         Me.chkRepeatable.BackColor = System.Drawing.Color.Transparent
-        Me.chkRepeatable.Location = New System.Drawing.Point(13, 18)
+        Me.chkRepeatable.Location = New System.Drawing.Point(13, -2)
         Me.chkRepeatable.Name = "chkRepeatable"
         Me.chkRepeatable.Size = New System.Drawing.Size(118, 17)
         Me.chkRepeatable.TabIndex = 34
@@ -855,22 +771,22 @@ Public Class frmTask
         Me.tabsMain.SharedControlsPage = Me.UltraTabSharedControlsPage1
         Me.tabsMain.Size = New System.Drawing.Size(573, 458)
         Me.tabsMain.TabIndex = 0
-        UltraTab6.Key = "Description"
-        UltraTab6.TabPage = Me.UltraTabPageControl1
-        UltraTab6.Text = "Description"
-        UltraTab7.Key = "Restrictions"
-        UltraTab7.TabPage = Me.UltraTabPageControl2
-        UltraTab7.Text = "Restrictions"
-        UltraTab8.Key = "Actions"
-        UltraTab8.TabPage = Me.UltraTabPageControl3
-        UltraTab8.Text = "Actions"
-        UltraTab9.Key = "Hints"
-        UltraTab9.TabPage = Me.UltraTabPageControl8
-        UltraTab9.Text = "Hints"
-        UltraTab10.Key = "Advanced"
-        UltraTab10.TabPage = Me.UltraTabPageControl7
-        UltraTab10.Text = "Advanced"
-        Me.tabsMain.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab6, UltraTab7, UltraTab8, UltraTab9, UltraTab10})
+        UltraTab1.Key = "Description"
+        UltraTab1.TabPage = Me.UltraTabPageControl1
+        UltraTab1.Text = "Description"
+        UltraTab2.Key = "Restrictions"
+        UltraTab2.TabPage = Me.UltraTabPageControl2
+        UltraTab2.Text = "Restrictions"
+        UltraTab3.Key = "Actions"
+        UltraTab3.TabPage = Me.UltraTabPageControl3
+        UltraTab3.Text = "Actions"
+        UltraTab4.Key = "Hints"
+        UltraTab4.TabPage = Me.UltraTabPageControl8
+        UltraTab4.Text = "Hints"
+        UltraTab5.Key = "Advanced"
+        UltraTab5.TabPage = Me.UltraTabPageControl7
+        UltraTab5.Text = "Advanced"
+        Me.tabsMain.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab1, UltraTab2, UltraTab3, UltraTab4, UltraTab5})
         '
         'UltraTabSharedControlsPage1
         '
@@ -933,15 +849,6 @@ Public Class frmTask
         Me._frmTask_Toolbars_Dock_Area_Left.Size = New System.Drawing.Size(0, 458)
         Me._frmTask_Toolbars_Dock_Area_Left.ToolbarsManager = Me.UTMPopup
         '
-        'UTMPopup
-        '
-        Me.UTMPopup.DesignerFlags = 1
-        Me.UTMPopup.DockWithinContainer = Me
-        Me.UTMPopup.DockWithinContainerBaseType = GetType(System.Windows.Forms.Form)
-        Me.UTMPopup.ShowFullMenusDelay = 500
-        PopupMenuTool1.SharedPropsInternal.Caption = "ctxmPopup"
-        Me.UTMPopup.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {PopupMenuTool1})
-        '
         '_frmTask_Toolbars_Dock_Area_Right
         '
         Me._frmTask_Toolbars_Dock_Area_Right.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -978,6 +885,100 @@ Public Class frmTask
         'HelpProvider
         '
         Me.HelpProvider.HelpNamespace = "ADRIFT 5 Help.chm"
+        '
+        'cmbSystemTriggerLocation
+        '
+        Me.cmbSystemTriggerLocation.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmbSystemTriggerLocation.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
+        Me.cmbSystemTriggerLocation.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
+        Me.cmbSystemTriggerLocation.Location = New System.Drawing.Point(288, 69)
+        Me.cmbSystemTriggerLocation.Name = "cmbSystemTriggerLocation"
+        Me.cmbSystemTriggerLocation.Size = New System.Drawing.Size(253, 21)
+        Me.cmbSystemTriggerLocation.SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
+        Me.cmbSystemTriggerLocation.TabIndex = 23
+        Me.cmbSystemTriggerLocation.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI
+        Me.cmbSystemTriggerLocation.Visible = False
+        '
+        'SpecificTask1
+        '
+        Me.SpecificTask1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SpecificTask1.Location = New System.Drawing.Point(13, 62)
+        Me.SpecificTask1.Name = "SpecificTask1"
+        Me.SpecificTask1.Size = New System.Drawing.Size(534, 24)
+        Me.SpecificTask1.TabIndex = 17
+        '
+        'cmbGeneralTask
+        '
+        Me.cmbGeneralTask.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmbGeneralTask.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
+        Me.cmbGeneralTask.Location = New System.Drawing.Point(177, 33)
+        Me.cmbGeneralTask.Name = "cmbGeneralTask"
+        Me.cmbGeneralTask.Size = New System.Drawing.Size(370, 21)
+        Me.cmbGeneralTask.SortStyle = Infragistics.Win.ValueListSortStyle.Ascending
+        Me.cmbGeneralTask.TabIndex = 13
+        Me.cmbGeneralTask.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI
+        '
+        'txtCompletion
+        '
+        Me.txtCompletion.AllowAlternateDescriptions = True
+        Me.txtCompletion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCompletion.BackColor = System.Drawing.Color.Transparent
+        Me.txtCompletion.FirstTabHasRestrictions = False
+        Me.txtCompletion.Location = New System.Drawing.Point(8, 217)
+        Me.txtCompletion.Name = "txtCompletion"
+        Me.txtCompletion.sCommand = Nothing
+        Me.txtCompletion.Size = New System.Drawing.Size(557, 205)
+        Me.txtCompletion.TabIndex = 13
+        '
+        'RestrictDetails1
+        '
+        Me.RestrictDetails1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RestrictDetails1.BackColor = System.Drawing.Color.Transparent
+        Me.RestrictDetails1.Location = New System.Drawing.Point(24, 8)
+        Me.RestrictDetails1.Name = "RestrictDetails1"
+        Me.RestrictDetails1.Size = New System.Drawing.Size(541, 416)
+        Me.RestrictDetails1.TabIndex = 0
+        '
+        'Actions1
+        '
+        Me.Actions1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Actions1.BackColor = System.Drawing.Color.Transparent
+        Me.Actions1.Location = New System.Drawing.Point(24, 8)
+        Me.Actions1.Name = "Actions1"
+        Me.Actions1.Size = New System.Drawing.Size(541, 416)
+        Me.Actions1.TabIndex = 0
+        '
+        'txtFailOverride
+        '
+        Me.txtFailOverride.AllowAlternateDescriptions = True
+        Me.txtFailOverride.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFailOverride.BackColor = System.Drawing.Color.Transparent
+        Me.txtFailOverride.FirstTabHasRestrictions = False
+        Me.txtFailOverride.Location = New System.Drawing.Point(16, 259)
+        Me.txtFailOverride.Name = "txtFailOverride"
+        Me.txtFailOverride.sCommand = Nothing
+        Me.txtFailOverride.Size = New System.Drawing.Size(540, 163)
+        Me.txtFailOverride.TabIndex = 12
+        '
+        'UTMPopup
+        '
+        Me.UTMPopup.DesignerFlags = 1
+        Me.UTMPopup.DockWithinContainer = Me
+        Me.UTMPopup.DockWithinContainerBaseType = GetType(System.Windows.Forms.Form)
+        Me.UTMPopup.ShowFullMenusDelay = 500
+        PopupMenuTool1.SharedPropsInternal.Caption = "ctxmPopup"
+        Me.UTMPopup.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {PopupMenuTool1})
         '
         'frmTask
         '
@@ -1016,14 +1017,12 @@ Public Class frmTask
         CType(Me.grpSystem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpSystem.ResumeLayout(False)
         Me.grpSystem.PerformLayout()
-        CType(Me.cmbSystemTriggerLocation, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cmbSystemTrigger, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grpSpecific, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpSpecific.ResumeLayout(False)
         Me.grpSpecific.PerformLayout()
         CType(Me.cmbSpecificOverrideType, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkExecuteParentActions, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cmbGeneralTask, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BlueBorder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkOutputParentText, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkSpecific, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1049,6 +1048,8 @@ Public Class frmTask
         CType(Me.UltraStatusBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UltraStatusBar1.ResumeLayout(False)
         Me.UltraStatusBar1.PerformLayout()
+        CType(Me.cmbSystemTriggerLocation, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cmbGeneralTask, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UTMPopup, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1908,7 +1909,7 @@ EndCheckRefs:
 
         Select Case True
             Case sender Is chkGeneral
-                Me.Icon = Icon.FromHandle(My.Resources.imgTaskGeneral16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgTaskGeneral16.GetHicon)
                 grpGeneral.BringToFront()
                 'chkExecuteParentActions.Enabled = False            
                 txtCommands.Focus()
@@ -1919,7 +1920,7 @@ EndCheckRefs:
                 txtFailOverride.Enabled = True
                 Label8.Enabled = True
             Case sender Is chkSpecific
-                Me.Icon = Icon.FromHandle(My.Resources.imgTaskSpecific16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgTaskSpecific16.GetHicon)
                 grpSpecific.BringToFront()
                 'chkExecuteParentActions.Enabled = (cmbGeneralTask.SelectedIndex > -1)                
                 If bLoaded AndAlso cmbGeneralTask.SelectedIndex = -1 Then
@@ -1933,7 +1934,7 @@ EndCheckRefs:
                 txtFailOverride.Enabled = False
                 Label8.Enabled = False
             Case sender Is chkSystem
-                Me.Icon = Icon.FromHandle(My.Resources.imgTaskSystem16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgTaskSystem16.GetHicon)
                 grpSystem.BringToFront()
                 'chkExecuteParentActions.Enabled = False                
                 If bLoaded AndAlso txtCompletion.rtxtSource.Text = "" Then chkRepeatable.Checked = True

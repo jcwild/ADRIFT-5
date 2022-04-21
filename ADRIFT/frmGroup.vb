@@ -432,14 +432,14 @@ Public Class frmGroup
 
 
     Private Sub frmRoomGroup_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgGroup16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgGroup16.GetHicon)
         GetFormPosition(Me)
         Dim il As New ImageList
-        il.Images.Add("Location", My.Resources.imgLocation16)
-        il.Images.Add("Static", My.Resources.imgObjectStatic16)
-        il.Images.Add("Dynamic", My.Resources.imgObjectDynamic16)
-        il.Images.Add("Player", My.Resources.imgPlayer16)
-        il.Images.Add("Character", My.Resources.imgCharacter16)
+        il.Images.Add("Location", My.Resources.Resources.imgLocation16)
+        il.Images.Add("Static", My.Resources.Resources.imgObjectStatic16)
+        il.Images.Add("Dynamic", My.Resources.Resources.imgObjectDynamic16)
+        il.Images.Add("Player", My.Resources.Resources.imgPlayer16)
+        il.Images.Add("Character", My.Resources.Resources.imgCharacter16)
         lvwItems.SmallImageList = il
     End Sub
 

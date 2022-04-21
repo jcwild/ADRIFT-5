@@ -162,7 +162,7 @@ Public Class frmOptionsRunner
 
     Private Sub frmOptions_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GetFormPosition(Me)
-        Me.Icon = Icon.FromHandle(My.Resources.imgOptions16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgOptions16.GetHicon)
     End Sub
 
 

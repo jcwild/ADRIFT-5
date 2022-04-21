@@ -180,27 +180,27 @@ Public Class ItemSelector
 
             Select Case value
                 Case ItemEnum.Character
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgCharacter16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCharacter16
                 Case ItemEnum.Event
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgEvent16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgEvent16
                 Case ItemEnum.Hint
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgHint16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgHint16
                 Case ItemEnum.Location
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgLocation16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
                 Case ItemEnum.LocationGroup
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgGroup16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgGroup16
                 Case ItemEnum.Object
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
                 Case ItemEnum.Property
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgProperty16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgProperty16
                 Case ItemEnum.Task
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgTaskGeneral16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgTaskGeneral16
                 Case ItemEnum.Variable
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgVariable16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
                 Case ItemEnum.Expression
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgExpression
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgExpression
                 Case ItemEnum.ValueList
-                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.imgVariable16
+                    btnItemType.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgVariable16
             End Select
 
             If DesignMode Then Exit Property

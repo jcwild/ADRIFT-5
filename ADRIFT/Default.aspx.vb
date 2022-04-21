@@ -154,9 +154,14 @@ Public Class _Default
 
                         Else
                             ' We need to download the file
+RetryDownload:
                             Try
                                 Dim wc As New System.Net.WebClient
                                 sFile = IO.Path.GetFileName(sURL)
+                                If sURL.ToUpper.StartsWith("HTTPS://") Then
+                                    System.Net.ServicePointManager.Expect100Continue = True
+                                    System.Net.ServicePointManager.SecurityProtocol = Net.SecurityProtocolType.Tls Or Net.SecurityProtocolType.Tls11 Or Net.SecurityProtocolType.Tls12 Or Net.SecurityProtocolType.Ssl3
+                                End If
                                 wc.DownloadFile(sURL, sFile)
                                 wc.Dispose()
 
@@ -164,6 +169,10 @@ Public Class _Default
                             Catch exHLE As System.Net.HttpListenerException
                                 ErrMsg("Error downloading " & sURL, exHLE)
                             Catch ex As Exception
+                                If ex.HResult = -2146233079 AndAlso sURL.ToUpper.StartsWith("HTTP://") Then
+                                    sURL = "https://" & sURL.Substring(7)
+                                    GoTo RetryDownload
+                                End If
                                 ErrMsg("Error downloading " & sURL, ex)
                             End Try
                         End If
@@ -183,7 +192,7 @@ Public Class _Default
                             IO.Directory.CreateDirectory(UserSession.sGameFolder)
                         End If
 
-                        'If sFile = "cursed.taf" OrElse sFile = "how suzy got her powers.taf" Then CType(Page.Master, Site).footer.InnerHtml = "Please be aware that v5 is not yet 100% compatible with v4.  For this reason, please play this game on <a href=""http://www.adrift.co/files/ADRIFT40r.zip"">v4 Runner</a>."
+                        'If sFile = "cursed.taf" OrElse sFile = "how suzy got her powers.taf" Then CType(Page.Master, Site).footer.InnerHtml = "Please be aware that v5 is not yet 100% compatible with v4.  For this reason, please play this game on <a href=""https://www.adrift.co/files/ADRIFT40r.zip"">v4 Runner</a>."
                     Else
                         ErrMsg("File not found")
                     End If
@@ -239,7 +248,7 @@ Public Class _Default
             End If
         End If
 
-        UserSession.Display(vbCrLf & vbCrLf & "ADRIFT WebRunner is still in development, and there may be bugs.  If you find any, please notify <a href=""mailto:campbell@adrift.org.uk"">Campbell</a> or add it to the ADRIFT <a href=""http://www.adrift.org.uk/cgi/new/adrift.cgi?script=bugs5"">bugs list</a>.  At present, there are a few things that WebRunner can't do that the Runner app does.  For the full experience, please <a href=""http://www.adrift.co/download"">download</a> ADRIFT Runner for your operating system.", True)
+        UserSession.Display(vbCrLf & vbCrLf & "ADRIFT WebRunner is still in development, and there may be bugs.  If you find any, please notify <a href=""mailto:campbell@adrift.org.uk"">Campbell</a> or add it to the ADRIFT <a href=""https://www.adrift.co/cgi/new/adrift.cgi?script=bugs5"">bugs list</a>.  At present, there are a few things that WebRunner can't do that the Runner app does.  For the full experience, please <a href=""http://www.adrift.co/download"">download</a> ADRIFT Runner for your operating system.", True)
 
     End Sub
 
@@ -806,11 +815,11 @@ Public Class _Default
 
         If muteButton.ToolTip = "Unmute audio" Then
             muteButton.ToolTip = "Mute audio"
-            muteButton.ImageUrl = "http://play.adrift.co/img/unmute.png"
+            muteButton.ImageUrl = "https://play.adrift.co/img/unmute.png"
             muteButton.OnClientClick = "MuteAudio(true)"
         Else
             muteButton.ToolTip = "Unmute audio"
-            muteButton.ImageUrl = "http://play.adrift.co/img/mute.png"
+            muteButton.ImageUrl = "https://play.adrift.co/img/mute.png"
             muteButton.OnClientClick = "MuteAudio(false)"
         End If
 

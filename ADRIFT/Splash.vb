@@ -26,7 +26,7 @@
             'End If
 
             'Dim pfc As New System.Drawing.Text.PrivateFontCollection
-            'Dim bytLydian As Byte() = My.Resources.Lydian
+            'Dim bytLydian As Byte() = My.Resources.Resources.Lydian
             'gch = Runtime.InteropServices.GCHandle.Alloc(bytLydian, Runtime.InteropServices.GCHandleType.Pinned)
             'pfc.AddMemoryFont(gch.AddrOfPinnedObject, bytLydian.Length)
 

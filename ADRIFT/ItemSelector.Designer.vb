@@ -38,7 +38,7 @@ Partial Class ItemSelector
         'btnItemType
         '
         Appearance1.BackColor = System.Drawing.Color.Transparent
-        Appearance1.Image = Global.ADRIFT.My.Resources.imgLocation16
+        Appearance1.Image = Global.ADRIFT.My.Resources.Resources.imgLocation16
         Me.btnItemType.Appearance = Appearance1
         Me.btnItemType.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnItemType.Cursor = System.Windows.Forms.Cursors.Hand
@@ -53,7 +53,7 @@ Partial Class ItemSelector
         '
         Me.btnNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Appearance2.BackColor = System.Drawing.Color.Transparent
-        Appearance2.Image = Global.ADRIFT.My.Resources.imgAdd16
+        Appearance2.Image = Global.ADRIFT.My.Resources.Resources.imgAdd16
         Me.btnNew.Appearance = Appearance2
         Me.btnNew.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnNew.Cursor = System.Windows.Forms.Cursors.Hand
@@ -81,7 +81,7 @@ Partial Class ItemSelector
         '
         Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Appearance3.BackColor = System.Drawing.Color.Transparent
-        Appearance3.Image = Global.ADRIFT.My.Resources.imgEdit16
+        Appearance3.Image = Global.ADRIFT.My.Resources.Resources.imgEdit16
         Me.btnEdit.Appearance = Appearance3
         Me.btnEdit.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Borderless
         Me.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand

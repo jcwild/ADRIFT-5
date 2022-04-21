@@ -364,7 +364,7 @@ Module SharedModule
                     _pfc.AddFontFile(sFont)
                 Else
 
-                    Dim bytLydian As Byte() = My.Resources.Lydian
+                    Dim bytLydian As Byte() = My.Resources.Resources.LYDIAN
                     Dim gch As Runtime.InteropServices.GCHandle = Runtime.InteropServices.GCHandle.Alloc(bytLydian, Runtime.InteropServices.GCHandleType.Pinned)
                     _pfc.AddMemoryFont(gch.AddrOfPinnedObject, bytLydian.Length)
                     gch.Free()
@@ -412,7 +412,7 @@ Module SharedModule
     '        'Dim ByteStrm(CType(FntStrm.Length, Integer)) As Byte
     '        'FntStrm.Read(ByteStrm, 0, Int(CType(FntStrm.Length, Integer)))
     '        'Allocate some memory on the global heap
-    '        Dim bytLydian As Byte() = My.Resources.Lydian
+    '        Dim bytLydian As Byte() = My.Resources.Resources.Lydian
     '        Dim FntPtr As IntPtr = Runtime.InteropServices.Marshal.AllocHGlobal(Runtime.InteropServices.Marshal.SizeOf(GetType(Byte)) * bytLydian.Length) ' ByteStrm.Length)
     '        'Copy the byte array holding the font into the allocated memory.
     '        Runtime.InteropServices.Marshal.Copy(bytLydian, 0, FntPtr, bytLydian.Length)
@@ -562,7 +562,7 @@ Module SharedModule
     Private WithEvents WebClient As New System.Net.WebClient
     Public Sub CheckForUpdate(Optional ByVal bAtStart As Boolean = True)
 
-        ' Try to download from http://www.adrift.co/cgi/versioncheck.cgi?from=5.0.26.1&atstart=0
+        ' Try to download from https://www.adrift.co/cgi/versioncheck.cgi?from=5.0.26.1&atstart=0
 
         ' <?xml>
         '   <versioncheck>
@@ -575,10 +575,10 @@ Module SharedModule
         Exit Sub
 #End If
 
-        'Dim URI As New System.Uri("http://www.adrift.co/cgi/versioncheck.cgi?from=" & Application.ProductVersion & If(bAtStart, "", "&atstart=0").ToString)
-        'Dim URI As New System.Uri("http://www.adrift.co/cgi/versioncheck.cgi?from=5.0.0.0" & If(bAtStart, "", "&atstart=0").ToString)
+        'Dim URI As New System.Uri("https://www.adrift.co/cgi/versioncheck.cgi?from=" & Application.ProductVersion & If(bAtStart, "", "&atstart=0").ToString)
+        'Dim URI As New System.Uri("https://www.adrift.co/cgi/versioncheck.cgi?from=5.0.0.0" & If(bAtStart, "", "&atstart=0").ToString)
 
-        WebClient.DownloadStringAsync(New System.Uri("http://www.adrift.co/cgi/versioncheck.cgi?from=" & Application.ProductVersion & If(bAtStart, "", "&atstart=0").ToString))
+        WebClient.DownloadStringAsync(New System.Uri("https://www.adrift.co/cgi/versioncheck.cgi?from=" & Application.ProductVersion & If(bAtStart, "", "&atstart=0").ToString))
 
     End Sub
 
@@ -694,7 +694,7 @@ Module SharedModule
 
     Private Sub DownloadUpdate()
         Cursor.Current = Cursors.WaitCursor
-        Process.Start("http://www.adrift.co/download")
+        Process.Start("https://www.adrift.co/download")
         Cursor.Current = Cursors.Arrow
     End Sub
 
@@ -1100,7 +1100,7 @@ Module SharedModule
         [Right]
         [Central]
     End Enum
-    Public Sub Source2HTML(ByVal sSource As String, ByRef RichText As RichTextBox, ByVal bClearRTB As Boolean, Optional ByVal bDebug As Boolean = False, Optional ByRef sUnprocessedText As String = Nothing)
+    Public Sub Source2HTML(ByVal sSource As String, ByRef RichText As RichTextBox, ByVal bClearRTB As Boolean, Optional ByVal bDebug As Boolean = False, Optional ByRef sUnprocessedText As String = Nothing, Optional Replacements As Dictionary(Of String, String) = Nothing)
 
 #If www Then
         fRunner.AppendHTML(sSource)
@@ -1399,13 +1399,13 @@ Module SharedModule
 #If Runner Then
                         If UserSession.bSound AndAlso Not bDebug Then
 #End If
-                            If sToken.Contains(" pause") Then
-                                PauseSound(iChannel)
-                            ElseIf sToken.Contains(" stop") Then
-                                StopSound(iChannel)
-                            Else
-                                PlaySound(sSrc, iChannel, bLooping)
-                            End If
+                        If sToken.Contains(" pause") Then
+                            PauseSound(iChannel)
+                        ElseIf sToken.Contains(" stop") Then
+                            StopSound(iChannel)
+                        Else
+                            PlaySound(sSrc, iChannel, bLooping)
+                        End If
 #If Runner Then
                         End If
 #End If
@@ -1610,7 +1610,27 @@ Module SharedModule
 
             End While
 
-            ScrollToEnd(RichText)
+            If Replacements IsNot Nothing Then
+                ' Highlight all replacements with slightly lighter/darker background
+                Dim bgColour As Color = GetBackgroundColour()
+                If CInt(bgColour.R) + CInt(bgColour.G) + CInt(bgColour.B) > 384 Then
+                    ' Go darker
+                    bgColour = Color.FromArgb(bgColour.A, Math.Max(bgColour.R - 40, 0), Math.Max(bgColour.G - 40, 0), Math.Max(bgColour.B - 40, 0))
+                Else
+                    ' Go ligher
+                    bgColour = Color.FromArgb(bgColour.A, Math.Min(bgColour.R + 40, 255), Math.Min(bgColour.G + 40, 255), Math.Min(bgColour.B + 40, 255))
+                End If
+                For Each kvp As KeyValuePair(Of String, String) In Replacements
+                        Dim i As Integer = RichText.Text.IndexOf(kvp.Value)
+                    If i > -1 Then
+                        RichText.SelectionStart = i
+                        RichText.SelectionLength = kvp.Value.Length
+                        RichText.SelectionBackColor = bgColour
+                    End If
+                Next
+                End If
+
+                ScrollToEnd(RichText)
 
         Catch exOD As ObjectDisposedException
             ' Fail silently - we're shutting down            
@@ -3731,7 +3751,7 @@ Module SharedModule
     End Sub
 
 
-    Public Function ReplaceFunctions(ByVal sText As String, Optional ByVal bExpression As Boolean = False, Optional ByVal bAllowOO As Boolean = True) As String
+    Public Function ReplaceFunctions(ByVal sText As String, Optional ByVal bExpression As Boolean = False, Optional ByVal bAllowOO As Boolean = True, Optional ByVal Replacements As Dictionary(Of String, String) = Nothing) As String
 
         Try
             Dim dictGUIDs As New Dictionary(Of String, String)
@@ -3755,15 +3775,15 @@ Module SharedModule
                 Do
                     sCheck = sText
 
-                    sText = ReplaceIgnoreCase(sText, "%Player%", Adventure.Player.Key)
+                    sText = ReplaceIgnoreCase(sText, "%Player%", Adventure.Player.Key, Replacements)
 
-                    sText = ReplaceIgnoreCase(sText, "%object%", "%object1%")
-                    sText = ReplaceIgnoreCase(sText, "%character%", "%character1%")
-                    sText = ReplaceIgnoreCase(sText, "%location%", "%location1%")
-                    sText = ReplaceIgnoreCase(sText, "%direction%", "%direction1%")
-                    sText = ReplaceIgnoreCase(sText, "%item%", "%item1%")
-                    sText = ReplaceIgnoreCase(sText, "%text%", "%text1%")
-                    sText = ReplaceIgnoreCase(sText, "%number%", "%number1%")
+                    sText = ReplaceIgnoreCase(sText, "%object%", "%object1%", Replacements)
+                    sText = ReplaceIgnoreCase(sText, "%character%", "%character1%", Replacements)
+                    sText = ReplaceIgnoreCase(sText, "%location%", "%location1%", Replacements)
+                    sText = ReplaceIgnoreCase(sText, "%direction%", "%direction1%", Replacements)
+                    sText = ReplaceIgnoreCase(sText, "%item%", "%item1%", Replacements)
+                    sText = ReplaceIgnoreCase(sText, "%text%", "%text1%", Replacements)
+                    sText = ReplaceIgnoreCase(sText, "%number%", "%number1%", Replacements)
 
                     'If bExpression Then
                     '    sText = ReplaceIgnoreCase(sText, "%text%", """" & Adventure.sReferencedText & """")
@@ -3986,7 +4006,7 @@ Module SharedModule
                                                 End If
                                             End If
                                         End If
-                                    Next                                    
+                                    Next
                                     If bQuote Then
                                         sText = ReplaceIgnoreCase(sText, sRefText, """" & Adventure.sReferencedText(iRef) & """")
                                     Else
@@ -4849,9 +4869,10 @@ Module SharedModule
 
 
 
-    Public Function ReplaceIgnoreCase(ByVal Expression As String, ByVal Find As String, ByVal Replacement As String) As String
+    Public Function ReplaceIgnoreCase(ByVal Expression As String, ByVal Find As String, ByVal Replacement As String, Optional ByVal Replacements As Dictionary(Of String, String) = Nothing) As String
         If Replacement Is Nothing Then Replacement = ""
         Dim regex As New System.Text.RegularExpressions.Regex(Find.Replace("[", "\[").Replace("]", "\]").Replace("(", "\(").Replace(")", "\)").Replace("|", "\|").Replace("*", "\*").Replace("?", "\?").Replace("$", "\$").Replace("^", "\^").Replace("+", "\+"), System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+        If Replacements IsNot Nothing AndAlso Not Replacements.ContainsKey(Find) AndAlso regex.IsMatch(Expression, Replacement.Replace("$", "$$")) Then Replacements.Add(Find, Replacement)
         Return regex.Replace(Expression, Replacement.Replace("$", "$$"), 1) ' Prevent Substitutions (http://msdn.microsoft.com/en-us/library/ewy2t5e0.aspx)
     End Function
 

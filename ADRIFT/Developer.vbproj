@@ -133,7 +133,7 @@
     <WarningLevel>1</WarningLevel>
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DefineConstants>Generator=True</DefineConstants>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <IntermediateOutputPath>C:\Users\Campbell\AppData\Local\Temp\vs1BF5.tmp\x86\Debug\</IntermediateOutputPath>
@@ -306,6 +306,9 @@
     <Compile Include="frmUserFunction.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GenTextBox.designer.vb">
+      <DependentUpon>GenTextBox.vb</DependentUpon>
+    </Compile>
     <Compile Include="Item Classes\clsUserFunction.vb" />
     <Compile Include="Item Classes\clsALR.vb">
       <SubType>Code</SubType>
@@ -409,6 +412,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="OOTextbox.vb">
       <SubType>Component</SubType>
@@ -526,7 +534,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GenTextBox.vb">
-      <CustomToolNamespace>ADRIFT</CustomToolNamespace>
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Global.vb">
@@ -543,11 +550,6 @@
     </Compile>
     <Compile Include="Map.vb">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="NumericTextbox.vb">
       <SubType>UserControl</SubType>
@@ -646,6 +648,11 @@
     <EmbeddedResource Include="Image.resx">
       <DependentUpon>Image.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PropertyValue.resx">
       <DependentUpon>PropertyValue.vb</DependentUpon>
@@ -752,12 +759,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>Map.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <SubType>Designer</SubType>
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My</CustomToolNamespace>
-    </EmbeddedResource>
     <EmbeddedResource Include="NumericTextbox.resx">
       <DependentUpon>NumericTextbox.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -807,8 +808,8 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </Content>
     <None Include="app.config" />
-    <None Include="Resources\RO-Mx1-16_arrows-mix.png" />
     <None Include="My Project\app.manifest" />
+    <None Include="Resources\LYDIAN.TTF" />
     <None Include="StandardLibrary.amf" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>

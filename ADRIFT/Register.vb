@@ -79,7 +79,7 @@ Public Class frmRegister
 
             If IsKeyValid(sUsername, sKey) Then
                 ' Attempt to send username, key and details to ADRIFT server
-                Dim sURL As String = String.Format("http://www.adrift.org.uk/cgi/new/validate.cgi?fg=1&username={0}&k1={1}&k2={2}&k3={3}&k4={4}&k5={5}&identifier={6}", URLEncode(txtUsername.Text), txtKey1.Text, txtKey2.Text, txtKey3.Text, txtKey4.Text, txtKey5.Text, GetDetails)
+                Dim sURL As String = String.Format("https://www.adrift.co/cgi/new/validate.cgi?fg=1&username={0}&k1={1}&k2={2}&k3={3}&k4={4}&k5={5}&identifier={6}", URLEncode(txtUsername.Text), txtKey1.Text, txtKey2.Text, txtKey3.Text, txtKey4.Text, txtKey5.Text, GetDetails)
                 Dim sResult As String
 
                 If txtValidation.Text <> "" Then
@@ -210,7 +210,7 @@ Public Class frmRegister
             lblError.Visible = False
         End If
 
-        Me.Icon = Icon.FromHandle(My.Resources.imgKey16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgKey16.GetHicon)
         GetFormPosition(Me)
     End Sub
 

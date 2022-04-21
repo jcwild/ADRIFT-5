@@ -525,9 +525,9 @@ Public Class frmCharacter
             If .Name = "" OrElse (.Name = "Anonymous" AndAlso .Key = "") Then Text = "New Character"
 
             If .CharacterType = clsCharacter.CharacterTypeEnum.Player Then
-                Me.Icon = Icon.FromHandle(My.Resources.imgPlayer16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgPlayer16.GetHicon)
             Else
-                Me.Icon = Icon.FromHandle(My.Resources.imgCharacter16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgCharacter16.GetHicon)
             End If
 
             txtDescription.Description = .Description.Copy
@@ -818,9 +818,9 @@ Public Class frmCharacter
 
     Private Sub TopicIcons(ByVal topic As clsTopic, ByVal node As Infragistics.Win.UltraWinTree.UltraTreeNode)
         If topic.bIntroduction Then
-            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.imgRight
+            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.Resources.imgRight
         ElseIf topic.bFarewell Then
-            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.imgLeft
+            node.Override.NodeAppearance.Image = Global.ADRIFT.My.Resources.Resources.imgLeft
         End If
     End Sub
 

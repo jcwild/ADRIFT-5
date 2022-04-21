@@ -75,7 +75,15 @@ Friend Class RunnerSession
     Public htblVisibleObjects As New ObjectHashTable
     Public htblSeenObjects As New ObjectHashTable
     Public sInput, sLastProperInput As String
-    Friend iRestNum As Integer
+    Private _irestnum As Integer
+    Friend Property iRestNum As Integer
+        Get
+            Return _irestnum
+        End Get
+        Set(value As Integer)
+            _irestnum = value
+        End Set
+    End Property
     Private sAmbTask As String
     Public sOutputText As String
     Public sRestrictionText, sRestrictionTextMulti As String
@@ -3825,7 +3833,7 @@ NextChar2:
                 sFilename = UserSession.sGameFolder & IO.Path.DirectorySeparatorChar & sFile
                 Display("Saving game...")
             Else
-                Display("Save function not currently available for online play.  Please <a href=""http://www.adrift.co/download"">download</a> Runner app for enhanced functionality.")
+                Display("Save function not currently available for online play.  Please <a href=""https://www.adrift.co/download"">download</a> Runner app for enhanced functionality.")
                 Return False
             End If
 #Else
@@ -6826,19 +6834,26 @@ SkipTest:
     ' IgnoreReferences is for when we are evaluating whether the task is completable or not, but we don't have any refs yet
     Public Function PassRestrictions(ByVal arlRestrictions As RestrictionArrayList, Optional ByVal bIgnoreReferences As Boolean = False, Optional tas As clsTask = Nothing) As Boolean
 
+        Dim iRestNumIn As Integer = iRestNum
         iRestNum = 0
-        sRouteError = ""
 
-        If arlRestrictions.Count = 0 Then
-            Return True
-        Else
-            ' We have to check each combination of objects from our task
-            ' e.g. "get %objects% from %object2%
-            ' "get red ball and blue ball from box"
-            ' get red ball from box
-            ' get blue ball from box
-            Return EvaluateRestrictionBlock(arlRestrictions, arlRestrictions.BracketSequence, bIgnoreReferences, tas)
-        End If
+        Try
+            sRouteError = ""
+
+            If arlRestrictions.Count = 0 Then
+                Return True
+            Else
+                ' We have to check each combination of objects from our task
+                ' e.g. "get %objects% from %object2%
+                ' "get red ball and blue ball from box"
+                ' get red ball from box
+                ' get blue ball from box
+                Return EvaluateRestrictionBlock(arlRestrictions, arlRestrictions.BracketSequence, bIgnoreReferences, tas)
+            End If
+
+        Finally
+            iRestNum = iRestNumIn
+        End Try
 
     End Function
 

@@ -121,55 +121,55 @@ Public Class Folder
 
         Select Case True
             Case TypeOf itemGen Is clsFolder
-                item.Appearance.Image = My.Resources.imgFolderClosed16
+                item.Appearance.Image = My.Resources.Resources.imgFolderClosed16
             Case TypeOf itemGen Is clsLocation
-                item.Appearance.Image = My.Resources.imgLocation16
+                item.Appearance.Image = My.Resources.Resources.imgLocation16
             Case TypeOf itemGen Is clsObject
                 If CType(itemGen, clsObject).IsStatic Then
-                    item.Appearance.Image = My.Resources.imgObjectStatic16
+                    item.Appearance.Image = My.Resources.Resources.imgObjectStatic16
                 Else
-                    item.Appearance.Image = My.Resources.imgObjectDynamic16
+                    item.Appearance.Image = My.Resources.Resources.imgObjectDynamic16
                 End If
             Case TypeOf itemGen Is clsTask
                 Select Case CType(itemGen, clsTask).TaskType
                     Case clsTask.TaskTypeEnum.General
-                        item.Appearance.Image = My.Resources.imgTaskGeneral16
+                        item.Appearance.Image = My.Resources.Resources.imgTaskGeneral16
                     Case clsTask.TaskTypeEnum.Specific
-                        item.Appearance.Image = My.Resources.imgTaskSpecific16
+                        item.Appearance.Image = My.Resources.Resources.imgTaskSpecific16
                     Case clsTask.TaskTypeEnum.System
-                        item.Appearance.Image = My.Resources.imgTaskSystem16
+                        item.Appearance.Image = My.Resources.Resources.imgTaskSystem16
                 End Select
                 If subitems.Length > 3 Then subitems(4).Value = CType(itemGen, clsTask).Priority
                 item.Visible = Not (itemGen.IsLibrary AndAlso SafeBool(GetSetting("ADRIFT", "Generator", "HideLibraryItems", "1")))
             Case TypeOf itemGen Is clsEvent
                 Select Case CType(itemGen, clsEvent).EventType
                     Case clsEvent.EventTypeEnum.TurnBased
-                        item.Appearance.Image = My.Resources.imgEvent16
+                        item.Appearance.Image = My.Resources.Resources.imgEvent16
                     Case clsEvent.EventTypeEnum.TimeBased
-                        item.Appearance.Image = My.Resources.imgTimeEvent16
+                        item.Appearance.Image = My.Resources.Resources.imgTimeEvent16
                 End Select
             Case TypeOf itemGen Is clsCharacter
                 Select Case CType(itemGen, clsCharacter).CharacterType
                     Case clsCharacter.CharacterTypeEnum.Player
-                        item.Appearance.Image = My.Resources.imgPlayer16
+                        item.Appearance.Image = My.Resources.Resources.imgPlayer16
                     Case clsCharacter.CharacterTypeEnum.NonPlayer
-                        item.Appearance.Image = My.Resources.imgCharacter16
+                        item.Appearance.Image = My.Resources.Resources.imgCharacter16
                 End Select
             Case TypeOf itemGen Is clsGroup
-                item.Appearance.Image = My.Resources.imgGroup16
+                item.Appearance.Image = My.Resources.Resources.imgGroup16
             Case TypeOf itemGen Is clsVariable
-                item.Appearance.Image = My.Resources.imgVariable16
+                item.Appearance.Image = My.Resources.Resources.imgVariable16
             Case TypeOf itemGen Is clsALR
-                item.Appearance.Image = My.Resources.imgALR16
+                item.Appearance.Image = My.Resources.Resources.imgALR16
             Case TypeOf itemGen Is clsHint
-                item.Appearance.Image = My.Resources.imgHint16
+                item.Appearance.Image = My.Resources.Resources.imgHint16
             Case TypeOf itemGen Is clsProperty
-                item.Appearance.Image = My.Resources.imgProperty16
+                item.Appearance.Image = My.Resources.Resources.imgProperty16
                 item.Visible = Not (itemGen.IsLibrary AndAlso SafeBool(GetSetting("ADRIFT", "Generator", "HideLibraryItems", "1")))
             Case TypeOf itemGen Is clsUserFunction
-                item.Appearance.Image = My.Resources.imgFunction16
+                item.Appearance.Image = My.Resources.Resources.imgFunction16
             Case TypeOf itemGen Is clsSynonym
-                item.Appearance.Image = My.Resources.imgSynonym16
+                item.Appearance.Image = My.Resources.Resources.imgSynonym16
         End Select
 
         Return item
@@ -347,40 +347,40 @@ Public Class Folder
         Select Case True
             Case folder.Name.Contains("Location")
                 miAddItem.Text = "Add Location"
-                miAddItem.Image = My.Resources.imgLocation16
+                miAddItem.Image = My.Resources.Resources.imgLocation16
             Case folder.Name.Contains("Object")
                 miAddItem.Text = "Add Object"
-                miAddItem.Image = My.Resources.imgObjectDynamic16
+                miAddItem.Image = My.Resources.Resources.imgObjectDynamic16
             Case folder.Name.Contains("Task")
                 miAddItem.Text = "Add Task"
-                miAddItem.Image = My.Resources.imgTaskGeneral16
+                miAddItem.Image = My.Resources.Resources.imgTaskGeneral16
             Case folder.Name.Contains("Event")
                 miAddItem.Text = "Add Event"
-                miAddItem.Image = My.Resources.imgEvent16
+                miAddItem.Image = My.Resources.Resources.imgEvent16
             Case folder.Name.Contains("Character")
                 miAddItem.Text = "Add Character"
-                miAddItem.Image = My.Resources.imgCharacter16
+                miAddItem.Image = My.Resources.Resources.imgCharacter16
             Case folder.Name.Contains("Propert")
                 miAddItem.Text = "Add Property"
-                miAddItem.Image = My.Resources.imgProperty16
+                miAddItem.Image = My.Resources.Resources.imgProperty16
             Case folder.Name.Contains("Text Override")
                 miAddItem.Text = "Add Text Override"
-                miAddItem.Image = My.Resources.imgALR16
+                miAddItem.Image = My.Resources.Resources.imgALR16
             Case folder.Name.Contains("Group")
                 miAddItem.Text = "Add Group"
-                miAddItem.Image = My.Resources.imgGroup16
+                miAddItem.Image = My.Resources.Resources.imgGroup16
             Case folder.Name.Contains("Variable")
                 miAddItem.Text = "Add Variable"
-                miAddItem.Image = My.Resources.imgVariable16
+                miAddItem.Image = My.Resources.Resources.imgVariable16
             Case folder.Name.Contains("Hint")
                 miAddItem.Text = "Add Hint"
-                miAddItem.Image = My.Resources.imgHint16
+                miAddItem.Image = My.Resources.Resources.imgHint16
             Case folder.Name.Contains("Synonym")
                 miAddItem.Text = "Add Synonym"
-                miAddItem.Image = My.Resources.imgSynonym16
+                miAddItem.Image = My.Resources.Resources.imgSynonym16
             Case folder.Name.Contains("Function")
                 miAddItem.Text = "Add User Function"
-                miAddItem.Image = My.Resources.imgFunction16
+                miAddItem.Image = My.Resources.Resources.imgFunction16
         End Select
         miAddItem.Visible = (miAddItem.Text <> "Add Item")
         sep1.Visible = (miAddItem.Text <> "Add Item")
@@ -863,7 +863,7 @@ Public Class Folder
 
         Dim itmFolder As New UltraListViewItem(newFolder.Name, subitems)
         itmFolder.Key = newFolder.Key
-        itmFolder.Appearance.Image = My.Resources.imgFolderClosed16
+        itmFolder.Appearance.Image = My.Resources.Resources.imgFolderClosed16
         lstContents.Items.Add(itmFolder)
 
         fGenerator.FolderList1.AddFolder(newFolder, fGenerator.FolderList1.treeFolders.GetNodeByKey(folder.Key))

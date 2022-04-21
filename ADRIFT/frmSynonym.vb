@@ -193,7 +193,7 @@
 
 
     Private Sub frmHint_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgSynonym16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgSynonym16.GetHicon)
         GetFormPosition(Me)
     End Sub
 

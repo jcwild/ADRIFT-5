@@ -190,7 +190,7 @@ Public Class frmObject
         '
         'chkDynamic
         '
-        Appearance5.Image = Global.ADRIFT.My.Resources.imgObjectDynamic16
+        Appearance5.Image = Global.ADRIFT.My.Resources.Resources.imgObjectDynamic16
         Appearance5.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance5.TextHAlignAsString = "Center"
         Me.chkDynamic.Appearance = Appearance5
@@ -207,7 +207,7 @@ Public Class frmObject
         '
         'chkStatic
         '
-        Appearance6.Image = Global.ADRIFT.My.Resources.imgObjectStatic16
+        Appearance6.Image = Global.ADRIFT.My.Resources.Resources.imgObjectStatic16
         Appearance6.ImageHAlign = Infragistics.Win.HAlign.Left
         Appearance6.TextHAlignAsString = "Center"
         Me.chkStatic.Appearance = Appearance6
@@ -449,9 +449,9 @@ Public Class frmObject
 
         If Properties1.htblProperties.ContainsKey("StaticOrDynamic") Then
             If Properties1.htblProperties("StaticOrDynamic").StringData.ToString = "Dynamic" Then
-                Me.Icon = Icon.FromHandle(My.Resources.imgObjectDynamic16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectDynamic16.GetHicon)
             Else
-                Me.Icon = Icon.FromHandle(My.Resources.imgObjectStatic16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectStatic16.GetHicon)
             End If
         End If
     End Sub
@@ -806,12 +806,12 @@ Public Class frmObject
 
     Private Sub frmObject_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Properties1.PropertyType = clsProperty.PropertyOfEnum.Objects
-        'Me.Icon = Icon.FromHandle(My.Resources.imgObjectStatic32.GetHicon)
+        'Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectStatic32.GetHicon)
         If Properties1.htblProperties.ContainsKey("StaticOrDynamic") Then
             If Properties1.htblProperties("StaticOrDynamic").StringData.ToString = "Dynamic" Then
-                Me.Icon = Icon.FromHandle(My.Resources.imgObjectDynamic16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectDynamic16.GetHicon)
             Else
-                Me.Icon = Icon.FromHandle(My.Resources.imgObjectStatic16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectStatic16.GetHicon)
             End If
         End If
     End Sub
@@ -837,7 +837,7 @@ Public Class frmObject
         cmbInitialLocation.Items.Clear()
         Select Case True
             Case sender Is chkStatic
-                Me.Icon = Icon.FromHandle(My.Resources.imgObjectStatic16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectStatic16.GetHicon)
                 cmbInitialLocation.Items.Add("Hidden", "Hidden")
                 cmbInitialLocation.Items.Add("AtLocation", "Single Location")
                 cmbInitialLocation.Items.Add("AtLocationGroup", "Location Group")
@@ -857,7 +857,7 @@ Public Class frmObject
                         cmbLocation2.Key = sOldKey
                 End Select
             Case sender Is chkDynamic
-                Me.Icon = Icon.FromHandle(My.Resources.imgObjectDynamic16.GetHicon)
+                Me.Icon = Icon.FromHandle(My.Resources.Resources.imgObjectDynamic16.GetHicon)
                 'For Each sState As String In Adventure.htblObjectProperties("DynamicLocation").arlStates
                 '    cmbInitialLocation.Items.Add(sState)
                 'Next

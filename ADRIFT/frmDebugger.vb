@@ -38,15 +38,15 @@ Public Class frmDebugger
         SplitContainer2.Panel2Collapsed = True
         With imgList.Images
             .Add("", New Bitmap(1, 1))
-            .Add("imgLocation16", My.Resources.imgLocation16)
-            .Add("imgObjectStatic16", My.Resources.imgObjectStatic16)
-            .Add("imgObjectDynamic16", My.Resources.imgObjectDynamic16)
-            .Add("imgTaskGeneral16", My.Resources.imgTaskGeneral16)
-            .Add("imgTaskSpecific16", My.Resources.imgTaskSpecific16)
-            .Add("imgTaskSystem16", My.Resources.imgTaskSystem16)
-            .Add("imgEvent16", My.Resources.imgEvent16)
-            .Add("imgCharacter16", My.Resources.imgCharacter16)
-            .Add("imgVariable16", My.Resources.imgVariable16)
+            .Add("imgLocation16", My.Resources.Resources.imgLocation16)
+            .Add("imgObjectStatic16", My.Resources.Resources.imgObjectStatic16)
+            .Add("imgObjectDynamic16", My.Resources.Resources.imgObjectDynamic16)
+            .Add("imgTaskGeneral16", My.Resources.Resources.imgTaskGeneral16)
+            .Add("imgTaskSpecific16", My.Resources.Resources.imgTaskSpecific16)
+            .Add("imgTaskSystem16", My.Resources.Resources.imgTaskSystem16)
+            .Add("imgEvent16", My.Resources.Resources.imgEvent16)
+            .Add("imgCharacter16", My.Resources.Resources.imgCharacter16)
+            .Add("imgVariable16", My.Resources.Resources.imgVariable16)
         End With
         treeItemBrowser.ImageList = imgList
         treeItemBrowser.TreeViewNodeSorter = New NodeSorter
@@ -95,7 +95,7 @@ Public Class frmDebugger
         For Each l As clsLocation In Adventure.htblLocations.Values
             'Dim n As Infragistics.Win.UltraWinTree.UltraTreeNode = treeItemBrowser.Nodes("Locations").Nodes.Add(l.Key, l.ShortDescription.ToString)
             n = treeItemBrowser.Nodes("Locations").Nodes.Add(l.Key, l.ShortDescription.ToString)
-            'n.LeftImages.Add(My.Resources.imgLocation16)
+            'n.LeftImages.Add(My.Resources.Resources.imgLocation16)
             n.ImageKey = "imgLocation16"
             n.SelectedImageKey = n.ImageKey
         Next
@@ -108,10 +108,10 @@ Public Class frmDebugger
             'Dim n As Infragistics.Win.UltraWinTree.UltraTreeNode = treeItemBrowser.Nodes("Objects").Nodes.Add(o.Key, o.FullName)
             n = treeItemBrowser.Nodes("Objects").Nodes.Add(o.Key, o.FullName)
             If o.IsStatic Then
-                'n.LeftImages.Add(My.Resources.imgObjectStatic16)
+                'n.LeftImages.Add(My.Resources.Resources.imgObjectStatic16)
                 n.ImageKey = "imgObjectStatic16"
             Else
-                'n.LeftImages.Add(My.Resources.imgObjectDynamic16)
+                'n.LeftImages.Add(My.Resources.Resources.imgObjectDynamic16)
                 n.ImageKey = "imgObjectDynamic16"
             End If
             n.SelectedImageKey = n.ImageKey
@@ -152,7 +152,7 @@ Public Class frmDebugger
         For Each e As clsEvent In Adventure.htblEvents.Values
             'Dim n As Infragistics.Win.UltraWinTree.UltraTreeNode = treeItemBrowser.Nodes("Events").Nodes.Add(e.Key, e.Description)
             n = treeItemBrowser.Nodes("Events").Nodes.Add(e.Key, e.Description)
-            'n.LeftImages.Add(My.Resources.imgEvent16)
+            'n.LeftImages.Add(My.Resources.Resources.imgEvent16)
             If e.EventType = clsEvent.EventTypeEnum.TurnBased Then
                 n.ImageKey = "imgEvent16"
             Else
@@ -168,7 +168,7 @@ Public Class frmDebugger
         For Each c As clsCharacter In Adventure.htblCharacters.Values
             'Dim n As Infragistics.Win.UltraWinTree.UltraTreeNode = treeItemBrowser.Nodes("Characters").Nodes.Add(c.Key, c.Name)
             n = treeItemBrowser.Nodes("Characters").Nodes.Add(c.Key, c.Name)
-            'n.LeftImages.Add(My.Resources.imgCharacter16)
+            'n.LeftImages.Add(My.Resources.Resources.imgCharacter16)
             n.ImageKey = "imgCharacter16"
             n.SelectedImageKey = n.ImageKey
         Next
@@ -180,7 +180,7 @@ Public Class frmDebugger
         For Each v As clsVariable In Adventure.htblVariables.Values
             'Dim n As Infragistics.Win.UltraWinTree.UltraTreeNode = treeItemBrowser.Nodes("Variables").Nodes.Add(v.Key, v.Name)
             n = treeItemBrowser.Nodes("Variables").Nodes.Add(v.Key, v.Name)
-            'n.LeftImages.Add(My.Resources.imgVariable16)
+            'n.LeftImages.Add(My.Resources.Resources.imgVariable16)
             n.ImageKey = "imgVariable16"
             n.SelectedImageKey = n.ImageKey
         Next

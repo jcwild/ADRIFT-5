@@ -954,7 +954,7 @@ Public Class frmProperty
 
 
     Private Sub frmObject_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgProperty16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgProperty16.GetHicon)
         GetFormPosition(Me)
         ResizeForm()
     End Sub

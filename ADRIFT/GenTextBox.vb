@@ -1,739 +1,11 @@
 Imports System.ComponentModel
 Imports Infragistics.Win.UltraWinToolbars
 Imports Infragistics.Win.UltraWinSpellChecker
+Imports System.Security.Policy
 'Imports System.Data
 
 
 Public Class GenTextbox
-    Inherits System.Windows.Forms.UserControl
-
-#Region " Windows Form Designer generated code "
-
-    Public Sub New()        
-        MyBase.New()
-        'DebugTimeRecord("GenTextbox New")
-        'This call is required by the Windows Form Designer.
-        InitializeComponent()
-        'DebugTimeFinish("GenTextbox New")
-        'Add any initialization after the InitializeComponent() call
-        SetStyle(ControlStyles.SupportsTransparentBackColor, True)
-        Me.BackColor = Color.Transparent
-        rtxtSource.Arguments = Arguments
-    End Sub
-
-    'UserControl1 overrides dispose to clean up the component list.
-    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-        If disposing Then
-            If Not (components Is Nothing) Then
-                components.Dispose()
-            End If
-        End If
-        Try
-            MyBase.Dispose(disposing) ' Cross threading error here sometimes (Infragistics?)
-        Catch
-        End Try
-    End Sub
-
-    'Required by the Windows Form Designer
-    Private components As System.ComponentModel.IContainer
-
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    Friend WithEvents Tabs As Infragistics.Win.UltraWinTabControl.UltraTabControl
-    Friend WithEvents UltraTabSharedControlsPage1 As Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage
-    Friend WithEvents tabpageSource As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents tabpagePreview As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents rtxtPreview As System.Windows.Forms.RichTextBox
-    Friend WithEvents UTMText As Infragistics.Win.UltraWinToolbars.UltraToolbarsManager
-    Friend WithEvents UltraSpellChecker1 As Infragistics.Win.UltraWinSpellChecker.UltraSpellChecker
-    Friend WithEvents txtBorder As Infragistics.Win.UltraWinEditors.UltraTextEditor
-    Friend WithEvents rtxtSource As OOTextbox ' System.Windows.Forms.RichTextBox    
-    Friend WithEvents SplitContainer As System.Windows.Forms.SplitContainer
-    Friend WithEvents RestrictSummary As ADRIFT.RestrictSummary
-    Friend WithEvents tabsDescriptions As Infragistics.Win.UltraWinTabControl.UltraTabStripControl
-    Friend WithEvents UltraTabSharedControlsPage2 As Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage
-    Friend WithEvents cmsTabs As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents mnuDeleteTab As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents cmbDisplayWhen As Infragistics.Win.UltraWinEditors.UltraComboEditor
-    Friend WithEvents lblAreAllMetThen As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents _Panel2_Toolbars_Dock_Area_Left As Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea
-    Friend WithEvents _Panel2_Toolbars_Dock_Area_Right As Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea
-    Friend WithEvents _Panel2_Toolbars_Dock_Area_Top As Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea
-    Friend WithEvents _Panel2_Toolbars_Dock_Area_Bottom As Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea
-    Friend WithEvents fileGraphics As ADRIFT.DirectoryBox       
-    Friend WithEvents imgGraphics As ADRIFT.clsImage    
-    Friend WithEvents miRenameTab As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UltraTabPageControl1 As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    Friend WithEvents fileAudio As ADRIFT.DirectoryBox
-    Friend WithEvents pnlButtons As Infragistics.Win.Misc.UltraPanel
-    Friend WithEvents chkPlay As Infragistics.Win.UltraWinEditors.UltraCheckEditor
-    Friend WithEvents nudChannel As System.Windows.Forms.NumericUpDown
-    Friend WithEvents lblChannel As Infragistics.Win.Misc.UltraLabel
-    Friend WithEvents chkPause As Infragistics.Win.UltraWinEditors.UltraCheckEditor
-    Friend WithEvents chkStop As Infragistics.Win.UltraWinEditors.UltraCheckEditor
-    Friend WithEvents chkLoop As Infragistics.Win.UltraWinEditors.UltraCheckEditor
-    Friend WithEvents pnlAudio As Infragistics.Win.Misc.UltraPanel
-    Friend WithEvents pnlChannel As Infragistics.Win.Misc.UltraPanel
-    Friend WithEvents lblImageInstructions As Infragistics.Win.Misc.UltraLabel    
-    Friend WithEvents tabpageGraphics As Infragistics.Win.UltraWinTabControl.UltraTabPageControl
-    '<System.Diagnostics.DebuggerStepThrough()> 
-    Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim Appearance5 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance6 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance19 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance7 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance23 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance22 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance24 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance31 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance25 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance26 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance30 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance27 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance28 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance29 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim ValueListItem1 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
-        Dim ValueListItem2 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
-        Dim ValueListItem3 As Infragistics.Win.ValueListItem = New Infragistics.Win.ValueListItem()
-        Dim UltraTab1 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab2 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab3 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab6 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraToolbar2 As Infragistics.Win.UltraWinToolbars.UltraToolbar = New Infragistics.Win.UltraWinToolbars.UltraToolbar("tbFormat")
-        Dim ButtonTool1 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("CheckSpelling")
-        Dim ButtonTool2 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("CheckSpelling")
-        Dim Appearance1 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim Appearance2 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim PopupMenuTool1 As Infragistics.Win.UltraWinToolbars.PopupMenuTool = New Infragistics.Win.UltraWinToolbars.PopupMenuTool("mnuPopup")
-        Dim ButtonTool3 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("CheckSpelling")
-        Dim ButtonTool4 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("AddAlternateDescription")
-        Dim ButtonTool5 As Infragistics.Win.UltraWinToolbars.ButtonTool = New Infragistics.Win.UltraWinToolbars.ButtonTool("AddAlternateDescription")
-        Dim Appearance3 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Dim UltraTab4 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim UltraTab5 As Infragistics.Win.UltraWinTabControl.UltraTab = New Infragistics.Win.UltraWinTabControl.UltraTab()
-        Dim Appearance4 As Infragistics.Win.Appearance = New Infragistics.Win.Appearance()
-        Me.tabpageSource = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.rtxtSource = New ADRIFT.OOTextbox()
-        Me.txtBorder = New Infragistics.Win.UltraWinEditors.UltraTextEditor()
-        Me.tabpagePreview = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.rtxtPreview = New System.Windows.Forms.RichTextBox()
-        Me.tabpageGraphics = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.lblImageInstructions = New Infragistics.Win.Misc.UltraLabel()
-        Me.imgGraphics = New ADRIFT.clsImage()
-        Me.fileGraphics = New ADRIFT.DirectoryBox()
-        Me.UltraTabPageControl1 = New Infragistics.Win.UltraWinTabControl.UltraTabPageControl()
-        Me.fileAudio = New ADRIFT.DirectoryBox()
-        Me.pnlAudio = New Infragistics.Win.Misc.UltraPanel()
-        Me.chkLoop = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.pnlChannel = New Infragistics.Win.Misc.UltraPanel()
-        Me.nudChannel = New System.Windows.Forms.NumericUpDown()
-        Me.lblChannel = New Infragistics.Win.Misc.UltraLabel()
-        Me.pnlButtons = New Infragistics.Win.Misc.UltraPanel()
-        Me.chkStop = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.chkPause = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.chkPlay = New Infragistics.Win.UltraWinEditors.UltraCheckEditor()
-        Me.SplitContainer = New System.Windows.Forms.SplitContainer()
-        Me.cmbDisplayWhen = New Infragistics.Win.UltraWinEditors.UltraComboEditor()
-        Me.lblAreAllMetThen = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.RestrictSummary = New ADRIFT.RestrictSummary()
-        Me.Tabs = New Infragistics.Win.UltraWinTabControl.UltraTabControl()
-        Me.UltraTabSharedControlsPage1 = New Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage()
-        Me._Panel2_Toolbars_Dock_Area_Left = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
-        Me.UTMText = New Infragistics.Win.UltraWinToolbars.UltraToolbarsManager(Me.components)
-        Me._Panel2_Toolbars_Dock_Area_Right = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
-        Me._Panel2_Toolbars_Dock_Area_Top = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
-        Me._Panel2_Toolbars_Dock_Area_Bottom = New Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea()
-        Me.tabsDescriptions = New Infragistics.Win.UltraWinTabControl.UltraTabStripControl()
-        Me.cmsTabs = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.miRenameTab = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuDeleteTab = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UltraTabSharedControlsPage2 = New Infragistics.Win.UltraWinTabControl.UltraTabSharedControlsPage()
-        Me.tabpageSource.SuspendLayout()
-        CType(Me.txtBorder, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tabpagePreview.SuspendLayout()
-        Me.tabpageGraphics.SuspendLayout()
-        Me.UltraTabPageControl1.SuspendLayout()
-        Me.pnlAudio.ClientArea.SuspendLayout()
-        Me.pnlAudio.SuspendLayout()
-        CType(Me.chkLoop, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlChannel.ClientArea.SuspendLayout()
-        Me.pnlChannel.SuspendLayout()
-        CType(Me.nudChannel, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlButtons.ClientArea.SuspendLayout()
-        Me.pnlButtons.SuspendLayout()
-        CType(Me.chkStop, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkPause, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.chkPlay, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer.Panel1.SuspendLayout()
-        Me.SplitContainer.Panel2.SuspendLayout()
-        Me.SplitContainer.SuspendLayout()
-        CType(Me.cmbDisplayWhen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tabs, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Tabs.SuspendLayout()
-        CType(Me.UTMText, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tabsDescriptions, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tabsDescriptions.SuspendLayout()
-        Me.cmsTabs.SuspendLayout()
-        Me.UltraTabSharedControlsPage2.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'tabpageSource
-        '
-        Me.tabpageSource.Controls.Add(Me.rtxtSource)
-        Me.tabpageSource.Controls.Add(Me.txtBorder)
-        Me.tabpageSource.Location = New System.Drawing.Point(1, 1)
-        Me.tabpageSource.Name = "tabpageSource"
-        Me.tabpageSource.Size = New System.Drawing.Size(442, 374)
-        '
-        'rtxtSource
-        '
-        Me.rtxtSource.AllowDrop = True
-        Me.UTMText.SetContextMenuUltra(Me.rtxtSource, "mnuPopup")
-        Me.rtxtSource.DetectUrls = False
-        Me.rtxtSource.Dock = System.Windows.Forms.DockStyle.None
-        Me.rtxtSource.EnableAutoDragDrop = True
-        Me.rtxtSource.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxtSource.Location = New System.Drawing.Point(-1, -1)
-        Me.rtxtSource.Multiline = True
-        Me.rtxtSource.Name = "rtxtSource"
-        Me.rtxtSource.Size = New System.Drawing.Size(442, 374)
-        Me.rtxtSource.TabIndex = 0
-        Me.rtxtSource.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI
-        Me.rtxtSource.Value = New Infragistics.Win.FormattedLinkLabel.ParsedFormattedTextValue("")
-        Me.rtxtSource.TreatValueAs = Infragistics.Win.FormattedLinkLabel.TreatValueAs.FormattedText
-        '
-        'txtBorder
-        '
-        Me.txtBorder.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtBorder.Location = New System.Drawing.Point(0, 0)
-        Me.txtBorder.Multiline = True
-        Me.txtBorder.Name = "txtBorder"
-        Me.txtBorder.Size = New System.Drawing.Size(442, 374)
-        Me.txtBorder.TabIndex = 1
-        Me.txtBorder.TabStop = False
-        Me.txtBorder.Text = "UltraTextEditor1"
-        '
-        'tabpagePreview
-        '
-        Me.tabpagePreview.Controls.Add(Me.rtxtPreview)
-        Me.tabpagePreview.Enabled = False
-        Me.tabpagePreview.Location = New System.Drawing.Point(-10000, -10000)
-        Me.tabpagePreview.Name = "tabpagePreview"
-        Me.tabpagePreview.Size = New System.Drawing.Size(442, 374)
-        '
-        'rtxtPreview
-        '
-        Me.rtxtPreview.BackColor = System.Drawing.Color.Black
-        Me.rtxtPreview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtxtPreview.ForeColor = System.Drawing.Color.Lime
-        Me.rtxtPreview.Location = New System.Drawing.Point(0, 0)
-        Me.rtxtPreview.Name = "rtxtPreview"
-        Me.rtxtPreview.Size = New System.Drawing.Size(442, 374)
-        Me.rtxtPreview.TabIndex = 0
-        Me.rtxtPreview.Text = ""
-        '
-        'tabpageGraphics
-        '
-        Me.tabpageGraphics.Controls.Add(Me.lblImageInstructions)
-        Me.tabpageGraphics.Controls.Add(Me.imgGraphics)
-        Me.tabpageGraphics.Controls.Add(Me.fileGraphics)
-        Me.tabpageGraphics.Location = New System.Drawing.Point(-10000, -10000)
-        Me.tabpageGraphics.Name = "tabpageGraphics"
-        Me.tabpageGraphics.Size = New System.Drawing.Size(442, 374)
-        '
-        'lblImageInstructions
-        '
-        Me.lblImageInstructions.AllowDrop = True
-        Me.lblImageInstructions.Anchor = System.Windows.Forms.AnchorStyles.None
-        Appearance5.BackColor = System.Drawing.Color.Transparent
-        Appearance5.TextHAlignAsString = "Center"
-        Appearance5.TextVAlignAsString = "Middle"
-        Me.lblImageInstructions.Appearance = Appearance5
-        Me.lblImageInstructions.Location = New System.Drawing.Point(71, 134)
-        Me.lblImageInstructions.Name = "lblImageInstructions"
-        Me.lblImageInstructions.Size = New System.Drawing.Size(310, 71)
-        Me.lblImageInstructions.TabIndex = 4
-        Me.lblImageInstructions.Text = "Select an Image file, enter a web URL, or drag an image into this window"
-        '
-        'imgGraphics
-        '
-        Me.imgGraphics.AllowDrop = True
-        Me.imgGraphics.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.imgGraphics.BackColor = System.Drawing.Color.Transparent
-        Me.imgGraphics.BackColour = System.Drawing.Color.Transparent
-        Me.imgGraphics.Image = Nothing
-        Me.imgGraphics.Location = New System.Drawing.Point(5, 5)
-        Me.imgGraphics.Name = "imgGraphics"
-        Me.imgGraphics.Size = New System.Drawing.Size(433, 336)
-        Me.imgGraphics.SizeMode = ADRIFT.clsImage.SizeModeEnum.ActualSizeCentred
-        Me.imgGraphics.TabIndex = 2
-        '
-        'fileGraphics
-        '
-        Me.fileGraphics.AllowDrop = True
-        Me.fileGraphics.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.fileGraphics.BackColor = System.Drawing.Color.Transparent
-        Me.fileGraphics.BoxType = ADRIFT.DirectoryBox.BoxTypeEnum.File
-        Me.fileGraphics.Directory = "*** Incorrect BoxType ***"
-        Me.fileGraphics.FileFilter = "Image Files|*.jpg;*.gif;*.png|All Files (*.*)|*.*"
-        Me.fileGraphics.Filename = ""
-        Me.fileGraphics.Location = New System.Drawing.Point(5, 348)
-        Me.fileGraphics.Name = "fileGraphics"
-        Me.fileGraphics.OpenOrSave = ADRIFT.DirectoryBox.OpenOrSaveEnum.Open
-        Me.fileGraphics.Size = New System.Drawing.Size(434, 22)
-        Me.fileGraphics.TabIndex = 0
-        '
-        'UltraTabPageControl1
-        '
-        Me.UltraTabPageControl1.Controls.Add(Me.fileAudio)
-        Me.UltraTabPageControl1.Controls.Add(Me.pnlAudio)
-        Me.UltraTabPageControl1.Location = New System.Drawing.Point(-10000, -10000)
-        Me.UltraTabPageControl1.Name = "UltraTabPageControl1"
-        Me.UltraTabPageControl1.Size = New System.Drawing.Size(442, 374)
-        '
-        'fileAudio
-        '
-        Me.fileAudio.AllowDrop = True
-        Me.fileAudio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.fileAudio.BackColor = System.Drawing.Color.Transparent
-        Me.fileAudio.BoxType = ADRIFT.DirectoryBox.BoxTypeEnum.File
-        Me.fileAudio.Directory = "*** Incorrect BoxType ***"
-        Me.fileAudio.Enabled = False
-        Me.fileAudio.FileFilter = "Audio Files|*.wav;*.mp3;*.mid|All Files (*.*)|*.*"
-        Me.fileAudio.Filename = ""
-        Me.fileAudio.Location = New System.Drawing.Point(5, 348)
-        Me.fileAudio.Name = "fileAudio"
-        Me.fileAudio.OpenOrSave = ADRIFT.DirectoryBox.OpenOrSaveEnum.Open
-        Me.fileAudio.Size = New System.Drawing.Size(434, 22)
-        Me.fileAudio.TabIndex = 1
-        '
-        'pnlAudio
-        '
-        Me.pnlAudio.Anchor = System.Windows.Forms.AnchorStyles.None
-        Appearance6.BackColor = System.Drawing.Color.Transparent
-        Me.pnlAudio.Appearance = Appearance6
-        '
-        'pnlAudio.ClientArea
-        '
-        Me.pnlAudio.ClientArea.Controls.Add(Me.chkLoop)
-        Me.pnlAudio.ClientArea.Controls.Add(Me.pnlChannel)
-        Me.pnlAudio.ClientArea.Controls.Add(Me.pnlButtons)
-        Me.pnlAudio.Location = New System.Drawing.Point(5, 129)
-        Me.pnlAudio.Name = "pnlAudio"
-        Me.pnlAudio.Size = New System.Drawing.Size(434, 86)
-        Me.pnlAudio.TabIndex = 8
-        '
-        'chkLoop
-        '
-        Appearance19.FontData.Name = "ariel"
-        Appearance19.FontData.SizeInPoints = 10.0!
-        Me.chkLoop.Appearance = Appearance19
-        Me.chkLoop.Enabled = False
-        Me.chkLoop.Location = New System.Drawing.Point(247, 61)
-        Me.chkLoop.Name = "chkLoop"
-        Me.chkLoop.Size = New System.Drawing.Size(61, 20)
-        Me.chkLoop.TabIndex = 7
-        Me.chkLoop.Text = "Loop"
-        '
-        'pnlChannel
-        '
-        Me.pnlChannel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Appearance7.BackColor = System.Drawing.Color.Transparent
-        Me.pnlChannel.Appearance = Appearance7
-        '
-        'pnlChannel.ClientArea
-        '
-        Me.pnlChannel.ClientArea.Controls.Add(Me.nudChannel)
-        Me.pnlChannel.ClientArea.Controls.Add(Me.lblChannel)
-        Me.pnlChannel.Location = New System.Drawing.Point(134, 58)
-        Me.pnlChannel.Name = "pnlChannel"
-        Me.pnlChannel.Size = New System.Drawing.Size(92, 24)
-        Me.pnlChannel.TabIndex = 9
-        '
-        'nudChannel
-        '
-        Me.nudChannel.Location = New System.Drawing.Point(57, 2)
-        Me.nudChannel.Maximum = New Decimal(New Integer() {8, 0, 0, 0})
-        Me.nudChannel.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.nudChannel.Name = "nudChannel"
-        Me.nudChannel.Size = New System.Drawing.Size(33, 22)
-        Me.nudChannel.TabIndex = 2
-        Me.nudChannel.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'lblChannel
-        '
-        Me.lblChannel.Location = New System.Drawing.Point(0, 5)
-        Me.lblChannel.Name = "lblChannel"
-        Me.lblChannel.Size = New System.Drawing.Size(100, 23)
-        Me.lblChannel.TabIndex = 3
-        Me.lblChannel.Text = "Channel:"
-        '
-        'pnlButtons
-        '
-        Me.pnlButtons.Anchor = System.Windows.Forms.AnchorStyles.None
-        Appearance23.BackColor = System.Drawing.Color.Transparent
-        Me.pnlButtons.Appearance = Appearance23
-        '
-        'pnlButtons.ClientArea
-        '
-        Me.pnlButtons.ClientArea.Controls.Add(Me.chkStop)
-        Me.pnlButtons.ClientArea.Controls.Add(Me.chkPause)
-        Me.pnlButtons.ClientArea.Controls.Add(Me.chkPlay)
-        Me.pnlButtons.Location = New System.Drawing.Point(111, 2)
-        Me.pnlButtons.Name = "pnlButtons"
-        Me.pnlButtons.Size = New System.Drawing.Size(210, 52)
-        Me.pnlButtons.TabIndex = 2
-        '
-        'chkStop
-        '
-        Appearance22.AlphaLevel = CType(128, Short)
-        Appearance22.BackColor = System.Drawing.Color.Transparent
-        Appearance22.BorderColor = System.Drawing.Color.Transparent
-        Appearance22.Image = Global.ADRIFT.My.Resources.imgStop48
-        Appearance22.ImageAlpha = Infragistics.Win.Alpha.UseAlphaLevel
-        Me.chkStop.Appearance = Appearance22
-        Me.chkStop.BackColor = System.Drawing.Color.Transparent
-        Me.chkStop.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkStop.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Button
-        Appearance24.Image = Global.ADRIFT.My.Resources.imgStopShadow48
-        Appearance24.ImageAlpha = Infragistics.Win.Alpha.Opaque
-        Me.chkStop.CheckedAppearance = Appearance24
-        Appearance31.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.chkStop.HotTrackingAppearance = Appearance31
-        Me.chkStop.Location = New System.Drawing.Point(159, 1)
-        Me.chkStop.Name = "chkStop"
-        Me.chkStop.Size = New System.Drawing.Size(50, 50)
-        Me.chkStop.Style = Infragistics.Win.EditCheckStyle.Button
-        Me.chkStop.TabIndex = 6
-        Me.chkStop.TabStop = False
-        Me.chkStop.UseFlatMode = Infragistics.Win.DefaultableBoolean.[True]
-        Me.chkStop.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
-        '
-        'chkPause
-        '
-        Appearance25.AlphaLevel = CType(128, Short)
-        Appearance25.BackColor = System.Drawing.Color.Transparent
-        Appearance25.BorderColor = System.Drawing.Color.Transparent
-        Appearance25.Image = Global.ADRIFT.My.Resources.imgPause48
-        Appearance25.ImageAlpha = Infragistics.Win.Alpha.UseAlphaLevel
-        Me.chkPause.Appearance = Appearance25
-        Me.chkPause.BackColor = System.Drawing.Color.Transparent
-        Me.chkPause.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkPause.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Button
-        Appearance26.Image = Global.ADRIFT.My.Resources.imgPauseShadow48
-        Appearance26.ImageAlpha = Infragistics.Win.Alpha.Opaque
-        Me.chkPause.CheckedAppearance = Appearance26
-        Appearance30.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.chkPause.HotTrackingAppearance = Appearance30
-        Me.chkPause.Location = New System.Drawing.Point(81, 1)
-        Me.chkPause.Name = "chkPause"
-        Me.chkPause.Size = New System.Drawing.Size(50, 50)
-        Me.chkPause.Style = Infragistics.Win.EditCheckStyle.Button
-        Me.chkPause.TabIndex = 5
-        Me.chkPause.TabStop = False
-        Me.chkPause.UseFlatMode = Infragistics.Win.DefaultableBoolean.[True]
-        Me.chkPause.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
-        '
-        'chkPlay
-        '
-        Appearance27.AlphaLevel = CType(128, Short)
-        Appearance27.BackColor = System.Drawing.Color.Transparent
-        Appearance27.BorderColor = System.Drawing.Color.Transparent
-        Appearance27.Image = Global.ADRIFT.My.Resources.imgPlay48
-        Appearance27.ImageAlpha = Infragistics.Win.Alpha.UseAlphaLevel
-        Me.chkPlay.Appearance = Appearance27
-        Me.chkPlay.BackColor = System.Drawing.Color.Transparent
-        Me.chkPlay.BackColorInternal = System.Drawing.Color.Transparent
-        Me.chkPlay.ButtonStyle = Infragistics.Win.UIElementButtonStyle.Button
-        Appearance28.Image = Global.ADRIFT.My.Resources.imgPlayShadow48
-        Appearance28.ImageAlpha = Infragistics.Win.Alpha.Opaque
-        Me.chkPlay.CheckedAppearance = Appearance28
-        Appearance29.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.chkPlay.HotTrackingAppearance = Appearance29
-        Me.chkPlay.Location = New System.Drawing.Point(1, 1)
-        Me.chkPlay.Name = "chkPlay"
-        Me.chkPlay.Size = New System.Drawing.Size(49, 49)
-        Me.chkPlay.Style = Infragistics.Win.EditCheckStyle.Button
-        Me.chkPlay.TabIndex = 4
-        Me.chkPlay.UseFlatMode = Infragistics.Win.DefaultableBoolean.[True]
-        Me.chkPlay.UseOsThemes = Infragistics.Win.DefaultableBoolean.[False]
-        '
-        'SplitContainer
-        '
-        Me.SplitContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer.IsSplitterFixed = True
-        Me.SplitContainer.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer.Name = "SplitContainer"
-        Me.SplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer.Panel1
-        '
-        Me.SplitContainer.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.SplitContainer.Panel1.Controls.Add(Me.cmbDisplayWhen)
-        Me.SplitContainer.Panel1.Controls.Add(Me.lblAreAllMetThen)
-        Me.SplitContainer.Panel1.Controls.Add(Me.Label1)
-        Me.SplitContainer.Panel1.Controls.Add(Me.RestrictSummary)
-        Me.SplitContainer.Panel1MinSize = 24
-        '
-        'SplitContainer.Panel2
-        '
-        Me.SplitContainer.Panel2.Controls.Add(Me.Tabs)
-        Me.SplitContainer.Panel2.Controls.Add(Me._Panel2_Toolbars_Dock_Area_Left)
-        Me.SplitContainer.Panel2.Controls.Add(Me._Panel2_Toolbars_Dock_Area_Right)
-        Me.SplitContainer.Panel2.Controls.Add(Me._Panel2_Toolbars_Dock_Area_Top)
-        Me.SplitContainer.Panel2.Controls.Add(Me._Panel2_Toolbars_Dock_Area_Bottom)
-        Me.SplitContainer.Size = New System.Drawing.Size(496, 403)
-        Me.SplitContainer.SplitterDistance = 24
-        Me.SplitContainer.SplitterWidth = 1
-        Me.SplitContainer.TabIndex = 2
-        '
-        'cmbDisplayWhen
-        '
-        Me.cmbDisplayWhen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbDisplayWhen.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
-        ValueListItem1.DataValue = 0
-        ValueListItem1.DisplayText = "start description with:"
-        ValueListItem2.DataValue = 1
-        ValueListItem2.DisplayText = "display this after default:"
-        ValueListItem3.DataValue = 2
-        ValueListItem3.DisplayText = "append this to previous:"
-        Me.cmbDisplayWhen.Items.AddRange(New Infragistics.Win.ValueListItem() {ValueListItem1, ValueListItem2, ValueListItem3})
-        Me.cmbDisplayWhen.Location = New System.Drawing.Point(341, 2)
-        Me.cmbDisplayWhen.Name = "cmbDisplayWhen"
-        Me.cmbDisplayWhen.Size = New System.Drawing.Size(152, 21)
-        Me.cmbDisplayWhen.TabIndex = 1
-        '
-        'lblAreAllMetThen
-        '
-        Me.lblAreAllMetThen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblAreAllMetThen.AutoSize = True
-        Me.lblAreAllMetThen.Location = New System.Drawing.Point(259, 6)
-        Me.lblAreAllMetThen.Name = "lblAreAllMetThen"
-        Me.lblAreAllMetThen.Size = New System.Drawing.Size(79, 13)
-        Me.lblAreAllMetThen.TabIndex = 2
-        Me.lblAreAllMetThen.Text = "are all met then"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(4, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(13, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "If"
-        '
-        'RestrictSummary
-        '
-        Me.RestrictSummary.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RestrictSummary.BackColor = System.Drawing.Color.Transparent
-        Me.RestrictSummary.Location = New System.Drawing.Point(19, 2)
-        Me.RestrictSummary.Name = "RestrictSummary"
-        Me.RestrictSummary.Size = New System.Drawing.Size(240, 21)
-        Me.RestrictSummary.TabIndex = 0
-        '
-        'Tabs
-        '
-        Me.Tabs.BackColorInternal = System.Drawing.Color.Transparent
-        Me.Tabs.Controls.Add(Me.UltraTabSharedControlsPage1)
-        Me.Tabs.Controls.Add(Me.tabpageSource)
-        Me.Tabs.Controls.Add(Me.tabpagePreview)
-        Me.Tabs.Controls.Add(Me.tabpageGraphics)
-        Me.Tabs.Controls.Add(Me.UltraTabPageControl1)
-        Me.Tabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Tabs.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tabs.Location = New System.Drawing.Point(27, 0)
-        Me.Tabs.MinTabWidth = 10
-        Me.Tabs.Name = "Tabs"
-        Me.Tabs.SharedControlsPage = Me.UltraTabSharedControlsPage1
-        Me.Tabs.Size = New System.Drawing.Size(469, 378)
-        Me.Tabs.TabIndex = 0
-        Me.Tabs.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.RightTop
-        UltraTab1.Key = "tabSource"
-        UltraTab1.TabPage = Me.tabpageSource
-        UltraTab1.Text = "Source"
-        UltraTab2.Key = "tabPreview"
-        UltraTab2.TabPage = Me.tabpagePreview
-        UltraTab2.Text = "Preview"
-        UltraTab3.Key = "tabGraphics"
-        UltraTab3.TabPage = Me.tabpageGraphics
-        UltraTab3.Text = "Graphics"
-        UltraTab6.Key = "tabAudio"
-        UltraTab6.TabPage = Me.UltraTabPageControl1
-        UltraTab6.Text = "Audio"
-        Me.Tabs.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab1, UltraTab2, UltraTab3, UltraTab6})
-        '
-        'UltraTabSharedControlsPage1
-        '
-        Me.UltraTabSharedControlsPage1.Location = New System.Drawing.Point(-10000, -10000)
-        Me.UltraTabSharedControlsPage1.Name = "UltraTabSharedControlsPage1"
-        Me.UltraTabSharedControlsPage1.Size = New System.Drawing.Size(442, 374)
-        '
-        '_Panel2_Toolbars_Dock_Area_Left
-        '
-        Me._Panel2_Toolbars_Dock_Area_Left.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me._Panel2_Toolbars_Dock_Area_Left.BackColor = System.Drawing.SystemColors.Control
-        Me._Panel2_Toolbars_Dock_Area_Left.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Left
-        Me._Panel2_Toolbars_Dock_Area_Left.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._Panel2_Toolbars_Dock_Area_Left.Location = New System.Drawing.Point(0, 0)
-        Me._Panel2_Toolbars_Dock_Area_Left.Name = "_Panel2_Toolbars_Dock_Area_Left"
-        Me._Panel2_Toolbars_Dock_Area_Left.Size = New System.Drawing.Size(27, 378)
-        Me._Panel2_Toolbars_Dock_Area_Left.ToolbarsManager = Me.UTMText
-        '
-        'UTMText
-        '
-        Me.UTMText.DesignerFlags = 1
-        Me.UTMText.DockWithinContainer = Me.SplitContainer.Panel2
-        Me.UTMText.ShowFullMenusDelay = 500
-        UltraToolbar2.DockedColumn = 0
-        UltraToolbar2.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Left
-        UltraToolbar2.DockedRow = 0
-        UltraToolbar2.FloatingSize = New System.Drawing.Size(100, 20)
-        UltraToolbar2.NonInheritedTools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool1})
-        UltraToolbar2.Text = "Format"
-        Me.UTMText.Toolbars.AddRange(New Infragistics.Win.UltraWinToolbars.UltraToolbar() {UltraToolbar2})
-        Appearance1.Image = Global.ADRIFT.My.Resources.imgSpelling
-        ButtonTool2.SharedPropsInternal.AppearancesLarge.Appearance = Appearance1
-        Appearance2.Image = Global.ADRIFT.My.Resources.imgSpelling
-        ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = Appearance2
-        ButtonTool2.SharedPropsInternal.Caption = "Spelling..."
-        ButtonTool2.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.F7
-        PopupMenuTool1.SharedPropsInternal.Caption = "PopupMenuTool1"
-        PopupMenuTool1.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool3, ButtonTool4})
-        Appearance3.Image = Global.ADRIFT.My.Resources.imgNew16
-        ButtonTool5.SharedPropsInternal.AppearancesSmall.Appearance = Appearance3
-        ButtonTool5.SharedPropsInternal.Caption = "Add Alternative Description"
-        Me.UTMText.Tools.AddRange(New Infragistics.Win.UltraWinToolbars.ToolBase() {ButtonTool2, PopupMenuTool1, ButtonTool5})
-        '
-        '_Panel2_Toolbars_Dock_Area_Right
-        '
-        Me._Panel2_Toolbars_Dock_Area_Right.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me._Panel2_Toolbars_Dock_Area_Right.BackColor = System.Drawing.SystemColors.Control
-        Me._Panel2_Toolbars_Dock_Area_Right.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Right
-        Me._Panel2_Toolbars_Dock_Area_Right.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._Panel2_Toolbars_Dock_Area_Right.Location = New System.Drawing.Point(496, 0)
-        Me._Panel2_Toolbars_Dock_Area_Right.Name = "_Panel2_Toolbars_Dock_Area_Right"
-        Me._Panel2_Toolbars_Dock_Area_Right.Size = New System.Drawing.Size(0, 378)
-        Me._Panel2_Toolbars_Dock_Area_Right.ToolbarsManager = Me.UTMText
-        '
-        '_Panel2_Toolbars_Dock_Area_Top
-        '
-        Me._Panel2_Toolbars_Dock_Area_Top.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me._Panel2_Toolbars_Dock_Area_Top.BackColor = System.Drawing.SystemColors.Control
-        Me._Panel2_Toolbars_Dock_Area_Top.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Top
-        Me._Panel2_Toolbars_Dock_Area_Top.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._Panel2_Toolbars_Dock_Area_Top.Location = New System.Drawing.Point(0, 0)
-        Me._Panel2_Toolbars_Dock_Area_Top.Name = "_Panel2_Toolbars_Dock_Area_Top"
-        Me._Panel2_Toolbars_Dock_Area_Top.Size = New System.Drawing.Size(496, 0)
-        Me._Panel2_Toolbars_Dock_Area_Top.ToolbarsManager = Me.UTMText
-        '
-        '_Panel2_Toolbars_Dock_Area_Bottom
-        '
-        Me._Panel2_Toolbars_Dock_Area_Bottom.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me._Panel2_Toolbars_Dock_Area_Bottom.BackColor = System.Drawing.SystemColors.Control
-        Me._Panel2_Toolbars_Dock_Area_Bottom.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Bottom
-        Me._Panel2_Toolbars_Dock_Area_Bottom.ForeColor = System.Drawing.SystemColors.ControlText
-        Me._Panel2_Toolbars_Dock_Area_Bottom.Location = New System.Drawing.Point(0, 378)
-        Me._Panel2_Toolbars_Dock_Area_Bottom.Name = "_Panel2_Toolbars_Dock_Area_Bottom"
-        Me._Panel2_Toolbars_Dock_Area_Bottom.Size = New System.Drawing.Size(496, 0)
-        Me._Panel2_Toolbars_Dock_Area_Bottom.ToolbarsManager = Me.UTMText
-        '
-        'tabsDescriptions
-        '
-        Me.tabsDescriptions.AllowTabMoving = True
-        Me.tabsDescriptions.ContextMenuStrip = Me.cmsTabs
-        Me.tabsDescriptions.Controls.Add(Me.UltraTabSharedControlsPage2)
-        Me.tabsDescriptions.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tabsDescriptions.Location = New System.Drawing.Point(0, 0)
-        Me.tabsDescriptions.Name = "tabsDescriptions"
-        Me.tabsDescriptions.SharedControls.AddRange(New System.Windows.Forms.Control() {Me.SplitContainer})
-        Me.tabsDescriptions.SharedControlsPage = Me.UltraTabSharedControlsPage2
-        Me.tabsDescriptions.Size = New System.Drawing.Size(500, 429)
-        Me.tabsDescriptions.TabIndex = 11
-        Me.tabsDescriptions.TabLayoutStyle = Infragistics.Win.UltraWinTabs.TabLayoutStyle.SingleRowCompressed
-        Me.tabsDescriptions.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.BottomLeft
-        UltraTab4.Key = "tabDefault"
-        UltraTab4.Text = "Default Description"
-        Appearance4.Image = Global.ADRIFT.My.Resources.imgNew16
-        UltraTab5.HotTrackAppearance = Appearance4
-        UltraTab5.Key = "tabNew"
-        UltraTab5.Text = " "
-        Me.tabsDescriptions.Tabs.AddRange(New Infragistics.Win.UltraWinTabControl.UltraTab() {UltraTab4, UltraTab5})
-        '
-        'cmsTabs
-        '
-        Me.cmsTabs.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miRenameTab, Me.mnuDeleteTab})
-        Me.cmsTabs.Name = "cmsTabs"
-        Me.cmsTabs.Size = New System.Drawing.Size(141, 48)
-        '
-        'miRenameTab
-        '
-        Me.miRenameTab.Name = "miRenameTab"
-        Me.miRenameTab.Size = New System.Drawing.Size(140, 22)
-        Me.miRenameTab.Text = "Rename Tab"
-        '
-        'mnuDeleteTab
-        '
-        Me.mnuDeleteTab.Image = Global.ADRIFT.My.Resources.imgDelete
-        Me.mnuDeleteTab.Name = "mnuDeleteTab"
-        Me.mnuDeleteTab.Size = New System.Drawing.Size(140, 22)
-        Me.mnuDeleteTab.Text = "Delete Tab"
-        '
-        'UltraTabSharedControlsPage2
-        '
-        Me.UltraTabSharedControlsPage2.Controls.Add(Me.SplitContainer)
-        Me.UltraTabSharedControlsPage2.Location = New System.Drawing.Point(1, 1)
-        Me.UltraTabSharedControlsPage2.Name = "UltraTabSharedControlsPage2"
-        Me.UltraTabSharedControlsPage2.Size = New System.Drawing.Size(496, 403)
-        '
-        'GenTextbox
-        '
-        Me.Controls.Add(Me.tabsDescriptions)
-        Me.Name = "GenTextbox"
-        Me.Size = New System.Drawing.Size(500, 429)
-        Me.tabpageSource.ResumeLayout(False)
-        Me.tabpageSource.PerformLayout()
-        CType(Me.txtBorder, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tabpagePreview.ResumeLayout(False)
-        Me.tabpageGraphics.ResumeLayout(False)
-        Me.UltraTabPageControl1.ResumeLayout(False)
-        Me.pnlAudio.ClientArea.ResumeLayout(False)
-        Me.pnlAudio.ResumeLayout(False)
-        CType(Me.chkLoop, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlChannel.ClientArea.ResumeLayout(False)
-        Me.pnlChannel.ResumeLayout(False)
-        CType(Me.nudChannel, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlButtons.ClientArea.ResumeLayout(False)
-        Me.pnlButtons.ResumeLayout(False)
-        CType(Me.chkStop, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkPause, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.chkPlay, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer.Panel1.ResumeLayout(False)
-        Me.SplitContainer.Panel1.PerformLayout()
-        Me.SplitContainer.Panel2.ResumeLayout(False)
-        Me.SplitContainer.ResumeLayout(False)
-        CType(Me.cmbDisplayWhen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tabs, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Tabs.ResumeLayout(False)
-        CType(Me.UTMText, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tabsDescriptions, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tabsDescriptions.ResumeLayout(False)
-        Me.cmsTabs.ResumeLayout(False)
-        Me.UltraTabSharedControlsPage2.ResumeLayout(False)
-        Me.ResumeLayout(False)
-
-    End Sub
-
-#End Region
 
     Private bLocked As Boolean
     Public Shadows Event GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -753,6 +25,20 @@ Public Class GenTextbox
     Public Event Changed(ByVal sender As Object, ByVal e As System.EventArgs)
 
     Friend Property Arguments As List(Of clsUserFunction.Argument)
+
+
+    Public Sub New()
+        MyBase.New()
+        'DebugTimeRecord("GenTextbox New")
+        'This call is required by the Windows Form Designer.
+        InitializeComponent()
+        'DebugTimeFinish("GenTextbox New")
+        'Add any initialization after the InitializeComponent() call
+        SetStyle(ControlStyles.SupportsTransparentBackColor, True)
+        Me.BackColor = Color.Transparent
+        rtxtSource.Arguments = Arguments
+    End Sub
+
 
     Private bFirstTabHasRestrictions As Boolean = False
     Public Property FirstTabHasRestrictions As Boolean
@@ -777,7 +63,7 @@ Public Class GenTextbox
     End Property
 
     ' Hide the Text property
-    <Browsable(False), EditorBrowsable(EditorBrowsableState.Never), Obsolete("Text Property not in use", True)> _
+    <Browsable(False), EditorBrowsable(EditorBrowsableState.Never), Obsolete("Text Property not in use", True)>
     Public Overrides Property Text() As String
         Get
             Return Nothing
@@ -868,11 +154,14 @@ Public Class GenTextbox
     'End Property
 
 
+    'Private PreviewFunctions As New Dictionary(Of String, String)
+    Private ReplacedFunctions As Dictionary(Of String, String)
 
     Private Sub Tabs_SelectedTabChanged(ByVal sender As System.Object, ByVal e As Infragistics.Win.UltraWinTabControl.SelectedTabChangedEventArgs) Handles Tabs.SelectedTabChanged
         Select Case e.Tab.Key
             Case "tabSource"
-                UTMText.Visible = False
+                'UTMText.Visible = False
+                'UTMText.Toolbars.Item(0).Visible = False
                 'tabpageSource.Enabled = True
                 'tabpagePreview.Enabled = False
                 'tabpageGraphics.Enabled = False
@@ -881,10 +170,19 @@ Public Class GenTextbox
                 'fileGraphics.Enabled = False               
             Case "tabPreview"
                 ' TODO - Only allow this as an option, and if selected, disable the preview box from being edited
-                Dim sSourceText As String = ReplaceALRs(ReplaceFunctions(rtxtSource.Text))
+                ReplacedFunctions = New Dictionary(Of String, String)
+                Dim sSourceText As String = ReplaceALRs(ReplaceFunctions(rtxtSource.Text, Replacements:=ReplacedFunctions))
+                'PreviewFunctions = CalculatePreviewFunctions(rtxtSource.Text, sSourceText)
 
-                Source2HTML(sSourceText, rtxtPreview, True) ' If we do above won't be able to use formatting
-                UTMText.Visible = True
+                ' Compare source to the replaced text
+                ' Work out a list of all the replaced functions
+                ' Then make these parts of the preview immutable, and display with a slightly lighter/grey background
+                ' Then when we convert back from preview to source, we simply switch out the functions
+                ' If the function evaluates to blank, retain the original function
+
+                Source2HTML(sSourceText, rtxtPreview, True,,, ReplacedFunctions) ' If we do above won't be able to use formatting
+                'UTMText.Visible = True
+                UTMText.Toolbars.Item(0).Visible = True
                 'rtxtPreview.Enabled = True
                 'rtxtSource.Enabled = False
                 'fileGraphics.Enabled = False
@@ -901,6 +199,23 @@ Public Class GenTextbox
         End Select
 
     End Sub
+
+
+    Private Function CalculatePreviewFunctions(ByVal sSource As String, ByVal sPreview As String) As Dictionary(Of String, String)
+
+        ' Compare the two strings
+        Dim iSource As Integer = 0 ' position in source
+        Dim iPreview As Integer = 0 ' position in preview
+
+        Dim sMatch As String
+        If sSource(iSource) = sPreview(iPreview) Then
+            sMatch &= sSource(iSource)
+        Else
+            ' Find where the source and preview match again
+
+        End If
+
+    End Function
 
 
     Dim bFormatting As Boolean = False
@@ -1088,13 +403,17 @@ Public Class GenTextbox
         If bTextChanging Then Exit Sub
         FormatTextbox()
         UpdateDescription()
+        'UpdatePreview()
     End Sub
 
 
+    'Private Sub UpdatePreview()
+    '    Source2HTML(rtxtPreview.Text, rtxtPreview, True)
+    'End Sub
 
-    Private Sub cmsIntellisense_ItemClicked(sender As Object, e As System.Windows.Forms.ToolStripItemClickedEventArgs)
-        'rtxtSource.AppendText(e.ClickedItem.Tag.ToString)
-    End Sub
+    'Private Sub cmsIntellisense_ItemClicked(sender As Object, e As System.Windows.Forms.ToolStripItemClickedEventArgs)
+    '    'rtxtSource.AppendText(e.ClickedItem.Tag.ToString)
+    'End Sub
 
 
 
@@ -1368,14 +687,50 @@ Public Class GenTextbox
             Tabs.Tabs("tabAudio").Text = "A"
         End If
 
-        If Height < 120 Then
-            pnlButtons.Location = New Point(50, 19)
-            pnlChannel.Location = New Point(pnlButtons.Width + 70, 21)
-            chkLoop.Location = New Point(pnlButtons.Width + 72, 46)
+        'If Height < 120 Then
+        '    pnlButtons.Location = New Point(50, 19)
+        '    pnlChannel.Location = New Point(pnlButtons.Width + 70, 21)
+        '    chkLoop.Location = New Point(pnlButtons.Width + 72, 46)
+        'Else
+        '    pnlButtons.Location = New Point(111, 2)
+        '    pnlChannel.Location = New Point(134, 58)
+        '    chkLoop.Location = New Point(247, 61)
+        'End If
+
+        If Height > 220 Then
+            chkPlay.Size = New Size(192, 50)
+            chkPlay.Location = New Point(1, 1)
+            chkPlay.Appearance.ImageHAlign = Infragistics.Win.HAlign.Left
+            chkPlay.Text = "Play Audio"
+            chkPause.Size = New Size(192, 50)
+            chkPause.Location = New Point(1, 52)
+            chkPause.Appearance.ImageHAlign = Infragistics.Win.HAlign.Left
+            chkPause.Text = "Pause Audio"
+            chkStop.Size = New Size(192, 50)
+            chkStop.Location = New Point(1, 103)
+            chkStop.Appearance.ImageHAlign = Infragistics.Win.HAlign.Left
+            chkStop.Text = "Stop Audio"
+            pnlButtons.Size = New Size(194, 154)
+            pnlButtons.Location = New Point(CInt((pnlAudio.Width - pnlButtons.Width) / 2), CInt((pnlAudio.Height - pnlButtons.Height) / 2) - 20)
+            pnlChannel.Location = New Point(pnlButtons.Location.X, pnlButtons.Location.Y + pnlButtons.Height + 10)
+            chkLoop.Location = New Point(pnlChannel.Location.X + pnlChannel.Width + 40, pnlChannel.Location.Y + 3)
         Else
-            pnlButtons.Location = New Point(111, 2)
-            pnlChannel.Location = New Point(134, 58)
-            chkLoop.Location = New Point(247, 61)
+            chkPlay.Size = New Size(64, 50)
+            chkPlay.Location = New Point(1, 1)
+            chkPlay.Appearance.ImageHAlign = Infragistics.Win.HAlign.Center
+            chkPlay.Text = ""
+            chkPause.Size = New Size(64, 50)
+            chkPause.Location = New Point(65, 1)
+            chkPause.Appearance.ImageHAlign = Infragistics.Win.HAlign.Center
+            chkPause.Text = ""
+            chkStop.Size = New Size(64, 50)
+            chkStop.Location = New Point(129, 1)
+            chkStop.Appearance.ImageHAlign = Infragistics.Win.HAlign.Center
+            chkStop.Text = ""
+            pnlButtons.Size = New Size(193, 52)
+            pnlButtons.Location = New Point(CInt((pnlAudio.Width - pnlButtons.Width) / 2), CInt((pnlAudio.Height - pnlButtons.Height) / 2) - 20)
+            pnlChannel.Location = New Point(pnlButtons.Location.X, pnlButtons.Location.Y + pnlButtons.Height + 10)
+            chkLoop.Location = New Point(pnlChannel.Location.X + pnlChannel.Width + 40, pnlChannel.Location.Y + 3)
         End If
 
         If iTabs > 1 Then
@@ -1446,20 +801,20 @@ Public Class GenTextbox
 
                     AddToMenu("mnuPopup", "Language", "&Language").InstanceProps.IsFirstInGroup = True
                     With AddToMenu("mnuPopup", "CheckSpelling", "&Spelling...").InstanceProps
-                        .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgSpelling
+                        .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgSpelling
                     End With
 
                     With AddToMenu("mnuPopup", "Cut", "Cu&t")
                         .InstanceProps.IsFirstInGroup = True
-                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCut
+                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCut
                         .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
                     End With
                     With AddToMenu("mnuPopup", "Copy", "&Copy")
-                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCopy
+                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
                         .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
                     End With
                     With AddToMenu("mnuPopup", "Paste", "&Paste")
-                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgPaste
+                        .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
                         .SharedProps.Enabled = Clipboard.ContainsText
                     End With
 
@@ -1469,22 +824,22 @@ Public Class GenTextbox
 
             sWord = ""
             With AddToMenu("mnuPopup", "Cut", "Cu&t")
-                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCut
+                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCut
                 .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
             End With
             With AddToMenu("mnuPopup", "Copy", "&Copy")
-                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgCopy
+                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgCopy
                 .SharedProps.Enabled = (rtxtSource.SelectionLength > 0)
             End With
             With AddToMenu("mnuPopup", "Paste", "&Paste")
-                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgPaste
+                .InstanceProps.AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgPaste
                 .SharedProps.Enabled = Clipboard.ContainsText
             End With
 
             If bAllowAlternateDescriptions Then
                 With AddToMenu("mnuPopup", "AddAlternateDescription", "Add Alternative Description").InstanceProps
                     .IsFirstInGroup = True
-                    .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.imgNew16
+                    .AppearancesSmall.Appearance.Image = Global.ADRIFT.My.Resources.Resources.imgNew16
                 End With
             End If
 
@@ -1517,8 +872,10 @@ Public Class GenTextbox
             Case "AddAlternateDescription"
                 AddTab()
             Case "AddToDictionary"
+                If UltraSpellChecker1 Is Nothing Then InitSpellCheck()
                 UltraSpellChecker1.AddWordToUserDictionary(sWord)
             Case "CheckSpelling"
+                If UltraSpellChecker1 Is Nothing Then InitSpellCheck()
                 UltraSpellChecker1.ShowSpellCheck(Me.rtxtSource)
             Case "Copy"
                 'Try
@@ -1534,8 +891,10 @@ Public Class GenTextbox
                 'End Try   
                 rtxtSource.EditInfo.PerformAction(Infragistics.Win.FormattedLinkLabel.FormattedLinkEditorAction.Cut)
             Case "Ignore"
+                If UltraSpellChecker1 Is Nothing Then InitSpellCheck()
                 UltraSpellChecker1.IgnoreError(Me.rtxtSource, UltraSpellChecker1.GetErrorAtPoint(Me.rtxtSource, rtxtSource.GetPositionFromCharIndex(rtxtSource.EditInfo.SelectionStart)))
             Case "IgnoreAll"
+                If UltraSpellChecker1 Is Nothing Then InitSpellCheck()
                 UltraSpellChecker1.IgnoreAll(sWord)
             Case "Paste"
                 'rtxtSource.SelectedText = Clipboard.GetText
@@ -1575,8 +934,8 @@ Public Class GenTextbox
 
     Private Sub AddTab()
 
-        If Not tabsDescriptions.Visible Then            
-            SplitContainer.Parent = tabsDescriptions.SharedControlsPage            
+        If Not tabsDescriptions.Visible Then
+            SplitContainer.Parent = tabsDescriptions.SharedControlsPage
             If Tabs.Visible Then
                 Tabs.BeginUpdate()
                 Tabs.Parent = SplitContainer.Panel2
@@ -1591,7 +950,7 @@ Public Class GenTextbox
                 pnl.Dock = DockStyle.None
                 pnl.Location = New Point(-1, -1)
                 pnl.Size = New Size(SplitContainer.Panel2.Width + 2, SplitContainer.Panel2.Height + 2)
-                pnl.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top                
+                pnl.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right Or AnchorStyles.Top
             End If
             tabsDescriptions.Visible = True
         End If
@@ -1911,7 +1270,7 @@ Public Class GenTextbox
     End Sub
 
 
-    Private Sub Audio_Changed(ByVal sender As Object, ByVal e As System.EventArgs) Handles fileAudio.TextChanged, chkLoop.CheckedChanged, chkPlay.CheckedChanged, chkPause.CheckedChanged, chkStop.CheckedChanged, nudChannel.ValueChanged
+    Private Sub Audio_Changed(ByVal sender As Object, ByVal e As System.EventArgs) Handles fileAudio.TextChanged, chkLoop.CheckedChanged, nudChannel.ValueChanged
         Try
             If Description Is Nothing Then Exit Sub ' OrElse bLoading  ' this stops audio being set on load
 
@@ -2160,10 +1519,12 @@ Public Class GenTextbox
     End Sub
 
 
-    
+
     Private Sub chkPlay_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkPlay.CheckedChanged
         fileAudio.Enabled = chkPlay.Checked
         chkLoop.Enabled = chkPlay.Checked
+        nudChannel.Enabled = chkPlay.Checked OrElse chkPause.Checked OrElse chkStop.Checked
+        lblChannel.Enabled = nudChannel.Enabled
         If chkPlay.Checked Then
             chkPause.Checked = False
             chkStop.Checked = False
@@ -2171,6 +1532,8 @@ Public Class GenTextbox
     End Sub
 
     Private Sub chkPause_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkPause.CheckedChanged
+        nudChannel.Enabled = chkPlay.Checked OrElse chkPause.Checked OrElse chkStop.Checked
+        lblChannel.Enabled = nudChannel.Enabled
         If chkPause.Checked Then
             chkPlay.Checked = False
             chkStop.Checked = False
@@ -2178,6 +1541,8 @@ Public Class GenTextbox
     End Sub
 
     Private Sub chkStop_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkStop.CheckedChanged
+        nudChannel.Enabled = chkPlay.Checked OrElse chkPause.Checked OrElse chkStop.Checked
+        lblChannel.Enabled = nudChannel.Enabled
         If chkStop.Checked Then
             chkPlay.Checked = False
             chkPause.Checked = False
@@ -2196,18 +1561,18 @@ Public Class GenTextbox
         If e.Button = Windows.Forms.MouseButtons.Right Then StopSound(CInt(nudChannel.Value))
     End Sub
 
-    Private Sub chkPlayPauseStop_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles chkPlay.MouseDown, chkPause.MouseDown, chkStop.MouseDown
-        CType(sender, Infragistics.Win.UltraWinEditors.UltraCheckEditor).HotTrackingAppearance.BorderColor = Color.Transparent
-    End Sub
+    'Private Sub chkPlayPauseStop_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs)
+    '    'CType(sender, Infragistics.Win.UltraWinEditors.UltraCheckEditor).HotTrackingAppearance.BorderColor = Color.Transparent
+    'End Sub
 
     Private Sub chkPauseStop_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles chkPause.MouseUp, chkStop.MouseUp
         nudChannel.Focus()
-        CType(sender, Infragistics.Win.UltraWinEditors.UltraCheckEditor).HotTrackingAppearance.BorderColor = SystemColors.ActiveBorder
+        'CType(sender, Infragistics.Win.UltraWinEditors.UltraCheckEditor).HotTrackingAppearance.BorderColor = SystemColors.ActiveBorder
     End Sub
 
     Private Sub chkPlay_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles chkPlay.MouseUp
         If fileAudio.Enabled Then fileAudio.Focus() Else nudChannel.Focus()
-        CType(sender, Infragistics.Win.UltraWinEditors.UltraCheckEditor).HotTrackingAppearance.BorderColor = SystemColors.ActiveBorder
+        'Type(sender, Infragistics.Win.UltraWinEditors.UltraCheckEditor).HotTrackingAppearance.BorderColor = SystemColors.ActiveBorder
     End Sub
 
 End Class

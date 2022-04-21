@@ -258,36 +258,36 @@ Public Class SpecificTask
             Select Case tas.Specifics(iSpecific - 1).Type
                 Case ReferencesType.Object
                     .Text &= "Object"
-                    fPickKeys.AddItem("[ Referenced Object ]", "", My.Resources.imgObjectStatic16)
+                    fPickKeys.AddItem("[ Referenced Object ]", "", My.Resources.Resources.imgObjectStatic16)
                     For Each ob As clsObject In Adventure.htblObjects.Values
                         fPickKeys.AddItem(ob)
                     Next
                 Case ReferencesType.Character
                     .Text &= "Character"
-                    fPickKeys.AddItem("[ The Player Character ]", THEPLAYER, My.Resources.imgPlayer16)
-                    fPickKeys.AddItem("[ Referenced Character ]", "", My.Resources.imgCharacter16)
+                    fPickKeys.AddItem("[ The Player Character ]", THEPLAYER, My.Resources.Resources.imgPlayer16)
+                    fPickKeys.AddItem("[ Referenced Character ]", "", My.Resources.Resources.imgCharacter16)
                     For Each ch As clsCharacter In Adventure.htblCharacters.Values
                         fPickKeys.AddItem(ch)
                     Next
                 Case ReferencesType.Location
                     .Text &= "Location"
-                    fPickKeys.AddItem("[ Referenced Location ]", "", My.Resources.imgLocation16)
+                    fPickKeys.AddItem("[ Referenced Location ]", "", My.Resources.Resources.imgLocation16)
                     For Each loc As clsLocation In Adventure.htblLocations.Values
                         fPickKeys.AddItem(loc)
                     Next
                 Case ReferencesType.Direction
                     .Text &= "Direction"
-                    fPickKeys.AddItem("[ Referenced Direction ]", "", My.Resources.imgCentre16)
+                    fPickKeys.AddItem("[ Referenced Direction ]", "", My.Resources.Resources.imgCentre16)
                     For Each eDir As DirectionsEnum In [Enum].GetValues(GetType(DirectionsEnum))
-                        fPickKeys.AddItem(DirectionName(eDir), eDir.ToString, My.Resources.imgCentre16)
+                        fPickKeys.AddItem(DirectionName(eDir), eDir.ToString, My.Resources.Resources.imgCentre16)
                     Next
                 Case ReferencesType.Text
                     .Text &= "Text"
-                    fPickKeys.AddItem("[ Referenced Text ]", "", My.Resources.imgALR16)
-                    fPickKeys.AddItem("[ Specific Text ]", "SPECIFICTEXT", My.Resources.imgALR16)
+                    fPickKeys.AddItem("[ Referenced Text ]", "", My.Resources.Resources.imgALR16)
+                    fPickKeys.AddItem("[ Specific Text ]", "SPECIFICTEXT", My.Resources.Resources.imgALR16)
                 Case ReferencesType.Item
                     .Text &= "Item"
-                    fPickKeys.AddItem("[ Referenced Item ]", "", My.Resources.imgHelp16)
+                    fPickKeys.AddItem("[ Referenced Item ]", "", My.Resources.Resources.imgHelp16)
                     For Each ob As clsObject In Adventure.htblObjects.Values
                         fPickKeys.AddItem(ob)
                     Next

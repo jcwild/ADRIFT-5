@@ -9,9 +9,9 @@
         Set(ByVal value As String)
             txtExpression.Text = value
             If value = "" Then
-                btnEdit.Appearance.Image = My.Resources.imgAdd16
+                btnEdit.Appearance.Image = My.Resources.Resources.imgAdd16
             Else
-                btnEdit.Appearance.Image = My.Resources.imgEdit16
+                btnEdit.Appearance.Image = My.Resources.Resources.imgEdit16
             End If
         End Set
     End Property

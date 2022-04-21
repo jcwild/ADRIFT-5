@@ -1059,7 +1059,7 @@ Public Class frmOptions
 
 
     Private Sub frmOptions_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Icon = Icon.FromHandle(My.Resources.imgOptions16.GetHicon)
+        Me.Icon = Icon.FromHandle(My.Resources.Resources.imgOptions16.GetHicon)
         GetFormPosition(Me)
         imgGraphics.AllowDrop = True
         fileGraphics.AllowDrop = True

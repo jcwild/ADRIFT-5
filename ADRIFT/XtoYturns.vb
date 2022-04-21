@@ -76,13 +76,13 @@ Public Class XtoYturns
     Private Sub btnExpand_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExpand.Click
 
         If Not bShowRange Then
-            btnExpand.Appearance.Image = My.Resources.imgVariable16
+            btnExpand.Appearance.Image = My.Resources.Resources.imgVariable16
             Me.ToolTip1.SetToolTip(Me.btnExpand, "Click here to set a single value")
             lblTo.Visible = True
             txtTo.Visible = True
             bShowRange = True
         Else
-            btnExpand.Appearance.Image = My.Resources.imgOneToOne
+            btnExpand.Appearance.Image = My.Resources.Resources.imgOneToOne
             Me.ToolTip1.SetToolTip(Me.btnExpand, "Click here to set a range of values")
             lblTo.Visible = False
             txtTo.Visible = False
