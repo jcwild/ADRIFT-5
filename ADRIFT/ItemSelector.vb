@@ -1,3 +1,5 @@
+Imports Infragistics.Win
+
 Public Class ItemSelector
 
     Public Shadows Event GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -6,7 +8,7 @@ Public Class ItemSelector
     Private bNeedsReload As Boolean = False
 
 
-    <Flags()> _
+    <Flags()>
     Public Enum ItemEnum
         [Nothing] = 0
         Location = 1
@@ -228,7 +230,7 @@ Public Class ItemSelector
                                 sLastValidKey = Expression.Value.Substring(1, Expression.Value.Length - 2)
                             End If
                     End Select
-                End If                
+                End If
             End If
 
             eCurrentListType = value
@@ -239,7 +241,7 @@ Public Class ItemSelector
             RaiseEvent SelectionChanged(Me, New EventArgs)
         End Set
     End Property
-   
+
 
 
     Private Sub btnGroup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnItemType.Click
@@ -396,10 +398,10 @@ CheckNextGroup:
                 cmbList.Items.Add("", "[ No Character Selected ]")
                 'Application.DoEvents()
                 cmbList.Items.Add(THEPLAYER, "[ The Player Character ]")
-                For Each ch As clsCharacter In Adventure.htblCharacters.Values
-                    If RestrictProperty = "" OrElse ch.HasProperty(RestrictProperty) Then _
-                    cmbList.Items.Add(ch.Key, ch.Name)
-                Next
+                Dim chars As IEnumerable(Of ValueListItem) = From ch In Adventure.htblCharacters.Values
+                                                             Where RestrictProperty = "" OrElse ch.HasProperty(RestrictProperty)
+                                                             Select New ValueListItem(ch.Key, ch.Name)
+                cmbList.Items.AddRange(chars.ToArray())
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to characters)")
                 ToolTip1.SetToolTip(btnNew, "Add new character")
                 ToolTip1.SetToolTip(btnEdit, "Edit character")
@@ -413,31 +415,30 @@ CheckNextGroup:
                 End If
                 'Application.DoEvents()
                 If bAllowHidden Then cmbList.Items.Add(HIDDEN, "[ Hidden ]")
-                For Each loc As clsLocation In Adventure.htblLocations.Values
-                    If RestrictProperty = "" OrElse loc.HasProperty(RestrictProperty) Then _
-                    cmbList.Items.Add(loc.Key, loc.ShortDescription.ToString)
-                Next
+                Dim locs As IEnumerable(Of ValueListItem) = From loc In Adventure.htblLocations.Values
+                                                            Where RestrictProperty = "" OrElse loc.HasProperty(RestrictProperty)
+                                                            Select New ValueListItem(loc.Key, loc.ShortDescription.ToString)
+                cmbList.Items.AddRange(locs.ToArray())
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to locations)")
                 ToolTip1.SetToolTip(btnNew, "Add new location")
                 ToolTip1.SetToolTip(btnEdit, "Edit location")
             Case ItemEnum.LocationGroup
                 cmbList.Items.Add("", "[ No Group Selected ]")
                 'Application.DoEvents()
-                For Each grp As clsGroup In Adventure.htblGroups.Values
-                    If grp.GroupType = clsGroup.GroupTypeEnum.Locations Then
-                        cmbList.Items.Add(grp.Key, grp.Name)
-                    End If
-                Next
+                Dim grps As IEnumerable(Of ValueListItem) = From grp In Adventure.htblGroups.Values
+                                                            Where grp.GroupType = clsGroup.GroupTypeEnum.Locations
+                                                            Select New ValueListItem(grp.Key, grp.Name)
+                cmbList.Items.AddRange(grps.ToArray())
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to groups)")
                 ToolTip1.SetToolTip(btnNew, "Add new group")
                 ToolTip1.SetToolTip(btnEdit, "Edit group")
             Case ItemEnum.Object
                 cmbList.Items.Add("", "[ No Object Selected ]")
                 'Application.DoEvents()
-                For Each ob As clsObject In Adventure.htblObjects.Values
-                    If RestrictProperty = "" OrElse ob.HasProperty(RestrictProperty) Then _
-                    cmbList.Items.Add(ob.Key, ob.FullName)
-                Next
+                Dim objs As IEnumerable(Of ValueListItem) = From obj In Adventure.htblObjects.Values
+                                                            Where RestrictProperty = "" OrElse obj.HasProperty(RestrictProperty)
+                                                            Select New ValueListItem(obj.Key, obj.FullName)
+                cmbList.Items.AddRange(objs.ToArray())
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to objects)")
                 ToolTip1.SetToolTip(btnNew, "Add new object")
                 ToolTip1.SetToolTip(btnEdit, "Edit object")
@@ -445,18 +446,18 @@ CheckNextGroup:
             Case ItemEnum.Task
                 cmbList.Items.Add("", "[ No Task Selected ]")
                 'Application.DoEvents()
-                For Each t As clsTask In Adventure.htblTasks.Values
-                    cmbList.Items.Add(t.Key, t.Description)
-                Next
+                Dim tsks As IEnumerable(Of ValueListItem) = From tsk In Adventure.htblTasks.Values
+                                                            Select New ValueListItem(tsk.Key, tsk.Description)
+                cmbList.Items.AddRange(tsks.ToArray())
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to tasks)")
                 ToolTip1.SetToolTip(btnNew, "Add new task")
                 ToolTip1.SetToolTip(btnEdit, "Edit task")
             Case ItemEnum.Variable
                 cmbList.Items.Add("", "[ No Variable Selected ]")
                 'Application.DoEvents()
-                For Each v As clsVariable In Adventure.htblVariables.Values
-                    cmbList.Items.Add(v.Key, v.Name)
-                Next
+                Dim vars As IEnumerable(Of ValueListItem) = From var In Adventure.htblVariables.Values
+                                                            Select New ValueListItem(var.Key, var.Name)
+                cmbList.Items.AddRange(vars.ToArray())
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to variables)")
                 ToolTip1.SetToolTip(btnNew, "Add new variable")
                 ToolTip1.SetToolTip(btnEdit, "Edit variable")
@@ -471,10 +472,10 @@ CheckNextGroup:
                 'Application.DoEvents()
                 Dim p As clsProperty = Nothing
                 If Adventure.htblAllProperties.TryGetValue(_ValueListPropertyKey, p) Then
-                    cmbList.SortStyle = Infragistics.Win.ValueListSortStyle.None
-                    For Each sValue As String In p.ValueList.Keys
-                        cmbList.Items.Add(p.ValueList(sValue), sValue)
-                    Next
+                    cmbList.SortStyle = ValueListSortStyle.None
+                    Dim props As IEnumerable(Of ValueListItem) = From val In p.ValueList.Keys
+                                                                 Select New ValueListItem(p.ValueList(val), val)
+                    cmbList.Items.AddRange(props.ToArray())
                 End If
                 ToolTip1.SetToolTip(btnItemType, "Change list type (currently set to valuelist)")
                 ToolTip1.SetToolTip(btnEdit, "Edit valuelist")
