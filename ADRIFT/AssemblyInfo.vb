@@ -18,7 +18,7 @@ Imports System.Security
 #End If
 <Assembly: AssemblyDescription("Interactive Fiction Development System for Windows")> 
 <Assembly: AssemblyCompany("Campbell Wild")>
-<Assembly: AssemblyCopyright("© Campbell Wild 1998-2020")>
+<Assembly: AssemblyCopyright("© Campbell Wild 1998-2022")>
 <Assembly: AssemblyTrademark("")> 
 <Assembly: CLSCompliant(True)> 
 
@@ -35,4 +35,4 @@ Imports System.Security
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
-<Assembly: AssemblyVersion("5.0.36.4")>
+<Assembly: AssemblyVersion("5.0.36.5")>
