@@ -890,7 +890,7 @@ Public Class frmTask
         '
         Me.cmbSystemTriggerLocation.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbSystemTriggerLocation.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
+        Me.cmbSystemTriggerLocation.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest
         Me.cmbSystemTriggerLocation.DropDownStyle = Infragistics.Win.DropDownStyle.DropDownList
         Me.cmbSystemTriggerLocation.Location = New System.Drawing.Point(288, 69)
         Me.cmbSystemTriggerLocation.Name = "cmbSystemTriggerLocation"
@@ -913,7 +913,7 @@ Public Class frmTask
         '
         Me.cmbGeneralTask.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbGeneralTask.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None
+        Me.cmbGeneralTask.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.Suggest
         Me.cmbGeneralTask.Location = New System.Drawing.Point(177, 33)
         Me.cmbGeneralTask.Name = "cmbGeneralTask"
         Me.cmbGeneralTask.Size = New System.Drawing.Size(370, 21)
